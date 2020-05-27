@@ -1,7 +1,7 @@
 {
-  "name": "github-nlib-web-app-template",
+  "name": "dmt.server",
   "version": "1.0.0",
-  "description": "The git hub nlib web application template project.",
+  "description": "The DMT Web Service (TA/TOD) project.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chumpon-asaneerat/github-nlib-web-app-template.git"
+    "url": "git+https://github.com/chumpon-asaneerat/DMT.Server.git"
   },
   "author": "Chumpon Asaneerat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chumpon-asaneerat/github-nlib-web-app-template/issues"
+    "url": "https://github.com/chumpon-asaneerat/DMT.Server/issues"
   },
-  "homepage": "https://github.com/chumpon-asaneerat/github-nlib-web-app-template#readme",
+  "homepage": "https://github.com/chumpon-asaneerat/DMT.Server#readme",
   "devDependencies": {
     "@types/compression": "^1.0.1",
     "@types/dot": "^1.1.3",
