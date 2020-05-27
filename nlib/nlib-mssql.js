@@ -988,7 +988,7 @@ const SqlServer = class {
         
         let tmpl = `
         // required to manual set require path for nlib-mssql.
-        const SqlServer = require('./src/server/js/nlib/nlib-mssql');
+        const SqlServer = require('./nlib/nlib-mssql');
         const schema = require('./schema/{{=it.databaseName}}.schema.json');
 
         const {{=it.databaseName}} = class extends SqlServer {
