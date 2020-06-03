@@ -9,7 +9,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[TRANSACTIONTYPE](
-	[TRANS_TYPE] [nchar](1) NULL,
+	[TRANS_TYPE] [nchar](1) NULL, /* Type: 1 received, 2: returns */
 	[TRANS_DESC] [nchar](10) NULL,
 	[TRANS_GROUP] [nchar](1) NULL
 ) ON [PRIMARY]
