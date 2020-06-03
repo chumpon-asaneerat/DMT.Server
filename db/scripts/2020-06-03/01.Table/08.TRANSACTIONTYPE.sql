@@ -1,5 +1,3 @@
-USE [DMT_TATOD]
-GO
 
 /****** Object:  Table [dbo].[TRANSACTIONTYPE]    Script Date: 6/3/2020 12:54:19 PM ******/
 SET ANSI_NULLS ON

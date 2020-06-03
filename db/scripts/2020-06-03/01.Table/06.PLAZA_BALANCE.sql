@@ -1,5 +1,3 @@
-USE [DMT_TATOD]
-GO
 
 /****** Object:  Table [dbo].[PLAZA_BALANCE]    Script Date: 6/3/2020 12:53:11 PM ******/
 SET ANSI_NULLS ON

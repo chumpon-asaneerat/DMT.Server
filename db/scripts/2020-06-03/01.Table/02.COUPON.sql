@@ -1,6 +1,3 @@
-USE [DMT_TATOD]
-GO
-
 /****** Object:  Table [dbo].[COUPON]    Script Date: 6/3/2020 12:49:14 PM ******/
 SET ANSI_NULLS ON
 GO

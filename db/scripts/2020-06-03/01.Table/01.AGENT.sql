@@ -1,6 +1,3 @@
-USE [DMT_TATOD]
-GO
-
 /****** Object:  Table [dbo].[AGENT]    Script Date: 6/3/2020 12:48:25 PM ******/
 SET ANSI_NULLS ON
 GO

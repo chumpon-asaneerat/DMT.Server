@@ -1,5 +1,3 @@
-USE [DMT_TATOD]
-GO
 
 /****** Object:  Table [dbo].[MONEY]    Script Date: 6/3/2020 12:50:19 PM ******/
 SET ANSI_NULLS ON
