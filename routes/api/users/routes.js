@@ -20,6 +20,11 @@ const router = new WebRouter();
 //const mkdirp = require('mkdirp')
 //const sfs = require(path.join(rootPath, 'edl', 'server-fs'));
 
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+const adapter = new FileSync('db.json')
+const db = low(adapter)
+
 //#endregion
 
 // static class.
@@ -60,6 +65,25 @@ router.get('/users/:staffId', api.getusers.byId)
 router.post('/users', api.getusers.byId)
 
 const init_routes = (svr) => {
+    // init database
+    // Set some defaults (required if your JSON file is empty)
+    db.defaults({ users: [] })
+        .write()
+
+    // For performance, use .value() instead of .write() if you're only reading from db
+    let users = db.get('users')
+        //.find({ staffId: '14566' })
+        .value()
+
+    // Add a users
+    if (!users || users.length <= 0) {
+        api.users.forEach(user => {
+            db.get('users')
+            .push(user)
+            .write()
+        })
+    }
+
     svr.route('/api', router);
 };
 
