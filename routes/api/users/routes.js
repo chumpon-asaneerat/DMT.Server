@@ -31,14 +31,14 @@ const db = low(adapter)
 const api = class {}
 
 api.users = [
-    { staffId: '17155', staffName: 'นาย สมบูรณ์ สบายดี', role: 'supervisor' },
-    { staffId: '12522', staffName: 'นาย องอาจ สยามวารี', role: 'supervisor' },
-    { staffId: '11082', staffName: 'นาย พัชรพล อล่างพานิช', role: 'supervisor' },
-    { staffId: '17081', staffName: 'นาย ผจญ สุดศิริ', role: 'collector' },
-    { staffId: '22503', staffName: 'นวย วิรชัย ขำหิรัญ', role: 'collector' },
-    { staffId: '14566', staffName: 'นาย สมชาย ตุยเอียว', role: 'collector' },
-    { staffId: '14566', staffName: 'นางสาว สุณิสา อีนูน', role: 'collector' },
-    { staffId: '11045', staffName: 'นาย บุญส่ง บุญปลื้ม', role: 'collector' }
+    { staffId: '17155', staffName: 'นาย สมบูรณ์ สบายดี', pwd: '1234', role: 'supervisor' },
+    { staffId: '12522', staffName: 'นาย องอาจ สยามวารี', pwd: '1234', role: 'supervisor' },
+    { staffId: '11082', staffName: 'นาย พัชรพล อล่างพานิช', pwd: '1234', role: 'supervisor' },
+    { staffId: '17081', staffName: 'นาย ผจญ สุดศิริ', pwd: '1234', role: 'collector' },
+    { staffId: '22503', staffName: 'นวย วิรชัย ขำหิรัญ', pwd: '1234', role: 'collector' },
+    { staffId: '14566', staffName: 'นาย สมชาย ตุยเอียว', pwd: '1234', role: 'collector' },
+    { staffId: '14566', staffName: 'นางสาว สุณิสา อีนูน', pwd: '1234', role: 'collector' },
+    { staffId: '11045', staffName: 'นาย บุญส่ง บุญปลื้ม', pwd: '1234', role: 'collector' }
 ]
 api.getusers = class {
     static all(req, res) {
