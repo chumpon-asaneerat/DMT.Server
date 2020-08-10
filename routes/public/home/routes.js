@@ -5,13 +5,9 @@ const rootPath = process.env['ROOT_PATHS'];
 
 // for production
 const nlibPath = path.join(rootPath, 'nlib');
-// for nlib-server dev project
-//const nlibPath = path.join(rootPath, 'src', 'server', 'js', 'nlib');
 const nlibjs = path.join(nlibPath, 'nlib');
 const nlib = require(nlibjs);
-
 const nlibExprjs = path.join(nlibPath, 'nlib-express');
-
 const WebServer = require(nlibExprjs);
 
 //#endregion

@@ -1,0 +1,9 @@
+### Users (one) (POST)
+POST http://localhost:3000/api/users/coupons
+content-type: application/json
+
+{
+    "tsbid": "311",
+    "userid": "14124",
+    "coupontype": "35"
+}

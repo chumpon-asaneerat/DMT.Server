@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------
+Update 2020-08-10 #4
+- 
+
+Update 2020-08-10 #3
+- 
+
+Update 2020-08-10 #2
+- 
+
+[commit]
+Update 2020-08-10 #1
+- Restructure all folders and files.
+- Remove all unused folders and files.
+- Generate SQL Scripts.
+- Generate TAxTOD db schecma json file.
+- Generate TAxTOD database js file.
+- Create routes for users/coupons
+- Add user.coupons.rest for test call api.
+
+----------------------------------------------------------------------------------------------

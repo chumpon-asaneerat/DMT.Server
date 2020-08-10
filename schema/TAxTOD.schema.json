@@ -1,0 +1,93 @@
+{
+    "GetUserCouponList": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-10T18:00:08.723Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "varchar(10)"
+                },
+                {
+                    "name": "userid",
+                    "type": "varchar(10)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "varchar(2)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "SaveTACoupon": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-10T18:00:08.727Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "transactionid",
+                    "type": "varchar(10)"
+                },
+                {
+                    "name": "transactiondate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "varchar(10)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "varchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "varchar(7)"
+                },
+                {
+                    "name": "price",
+                    "type": "decimal"
+                },
+                {
+                    "name": "userid",
+                    "type": "varchar(10)"
+                },
+                {
+                    "name": "userreceivedate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "Couponstatus",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "solddate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "soldby",
+                    "type": "varchar(10)"
+                },
+                {
+                    "name": "finishflag",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "transferflag",
+                    "type": "char(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    }
+}
