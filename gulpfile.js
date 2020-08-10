@@ -86,7 +86,14 @@ gulp.task('bundle-js', () => {
 
 gulp.task('merge-sql-scripts', () => {
     let task = new GulpFileMerge();
-    let sDate = '2020-08-06';
+
+
+    // Change date here!!!!!!!!!!!!!!!!!!!!!
+    let sDate = '2020-08-06'; // Change date here!!!!
+    //let sDate = '2020-08-10'; // Change date here!!!!
+    // Change date here!!!!!!!!!!!!!!!!!!!!!
+
+
     let rootPath = path.join(__dirname, 'db/scripts/' + sDate);
     task.opts = {
         src: [

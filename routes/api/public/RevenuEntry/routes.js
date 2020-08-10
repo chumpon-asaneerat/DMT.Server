@@ -16,15 +16,18 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
-//#region Implement - SaveTACoupon
+// !!!!!1!!!!!!!
+// EXAMPLE !!!!!
+// !!!!!1!!!!!!!
+//#region Implement - GetUserCouponList (replace name in 4 positions)
 
-api.SaveTACoupon = class {
+api.GetUserCouponList = class {
     static prepare(req, res) {
-        let params = WebServer.parseReq(req).data;
-        return params;
+        let params = WebServer.parseReq(req).data
+        return params
     }
     static async call(db, params) { 
-        return db.SaveTACoupon(params)
+        return db.GetUserCouponList(params)
     }
     static parse(db, data, callback) {
         let result = dbutils.validate(db, data)
@@ -32,7 +35,7 @@ api.SaveTACoupon = class {
         if (callback) callback(result)
     }
     static entry(req, res) {
-        let ref = api.SaveTACoupon
+        let ref = api.GetUserCouponList
         let db = new sqldb()
         let params = ref.prepare(req, res)
         let fn = async () => { return ref.call(db, params) }
@@ -46,19 +49,10 @@ api.SaveTACoupon = class {
 
 //#endregion
 
-router.all('/', api.SaveTACoupon.entry)
+router.all('/', api.GetUserCouponList.entry) // replace name
 
 const init_routes = (svr) => {
-    svr.route('/api/users/coupons/save', router);
-    //svr.route('/api/users/coupons/sold', router);
-
-    //svr.route('/api/rto/coupons/sold', router);
-    //svr.route('/api/rto/coupons/search', router);
-
-    // Attendance login/logout (Used later for TOD)
-    //svr.route('/api/rto/attendances/begin', router);
-    //svr.route('/api/rto/attendances/end', router);
+    svr.route('/api/users/revenues/search', router); // set route name
 };
 
 module.exports.init_routes = exports.init_routes = init_routes;
-

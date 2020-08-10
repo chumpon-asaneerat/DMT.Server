@@ -1,31 +1,40 @@
-### Gets all user coupons that assigned by TA (POST)
+### Gets all user coupons that assigned by TA (POST) coupon 35
 POST http://localhost:3000/api/users/coupons/search
 content-type: application/json
 
 {
-    "tsbid": "311",
-    "userid": "14124",
+    "tSBiD": "311",
+    "uSERiD": null,
     "coupontype": "35"
 }
 
-### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
-POST http://localhost:3000/api/users/coupons/save
+### Gets all user coupons that assigned by TA (POST) coupon 80
+POST http://localhost:3000/api/users/coupons/search
 content-type: application/json
 
 {
-    "transactionid": 1,
-    "transactiondate": "2020-08-06T18:25:43.511Z",
-    "coupontype": "35",
-    "tsbid": "311",
-    "coupontype": "35",
-    "serialno": "ข112202",
-    "price": 665,
-    "userid": "14124",
-    "userreceivedate": "2020-08-06T18:25:43.511Z",
-    "Couponstatus": "2",
-    "solddate": "2020-08-06T18:25:43.511Z",
-    "soldby": "14124",
-    "finishflag": "1",
-    "transferflag": "1"
+    "tSBiD": "311",
+    "uSERiD": null,
+    "coupontype": "80"
+}
+
+### Gets all user coupons that assigned by TA (POST) coupon all
+POST http://localhost:3000/api/users/coupons/search
+content-type: application/json
+
+{
+    "tSBiD": "311",
+    "uSERiD": null,
+    "coupontype": ""
+}
+
+### Gets all user coupons that assigned by TA (POST) coupon all
+POST http://localhost:3000/api/users/coupons/search
+content-type: application/json
+
+{
+    "tSBiD": "311",
+    "uSERiD": null,
+    "coupontype": null
 }
 

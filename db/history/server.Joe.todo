@@ -1,0 +1,12 @@
+press alt-d to toggle checked
+press alt-c to cancel
+
+EDL Database Server:
+    Script for 2020-08-06:
+        ✔ Verify and checks correction. @done(20-08-10 20:15)
+        ✔ Generate script. @done(20-08-10 20:15)
+        ✔ Update to production server. @done(20-08-10 20:17)
+    Script for 2020-08-10:
+        ☐ Verify and checks correction.
+        ☐ Generate script.
+        ☐ Update to production server.
