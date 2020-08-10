@@ -16,15 +16,15 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
-//#region Implement - GetUserCouponList
+//#region Implement - SaveTACoupon
 
-api.GetUserCouponList = class {
+api.SaveTACoupon = class {
     static prepare(req, res) {
-        let params = WebServer.parseReq(req).data
-        return params
+        let params = WebServer.parseReq(req).data;
+        return params;
     }
     static async call(db, params) { 
-        return db.GetUserCouponList(params)
+        return db.SaveTACoupon(params)
     }
     static parse(db, data, callback) {
         let result = dbutils.validate(db, data)
@@ -32,7 +32,7 @@ api.GetUserCouponList = class {
         if (callback) callback(result)
     }
     static entry(req, res) {
-        let ref = api.GetUserCouponList
+        let ref = api.SaveTACoupon
         let db = new sqldb()
         let params = ref.prepare(req, res)
         let fn = async () => { return ref.call(db, params) }
@@ -46,10 +46,11 @@ api.GetUserCouponList = class {
 
 //#endregion
 
-router.all('/', api.GetUserCouponList.entry)
+router.all('/', api.SaveTACoupon.entry)
 
 const init_routes = (svr) => {
-    svr.route('/api/users/coupons/search', router);
+    svr.route('/api/users/coupons/save', router);
 };
 
 module.exports.init_routes = exports.init_routes = init_routes;
+
