@@ -3,19 +3,18 @@ POST http://localhost:3000/api/users/coupons/save
 content-type: application/json
 
 {
-    "transactionid": 1,
+    "couponpk": null,
+    "transactionid": 122,
     "transactiondate": "2020-08-06T18:25:43.511Z",
-    "coupontype": "35",
     "tsbid": "311",
     "coupontype": "35",
-    "serialno": "ข112202",
-    "price": 665,
+    "serialno": "C112202",
+    "price": 1268,
     "userid": "14124",
     "userreceivedate": "2020-08-06T18:25:43.511Z",
-    "Couponstatus": "2",
+    "Couponstatus": "1",
     "solddate": "2020-08-06T18:25:43.511Z",
-    "soldby": "14124",
-    "finishflag": "1",
-    "transferflag": "1"
+    "soldby": null,
+    "finishflag": "1"
 }
 

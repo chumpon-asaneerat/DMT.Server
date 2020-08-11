@@ -1,5 +1,8 @@
 {
     "DropAll": false,
     "GetUserCouponList": true,
-    "SaveTACoupon": true
+    "SaveTACoupon": true,
+    "TCTSoldCoupon": true,
+    "TCTSaveLaneAttendance": true,
+    "GetUserLaneAttendance": true
 }

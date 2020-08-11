@@ -5,19 +5,19 @@ GO
 
 
 CREATE PROCEDURE [dbo].[SaveTACoupon] (
-  @transactionid  varchar(10)
+  @couponpk int
+ ,@transactionid  int
 , @transactiondate datetime
-, @tsbid varchar(10)
+, @tsbid nvarchar(5)
 , @coupontype varchar(2)
-, @serialno varchar(7)
+, @serialno nvarchar(7)
 , @price decimal(6,0)
-, @userid varchar(10)
+, @userid nvarchar(10)
 , @userreceivedate datetime
 , @Couponstatus char(1)
 , @solddate datetime
-, @soldby varchar(10)
+, @soldby nvarchar(10)
 , @finishflag char(1)
-, @transferflag char(1)
 , @errNum as int = 0 out
 , @errMsg as nvarchar(MAX) = N'' out)
 AS
@@ -41,18 +41,17 @@ BEGIN
       ,[SoldDate] = COALESCE(@solddate, [SoldDate])
       ,[SoldBy] = COALESCE(@soldby, [SoldBy])
       ,[FinishFlag] = COALESCE(@finishflag, [FinishFlag])
-      ,[TransferFlag] = COALESCE(@transferflag, [TransferFlag])
-	WHERE [SerialNo] = @serialno
+    WHERE [SerialNo] = @serialno
 		and [CouponType]  = @coupontype
 		and [TSBId] = @tsbid;
 	End
 	ELSE
 		BEGIN
 	INSERT INTO [dbo].[TA_Coupon]
-           ([TransactionID], [TransactionDate],[TSBId] ,[CouponType] ,[SerialNo]
-           ,[Price] ,[CouponStatus] ,[FinishFlag] ,[TransferFlag])
+           ([couponpk], [TransactionDate],[TSBId] ,[CouponType] ,[SerialNo]
+           ,[Price] ,[CouponStatus] ,[FinishFlag] )
      VALUES ( @transactionid , @transactiondate , @tsbid, @coupontype, @serialno
-	         ,@price , @Couponstatus , @finishflag , @transferflag)
+	         ,@price , @Couponstatus , @finishflag )
 
 
 		END

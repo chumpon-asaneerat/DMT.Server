@@ -1,20 +1,20 @@
 {
     "GetUserCouponList": {
         "type": "PROCEDURE",
-        "updated": "2020-08-10T20:18:35.830Z",
+        "updated": "2020-08-11T21:15:09.527Z",
         "parameter": {
             "inputs": [
                 {
                     "name": "tsbid",
-                    "type": "varchar(10)"
+                    "type": "nvarchar(5)"
                 },
                 {
                     "name": "userid",
-                    "type": "varchar(10)"
+                    "type": "nvarchar(10)"
                 },
                 {
                     "name": "coupontype",
-                    "type": "varchar(2)"
+                    "type": "nvarchar(2)"
                 }
             ],
             "outputs": []
@@ -22,12 +22,16 @@
     },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2020-08-10T20:18:35.843Z",
+        "updated": "2020-08-11T21:15:09.530Z",
         "parameter": {
             "inputs": [
                 {
+                    "name": "couponpk",
+                    "type": "int"
+                },
+                {
                     "name": "transactionid",
-                    "type": "varchar(10)"
+                    "type": "int"
                 },
                 {
                     "name": "transactiondate",
@@ -35,7 +39,7 @@
                 },
                 {
                     "name": "tsbid",
-                    "type": "varchar(10)"
+                    "type": "nvarchar(5)"
                 },
                 {
                     "name": "coupontype",
@@ -43,7 +47,7 @@
                 },
                 {
                     "name": "serialno",
-                    "type": "varchar(7)"
+                    "type": "nvarchar(7)"
                 },
                 {
                     "name": "price",
@@ -51,7 +55,7 @@
                 },
                 {
                     "name": "userid",
-                    "type": "varchar(10)"
+                    "type": "nvarchar(10)"
                 },
                 {
                     "name": "userreceivedate",
@@ -67,15 +71,128 @@
                 },
                 {
                     "name": "soldby",
-                    "type": "varchar(10)"
+                    "type": "nvarchar(10)"
                 },
                 {
                     "name": "finishflag",
                     "type": "char(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
                 },
                 {
-                    "name": "transferflag",
-                    "type": "char(1)"
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TCTSoldCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-11T21:15:09.533Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "price",
+                    "type": "decimal"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "solddate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "GetUserLaneAttendance": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-11T21:15:09.537Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "plazagroupid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "startdate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "enddate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TCTSaveLaneAttendance": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-11T21:15:09.540Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "jobid",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "plazaid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "boj",
+                    "type": "datetime"
+                },
+                {
+                    "name": "eoj",
+                    "type": "datetime"
                 }
             ],
             "outputs": [

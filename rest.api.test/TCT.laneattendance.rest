@@ -1,0 +1,26 @@
+### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
+POST http://localhost:3000/api/TCT/LaneAttendance/save
+content-type: application/json
+
+{
+    "jobid": "D0001",
+    "tsbid": "311",
+    "plazaid": "3101",
+    "laneid": "DD02",
+    "userid": "14124",
+    "boj": "2020-08-06T19:30:43.511Z",
+    "eoj": "2020-08-06T20:18:43.511Z"
+}
+
+
+### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
+POST http://localhost:3000/api/user/LaneAttendance/search
+content-type: application/json
+
+{
+    "plazagroupid": "DD",
+    "userid": "14124",
+    "startdate": "2020-08-06T18:00:43.511Z",
+    "enddate": "2020-08-07T01:25:43.511Z"
+   
+}

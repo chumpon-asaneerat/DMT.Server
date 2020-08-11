@@ -16,21 +16,15 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
-//#region Implement - GetUserCouponList
+//#region Implement - GetUserLaneAttendance
 
-api.GetUserCouponList = class {
+api.GetUserLaneAttendance = class {
     static prepare(req, res) {
         let params = WebServer.parseReq(req).data
-        
-        if (params.userid == '') 
-        {
-            params.userid = null
-        }
-
         return params
     }
     static async call(db, params) { 
-        return db.GetUserCouponList(params)
+        return db.GetUserLaneAttendance(params)
     }
     static parse(db, data, callback) {
         let result = dbutils.validate(db, data)
@@ -38,7 +32,7 @@ api.GetUserCouponList = class {
         if (callback) callback(result)
     }
     static entry(req, res) {
-        let ref = api.GetUserCouponList
+        let ref = api.GetUserLaneAttendance
         let db = new sqldb()
         let params = ref.prepare(req, res)
         let fn = async () => { return ref.call(db, params) }
@@ -52,10 +46,10 @@ api.GetUserCouponList = class {
 
 //#endregion
 
-router.all('/', api.GetUserCouponList.entry)
+router.all('/', api.GetUserLaneAttendance.entry)
 
 const init_routes = (svr) => {
-    svr.route('/api/users/coupons/search', router);
+    svr.route('/api/user/LaneAttendance/search', router);
 };
 
 module.exports.init_routes = exports.init_routes = init_routes;

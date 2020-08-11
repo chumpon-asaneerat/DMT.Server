@@ -27,6 +27,24 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async TCTSoldCoupon(pObj) {
+        let name = 'TCTSoldCoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetUserLaneAttendance(pObj) {
+        let name = 'GetUserLaneAttendance';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TCTSaveLaneAttendance(pObj) {
+        let name = 'TCTSaveLaneAttendance';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
 }
 
 module.exports = exports = TAxTOD;

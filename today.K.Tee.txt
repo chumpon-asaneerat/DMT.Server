@@ -1,6 +1,14 @@
 ----------------------------------------------------------------------------------------------
-Update 2020-08-10 #2 (K.Tee)
+Update 2020-08-10 #5 (K.Tee)
 - 
+
+Update 2020-08-10 #4 (K.Tee)
+- 
+
+Update 2020-08-11 #3 (K.Tee)
+- Update Coupon Structure and Procedure
+- Add Procedure For TCT Sold Coupon , Save LaneAttendance
+- Add New Table  for LaneAttendance, Lane , UserShift
 
 [commited]
 Update 2020-08-10 #2 (K.Tee)

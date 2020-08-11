@@ -5,8 +5,8 @@ EDL Database Server:
     Script for 2020-08-06:
         ✔ Verify and checks correction. @done(20-08-10 20:15)
         ✔ Generate script. @done(20-08-10 20:15)
-        ☐ Update to production server.
-    Script for 2020-08-10:
-        ☐ Verify and checks correction.
-        ☐ Generate script.
-        ☐ Update to production server.
+        ✔ Update to production server. @done(20-08-11 13:59)
+    Script for 2020-08-11:
+        ✔ Verify and checks correction , Update script. @done(20-08-11 14:02)
+        ✔ Generate New script for TCT Coupon and lane attendance. @done(20-08-11 14:02)
+        ✔ Update to production server. @done(20-08-11 14:02)
