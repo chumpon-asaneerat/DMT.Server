@@ -28,7 +28,7 @@ content-type: application/json
     "coupontype": null
 }
 
-### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
+### Send user coupon sold to TA server (POST)
 POST http://localhost:3000/api/TCT/coupons/sold
 content-type: application/json
 
