@@ -1,4 +1,9 @@
 ----------------------------------------------------------------------------------------------
+[commited]
+Update 2020-08-13 #2
+- Install amqplib (RabbitMQ) package.
+
+[commited]
 Update 2020-08-13 #1
 - Update today.txt
 
