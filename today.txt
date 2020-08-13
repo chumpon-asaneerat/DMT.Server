@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-08-13 #4
+- setup access git accout.
+
+[commited]
 Update 2020-08-13 #3
 - Install on productin server.
 
