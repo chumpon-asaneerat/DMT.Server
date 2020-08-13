@@ -9,7 +9,7 @@ content-type: application/json
     "tsbid": "311",
     "coupontype": "35",
     "serialno": "C112202",
-    "price": 1268,
+    "price": 655,
     "userid": "14124",
     "userreceivedate": "2020-08-06T18:25:43.511Z",
     "Couponstatus": "1",

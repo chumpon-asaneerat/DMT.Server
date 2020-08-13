@@ -2,8 +2,10 @@
 Update 2020-08-10 #5 (K.Tee)
 - 
 
-Update 2020-08-10 #4 (K.Tee)
-- 
+Update 2020-08-13 #4 (K.Tee)
+- Update Table TA_coupon add identity on CouponPK
+- Add more Data in TA_coupon
+- Update SP for Save TA_coupon
 
 Update 2020-08-11 #3 (K.Tee)
 - Update Coupon Structure and Procedure
