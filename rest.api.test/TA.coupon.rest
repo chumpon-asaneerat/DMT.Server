@@ -1,4 +1,4 @@
-### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
+### TA Save Coupon 
 POST http://localhost:3000/api/users/coupons/save
 content-type: application/json
 
@@ -18,3 +18,14 @@ content-type: application/json
     "finishflag": "1"
 }
 
+
+### Gets all TSB coupons Data
+POST http://localhost:3000/api/users/coupons/getlist
+content-type: application/json
+
+{
+    "tsbid": "311",
+    "userid": null,
+    "transactiontype": 2,
+    "coupontype": 35
+}

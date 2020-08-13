@@ -21,6 +21,11 @@ const api = class { }
 api.TCTSaveLaneAttendance = class {
     static prepare(req, res) {
         let params = WebServer.parseReq(req).data
+        if (params.tsbid == '') 
+        {
+            params.tsbid = null
+        }
+
         return params
     }
     static async call(db, params) { 
