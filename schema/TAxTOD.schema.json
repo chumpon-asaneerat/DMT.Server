@@ -1,7 +1,7 @@
 {
     "GetUserCouponList": {
         "type": "PROCEDURE",
-        "updated": "2020-08-11T21:15:09.527Z",
+        "updated": "2020-08-11T21:37:30.010Z",
         "parameter": {
             "inputs": [
                 {
@@ -20,9 +20,126 @@
             "outputs": []
         }
     },
+    "TCTSoldCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-11T21:37:30.027Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "price",
+                    "type": "decimal"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "solddate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "GetUserLaneAttendance": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-11T21:37:30.030Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "plazagroupid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "startdate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "enddate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TCTSaveLaneAttendance": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-11T21:37:30.033Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "jobid",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "plazaid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "boj",
+                    "type": "datetime"
+                },
+                {
+                    "name": "eoj",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2020-08-11T21:15:09.530Z",
+        "updated": "2020-08-13T19:56:52.290Z",
         "parameter": {
             "inputs": [
                 {
@@ -90,121 +207,29 @@
             ]
         }
     },
-    "TCTSoldCoupon": {
+    "TAGetCouponList": {
         "type": "PROCEDURE",
-        "updated": "2020-08-11T21:15:09.533Z",
+        "updated": "2020-08-13T20:09:03.010Z",
         "parameter": {
             "inputs": [
                 {
                     "name": "tsbid",
                     "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "transactiontype",
+                    "type": "char(1)"
                 },
                 {
                     "name": "coupontype",
                     "type": "nvarchar(2)"
-                },
-                {
-                    "name": "serialno",
-                    "type": "nvarchar(7)"
-                },
-                {
-                    "name": "price",
-                    "type": "decimal"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "solddate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "laneid",
-                    "type": "nvarchar(10)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "GetUserLaneAttendance": {
-        "type": "PROCEDURE",
-        "updated": "2020-08-11T21:15:09.537Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "plazagroupid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "startdate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "enddate",
-                    "type": "datetime"
                 }
             ],
             "outputs": []
-        }
-    },
-    "TCTSaveLaneAttendance": {
-        "type": "PROCEDURE",
-        "updated": "2020-08-11T21:15:09.540Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "jobid",
-                    "type": "nvarchar(20)"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "plazaid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "laneid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "boj",
-                    "type": "datetime"
-                },
-                {
-                    "name": "eoj",
-                    "type": "datetime"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
         }
     }
 }

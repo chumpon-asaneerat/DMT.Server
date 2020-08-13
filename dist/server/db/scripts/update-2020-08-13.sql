@@ -95,6 +95,25 @@ END
 
 
 /*********** Script Update Date: 2020-08-13  ***********/
+CREATE PROCEDURE [dbo].[TAGetCouponList]
+(
+    @tsbid nvarchar(5)  ,
+	@userid nvarchar(10) ,
+	@transactiontype char(1),
+	@coupontype nvarchar(2)
+)
+AS
+BEGIN
+    SELECT *
+	FROM [dbo].[TA_Coupon] 
+     WHERE ( [UserId] = COALESCE(@userid, [UserId]) or @userid is NULL) 
+	and [TsbId] = COALESCE(@tsbid, [TsbId])  
+	 and [couponType] = COALESCE(@coupontype, [couponType])
+	 and [CouponStatus] = COALESCE(@transactiontype, [CouponStatus]) 
+     ORDER BY [couponType], [SerialNo] asc
+END
+
+/*********** Script Update Date: 2020-08-13  ***********/
 
 GO
 INSERT [dbo].[TA_Coupon] ( [TransactionDate], [TSBId], [CouponType], [SerialNo], [Price], [UserId], [UserReceiveDate], [CouponStatus], [SoldDate], [SoldBy], [FinishFlag], [SapChooseFlag]) VALUES (CAST(N'2020-08-06T22:00:47.287' AS DateTime), N'311', N'35', N'ข002202', CAST(665 AS Decimal(6, 0)), N'14124', NULL, N'2', NULL, NULL, N'1', N'1')

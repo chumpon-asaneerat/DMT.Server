@@ -4,5 +4,6 @@
     "SaveTACoupon": true,
     "TCTSoldCoupon": true,
     "TCTSaveLaneAttendance": true,
-    "GetUserLaneAttendance": true
+    "GetUserLaneAttendance": true,
+    "TAGetCouponList": true
 }

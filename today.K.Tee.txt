@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------------------
-Update 2020-08-10 #5 (K.Tee)
-- 
+Update 2020-08-13 #5 (K.Tee)
+-  Add SP for TA Get All Coupon List 
 
 Update 2020-08-13 #4 (K.Tee)
 - Update Table TA_coupon add identity on CouponPK

@@ -21,12 +21,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async SaveTACoupon(pObj) {
-        let name = 'SaveTACoupon';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async TCTSoldCoupon(pObj) {
         let name = 'TCTSoldCoupon';
         let proc = schema[name];
@@ -41,6 +35,18 @@ const TAxTOD = class extends SqlServer {
 
     async TCTSaveLaneAttendance(pObj) {
         let name = 'TCTSaveLaneAttendance';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveTACoupon(pObj) {
+        let name = 'SaveTACoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TAGetCouponList(pObj) {
+        let name = 'TAGetCouponList';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
