@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-08-13 #6
+- comfirm recheck sync when not signin in email account in browser.
+
+[commited]
 Update 2020-08-13 #5
 - comfirm recheck sync code from another computer.
 
