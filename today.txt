@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-08-13 #5
+- comfirm recheck sync code from another computer.
+
+[commited]
 Update 2020-08-13 #4
 - setup access git accout.
 
