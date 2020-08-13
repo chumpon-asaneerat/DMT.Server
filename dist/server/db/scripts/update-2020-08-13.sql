@@ -93,6 +93,7 @@ BEGIN
 	END CATCH
 END
 
+GO
 
 /*********** Script Update Date: 2020-08-13  ***********/
 CREATE PROCEDURE [dbo].[TAGetCouponList]
@@ -112,6 +113,8 @@ BEGIN
 	 and [CouponStatus] = COALESCE(@transactiontype, [CouponStatus]) 
      ORDER BY [couponType], [SerialNo] asc
 END
+
+GO
 
 /*********** Script Update Date: 2020-08-13  ***********/
 

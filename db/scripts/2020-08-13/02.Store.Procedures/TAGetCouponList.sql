@@ -15,3 +15,5 @@ BEGIN
 	 and [CouponStatus] = COALESCE(@transactiontype, [CouponStatus]) 
      ORDER BY [couponType], [SerialNo] asc
 END
+
+GO

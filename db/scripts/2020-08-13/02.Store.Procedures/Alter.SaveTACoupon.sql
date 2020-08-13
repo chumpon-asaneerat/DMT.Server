@@ -58,3 +58,5 @@ BEGIN
 		SET @errMsg = ERROR_MESSAGE();
 	END CATCH
 END
+
+GO
