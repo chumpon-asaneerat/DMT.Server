@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-08-13 #3
+- Install on productin server.
+
+[commited]
 Update 2020-08-13 #2
 - Install amqplib (RabbitMQ) package.
 
