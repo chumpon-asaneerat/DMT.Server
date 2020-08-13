@@ -21,6 +21,27 @@ const api = class { }
 api.SaveTACoupon = class {
     static prepare(req, res) {
         let params = WebServer.parseReq(req).data;
+        
+        if (params.userid == '') 
+        {
+            params.userid = null
+        }
+
+        if (params.userreceivedate == '') 
+        {
+            params.userreceivedate = null
+        }
+
+        if (params.solddate == '') 
+        {
+            params.solddate = null
+        }
+
+        if (params.soldby == '') 
+        {
+            params.soldby = null
+        }
+
         return params;
     }
     static async call(db, params) { 
@@ -50,6 +71,7 @@ router.all('/', api.SaveTACoupon.entry)
 
 const init_routes = (svr) => {
     svr.route('/api/users/coupons/save', router);
+
     //svr.route('/api/users/coupons/sold', router);
 
     //svr.route('/api/rto/coupons/sold', router);

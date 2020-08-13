@@ -16,11 +16,26 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
-//#region Implement - SaveTACoupon
+//#region Implement - TAGetCouponList
 
 api.TAGetCouponList = class {
     static prepare(req, res) {
         let params = WebServer.parseReq(req).data;
+        if (params.userid == '') 
+        {
+            params.userid = null
+        }
+
+        if (params.transactiontype == '') 
+        {
+            params.transactiontype = null
+        }
+
+        if (params.coupontype == '') 
+        {
+            params.coupontype = null
+        }
+
         return params;
     }
     static async call(db, params) { 

@@ -1,4 +1,8 @@
 ----------------------------------------------------------------------------------------------
+Update 2020-08-13 #6 (K.Tee)
+-  Add Check Empty String
+-  Fix SP Logic for TSBID is null
+
 Update 2020-08-13 #5 (K.Tee)
 -  Add SP for TA Get All Coupon List 
 

@@ -22,9 +22,19 @@ api.GetUserCouponList = class {
     static prepare(req, res) {
         let params = WebServer.parseReq(req).data
         
-        if (params.userid == '') 
+        if (params.userId == '') 
         {
-            params.userid = null
+            params.userId = null
+        }
+
+        if (params.tsbId == '') 
+        {
+            params.tsbId = null
+        }
+
+        if (params.coupontype == '') 
+        {
+            params.coupontype = null
         }
 
         return params
