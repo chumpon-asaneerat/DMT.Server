@@ -25,7 +25,7 @@ content-type: application/json
 
 {
     "tsbid": "311",
-    "userid": null,
-    "transactiontype": 2,
-    "coupontype": 35
+    "userid": "14211",
+    "transactiontype": null,
+    "coupontype": null
 }

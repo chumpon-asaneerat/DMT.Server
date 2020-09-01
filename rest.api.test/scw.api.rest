@@ -1,0 +1,9 @@
+### TA Save Coupon 
+POST http://localhost:3000/dmt-scw/api/tod/jobList
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 3101,
+    "staffId": "14124"
+}
