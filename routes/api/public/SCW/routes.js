@@ -18,20 +18,39 @@ const api = class { }
 
 //#region Implement - GetJobList
 
-api.GetUserCouponList = class {
+api.GetUserJobList = class {
     static entry(req, res) {
         let jsonFileName = path.join(rootPath, 'SCW', 'joblist.json')
-        let joblist = require(jsonFileName)
+        let joblist = nlib.JSONFile.load(jsonFileName)
         WebServer.sendJson(req, res, joblist)
     }
 }
 
 //#endregion
 
-router.all('/', api.GetUserCouponList.entry) // replace name
+//#region Implement - Declare
+
+api.Declare = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+        let jsonFileName = path.join(rootPath, 'SCW', 'declare.json')
+        nlib.JSONFile.save(jsonFileName, obj)
+        WebServer.sendJson(req, res, {
+                status: {
+                    code: 'S200',
+                    message: 'Success'
+                }
+            })
+    }
+}
+
+//#endregion
+
+router.post('/jobList', api.GetUserJobList.entry)
+router.post('/declare', api.Declare.entry)
 
 const init_routes = (svr) => {
-    svr.route('/dmt-scw/api/tod/jobList', router); // set route name
+    svr.route('/dmt-scw/api/tod', router); // set route name
 };
 
 module.exports.init_routes = exports.init_routes = init_routes;
