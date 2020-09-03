@@ -16,6 +16,30 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
+//#region Implement - currencyDenomList
+
+api.GetCurrencyDenomList = class {
+    static entry(req, res) {
+        let jsonFileName = path.join(rootPath, 'SCW', 'currencyList.json')
+        let joblist = nlib.JSONFile.load(jsonFileName)
+        WebServer.sendJson(req, res, joblist)
+    }
+}
+
+//#endregion
+
+//#region Implement - couponList
+
+api.GetCouponList = class {
+    static entry(req, res) {
+        let jsonFileName = path.join(rootPath, 'SCW', 'couponList.json')
+        let joblist = nlib.JSONFile.load(jsonFileName)
+        WebServer.sendJson(req, res, joblist)
+    }
+}
+
+//#endregion
+
 //#region Implement - GetJobList
 
 api.GetUserJobList = class {
@@ -46,6 +70,8 @@ api.Declare = class {
 
 //#endregion
 
+router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
+router.post('/couponList', api.GetCouponList.entry)
 router.post('/jobList', api.GetUserJobList.entry)
 router.post('/declare', api.Declare.entry)
 

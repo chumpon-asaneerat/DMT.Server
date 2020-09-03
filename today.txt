@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-09-03 #2
+- Add CurrentDemonList api.
+- Add CouponList api.
+
+[commited]
 Update 2020-09-03 #1
 - Add new joblist.json
 - Add decare api.
