@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-09-29 #1
+- sync rest test code for declare api.
+- sync rest test code for joblist api.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2020-09-03 #2
 - Add CurrentDemonList api.
 - Add CouponList api.
