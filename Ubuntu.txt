@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------------------------------------------------------	
+[X] Check connect to SQL Server (ETIMEOUT).
+    Solution 1: Need to add firewall inbound role for SQL Server
+	            "%ProgramFiles%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\sqlservr.exe"
+				Note: port 1433 for TCP/IP (but in firewall no need to specificed).
+	See: https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access?view=sql-server-ver15
+		 https://docs.microsoft.com/en-us/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15
+--------------------------------------------------------------------------------------------------------------------------------	
+[ ] Check error below
+	554 silly fetchPackageMetaData Error: getaddrinfo EAI_AGAIN registry.npmjs.org:443
+	554 silly fetchPackageMetaData     at Object._errnoException (util.js:1022:11)
+	554 silly fetchPackageMetaData     at errnoException (dns.js:55:15)
+	554 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+	554 silly fetchPackageMetaData  error for @types/express@^4.16.1 { Error: getaddrinfo EAI_AGAIN registry.npmjs.org:443
+	554 silly fetchPackageMetaData     at Object._errnoException (util.js:1022:11)
+	554 silly fetchPackageMetaData     at errnoException (dns.js:55:15)
+	554 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+	554 silly fetchPackageMetaData   code: 'EAI_AGAIN',
+	554 silly fetchPackageMetaData   errno: 'EAI_AGAIN',
+	554 silly fetchPackageMetaData   syscall: 'getaddrinfo',
+	554 silly fetchPackageMetaData   hostname: 'registry.npmjs.org',
+	554 silly fetchPackageMetaData   host: 'registry.npmjs.org',
+--------------------------------------------------------------------------------------------------------------------------------	
+[X] Check error below
+	> dmt.server@1.0.0 start /home/adisornt/DMT.Server
+	> node server.js
+
+	/home/adisornt/DMT.Server/nlib/nlib.js:281
+			catch { return null; }
+				  ^
+
+	SyntaxError: Unexpected token {
+		at createScript (vm.js:80:10)
+		at Object.runInThisContext (vm.js:139:10)
+		at Module._compile (module.js:616:28)
+		at Object.Module._extensions..js (module.js:663:10)
+		at Module.load (module.js:565:32)
+		at tryModuleLoad (module.js:505:12)
+		at Function.Module._load (module.js:497:3)
+		at Module.require (module.js:596:17)
+		at require (internal/module.js:11:18)
+		at Object.<anonymous> (/home/adisornt/DMT.Server/nlib/nlib-express.js:8:14)
+
+	npm ERR! Linux 4.15.0-109-generic
+	npm ERR! argv "/usr/bin/node" "/usr/bin/npm" "start"
+	npm ERR! node v8.10.0
+	
+	Solution 1: It looks like there is some encoding issue with the file that you're trying to run with Node. 
+	            Sometimes, files created with some command line utility does some encoding issues with the file. 
+			    So, I would suggest not to use them to create file. Just create file with Right-Click > New File > app.js 
+			    and replace your old file with this app.js. And try running node app.js.	
+    Solution 2: Looks like it's a because the node version is out of date,
+				Try catch block used to always require an error parameter like so:
+
+				try {
+
+				} catch(error) {
+
+				}
+				
+				But optional catch binding was suggested and implemented:
+
+				try {
+
+				} catch {
+
+				}
+				The only problem is that this requires node version 8 or above, so to fix you need to simply update your node.js
+				After you fix that though there might be another error underneath, depends on your code, which you will 
+				need to show
+	Solution 3: The most likely culprit is that you are using Node.js version 8, which does not support optional catch 
+	            binding (a part of ES2017, see https://github.com/tc39/proposal-optional-catch-binding).
+                LoopBack requires Node.js version 10 or newer to run. Please upgrade your Node.js version to 10.x or newer.
+--------------------------------------------------------------------------------------------------------------------------------	
+	

@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-09-29 #2
+- Add ubuntu.txt.
+
+[commited]
 Update 2020-09-29 #1
 - sync rest test code for declare api.
 - sync rest test code for joblist api.
