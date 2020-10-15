@@ -1,0 +1,26 @@
+{
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 3101,
+            "laneId": 1,
+            "jobNo": 43,
+            "staffId": "00111",
+            "bojDateTime": "2020-09-09T12:06:09.001+07:00",
+            "eojDateTime": "2020-09-09T12:06:12.2+07:00"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 3101,
+            "laneId": 1,
+            "jobNo": 44,
+            "staffId": "00111",
+            "bojDateTime": "2020-09-09T12:07:44.000+07:00",
+            "eojDateTime": "2020-09-09T12:07:44.000+07:00"
+        }
+    ],
+    "status": {
+        "code": "S200",
+        "message": "Success"
+    }
+}
