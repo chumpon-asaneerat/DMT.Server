@@ -1,17 +1,17 @@
 {
     "networkId": 31,
-    "plazaId": 3101,
+    "plazaId": 1,
     "staffId": "00111",
-    "bagNumber": "12312",
-    "safetyBeltNumber": "12312",
+    "bagNumber": "112",
+    "safetyBeltNumber": "112",
     "shiftTypeId": 1,
-    "declareDateTime": "2020-10-15T20:03:49.623+07:00",
-    "attendanceDateTime": "2020-10-15T19:57:58.652+07:00",
-    "departureDateTime": "2020-10-15T20:03:57.280+07:00",
-    "operationDate": "2020-10-15T00:00:00.000+07:00",
+    "declareDateTime": "2020-10-16T11:26:36.982+07:00",
+    "attendanceDateTime": "2020-10-16T11:26:46.525+07:00",
+    "departureDateTime": "2020-10-16T11:26:56.626+07:00",
+    "operationDate": "2020-10-16T00:00:00.000+07:00",
     "declareById": "00111",
     "declareByName": "ดินแดง",
-    "cashTotalAmount": 0,
+    "cashTotalAmount": 3000,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
@@ -20,29 +20,44 @@
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
-    "chiefId": "13566",
-    "chiefName": "นาย ผจญ สุดศิริ",
+    "chiefId": "26855",
+    "chiefName": "นาย วิรชัย ขำหิรัญ",
     "jobList": [
         {
             "networkId": 31,
             "plazaId": 1,
             "laneId": 1,
-            "jobNo": 45,
+            "jobNo": 41,
             "staffId": "00111",
-            "bojDateTime": "2020-10-15T19:59:59.001+07:00",
-            "eojDateTime": "2020-10-15T19:59:59.200+07:00"
+            "bojDateTime": "2020-10-15T10:10:09.001+07:00",
+            "eojDateTime": "2020-10-15T10:10:12.200+07:00"
         },
         {
             "networkId": 31,
             "plazaId": 1,
-            "laneId": 2,
-            "jobNo": 46,
+            "laneId": 1,
+            "jobNo": 42,
             "staffId": "00111",
-            "bojDateTime": "2020-10-15T20:00:00.000+07:00",
-            "eojDateTime": "2020-10-15T20:00:02.000+07:00"
+            "bojDateTime": "2020-10-15T10:11:09.001+07:00",
+            "eojDateTime": "2020-10-15T10:11:12.200+07:00"
         }
     ],
-    "cashList": [],
+    "cashList": [
+        {
+            "currencyId": 1,
+            "currencyDenomId": 6,
+            "denomValue": 10,
+            "number": 100,
+            "total": 1000
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 8,
+            "denomValue": 20,
+            "number": 100,
+            "total": 2000
+        }
+    ],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
