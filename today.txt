@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-10-16 #2
+- update fixed date in nlib-mssql.
+
+[commited]
 Update 2020-10-16 #1
 - update test code for declare api.
 

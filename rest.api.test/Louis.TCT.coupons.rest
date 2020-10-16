@@ -4,7 +4,7 @@ content-type: application/json
 
 {
     "tsbId": "311",
-    "userId": "14124",
+    "userId": "00111",
     "coupontype": "35"
 }
 

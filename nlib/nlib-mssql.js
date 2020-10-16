@@ -381,6 +381,10 @@ const formatBit = (value) => {
 }
 // The moment custom date formats.
 const dateFormats = [
+    'YYYY-MM-DD HH.mm.ss.SSSZ',
+    'YYYY/MM/DD HH.mm.ss.SSSZ',
+    'YYYY-MM-DD HH:mm:ss.SSSZ',
+    'YYYY/MM/DD HH:mm:ss.SSSZ',
     'YYYY-MM-DD HH.mm.ss.SSS',
     'YYYY/MM/DD HH.mm.ss.SSS',
     'YYYY-MM-DD HH:mm:ss.SSS',
@@ -389,11 +393,17 @@ const dateFormats = [
 const formatDateTime = (value) => {
     let ret = null;
     try {
-        let dt = moment(value, dateFormats);
+        let dt = moment(value, dateFormats, true).local();
         //ret = (dt.isValid()) ? new Date(dt.utc()) : null;
-        ret = (dt.isValid()) ? dt.toDate() : null;
+        let isValid = dt.isValid();
+        ret = (isValid) ? dt.toDate() : null;
         // fixed timezone offset (need to check if has problem)
-        ret = new Date(ret.getTime() - (ret.getTimezoneOffset() * 60 * 1000))
+        if (null !== ret) {
+            ret = new Date(ret.getTime() - (ret.getTimezoneOffset() * 60 * 1000))
+        }
+        else {
+            ret = new Date(value);
+        }
         //console.log('OTHER DATE (try to used moment.js):', ret);
     }
     catch (ex) {
