@@ -2,22 +2,22 @@
     "networkId": 31,
     "plazaId": 1,
     "staffId": "00111",
-    "bagNumber": "112",
-    "safetyBeltNumber": "112",
+    "bagNumber": "",
+    "safetyBeltNumber": "",
     "shiftTypeId": 1,
-    "declareDateTime": "2020-10-16T11:26:36.982+07:00",
-    "attendanceDateTime": "2020-10-16T11:26:46.525+07:00",
-    "departureDateTime": "2020-10-16T11:26:56.626+07:00",
-    "operationDate": "2020-10-16T00:00:00.000+07:00",
+    "declareDateTime": "2020-10-17T21:43:53.616+07:00",
+    "attendanceDateTime": "2020-10-17T21:44:02.973+07:00",
+    "departureDateTime": "2020-10-17T21:44:26.639+07:00",
+    "operationDate": "2020-10-17T21:44:26.638+07:00",
     "declareById": "00111",
     "declareByName": "ดินแดง",
-    "cashTotalAmount": 3000,
-    "couponTotalAmount": 0,
-    "couponBookTotalAmount": 0,
-    "cardAllowTotalAmount": 0,
+    "cashTotalAmount": 85,
+    "couponTotalAmount": 10,
+    "couponBookTotalAmount": 10925,
+    "cardAllowTotalAmount": 5,
     "qrcodeTotalAmount": 0,
     "emvTotalAmount": 0,
-    "otherTotalAmount": 0,
+    "otherTotalAmount": 5,
     "cashRemark": "",
     "otherRemark": "",
     "chiefId": "26855",
@@ -26,41 +26,70 @@
         {
             "networkId": 31,
             "plazaId": 1,
-            "laneId": 1,
-            "jobNo": 41,
+            "laneId": 2,
+            "jobNo": 46,
             "staffId": "00111",
-            "bojDateTime": "2020-10-15T10:10:09.001+07:00",
-            "eojDateTime": "2020-10-15T10:10:12.200+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 1,
-            "laneId": 1,
-            "jobNo": 42,
-            "staffId": "00111",
-            "bojDateTime": "2020-10-15T10:11:09.001+07:00",
-            "eojDateTime": "2020-10-15T10:11:12.200+07:00"
+            "bojDateTime": "2020-10-15T20:00:00.000+07:00",
+            "eojDateTime": "2020-10-15T20:00:02.000+07:00"
         }
     ],
     "cashList": [
         {
             "currencyId": 1,
-            "currencyDenomId": 6,
-            "denomValue": 10,
-            "number": 100,
-            "total": 1000
+            "currencyDenomId": 4,
+            "denomValue": 2,
+            "number": 5,
+            "total": 10
         },
         {
             "currencyId": 1,
-            "currencyDenomId": 8,
-            "denomValue": 20,
-            "number": 100,
-            "total": 2000
+            "currencyDenomId": 5,
+            "denomValue": 5,
+            "number": 5,
+            "total": 25
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 6,
+            "denomValue": 10,
+            "number": 5,
+            "total": 50
         }
     ],
-    "couponList": [],
-    "couponBookList": [],
-    "cardAllowList": [],
+    "couponList": [
+        {
+            "couponId": 2,
+            "couponValue": 35,
+            "number": 5,
+            "total": 175
+        },
+        {
+            "couponId": 4,
+            "couponValue": 80,
+            "number": 5,
+            "total": 400
+        }
+    ],
+    "couponBookList": [
+        {
+            "couponBookId": 1,
+            "couponBookValue": 35,
+            "number": 5,
+            "total": 3325
+        },
+        {
+            "couponBookId": 2,
+            "couponBookValue": 80,
+            "number": 5,
+            "total": 7600
+        }
+    ],
+    "cardAllowList": [
+        {
+            "cardAllowId": 2,
+            "number": 5
+        }
+    ],
     "qrcodeList": [],
     "emvList": []
 }
