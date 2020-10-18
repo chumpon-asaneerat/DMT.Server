@@ -381,10 +381,7 @@ const formatBit = (value) => {
 }
 // The moment custom date formats.
 const dateFormats = [
-    'YYYY-MM-DD HH.mm.ss.SSSZ',
-    'YYYY/MM/DD HH.mm.ss.SSSZ',
-    'YYYY-MM-DD HH:mm:ss.SSSZ',
-    'YYYY/MM/DD HH:mm:ss.SSSZ',
+    // SQL Server Format Styles.
     'YYYY-MM-DD HH.mm.ss.SSS',
     'YYYY/MM/DD HH.mm.ss.SSS',
     'YYYY-MM-DD HH:mm:ss.SSS',
@@ -393,24 +390,29 @@ const dateFormats = [
 const formatDateTime = (value) => {
     let ret = null;
     try {
-        let dt = moment(value, dateFormats, true).local();
-        //ret = (dt.isValid()) ? new Date(dt.utc()) : null;
-        let isValid = dt.isValid();
-        ret = (isValid) ? dt.toDate() : null;
-        // fixed timezone offset (need to check if has problem)
-        if (null !== ret) {
-            ret = new Date(ret.getTime() - (ret.getTimezoneOffset() * 60 * 1000))
+        if (null !== value) {
+            // make sure convert parameter to string.
+            let sVal = JSON.stringify(value);
+            // create moment object (default assume its local time).
+            let mObj = moment(sVal, dateFormats);
+            let isValid = mObj.isValid();
+            let dt = (isValid) ? mObj.toDate() : null;
+            if (null !== dt) {
+                let time = dt.getTime();
+                let tz = dt.getTimezoneOffset() * 60 * 1000;
+                ret = new Date(time - tz);
+            }
+            else {
+                console.log('Invalid moment date fomat : ', value);
+                ret = new Date(value);
+            }
         }
-        else {
-            ret = new Date(value);
-        }
-        //console.log('OTHER DATE (try to used moment.js):', ret);
     }
     catch (ex) {
+        console.log('Error convert date : ', value);
         console.log(ex);
-        console.log('OTHER DATE (try to used moment.js): failed.');
+        ret = null;
     }
-
     return ret;
 }
 /**
