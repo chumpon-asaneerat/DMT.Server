@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-10-18 #2
+- Update moment.js file for test date format and conversion #2.
+
+[commited]
 Update 2020-10-18 #1
 - Add moment.js file for test date format and conversion.
 
