@@ -42,6 +42,8 @@ api.SaveTACoupon = class {
             params.soldby = null
         }
 
+        //console.log('TA Save coupon TSBId:', params.tsbid)
+
         return params;
     }
     static async call(db, params) { 

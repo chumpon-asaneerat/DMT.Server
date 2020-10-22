@@ -35,6 +35,7 @@ api.TAGetCouponList = class {
         {
             params.coupontype = null
         }
+        //console.log('TA coupon getlist TSBId:', params.tsbid)
 
         return params;
     }

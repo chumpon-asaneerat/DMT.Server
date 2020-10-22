@@ -37,6 +37,8 @@ api.GetUserCouponList = class {
             params.coupontype = null
         }
 
+        //console.log('TA/TCT Coupons search TSBId:', params.tsbid)
+
         return params
     }
     static async call(db, params) { 

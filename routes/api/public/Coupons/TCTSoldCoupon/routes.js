@@ -22,10 +22,10 @@ api.TCTSoldCoupon = class {
     static prepare(req, res) {
         let params = WebServer.parseReq(req).data
 
-        if (params.tsbid == '') 
-        {
+        if (params.tsbid == '') {
             params.tsbid = null
         }
+        //console.log('TCT Sold coupon TSBId:', params.tsbid)
         
         return params
     }
