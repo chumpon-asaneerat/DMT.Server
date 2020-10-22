@@ -24,8 +24,8 @@ POST http://localhost:3000/api/users/coupons/getlist
 content-type: application/json
 
 {
-    "tsbid": "311",
-    "userid": "14211",
+    "tsbid": "319",
+    "userid": null,
     "transactiontype": null,
     "coupontype": null
 }
