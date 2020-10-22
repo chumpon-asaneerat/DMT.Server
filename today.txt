@@ -1,6 +1,10 @@
 
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-10-22 #3
+- Update test rest api.
+
+[commited]
 Update 2020-10-22 #2
 - Update api route code.
 - Update test rest api.
