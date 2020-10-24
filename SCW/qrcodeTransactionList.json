@@ -1,0 +1,16 @@
+{
+    "list": [
+        {
+            "trxDateTime": "2020-06-29T17:48:40.515+07",
+            "amount": 40.0,
+            "approvCode": "approveCode",
+            "refNo": "refNo",
+            "staffId": "41023",
+            "laneId": 1
+        }
+    ],
+    "status": {
+        "code": "S200",
+        "message": "Success"
+    }
+}
