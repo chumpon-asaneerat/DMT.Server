@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-10-24 #2
+- Add emv and qrcode transaction list routes.
+
+[commited]
 Update 2020-10-24 #1
 - Add emv and qrcode transaction list json files.
 

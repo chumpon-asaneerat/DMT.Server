@@ -64,6 +64,30 @@ api.GetUserJobList = class {
 
 //#endregion
 
+//#region Implement - emvTransactionList
+
+api.GetEMVTransactionList = class {
+    static entry(req, res) {
+        let jsonFileName = path.join(rootPath, 'SCW', 'emvTransactionList.json')
+        let joblist = nlib.JSONFile.load(jsonFileName)
+        WebServer.sendJson(req, res, joblist)
+    }
+}
+
+//#endregion
+
+//#region Implement - qrcodeTransactionList
+
+api.GetQRCodeTransactionList = class {
+    static entry(req, res) {
+        let jsonFileName = path.join(rootPath, 'SCW', 'qrcodeTransactionList.json')
+        let joblist = nlib.JSONFile.load(jsonFileName)
+        WebServer.sendJson(req, res, joblist)
+    }
+}
+
+//#endregion
+
 //#region Implement - Declare
 
 api.Declare = class {
@@ -87,6 +111,8 @@ router.post('/couponList', api.GetCouponList.entry)
 router.post('/cardAllowList', api.GetCarcAllowList.entry)
 router.post('/jobList', api.GetUserJobList.entry)
 router.post('/declare', api.Declare.entry)
+router.post('/emvTransactionList', api.GetEMVTransactionList.entry)
+router.post('/qrcodeTransactionList', api.GetQRCodeTransactionList.entry)
 
 const init_routes = (svr) => {
     svr.route('/dmt-scw/api/tod', router); // set route name
