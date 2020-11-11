@@ -1,12 +1,34 @@
 {
     "list": [
         {
-            "trxDateTime": "2020-06-29T17:48:40.515+07",
-            "amount": 40.0,
-            "approvCode": "approveCode",
-            "refNo": "refNo",
-            "staffId": "41023",
-            "laneId": 1
+            "trxDateTime": "2020-11-10T13:10:27.000+07",
+            "amount": 35,
+            "approvCode": "PCE7P2   ",
+            "refNo": "10000221201110131009",
+            "staffId": "00111",
+            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffNameEn": "Mr.Qfree Qfree",
+            "laneId": 5
+        },
+        {
+            "trxDateTime": "2020-11-10T13:43:57.000+07",
+            "amount": 35,
+            "approvCode": "3TSJ9E   ",
+            "refNo": "10000221201110134321",
+            "staffId": "00111",
+            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffNameEn": "Mr.Qfree Qfree",
+            "laneId": 5
+        },
+        {
+            "trxDateTime": "2020-11-10T13:44:28.000+07",
+            "amount": 35,
+            "approvCode": "CQA28X   ",
+            "refNo": "10000221201110134408",
+            "staffId": "00111",
+            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffNameEn": "Mr.Qfree Qfree",
+            "laneId": 5
         }
     ],
     "status": {
