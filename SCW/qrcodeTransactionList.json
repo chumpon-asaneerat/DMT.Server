@@ -5,8 +5,8 @@
             "amount": 35,
             "approvCode": "PCE7P2   ",
             "refNo": "10000221201110131009",
-            "staffId": "00111",
-            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffId": "26855",
+            "staffNameTh": "นาย วิรชัย ขำหิรัญ",
             "staffNameEn": "Mr.Qfree Qfree",
             "laneId": 5
         },
@@ -18,15 +18,15 @@
             "staffId": "00111",
             "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
             "staffNameEn": "Mr.Qfree Qfree",
-            "laneId": 5
+            "laneId": 6
         },
         {
             "trxDateTime": "2020-11-10T13:44:28.000+07",
             "amount": 35,
             "approvCode": "CQA28X   ",
             "refNo": "10000221201110134408",
-            "staffId": "00111",
-            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffId": "10111",
+            "staffNameTh": "Admin",
             "staffNameEn": "Mr.Qfree Qfree",
             "laneId": 5
         }
