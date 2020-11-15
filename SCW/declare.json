@@ -1,40 +1,81 @@
 {
     "networkId": 31,
     "plazaId": 1,
-    "staffId": "00111",
-    "bagNumber": "23423",
-    "safetyBeltNumber": "23423",
+    "staffId": "14211",
+    "bagNumber": "5555",
+    "safetyBeltNumber": "5555",
     "shiftTypeId": 1,
-    "declareDateTime": "2020-11-14T11:33:13.369+07:00",
-    "attendanceDateTime": "2020-11-14T11:33:25.183+07:00",
-    "departureDateTime": "2020-11-14T11:33:38.532+07:00",
-    "operationDate": "2020-10-15T00:00:00.000+07:00",
-    "declareById": "00111",
+    "declareDateTime": "2020-11-15T21:11:16.499+07:00",
+    "attendanceDateTime": "2020-11-15T21:11:26.756+07:00",
+    "departureDateTime": "2020-11-15T21:11:26.984+07:00",
+    "operationDate": "2020-11-15T00:00:00.000+07:00",
+    "declareById": "14211",
     "declareByName": "ดินแดง",
-    "cashTotalAmount": 50,
+    "cashTotalAmount": 100,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
-    "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 0,
-    "emvTotalAmount": 0,
+    "cardAllowTotalAmount": 13,
+    "qrcodeTotalAmount": 105,
+    "emvTotalAmount": 105,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
-    "chiefId": "26855",
-    "chiefName": "นาย วิรชัย ขำหิรัญ",
+    "chiefId": "10111",
+    "chiefName": "Admin 1",
     "jobList": [],
     "cashList": [
         {
             "currencyId": 1,
-            "currencyDenomId": 6,
-            "denomValue": 10,
+            "currencyDenomId": 8,
+            "denomValue": 20,
             "number": 5,
-            "total": 50
+            "total": 100
         }
     ],
     "couponList": [],
     "couponBookList": [],
-    "cardAllowList": [],
-    "qrcodeList": [],
-    "emvList": []
+    "cardAllowList": [
+        {
+            "cardAllowId": 1,
+            "number": 6
+        },
+        {
+            "cardAllowId": 2,
+            "number": 7
+        }
+    ],
+    "qrcodeList": [
+        {
+            "approvalCode": "PCE7P2   ",
+            "trxDate": "2020-11-10T13:10:27.000+07:00",
+            "amount": 35
+        },
+        {
+            "approvalCode": "3TSJ9E   ",
+            "trxDate": "2020-11-10T13:43:57.000+07:00",
+            "amount": 35
+        },
+        {
+            "approvalCode": "CQA28X   ",
+            "trxDate": "2020-11-10T13:44:28.000+07:00",
+            "amount": 35
+        }
+    ],
+    "emvList": [
+        {
+            "approvalCode": "PCE7P2   ",
+            "trxDate": "2020-11-10T13:10:27.000+07:00",
+            "amount": 35
+        },
+        {
+            "approvalCode": "3TSJ9E   ",
+            "trxDate": "2020-11-10T13:43:57.000+07:00",
+            "amount": 35
+        },
+        {
+            "approvalCode": "CQA28X   ",
+            "trxDate": "2020-11-10T13:44:28.000+07:00",
+            "amount": 35
+        }
+    ]
 }

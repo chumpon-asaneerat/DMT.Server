@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-11-15 #1
+- Update declare json file.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2020-11-14 #1
 - Update emv and qrcode transaction list json files.
 - Update declare json file.
