@@ -2,6 +2,7 @@
 [commited]
 Update 2020-11-30 #1
 - Add Table / SP for TA Credit Low Limit
+- Update TA Counpon and table SapWhsCodeTSBMap for SAP 
 
 ----------------------------------------------------------------------------------------------
 [commited]
