@@ -20,52 +20,6 @@
             "outputs": []
         }
     },
-    "TCTSoldCoupon": {
-        "type": "PROCEDURE",
-        "updated": "2020-08-11T21:37:30.027Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "nvarchar(2)"
-                },
-                {
-                    "name": "serialno",
-                    "type": "nvarchar(7)"
-                },
-                {
-                    "name": "price",
-                    "type": "decimal"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "solddate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "laneid",
-                    "type": "nvarchar(10)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "GetUserLaneAttendance": {
         "type": "PROCEDURE",
         "updated": "2020-08-11T21:37:30.030Z",
@@ -93,7 +47,7 @@
     },
     "TCTSaveLaneAttendance": {
         "type": "PROCEDURE",
-        "updated": "2020-08-11T21:37:30.033Z",
+        "updated": "2020-08-13T23:01:19.420Z",
         "parameter": {
             "inputs": [
                 {
@@ -137,9 +91,80 @@
             ]
         }
     },
+    "TCTSoldCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-13T23:07:14.393Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "price",
+                    "type": "decimal"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "solddate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TAGetCouponList": {
+        "type": "PROCEDURE",
+        "updated": "2020-08-24T10:14:36.137Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "transactiontype",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                }
+            ],
+            "outputs": []
+        }
+    },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2020-08-13T19:56:52.290Z",
+        "updated": "2020-08-24T10:18:07.190Z",
         "parameter": {
             "inputs": [
                 {
@@ -207,9 +232,9 @@
             ]
         }
     },
-    "TAGetCouponList": {
+    "TA_UpdateCreditLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2020-08-13T20:09:03.010Z",
+        "updated": "2020-11-30T11:06:31.820Z",
         "parameter": {
             "inputs": [
                 {
@@ -217,19 +242,60 @@
                     "type": "nvarchar(5)"
                 },
                 {
+                    "name": "bht1",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht2",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht5",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht10",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht20",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht50",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht100",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht500",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht1000",
+                    "type": "decimal"
+                },
+                {
                     "name": "userid",
                     "type": "nvarchar(10)"
                 },
                 {
-                    "name": "transactiontype",
-                    "type": "char(1)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "nvarchar(2)"
+                    "name": "updatedate",
+                    "type": "datetime"
                 }
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
         }
     }
 }

@@ -1,0 +1,18 @@
+### TA Save Low Limit Balance 
+POST http://localhost:3000/api/TA/CreditLowLimit/save
+content-type: application/json
+
+{
+    "tsbid": "311",
+    "bht1": 1000,
+    "bht2": 1000,
+    "bht5": 1000,
+    "bht10": 1000,
+    "bht20": 1000,
+    "bht50": 1000,
+    "bht100": 1000,
+    "bht500": 1000,
+    "bht1000": 1000,
+    "userid": "40001",
+    "updatedate": "2020-11-10T19:30:43.511Z"
+}

@@ -5,5 +5,9 @@
     "TCTSoldCoupon": true,
     "TCTSaveLaneAttendance": true,
     "GetUserLaneAttendance": true,
-    "TAGetCouponList": true
+    "TAGetCouponList": true,
+    "TA_GetExchangeData": false,
+    "TA_SaveExchangeTransaction": false,
+    "ESellingToTA": false,
+    "TA_UpdateCreditLowLimit": true
 }
