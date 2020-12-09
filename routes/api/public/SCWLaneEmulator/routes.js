@@ -5,7 +5,8 @@ const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 
 //const sqldb = require(path.join(nlib.paths.root, 'TAxTOD.db'));
-//const dbutils = require(path.join(rootPath, 'dmt', 'utils', 'db-utils')).DbUtils;
+const LaneActivityManager = require(path.join(rootPath, 'dmt', 'scw', 'LaneActivityManager')).LaneActivityManager;
+const laneMgr = new LaneActivityManager();
 
 const WebServer = require(path.join(rootPath, 'nlib', 'nlib-express'));
 const WebRouter = WebServer.WebRouter;
@@ -21,9 +22,12 @@ const api = class { }
 api.BOJ = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-
-        let joblist = nlib.JSONFile.load(jsonFileName)
-        WebServer.sendJson(req, res, joblist)
+        laneMgr.boj(obj.networkId, obj.plazaId, obj.laneId, obj.jobNo, obj.staffId)
+        let ret = { status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
     }
 }
 
@@ -34,9 +38,12 @@ api.BOJ = class {
 api.EOJ = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-
-        let joblist = nlib.JSONFile.load(jsonFileName)
-        WebServer.sendJson(req, res, joblist)
+        laneMgr.eoj(obj.networkId, obj.plazaId, obj.laneId, obj.jobNo, obj.staffId)
+        let ret = { status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
     }
 }
 
@@ -44,11 +51,13 @@ api.EOJ = class {
 
 //#region Implement - Clear Job
 
-api.EOJ = class {
+api.ClearJob = class {
     static entry(req, res) {
-        let obj = WebServer.parseReq(req).data
-        
-        let joblist = nlib.JSONFile.load(jsonFileName)
+        laneMgr.clear()
+        let ret = { status : {
+            code: "S200",
+            message: "Success"
+        }}
         WebServer.sendJson(req, res, joblist)
     }
 }

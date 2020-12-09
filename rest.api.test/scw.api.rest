@@ -7,3 +7,16 @@ content-type: application/json
     "plazaId": 3101,
     "staffId": "14124"
 }
+
+
+### EMULATOR TEST FUNCTIONS
+
+### BOJ
+POST http://localhost:3000/dmt-scw/api/emu/boj
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 3101,
+    "staffId": "14124"
+}
