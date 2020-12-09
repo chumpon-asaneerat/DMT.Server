@@ -1,13 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 3101,
-            "staffId": "14124",
-            "bojDateTime": null,
-            "eojDateTime": null
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"

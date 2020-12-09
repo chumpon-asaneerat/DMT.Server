@@ -17,6 +17,8 @@ content-type: application/json
 
 {
     "networkId": 31,
-    "plazaId": 3101,
-    "staffId": "14124"
+    "plazaId": 15,
+    "laneId": 5,
+    "jobNo": 1,
+    "staffId": "00112"
 }

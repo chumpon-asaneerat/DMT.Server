@@ -3,6 +3,7 @@
 const path = require('path');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
+const moment = require('moment');
 
 //#endregion
 
@@ -20,7 +21,7 @@ const LaneActivityManager = class {
             laneId: laneId,
             jobNo: jobNo,
             staffId: staffId,
-            bojDateTime: null,
+            bojDateTime: moment(Date.now()).format('YYYY-MM-DDTHH:mm:ss.SSSZZ'),
             eojDateTime: null
         }
         this.data.list.push(obj) // append to array.
@@ -40,7 +41,7 @@ const LaneActivityManager = class {
             el.jobNo === jobNo && 
             el.staffId === staffId
     }
-    filter(networkId, plazaId, laneId, jobNo, staffId) {
+    filter() {
         let rets = []
         if (this.data && this.data.list) {
             rets = this.data.list.filter(isMatch)
