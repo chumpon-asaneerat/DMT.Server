@@ -18,7 +18,19 @@ content-type: application/json
 {
     "networkId": 31,
     "plazaId": 15,
-    "laneId": 5,
+    "laneId": 6,
+    "jobNo": 1,
+    "staffId": "00112"
+}
+
+### EOJ
+POST http://localhost:3000/dmt-scw/api/emu/eoj
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "laneId": 4,
     "jobNo": 1,
     "staffId": "00112"
 }

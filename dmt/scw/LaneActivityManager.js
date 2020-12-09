@@ -4,6 +4,7 @@ const path = require('path');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 const moment = require('moment');
+const { Console } = require('console');
 
 //#endregion
 
@@ -15,6 +16,7 @@ const LaneActivityManager = class {
     }    
     boj(networkId, plazaId, laneId, jobNo, staffId) {
         if (!this.data || !this.data.list) this.clear()
+        let list = this.getOpendJobs(networkId, plazaId, laneId, jobNo, staffId)
         let obj = {
             networkId: networkId,
             plazaId: plazaId,
@@ -24,27 +26,36 @@ const LaneActivityManager = class {
             bojDateTime: moment(Date.now()).format('YYYY-MM-DDTHH:mm:ss.SSSZZ'),
             eojDateTime: null
         }
-        this.data.list.push(obj) // append to array.
-        this.save()
+        // Check no open job on current landId
+        if (list && list.length === 0) {
+            console.log('no opened job on current lane. ADD NEW!!')
+            this.data.list.push(obj) // append to array.
+            this.save()
+        }
+        else {
+            console.log('has opened job on current lane.')
+        }
     }
     eoj(networkId, plazaId, laneId, jobNo, staffId) {
         if (!this.data || !this.data.list) this.clear()
-        let list = this.filter(networkId, plazaId, laneId, jobNo, staffId)
+        let list = this.getOpendJobs(networkId, plazaId, laneId, jobNo, staffId)
         if (list && list.length > 0) {
+            console.log('has opened job count:', list.length)
+            list[0].eojDateTime = moment(Date.now()).format('YYYY-MM-DDTHH:mm:ss.SSSZZ')
             this.save()
         }
     }
-    isMatch(el) {
-        return el.networkId === networkId && 
-            el.plazaId === plazaId && 
-            el.laneId === laneId && 
-            el.jobNo === jobNo && 
-            el.staffId === staffId
-    }
-    filter() {
+    getOpendJobs(networkId, plazaId, laneId, jobNo, staffId) {
         let rets = []
         if (this.data && this.data.list) {
-            rets = this.data.list.filter(isMatch)
+            rets = this.data.list.filter((el) => {
+                return el.networkId === networkId && 
+                    el.plazaId === plazaId && 
+                    el.laneId === laneId && 
+                    el.jobNo === jobNo && 
+                    el.staffId === staffId &&
+                    el.eojDateTime === null            
+            })
         }
         return rets
     }
