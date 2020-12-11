@@ -4,8 +4,8 @@ const path = require('path');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 
-//const sqldb = require(path.join(nlib.paths.root, 'TAxTOD.db'));
-//const dbutils = require(path.join(rootPath, 'dmt', 'utils', 'db-utils')).DbUtils;
+const LaneActivityManager = require(path.join(rootPath, 'dmt', 'scw', 'LaneActivityManager')).LaneActivityManager;
+const laneMgr = new LaneActivityManager();
 
 const WebServer = require(path.join(rootPath, 'nlib', 'nlib-express'));
 const WebRouter = WebServer.WebRouter;
@@ -56,9 +56,15 @@ api.GetCarcAllowList = class {
 
 api.GetUserJobList = class {
     static entry(req, res) {
-        let jsonFileName = path.join(rootPath, 'SCW', 'joblist.json')
-        let joblist = nlib.JSONFile.load(jsonFileName)
-        WebServer.sendJson(req, res, joblist)
+        let obj = WebServer.parseReq(req).data
+        let jobs = laneMgr.getStaffJobs(obj.networkId, obj.plazaId, obj.staffId)
+        let ret = { 
+            list: jobs,
+            status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
     }
 }
 

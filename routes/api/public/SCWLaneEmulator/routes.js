@@ -4,7 +4,6 @@ const path = require('path');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 
-//const sqldb = require(path.join(nlib.paths.root, 'TAxTOD.db'));
 const LaneActivityManager = require(path.join(rootPath, 'dmt', 'scw', 'LaneActivityManager')).LaneActivityManager;
 const laneMgr = new LaneActivityManager();
 

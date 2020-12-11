@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-11 #2
+- Implements Lane getStaffJobs.
+- Update tod jobList routes.
+
+[commited]
 Update 2020-12-11 #1
 - Implements Lane RemoveJobs.
 
