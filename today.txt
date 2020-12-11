@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-11 #3
+- Update tod declare routes.
+
+[commited]
 Update 2020-12-11 #2
 - Implements Lane getStaffJobs.
 - Update tod jobList routes.

@@ -1,20 +1,20 @@
 {
     "networkId": 31,
-    "plazaId": 1,
-    "staffId": "14211",
+    "plazaId": 15,
+    "staffId": "00112",
     "bagNumber": "5555",
     "safetyBeltNumber": "5555",
     "shiftTypeId": 1,
-    "declareDateTime": "2020-11-15T21:11:16.499+07:00",
-    "attendanceDateTime": "2020-11-15T21:11:26.756+07:00",
-    "departureDateTime": "2020-11-15T21:11:26.984+07:00",
-    "operationDate": "2020-11-15T00:00:00.000+07:00",
-    "declareById": "14211",
+    "declareDateTime": "2020-11-16T14:11:58.216+07:00",
+    "attendanceDateTime": "2020-11-16T14:12:06.314+07:00",
+    "departureDateTime": "2020-11-16T14:12:06.363+07:00",
+    "operationDate": "2020-11-16T00:00:00.000+07:00",
+    "declareById": "00111",
     "declareByName": "ดินแดง",
-    "cashTotalAmount": 100,
+    "cashTotalAmount": 0,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
-    "cardAllowTotalAmount": 13,
+    "cardAllowTotalAmount": 0,
     "qrcodeTotalAmount": 105,
     "emvTotalAmount": 105,
     "otherTotalAmount": 0,
@@ -22,28 +22,21 @@
     "otherRemark": "",
     "chiefId": "10111",
     "chiefName": "Admin 1",
-    "jobList": [],
-    "cashList": [
+    "jobList": [
         {
-            "currencyId": 1,
-            "currencyDenomId": 8,
-            "denomValue": 20,
-            "number": 5,
-            "total": 100
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 6,
+            "jobNo": 1,
+            "staffId": "00112",
+            "bojDateTime": "2020-12-11T12:16:07.363+0700",
+            "eojDateTime": "2020-12-11T12:16:22.061+0700"
         }
     ],
+    "cashList": [],
     "couponList": [],
     "couponBookList": [],
-    "cardAllowList": [
-        {
-            "cardAllowId": 1,
-            "number": 6
-        },
-        {
-            "cardAllowId": 2,
-            "number": 7
-        }
-    ],
+    "cardAllowList": [],
     "qrcodeList": [
         {
             "approvalCode": "PCE7P2   ",

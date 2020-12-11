@@ -4,15 +4,6 @@
             "networkId": 31,
             "plazaId": 15,
             "laneId": 6,
-            "jobNo": 1,
-            "staffId": "00112",
-            "bojDateTime": "2020-12-11T12:16:07.363+0700",
-            "eojDateTime": "2020-12-11T12:16:22.061+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 6,
             "jobNo": 2,
             "staffId": "00112",
             "bojDateTime": "2020-12-11T12:17:55.794+0700",

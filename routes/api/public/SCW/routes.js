@@ -99,8 +99,14 @@ api.GetQRCodeTransactionList = class {
 api.Declare = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
+        // extract job list        
+        let jobs = (null != obj) ? obj.jobList : null
+
         let jsonFileName = path.join(rootPath, 'SCW', 'declare.json')
         nlib.JSONFile.save(jsonFileName, obj)
+
+        laneMgr.removeJobs(jobs); // remove job from list.
+
         WebServer.sendJson(req, res, {
                 status: {
                     code: 'S200',
