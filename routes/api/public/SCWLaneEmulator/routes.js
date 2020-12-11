@@ -49,6 +49,23 @@ api.EOJ = class {
 
 //#endregion
 
+//#region Implement - Remove Jobs
+
+api.RemoveJobs = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+        let jobs = (null != obj) ? obj.jobs : null
+        laneMgr.removeJobs(jobs)
+        let ret = { status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
+    }
+}
+
+//#endregion
+
 //#region Implement - Clear Job
 
 api.ClearJob = class {
@@ -66,6 +83,7 @@ api.ClearJob = class {
 
 router.post('/boj', api.BOJ.entry)
 router.post('/eoj', api.EOJ.entry)
+router.post('/removes', api.RemoveJobs.entry)
 router.post('/cls', api.ClearJob.entry)
 
 const init_routes = (svr) => {

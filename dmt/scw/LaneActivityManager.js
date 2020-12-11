@@ -15,6 +15,7 @@ const LaneActivityManager = class {
         this.load()
     }    
     boj(networkId, plazaId, laneId, jobNo, staffId) {
+        this.load()
         if (!this.data || !this.data.list) this.clear()
         let list = this.getOpendJobs(networkId, plazaId, laneId, jobNo, staffId)
         let obj = {
@@ -37,6 +38,7 @@ const LaneActivityManager = class {
         }
     }
     eoj(networkId, plazaId, laneId, jobNo, staffId) {
+        this.load()
         if (!this.data || !this.data.list) this.clear()
         let list = this.getOpendJobs(networkId, plazaId, laneId, jobNo, staffId)
         if (list && list.length > 0) {
@@ -45,8 +47,46 @@ const LaneActivityManager = class {
             this.save()
         }
     }
+    removeJobs(jobs) {
+        if (jobs && jobs.length > 0) {
+            let networkId, plazaId, laneId, jobNo, staffId, bojDateTime
+            if (this.data && this.data.list) {
+                jobs.forEach(job => {
+                    // extract each item data.
+                    networkId = job.networkId
+                    plazaId = job.plazaId
+                    laneId = job.laneId
+                    jobNo = job.jobNo
+                    staffId = job.staffId
+                    bojDateTime = job.bojDateTime
+                    // remove one by one.
+                    this.removeJob(networkId, plazaId, laneId, jobNo, staffId, bojDateTime)
+                })
+            }
+        }
+    }
+    removeJob(networkId, plazaId, laneId, jobNo, staffId, bojDateTime) {
+        this.load()
+        if (this.data && this.data.list) {
+            // loop to find match job attributes.
+            let i = this.data.list.length
+            while (i--) {
+                let el = this.data.list[i]
+                if (el.networkId === networkId && 
+                    el.plazaId === plazaId && 
+                    el.laneId === laneId && 
+                    el.jobNo === jobNo && 
+                    el.staffId === staffId &&
+                    el.bojDateTime === bojDateTime) {
+                        this.data.list.splice(i, 1) // remove from list
+                }
+            }
+            this.save()
+        }
+    }
     getOpendJobs(networkId, plazaId, laneId, jobNo, staffId) {
         let rets = []
+        this.load()
         if (this.data && this.data.list) {
             rets = this.data.list.filter((el) => {
                 return el.networkId === networkId && 
@@ -54,7 +94,7 @@ const LaneActivityManager = class {
                     el.laneId === laneId && 
                     el.jobNo === jobNo && 
                     el.staffId === staffId &&
-                    el.eojDateTime === null            
+                    el.eojDateTime === null
             })
         }
         return rets

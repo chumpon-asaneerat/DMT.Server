@@ -1,13 +1,14 @@
-### TA Save Coupon 
+### SCW FUNCTIONS
+
+### joblist 
 POST http://localhost:3000/dmt-scw/api/tod/jobList
 content-type: application/json
 
 {
     "networkId": 31,
-    "plazaId": 3101,
-    "staffId": "14124"
+    "plazaId": 15,
+    "staffId": "00112"
 }
-
 
 ### EMULATOR TEST FUNCTIONS
 
@@ -19,8 +20,8 @@ content-type: application/json
     "networkId": 31,
     "plazaId": 15,
     "laneId": 6,
-    "jobNo": 1,
-    "staffId": "00112"
+    "jobNo": 5,
+    "staffId": "00444"
 }
 
 ### EOJ
@@ -30,7 +31,31 @@ content-type: application/json
 {
     "networkId": 31,
     "plazaId": 15,
-    "laneId": 4,
-    "jobNo": 1,
+    "laneId": 6,
+    "jobNo": 3,
     "staffId": "00112"
+}
+
+### Remove Jobs
+POST http://localhost:3000/dmt-scw/api/emu/removes
+content-type: application/json
+
+{
+    "jobs" : [
+        { 
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 4,
+            "jobNo": 1,
+            "staffId": "00112",
+            "bojDateTime": "2020-12-10T00:59:47.835+0700"
+        }
+    ]
+}
+
+### Clear Jobs
+POST http://localhost:3000/dmt-scw/api/emu/cls
+content-type: application/json
+
+{
 }
