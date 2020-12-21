@@ -139,3 +139,93 @@ content-type: application/json
 
 {
 }
+
+### Add EMV
+POST http://localhost:3000/dmt-scw/api/emu/emv/add
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "laneId": 4,
+    "staffId": "00112",
+    "staffNameTh": "Mr. Test 1234",
+    "staffNameEn": "Mr. Test 1234",
+    "trxDateTime": "2020-12-21T00:59:47.835+0700",
+    "amount": 35,
+    "approvalCode": "APP_EMV_00001",
+    "refNo": "REF_EMV_00001"
+}
+
+### Remove EMV
+POST http://localhost:3000/dmt-scw/api/emu/emv/remove
+content-type: application/json
+
+{
+    "trxDateTime": "2020-12-21T00:59:47.835+0700",
+    "approvalCode": "APP_EMV_00001"
+}
+
+### Clear EMV
+POST http://localhost:3000/dmt-scw/api/emu/emv/cls
+content-type: application/json
+
+{
+}
+
+### emvTransactionList 
+POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112",
+    "startDateTime": "2020-12-21T00:00:00.000+0700",
+    "endDateTime": "2020-12-21T23:59:59.999+0700"
+}
+
+### Add QRCode
+POST http://localhost:3000/dmt-scw/api/emu/qrcode/add
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "laneId": 4,
+    "staffId": "00112",
+    "staffNameTh": "Mr. Test 1234",
+    "staffNameEn": "Mr. Test 1234",
+    "trxDateTime": "2020-12-21T00:59:47.835+0700",
+    "amount": 35,
+    "approvalCode": "APP_QR_00001",
+    "refNo": "REF_QR_00001"
+}
+
+### Remove QRCode
+POST http://localhost:3000/dmt-scw/api/emu/qrcode/remove
+content-type: application/json
+
+{
+    "trxDateTime": "2020-12-21T00:59:47.835+0700",
+    "approvalCode": "APP_QR_00001"
+}
+
+### Clear QRCode
+POST http://localhost:3000/dmt-scw/api/emu/qrcode/cls
+content-type: application/json
+
+{
+}
+
+### qrcodeTransactionList 
+POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112",
+    "startDateTime": "2020-12-21T00:00:00.000+0700",
+    "endDateTime": "2020-12-21T23:59:59.999+0700"
+}

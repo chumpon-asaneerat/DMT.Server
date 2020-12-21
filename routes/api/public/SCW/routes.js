@@ -7,6 +7,12 @@ const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 const LaneActivityManager = require(path.join(rootPath, 'dmt', 'scw', 'LaneActivityManager')).LaneActivityManager;
 const laneMgr = new LaneActivityManager();
 
+const EMVTransactionManager = require(path.join(rootPath, 'dmt', 'scw', 'EMVTransactionManager')).EMVTransactionManager;
+const emvMgr = new EMVTransactionManager();
+
+const QRCodeTransactionManager = require(path.join(rootPath, 'dmt', 'scw', 'QRCodeTransactionManager')).QRCodeTransactionManager;
+const qrMgr = new QRCodeTransactionManager();
+
 const WebServer = require(path.join(rootPath, 'nlib', 'nlib-express'));
 const WebRouter = WebServer.WebRouter;
 const router = new WebRouter();
@@ -74,9 +80,16 @@ api.GetUserJobList = class {
 
 api.GetEMVTransactionList = class {
     static entry(req, res) {
-        let jsonFileName = path.join(rootPath, 'SCW', 'emvTransactionList.json')
-        let joblist = nlib.JSONFile.load(jsonFileName)
-        WebServer.sendJson(req, res, joblist)
+        let obj = WebServer.parseReq(req).data
+        let emvs = emvMgr.getEMVTrans(obj.networkId, obj.plazaId, obj.staffId, 
+            obj.startDateTime, obj.endDateTime)
+        let ret = { 
+            list: emvs,
+            status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
     }
 }
 
@@ -86,9 +99,16 @@ api.GetEMVTransactionList = class {
 
 api.GetQRCodeTransactionList = class {
     static entry(req, res) {
-        let jsonFileName = path.join(rootPath, 'SCW', 'qrcodeTransactionList.json')
-        let joblist = nlib.JSONFile.load(jsonFileName)
-        WebServer.sendJson(req, res, joblist)
+        let obj = WebServer.parseReq(req).data
+        let qrcodes = qrMgr.getQRCodeTrans(obj.networkId, obj.plazaId, obj.staffId, 
+            obj.startDateTime, obj.endDateTime)
+        let ret = { 
+            list: qrcodes,
+            status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
     }
 }
 

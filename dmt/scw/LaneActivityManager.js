@@ -119,6 +119,7 @@ const LaneActivityManager = class {
                 message: "Success"
             }
         }
+        this.save();
     }
     load() {
         try {
