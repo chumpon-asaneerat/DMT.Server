@@ -138,6 +138,18 @@ api.Declare = class {
 
 //#endregion
 
+//#region Implement - passwordExpiresDays
+
+api.PasswordExpiresDays = class {
+    static entry(req, res) {
+        let jsonFileName = path.join(rootPath, 'SCW', 'passwordExpiresDays.json')
+        let joblist = nlib.JSONFile.load(jsonFileName)
+        WebServer.sendJson(req, res, joblist)
+    }
+}
+
+//#endregion
+
 router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
 router.post('/couponList', api.GetCouponList.entry)
 router.post('/cardAllowList', api.GetCarcAllowList.entry)
@@ -145,6 +157,7 @@ router.post('/jobList', api.GetUserJobList.entry)
 router.post('/declare', api.Declare.entry)
 router.post('/emvTransactionList', api.GetEMVTransactionList.entry)
 router.post('/qrcodeTransactionList', api.GetQRCodeTransactionList.entry)
+router.post('/passwordExpiresDays', api.PasswordExpiresDays.entry)
 
 const init_routes = (svr) => {
     svr.route('/dmt-scw/api/tod', router); // set route name

@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-22 #1
+- Implements passwordExpiresDays api.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2020-12-21 #1
 - Implements EMV Operations #1.
 - Implements QRCode Operations #1.
