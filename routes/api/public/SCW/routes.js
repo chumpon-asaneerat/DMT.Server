@@ -22,11 +22,11 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
-//#region Implement - currencyDenomList
+//#region Implement - cardAllowList
 
-api.GetCurrencyDenomList = class {
+api.GetCarcAllowList = class {
     static entry(req, res) {
-        let jsonFileName = path.join(rootPath, 'SCW', 'currencyList.json')
+        let jsonFileName = path.join(rootPath, 'SCW', 'cardAllowList.json')
         let joblist = nlib.JSONFile.load(jsonFileName)
         WebServer.sendJson(req, res, joblist)
     }
@@ -58,11 +58,43 @@ api.GetCouponBookList = class {
 
 //#endregion
 
-//#region Implement - cardAllowList
+//#region Implement - currencyDenomList
 
-api.GetCarcAllowList = class {
+api.GetCurrencyDenomList = class {
     static entry(req, res) {
-        let jsonFileName = path.join(rootPath, 'SCW', 'cardAllowList.json')
+        let jsonFileName = path.join(rootPath, 'SCW', 'currencyList.json')
+        let joblist = nlib.JSONFile.load(jsonFileName)
+        WebServer.sendJson(req, res, joblist)
+    }
+}
+
+//#endregion
+
+//#region Implement - SaveCheifDuty
+
+api.SaveCheifDuty = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+
+        let jsonFileName = path.join(rootPath, 'SCW', 'saveCheifDuty.json')
+        nlib.JSONFile.save(jsonFileName, obj)
+
+        WebServer.sendJson(req, res, {
+                status: {
+                    code: 'S200',
+                    message: 'Success'
+                }
+            })
+    }
+}
+
+//#endregion
+
+//#region Implement - passwordExpiresDays
+
+api.PasswordExpiresDays = class {
+    static entry(req, res) {
+        let jsonFileName = path.join(rootPath, 'SCW', 'passwordExpiresDays.json')
         let joblist = nlib.JSONFile.load(jsonFileName)
         WebServer.sendJson(req, res, joblist)
     }
@@ -150,29 +182,20 @@ api.Declare = class {
 
 //#endregion
 
-//#region Implement - passwordExpiresDays
-
-api.PasswordExpiresDays = class {
-    static entry(req, res) {
-        let jsonFileName = path.join(rootPath, 'SCW', 'passwordExpiresDays.json')
-        let joblist = nlib.JSONFile.load(jsonFileName)
-        WebServer.sendJson(req, res, joblist)
-    }
-}
-
-//#endregion
-
-router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
+// Master
+router.post('/cardAllowList', api.GetCarcAllowList.entry)
 router.post('/couponList', api.GetCouponList.entry)
 router.post('/couponBookList', api.GetCouponBookList.entry)
-router.post('/cardAllowList', api.GetCarcAllowList.entry)
-
+router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
+// Security
+router.post('/saveCheifDuty', api.SaveCheifDuty.entry)
+router.post('/passwordExpiresDays', api.PasswordExpiresDays.entry)
+// TOD
 router.post('/jobList', api.GetUserJobList.entry)
-router.post('/declare', api.Declare.entry)
 router.post('/emvTransactionList', api.GetEMVTransactionList.entry)
 router.post('/qrcodeTransactionList', api.GetQRCodeTransactionList.entry)
+router.post('/declare', api.Declare.entry)
 
-router.post('/passwordExpiresDays', api.PasswordExpiresDays.entry)
 
 const init_routes = (svr) => {
     svr.route('/dmt-scw/api/tod', router); // set route name

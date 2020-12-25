@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-25 #2
+- Implements saveCheifDuty api.
+
+[commited]
 Update 2020-12-25 #1
 - Implements couponBookList api.
 

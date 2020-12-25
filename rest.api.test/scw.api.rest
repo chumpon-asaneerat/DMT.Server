@@ -1,7 +1,7 @@
 ### SCW FUNCTIONS
 
-### currencyDenomList 
-POST http://localhost:3000/dmt-scw/api/tod/currencyDenomList
+### cardAllowList 
+POST http://localhost:3000/dmt-scw/api/tod/cardAllowList
 content-type: application/json
 
 {
@@ -24,8 +24,28 @@ content-type: application/json
     "networkId": 31
 }
 
-### cardAllowList 
-POST http://localhost:3000/dmt-scw/api/tod/cardAllowList
+### currencyDenomList 
+POST http://localhost:3000/dmt-scw/api/tod/currencyDenomList
+content-type: application/json
+
+{
+    "networkId": 31
+}
+
+### saveCheifDuty
+POST http://localhost:3000/dmt-scw/api/tod/saveCheifDuty
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00444",
+    "staffTypeId": 1,
+    "beginDateTime": "2020-12-25T07:55:30.000+07"
+}
+
+### passwordExpiresDays
+POST http://localhost:3000/dmt-scw/api/tod/passwordExpiresDays
 content-type: application/json
 
 {
@@ -40,6 +60,30 @@ content-type: application/json
     "networkId": 31,
     "plazaId": 15,
     "staffId": "00112"
+}
+
+### emvTransactionList 
+POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112",
+    "startDateTime": "2020-12-21T00:00:00.000+0700",
+    "endDateTime": "2020-12-21T23:59:59.999+0700"
+}
+
+### qrcodeTransactionList 
+POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112",
+    "startDateTime": "2020-12-21T00:00:00.000+0700",
+    "endDateTime": "2020-12-21T23:59:59.999+0700"
 }
 
 ### declare #1
@@ -205,17 +249,6 @@ content-type: application/json
 {
 }
 
-### emvTransactionList 
-POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
-content-type: application/json
-
-{
-    "networkId": 31,
-    "plazaId": 15,
-    "staffId": "00112",
-    "startDateTime": "2020-12-21T00:00:00.000+0700",
-    "endDateTime": "2020-12-21T23:59:59.999+0700"
-}
 
 ### Add QRCode
 POST http://localhost:3000/dmt-scw/api/emu/qrcode/add
@@ -248,24 +281,4 @@ POST http://localhost:3000/dmt-scw/api/emu/qrcode/cls
 content-type: application/json
 
 {
-}
-
-### qrcodeTransactionList 
-POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
-content-type: application/json
-
-{
-    "networkId": 31,
-    "plazaId": 15,
-    "staffId": "00112",
-    "startDateTime": "2020-12-21T00:00:00.000+0700",
-    "endDateTime": "2020-12-21T23:59:59.999+0700"
-}
-
-### passwordExpiresDays
-POST http://localhost:3000/dmt-scw/api/tod/passwordExpiresDays
-content-type: application/json
-
-{
-    "networkId": 31
 }
