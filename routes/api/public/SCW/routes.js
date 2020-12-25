@@ -90,6 +90,39 @@ api.SaveCheifDuty = class {
 
 //#endregion
 
+//#region Implement - GetCheifOnDuty
+
+api.GetCheifOnDuty = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+        let jsonFileName = path.join(rootPath, 'SCW', 'saveCheifDuty.json')
+        let data = nlib.JSONFile.load(jsonFileName)
+        let ret = {
+            networkId: obj.networkId,
+            plazaId: obj.plazaId,
+            staffId: null,
+            staffNameTh: null,
+            staffNameEn: null,
+            staffTypeId: obj.staffTypeId,
+            beginDateTime: null,
+            status: {
+                code: 'S200',
+                message: 'Success'
+            }
+        }
+        if (null !== data) {
+            ret.staffId = data.staffId,
+            ret.staffNameTh = 'Sim User',
+            ret.staffNameEn = 'Sim User',
+            ret.beginDateTime = data.beginDateTime
+        }
+
+        WebServer.sendJson(req, res, ret)
+    }
+}
+
+//#endregion
+
 //#region Implement - passwordExpiresDays
 
 api.PasswordExpiresDays = class {
@@ -189,6 +222,7 @@ router.post('/couponBookList', api.GetCouponBookList.entry)
 router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
 // Security
 router.post('/saveCheifDuty', api.SaveCheifDuty.entry)
+router.post('/cheifOnDuty', api.GetCheifOnDuty.entry)
 router.post('/passwordExpiresDays', api.PasswordExpiresDays.entry)
 // TOD
 router.post('/jobList', api.GetUserJobList.entry)

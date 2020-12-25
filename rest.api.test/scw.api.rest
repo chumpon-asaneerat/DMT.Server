@@ -44,6 +44,16 @@ content-type: application/json
     "beginDateTime": "2020-12-25T07:55:30.000+07"
 }
 
+### cheifOnDuty
+POST http://localhost:3000/dmt-scw/api/tod/cheifOnDuty
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffTypeId": 1
+}
+
 ### passwordExpiresDays
 POST http://localhost:3000/dmt-scw/api/tod/passwordExpiresDays
 content-type: application/json

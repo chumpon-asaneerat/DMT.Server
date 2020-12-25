@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-25 #3
+- Implements cheifOnDuty api.
+
+[commited]
 Update 2020-12-25 #2
 - Implements saveCheifDuty api.
 
