@@ -238,11 +238,15 @@ api.Declare = class {
         let obj = WebServer.parseReq(req).data
         // extract job list        
         let jobs = (null != obj) ? obj.jobList : null
+        let emvs = (null != obj) ? obj.emvList : null
+        let qrs = (null != obj) ? obj.qrcodeList : null
 
         let jsonFileName = path.join(rootPath, 'SCW', 'declare.json')
         nlib.JSONFile.save(jsonFileName, obj)
 
-        laneMgr.removeJobs(jobs); // remove job from list.
+        laneMgr.removeJobs(jobs) // remove job from list.
+        emvMgr.removes(emvs) // remove emv from list.
+        qrMgr.removes(qrs) // remove qrcode from list.
 
         WebServer.sendJson(req, res, {
                 status: {

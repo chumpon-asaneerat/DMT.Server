@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-25 #6
+- EMVTransactionManager Implements removes method.
+- QRCodeTransactionManager Implements removes method.
+- Update declare method to remove emvList, qrcodeList when declare.
+
+[commited]
 Update 2020-12-25 #5
 - Implements changePassword api.
 

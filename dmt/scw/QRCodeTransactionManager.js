@@ -52,6 +52,20 @@ const QRCodeTransactionManager = class {
             this.save()
         }
     }
+    removes(list) {
+        if (list && list.length > 0) {
+            let trxDateTime, approvalCode
+            if (this.data && this.data.list) {
+                list.forEach(item => {
+                    // extract each item data.
+                    trxDateTime = job.trxDate
+                    approvalCode = job.approvalCode
+                    // remove one by one.
+                    this.remove(trxDateTime, approvalCode)
+                })
+            }
+        }
+    }
     clear() {
         this.data = {
             list: [],
