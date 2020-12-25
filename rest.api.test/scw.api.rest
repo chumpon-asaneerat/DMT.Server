@@ -32,6 +32,18 @@ content-type: application/json
     "networkId": 31
 }
 
+### loginAudit
+POST http://localhost:3000/dmt-scw/api/tod/loginAudit
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00333",
+    "status": "fail",
+    "description": "invalid staff id"
+}
+
 ### saveCheifDuty
 POST http://localhost:3000/dmt-scw/api/tod/saveCheifDuty
 content-type: application/json

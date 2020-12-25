@@ -70,6 +70,26 @@ api.GetCurrencyDenomList = class {
 
 //#endregion
 
+//#region Implement - LoginAudit
+
+api.LoginAudit = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+
+        let jsonFileName = path.join(rootPath, 'SCW', 'loginAudit.json')
+        nlib.JSONFile.save(jsonFileName, obj)
+
+        WebServer.sendJson(req, res, {
+                status: {
+                    code: 'S200',
+                    message: 'Success'
+                }
+            })
+    }
+}
+
+//#endregion
+
 //#region Implement - SaveCheifDuty
 
 api.SaveCheifDuty = class {
@@ -221,11 +241,13 @@ router.post('/couponList', api.GetCouponList.entry)
 router.post('/couponBookList', api.GetCouponBookList.entry)
 router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
 // Security
+router.post('/loginAudit', api.LoginAudit.entry)
 router.post('/saveCheifDuty', api.SaveCheifDuty.entry)
 router.post('/cheifOnDuty', api.GetCheifOnDuty.entry)
 router.post('/passwordExpiresDays', api.PasswordExpiresDays.entry)
 // TOD
 router.post('/jobList', api.GetUserJobList.entry)
+//router.post('/jobList2', api.GetUserJobList2.entry) // not implements.
 router.post('/emvTransactionList', api.GetEMVTransactionList.entry)
 router.post('/qrcodeTransactionList', api.GetQRCodeTransactionList.entry)
 router.post('/declare', api.Declare.entry)

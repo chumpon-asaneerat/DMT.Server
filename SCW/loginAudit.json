@@ -1,0 +1,7 @@
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00333",
+    "status": "fail",
+    "description": "invalid staff id"
+}
