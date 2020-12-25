@@ -1,5 +1,13 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-25 #7
+- LaneActivityManager fixed bug in removeJob method.
+- EMVTransactionManager fixed bug in removes method.
+- EMVTransactionManager fixed bug in remove method.
+- QRCodeTransactionManager fixed bug in removes method.
+- QRCodeTransactionManager fixed bug in remove method.
+
+[commited]
 Update 2020-12-25 #6
 - EMVTransactionManager Implements removes method.
 - QRCodeTransactionManager Implements removes method.

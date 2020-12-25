@@ -37,15 +37,18 @@ const EMVTransactionManager = class {
             this.save()
         }
     }
-    remove(trxDateTime, approvalCode) {
+    remove(trxDateTime, approvCode) {
         this.load()
         if (this.data && this.data.list) {
             // loop to find match job attributes.
             let i = this.data.list.length
             while (i--) {
                 let el = this.data.list[i]
-                if (el.trxDateTime === trxDateTime && 
-                    el.approvalCode === approvalCode) {
+                // make sure in same format.
+                let dt1 = moment(el.trxDateTime).format('YYYY-MM-DDTHH:mm:ss.SSSZZ')
+                let dt2 = moment(trxDateTime).format('YYYY-MM-DDTHH:mm:ss.SSSZZ')
+                if (dt1 === dt2 && 
+                    el.approvCode.trim() === approvCode.trim()) {
                         this.data.list.splice(i, 1) // remove from list
                 }
             }
@@ -54,14 +57,14 @@ const EMVTransactionManager = class {
     }
     removes(list) {
         if (list && list.length > 0) {
-            let trxDateTime, approvalCode
+            let trxDateTime, approvCode
             if (this.data && this.data.list) {
                 list.forEach(item => {
                     // extract each item data.
-                    trxDateTime = job.trxDate
-                    approvalCode = job.approvalCode
+                    trxDateTime = item.trxDate
+                    approvCode = item.approvalCode
                     // remove one by one.
-                    this.remove(trxDateTime, approvalCode)
+                    this.remove(trxDateTime, approvCode)
                 })
             }
         }

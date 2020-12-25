@@ -72,12 +72,15 @@ const LaneActivityManager = class {
             let i = this.data.list.length
             while (i--) {
                 let el = this.data.list[i]
+                // make sure in same format.
+                let dt1 = moment(el.bojDateTime).format('YYYY-MM-DDTHH:mm:ss.SSSZZ')
+                let dt2 = moment(bojDateTime).format('YYYY-MM-DDTHH:mm:ss.SSSZZ')
                 if (el.networkId === networkId && 
                     el.plazaId === plazaId && 
                     el.laneId === laneId && 
                     el.jobNo === jobNo && 
                     el.staffId === staffId &&
-                    el.bojDateTime === bojDateTime) {
+                    dt1 === dt2) {
                         this.data.list.splice(i, 1) // remove from list
                 }
             }

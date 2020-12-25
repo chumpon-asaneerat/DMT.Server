@@ -168,29 +168,9 @@ content-type: application/json
       "approvalCode": "PCE7P2   ",
       "trxDate": "2020-11-10T13:10:27.000+07:00",
       "amount": 35.0
-    },
-    {
-      "approvalCode": "3TSJ9E   ",
-      "trxDate": "2020-11-10T13:43:57.000+07:00",
-      "amount": 35.0
-    },
-    {
-      "approvalCode": "CQA28X   ",
-      "trxDate": "2020-11-10T13:44:28.000+07:00",
-      "amount": 35.0
     }
   ],
   "emvList": [
-    {
-      "approvalCode": "PCE7P2   ",
-      "trxDate": "2020-11-10T13:10:27.000+07:00",
-      "amount": 35.0
-    },
-    {
-      "approvalCode": "3TSJ9E   ",
-      "trxDate": "2020-11-10T13:43:57.000+07:00",
-      "amount": 35.0
-    },
     {
       "approvalCode": "CQA28X   ",
       "trxDate": "2020-11-10T13:44:28.000+07:00",

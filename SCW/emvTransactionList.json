@@ -1,5 +1,26 @@
 {
-    "list": [],
+    "list": [
+        {
+            "trxDateTime": "2020-11-10T13:10:27.000+07",
+            "amount": 35,
+            "approvCode": "PCE7P2   ",
+            "refNo": "10000221201110131009",
+            "staffId": "00111",
+            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffNameEn": "Mr.Qfree Qfree",
+            "laneId": 6
+        },
+        {
+            "trxDateTime": "2020-11-10T13:43:57.000+07",
+            "amount": 35,
+            "approvCode": "3TSJ9E   ",
+            "refNo": "10000221201110134321",
+            "staffId": "00111",
+            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
+            "staffNameEn": "Mr.Qfree Qfree",
+            "laneId": 5
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"
