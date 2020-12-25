@@ -66,6 +66,17 @@ content-type: application/json
     "staffTypeId": 1
 }
 
+### changePassword
+POST http://localhost:3000/dmt-scw/api/tod/changePassword
+content-type: application/json
+
+{
+    "staffId": "00333",
+    "password": "e10adc3949ba59abbe56e057f20f883e",
+    "newPassword": "e10adc3949ba59abbe56e057f20f883e",
+    "confirmNewPassword": "e10adc3949ba59abbe56e057f20f883e"
+}
+
 ### passwordExpiresDays
 POST http://localhost:3000/dmt-scw/api/tod/passwordExpiresDays
 content-type: application/json

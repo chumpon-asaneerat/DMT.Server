@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-25 #5
+- Implements changePassword api.
+
+[commited]
 Update 2020-12-25 #4
 - Implements loginAudit api.
 

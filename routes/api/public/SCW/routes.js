@@ -143,6 +143,26 @@ api.GetCheifOnDuty = class {
 
 //#endregion
 
+//#region Implement - SaveCheifDuty
+
+api.ChangePassword = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+
+        let jsonFileName = path.join(rootPath, 'SCW', 'changePassword.json')
+        nlib.JSONFile.save(jsonFileName, obj)
+
+        WebServer.sendJson(req, res, {
+                status: {
+                    code: 'S200',
+                    message: 'Success'
+                }
+            })
+    }
+}
+
+//#endregion
+
 //#region Implement - passwordExpiresDays
 
 api.PasswordExpiresDays = class {
@@ -244,6 +264,7 @@ router.post('/currencyDenomList', api.GetCurrencyDenomList.entry)
 router.post('/loginAudit', api.LoginAudit.entry)
 router.post('/saveCheifDuty', api.SaveCheifDuty.entry)
 router.post('/cheifOnDuty', api.GetCheifOnDuty.entry)
+router.post('/changePassword', api.ChangePassword.entry)
 router.post('/passwordExpiresDays', api.PasswordExpiresDays.entry)
 // TOD
 router.post('/jobList', api.GetUserJobList.entry)
@@ -251,7 +272,6 @@ router.post('/jobList', api.GetUserJobList.entry)
 router.post('/emvTransactionList', api.GetEMVTransactionList.entry)
 router.post('/qrcodeTransactionList', api.GetQRCodeTransactionList.entry)
 router.post('/declare', api.Declare.entry)
-
 
 const init_routes = (svr) => {
     svr.route('/dmt-scw/api/tod', router); // set route name
