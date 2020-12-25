@@ -1,5 +1,37 @@
 ### SCW FUNCTIONS
 
+### currencyDenomList 
+POST http://localhost:3000/dmt-scw/api/tod/currencyDenomList
+content-type: application/json
+
+{
+    "networkId": 31
+}
+
+### couponList 
+POST http://localhost:3000/dmt-scw/api/tod/couponList
+content-type: application/json
+
+{
+    "networkId": 31
+}
+
+### couponBookList 
+POST http://localhost:3000/dmt-scw/api/tod/couponBookList
+content-type: application/json
+
+{
+    "networkId": 31
+}
+
+### cardAllowList 
+POST http://localhost:3000/dmt-scw/api/tod/cardAllowList
+content-type: application/json
+
+{
+    "networkId": 31
+}
+
 ### joblist 
 POST http://localhost:3000/dmt-scw/api/tod/jobList
 content-type: application/json

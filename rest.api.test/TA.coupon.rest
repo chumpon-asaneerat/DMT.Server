@@ -3,17 +3,17 @@ POST http://localhost:3000/api/users/coupons/save
 content-type: application/json
 
 {
-    "couponpk": null,
-    "transactionid": 122,
-    "transactiondate": "2020-08-06T18:25:43.511Z",
+    "couponpk": 12,
+    "transactionid": 444,
+    "transactiondate": "2020-12-25T18:25:43.511Z",
     "tsbid": "311",
     "coupontype": "35",
-    "serialno": "C112202",
-    "price": 655,
-    "userid": "14124",
-    "userreceivedate": "2020-08-06T18:25:43.511Z",
-    "Couponstatus": "1",
-    "solddate": "2020-08-06T18:25:43.511Z",
+    "serialno": "ข002213",
+    "price": 665,
+    "userid": "00111",
+    "userreceivedate": "2020-12-25T18:25:43.511Z",
+    "Couponstatus": "2",
+    "solddate": null,
     "soldby": null,
     "finishflag": "1"
 }
@@ -24,8 +24,8 @@ POST http://localhost:3000/api/users/coupons/getlist
 content-type: application/json
 
 {
-    "tsbid": "319",
-    "userid": null,
-    "transactiontype": null,
-    "coupontype": null
+    "TSBId": "311",
+    "UserId": null,
+    "TransactionType": 1,
+    "Coupontype": null
 }

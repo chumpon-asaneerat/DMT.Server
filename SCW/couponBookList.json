@@ -1,0 +1,20 @@
+{
+    "list": [
+        {
+            "couponBookId": 1,
+            "couponBookValue": 665.0,
+            "abbreviation": "35",
+            "description": "35 บาท"
+        },
+        {
+            "couponBookId": 2,
+            "couponBookValue": 1520.0,
+            "abbreviation": "80",
+            "description": "80 บาท"
+        }
+    ],
+    "status": {
+        "code": "S200",
+        "message": "Success"
+    }
+}
