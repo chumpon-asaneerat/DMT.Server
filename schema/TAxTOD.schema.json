@@ -137,34 +137,9 @@
             ]
         }
     },
-    "TAGetCouponList": {
-        "type": "PROCEDURE",
-        "updated": "2020-08-24T10:14:36.137Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "transactiontype",
-                    "type": "char(1)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "nvarchar(2)"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2020-08-24T10:18:07.190Z",
+        "updated": "2020-12-29T12:26:58.167Z",
         "parameter": {
             "inputs": [
                 {
@@ -218,6 +193,10 @@
                 {
                     "name": "finishflag",
                     "type": "char(1)"
+                },
+                {
+                    "name": "sendtaflag",
+                    "type": "char(1)"
                 }
             ],
             "outputs": [
@@ -232,9 +211,38 @@
             ]
         }
     },
+    "TAGetCouponList": {
+        "type": "PROCEDURE",
+        "updated": "2020-12-29T12:45:36.583Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "transactiontype",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                },
+                {
+                    "name": "flag",
+                    "type": "char(1)"
+                }
+            ],
+            "outputs": []
+        }
+    },
     "TA_UpdateCreditLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2020-11-30T11:43:52.287Z",
+        "updated": "2020-12-29T13:26:11.290Z",
         "parameter": {
             "inputs": [
                 {
@@ -296,6 +304,19 @@
                     "type": "nvarchar(max)"
                 }
             ]
+        }
+    },
+    "GetTSBLowLimit": {
+        "type": "PROCEDURE",
+        "updated": "2020-12-29T13:30:58.810Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
         }
     }
 }

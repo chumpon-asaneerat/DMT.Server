@@ -9,5 +9,6 @@
     "TA_GetExchangeData": false,
     "TA_SaveExchangeTransaction": false,
     "ESellingToTA": false,
-    "TA_UpdateCreditLowLimit": true
+    "TA_UpdateCreditLowLimit": true,
+    "GetTSBLowLimit": true
 }

@@ -1,5 +1,12 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2020-12-29 
+- Add Column sendtaflag Table TA_coupon 
+- Update SP for Saveing and getting Coupon
+- Update Table and SP TA_creditLowLimit
+
+
+[commited]
 Update 2020-12-25 #7
 - LaneActivityManager fixed bug in removeJob method.
 - EMVTransactionManager fixed bug in removes method.
