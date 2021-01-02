@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-02 #2
+- Add IsAlive route. 
+
+[commited]
 Update 2021-01-02
 - Add Quokka sample -> crypto for generate md5 hash. 
 
