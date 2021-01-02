@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-02
+- Add Quokka sample -> crypto for generate md5 hash. 
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2020-12-29 
 - Add Column sendtaflag Table TA_coupon 
 - Update SP for Saveing and getting Coupon
