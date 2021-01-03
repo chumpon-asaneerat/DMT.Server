@@ -22,7 +22,7 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
-//#region Implement - GetStaffs
+//#region Implement - GetAllJobs
 
 api.GetAllJobs = class {
     static entry(req, res) {
