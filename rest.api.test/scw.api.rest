@@ -213,6 +213,15 @@ content-type: application/json
     "staffId": "00112"
 }
 
+### Get All jobs (not enter revenue entry)
+POST http://localhost:3000/dmt-scw/api/emu/jobs
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15
+}
+
 ### Remove Jobs
 POST http://localhost:3000/dmt-scw/api/emu/removes
 content-type: application/json

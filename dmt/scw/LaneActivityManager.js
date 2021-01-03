@@ -114,6 +114,17 @@ const LaneActivityManager = class {
         }
         return rets
     }
+    getAllJobs(networkId, plazaId) {
+        let rets = []
+        this.load()
+        if (this.data && this.data.list) {
+            rets = this.data.list.filter((el) => {
+                return el.networkId === networkId && 
+                    el.plazaId === plazaId
+            })
+        }
+        return rets
+    }
     clear() {
         this.data = {
             list: [],

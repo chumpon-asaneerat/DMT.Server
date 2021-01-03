@@ -22,6 +22,24 @@ const router = new WebRouter();
 // static class.
 const api = class { }
 
+//#region Implement - GetStaffs
+
+api.GetAllJobs = class {
+    static entry(req, res) {
+        let obj = WebServer.parseReq(req).data
+        let list = laneMgr.getAllJobs(obj.networkId, obj.plazaId)
+        let ret = { 
+            list: list,
+            status : {
+            code: "S200",
+            message: "Success"
+        }}
+        WebServer.sendJson(req, res, ret)
+    }
+}
+
+//#endregion
+
 //#region Implement - BOJ (Lane)
 
 api.BOJ = class {
@@ -186,6 +204,7 @@ api.ClearQRCode = class {
 
 router.post('/boj', api.BOJ.entry)
 router.post('/eoj', api.EOJ.entry)
+router.post('/jobs', api.GetAllJobs.entry)
 router.post('/removes', api.RemoveJobs.entry)
 router.post('/cls', api.ClearJob.entry)
 
