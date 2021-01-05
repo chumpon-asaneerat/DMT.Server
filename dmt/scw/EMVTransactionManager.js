@@ -14,11 +14,13 @@ const EMVTransactionManager = class {
     constructor() {
         this.load()
     }    
-    add(laneId, staffId, staffNameTh, staffNameEn, trxDateTime, amount, approvCode, refNo) {
+    add(networkId, plazaId, laneId, staffId, staffNameTh, staffNameEn, trxDateTime, amount, approvCode, refNo) {
         this.load()
         if (!this.data || !this.data.list) this.clear()
         let list = this.data.list
         let obj = {
+            networkId: networkId,
+            plazaId: plazaId,
             laneId: laneId,
             staffId: staffId,
             staffNameTh: staffNameTh,
@@ -96,11 +98,39 @@ const EMVTransactionManager = class {
         let rets = []
         this.load()
         if (this.data && this.data.list) {
-            rets = this.data.list.filter((el) => {
-                return el.staffId === staffId && 
-                    el.trxDateTime >= startDateTime &&
-                    el.trxDateTime <= endDateTime
-            })
+
+            if (!startDateTime && ! endDateTime) {
+                rets = this.data.list.filter((el) => {
+                    return el.networkId === networkId &&
+                        el.plazaId === plazaId &&
+                        el.staffId === staffId
+                })
+            }
+            else if (startDateTime && !endDateTime) {
+                rets = this.data.list.filter((el) => {
+                    return el.networkId === networkId &&
+                        el.plazaId === plazaId &&
+                        el.staffId === staffId && 
+                        el.trxDateTime >= startDateTime
+                })
+            }
+            else if (!startDateTime && endDateTime) {
+                rets = this.data.list.filter((el) => {
+                    return el.networkId === networkId &&
+                        el.plazaId === plazaId &&
+                        el.staffId === staffId && 
+                        el.trxDateTime <= endDateTime
+                })
+            }
+            else {
+                rets = this.data.list.filter((el) => {
+                    return el.networkId === networkId &&
+                        el.plazaId === plazaId &&
+                        el.staffId === staffId && 
+                        el.trxDateTime >= startDateTime &&
+                        el.trxDateTime <= endDateTime
+                })
+            }
         }
         return rets
     }

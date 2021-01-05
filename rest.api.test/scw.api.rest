@@ -103,7 +103,7 @@ content-type: application/json
     "staffId": "00112"
 }
 
-### emvTransactionList 
+### emvTransactionList 1
 POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
 content-type: application/json
 
@@ -115,7 +115,28 @@ content-type: application/json
     "endDateTime": "2020-12-21T23:59:59.999+0700"
 }
 
-### qrcodeTransactionList 
+### emvTransactionList 2
+POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112"
+}
+
+### emvTransactionList 3
+POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112",
+    "startDateTime": "2020-12-21T00:00:00.000+0700"
+}
+
+### qrcodeTransactionList 1
 POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
 content-type: application/json
 
@@ -125,6 +146,27 @@ content-type: application/json
     "staffId": "00112",
     "startDateTime": "2020-12-21T00:00:00.000+0700",
     "endDateTime": "2020-12-21T23:59:59.999+0700"
+}
+
+### qrcodeTransactionList 2
+POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112"
+}
+
+### qrcodeTransactionList 3
+POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+content-type: application/json
+
+{
+    "networkId": 31,
+    "plazaId": 15,
+    "staffId": "00112",
+    "startDateTime": "2020-12-21T00:00:00.000+0700"
 }
 
 ### declare #1

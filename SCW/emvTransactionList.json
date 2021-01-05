@@ -1,34 +1,16 @@
 {
     "list": [
         {
-            "trxDateTime": "2020-11-10T13:10:27.000+07",
-            "amount": 35,
-            "approvCode": "PCE7P2   ",
-            "refNo": "10000221201110131009",
-            "staffId": "00111",
-            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
-            "staffNameEn": "Mr.Qfree Qfree",
-            "laneId": 6
-        },
-        {
-            "trxDateTime": "2020-11-10T13:43:57.000+07",
-            "amount": 35,
-            "approvCode": "3TSJ9E   ",
-            "refNo": "10000221201110134321",
-            "staffId": "00111",
-            "staffNameTh": "นาย.ฟัยศรน์ เฮะดือเระ",
-            "staffNameEn": "Mr.Qfree Qfree",
-            "laneId": 5
-        },
-        {
+            "networkId": 31,
+            "plazaId": 15,
             "laneId": 4,
             "staffId": "00112",
             "staffNameTh": "Mr. killer1115 killer1115",
             "staffNameEn": "Mr. killer1115 killer1115",
-            "trxDateTime": "2021-01-06T05:49:23.740+07:00",
-            "amount": 80,
-            "approvCode": "APV-NK-41310",
-            "refNo": "REF-N4-64403"
+            "trxDateTime": "2021-01-06T06:19:51.739+07:00",
+            "amount": 55,
+            "approvCode": "APV-5Y-95576",
+            "refNo": "REF-MI-34883"
         }
     ],
     "status": {

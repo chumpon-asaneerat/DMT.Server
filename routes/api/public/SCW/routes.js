@@ -200,8 +200,23 @@ api.GetEMVTransactionList = class {
         let obj = WebServer.parseReq(req).data
         let emvs = emvMgr.getEMVTrans(obj.networkId, obj.plazaId, obj.staffId, 
             obj.startDateTime, obj.endDateTime)
+        let results = []
+        if (emvs && emvs.length > 0) {
+            emvs.forEach(item => {
+                results.push({
+                    trxDateTime: item.trxDateTime,
+                    amount: item.amount,
+                    approvCode: item.approvCode,
+                    refNo: item.refNo,
+                    staffId: item.staffId,
+                    staffNameTh: item.staffNameTh,
+                    staffNameEn: item.staffNameEn,
+                    laneId: item.laneId
+                })
+            }) 
+        }
         let ret = { 
-            list: emvs,
+            list: results,
             status : {
             code: "S200",
             message: "Success"
@@ -219,8 +234,23 @@ api.GetQRCodeTransactionList = class {
         let obj = WebServer.parseReq(req).data
         let qrcodes = qrMgr.getQRCodeTrans(obj.networkId, obj.plazaId, obj.staffId, 
             obj.startDateTime, obj.endDateTime)
+        let results = []            
+        if (qrcodes && qrcodes.length > 0) {
+            qrcodes.forEach(item => {
+                results.push({
+                    trxDateTime: item.trxDateTime,
+                    amount: item.amount,
+                    approvCode: item.approvCode,
+                    refNo: item.refNo,
+                    staffId: item.staffId,
+                    staffNameTh: item.staffNameTh,
+                    staffNameEn: item.staffNameEn,
+                    laneId: item.laneId
+                })
+            }) 
+        }
         let ret = { 
-            list: qrcodes,
+            list: results,
             status : {
             code: "S200",
             message: "Success"

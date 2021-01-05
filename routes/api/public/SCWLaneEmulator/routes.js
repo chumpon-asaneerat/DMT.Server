@@ -109,7 +109,7 @@ api.ClearJob = class {
 api.AddEMV = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-        emvMgr.add(obj.laneId, 
+        emvMgr.add(obj.networkId, obj.plazaId, obj.laneId, 
             obj.staffId, obj.staffNameTh, obj.staffNameEn,
             obj.trxDateTime, obj.amount, obj.approvalCode, obj.refNo)
         let ret = { status : {
@@ -158,7 +158,7 @@ api.ClearEMV = class {
 api.AddQRCode = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-        qrMgr.add(obj.laneId, 
+        qrMgr.add(obj.networkId, obj.plazaId, obj.laneId, 
             obj.staffId, obj.staffNameTh, obj.staffNameEn,
             obj.trxDateTime, obj.amount, obj.approvalCode, obj.refNo)
         let ret = { status : {

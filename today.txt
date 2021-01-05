@@ -1,5 +1,17 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-06 #2
+- EMVTransactionManager Add method restore networkId, plazaId parameter.
+- EMVTransactionManager -> getEMVTrans method add if-else condition check start/end datetime.
+- QRCodeTransactionManager Add method restore networkId, plazaId parameter.
+- QRCodeTransactionManager -> getQRCodeTrans method add if-else condition check start/end datetime.
+- Update route AddEMV -> restore  networkId, plazaId parameter.
+- Update route AddQRCode -> restore  networkId, plazaId parameter.
+- Update emvTransactionList.json (from simulator app).
+- Update qrcodeTransactionList.json (from simulator app).
+- Update jobList.json (from simulator app).
+
+[commited]
 Update 2021-01-06 #1
 - EMVTransactionManager Add method remove networkId, plazaId parameter.
 - QRCodeTransactionManager Add method remove networkId, plazaId parameter.
