@@ -134,6 +134,15 @@
             "staffId": "00112",
             "bojDateTime": "2021-01-06T05:20:08.566+0700",
             "eojDateTime": null
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 5,
+            "jobNo": 1,
+            "staffId": "00113",
+            "bojDateTime": "2021-01-06T06:32:21.260+0700",
+            "eojDateTime": null
         }
     ],
     "status": {
