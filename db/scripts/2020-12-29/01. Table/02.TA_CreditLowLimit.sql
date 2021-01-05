@@ -1,7 +1,4 @@
 
-ALTER TABLE [dbo].[TA_CreditLowLimit] DROP CONSTRAINT [DF__TA_Credit__usefl__7CD98669]
-GO
-
 /****** Object:  Table [dbo].[TA_CreditLowLimit]    Script Date: 12/29/2020 1:07:58 PM ******/
 DROP TABLE [dbo].[TA_CreditLowLimit]
 GO
