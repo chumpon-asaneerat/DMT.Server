@@ -61,7 +61,7 @@
             "jobNo": 1,
             "staffId": "00112",
             "bojDateTime": "2021-01-03T21:57:31.933+0700",
-            "eojDateTime": null
+            "eojDateTime": "2021-01-05T08:25:21.733+0700"
         },
         {
             "networkId": 31,
@@ -70,7 +70,16 @@
             "jobNo": 2,
             "staffId": "00116",
             "bojDateTime": "2021-01-03T21:57:38.449+0700",
-            "eojDateTime": null
+            "eojDateTime": "2021-01-05T08:25:10.168+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 1,
+            "jobNo": 2,
+            "staffId": "00112",
+            "bojDateTime": "2021-01-05T08:24:21.348+0700",
+            "eojDateTime": "2021-01-05T08:25:12.096+0700"
         }
     ],
     "status": {
