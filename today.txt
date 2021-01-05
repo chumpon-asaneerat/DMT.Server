@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-05 #3
+- Add SP UpdateflagTACouponReceive for TA Update sendtaflag
+- create api /api/TA/coupons/updatereceive for SP UpdateflagTACouponReceive
+- Alter SP SaveTACoupon remove parameter @sendtaflag 
+
+[commited]
 Update 2021-01-05 #2
 - Fixed sql script bug drop constrain.
 

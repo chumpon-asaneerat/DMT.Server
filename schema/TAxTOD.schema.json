@@ -137,80 +137,6 @@
             ]
         }
     },
-    "SaveTACoupon": {
-        "type": "PROCEDURE",
-        "updated": "2020-12-29T12:26:58.167Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "couponpk",
-                    "type": "int"
-                },
-                {
-                    "name": "transactionid",
-                    "type": "int"
-                },
-                {
-                    "name": "transactiondate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "varchar(2)"
-                },
-                {
-                    "name": "serialno",
-                    "type": "nvarchar(7)"
-                },
-                {
-                    "name": "price",
-                    "type": "decimal"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "userreceivedate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "Couponstatus",
-                    "type": "char(1)"
-                },
-                {
-                    "name": "solddate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "soldby",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "finishflag",
-                    "type": "char(1)"
-                },
-                {
-                    "name": "sendtaflag",
-                    "type": "char(1)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "TAGetCouponList": {
         "type": "PROCEDURE",
         "updated": "2020-12-29T12:45:36.583Z",
@@ -317,6 +243,98 @@
                 }
             ],
             "outputs": []
+        }
+    },
+    "SaveTACoupon": {
+        "type": "PROCEDURE",
+        "updated": "2021-01-05T20:40:28.277Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "couponpk",
+                    "type": "int"
+                },
+                {
+                    "name": "transactionid",
+                    "type": "int"
+                },
+                {
+                    "name": "transactiondate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "varchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "price",
+                    "type": "decimal"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userreceivedate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "Couponstatus",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "solddate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "soldby",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "finishflag",
+                    "type": "char(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "UpdateflagTACouponReceive": {
+        "type": "PROCEDURE",
+        "updated": "2021-01-05T20:42:42.580Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
         }
     }
 }

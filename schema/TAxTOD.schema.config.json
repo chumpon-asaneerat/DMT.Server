@@ -10,5 +10,6 @@
     "TA_SaveExchangeTransaction": false,
     "ESellingToTA": false,
     "TA_UpdateCreditLowLimit": true,
-    "GetTSBLowLimit": true
+    "GetTSBLowLimit": true,
+    "UpdateflagTACouponReceive": true
 }

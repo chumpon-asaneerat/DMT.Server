@@ -28,6 +28,14 @@ content-type: application/json
     "TSBId": "319",
     "UserId": null,
     "TransactionType": 1,
-    "Coupontype": null,
+    "Coupontype": 35,
     "flag": null
+}
+
+### Gets all TSB coupons Data
+POST http://localhost:3000/api/TA/coupons/updatereceive
+content-type: application/json
+
+{
+    "serialno": "ข003875"
 }
