@@ -14,13 +14,11 @@ const EMVTransactionManager = class {
     constructor() {
         this.load()
     }    
-    add(networkId, plazaId, laneId, staffId, staffNameTh, staffNameEn, trxDateTime, amount, approvCode, refNo) {
+    add(laneId, staffId, staffNameTh, staffNameEn, trxDateTime, amount, approvCode, refNo) {
         this.load()
         if (!this.data || !this.data.list) this.clear()
         let list = this.data.list
         let obj = {
-            networkId: networkId,
-            plazaId: plazaId, 
             laneId: laneId,
             staffId: staffId,
             staffNameTh: staffNameTh,
@@ -99,9 +97,7 @@ const EMVTransactionManager = class {
         this.load()
         if (this.data && this.data.list) {
             rets = this.data.list.filter((el) => {
-                return el.networkId === networkId && 
-                    el.plazaId === plazaId && 
-                    el.staffId === staffId && 
+                return el.staffId === staffId && 
                     el.trxDateTime >= startDateTime &&
                     el.trxDateTime <= endDateTime
             })

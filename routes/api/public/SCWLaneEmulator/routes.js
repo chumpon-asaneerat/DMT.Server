@@ -109,9 +109,9 @@ api.ClearJob = class {
 api.AddEMV = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-        emvMgr.add(obj.networkId, obj.plazaId, obj.laneId, 
+        emvMgr.add(obj.laneId, 
             obj.staffId, obj.staffNameTh, obj.staffNameEn,
-            obj.trxDateTime, obj.amount, obj.approvCode, obj.refNo)
+            obj.trxDateTime, obj.amount, obj.approvalCode, obj.refNo)
         let ret = { status : {
             code: "S200",
             message: "Success"
@@ -127,7 +127,7 @@ api.AddEMV = class {
 api.RemoveEMV = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-        emvMgr.remove(obj.trxDateTime, obj.approvCode)
+        emvMgr.remove(obj.trxDateTime, obj.approvalCode)
         let ret = { status : {
             code: "S200",
             message: "Success"
@@ -158,9 +158,9 @@ api.ClearEMV = class {
 api.AddQRCode = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-        qrMgr.add(obj.networkId, obj.plazaId, obj.laneId, 
+        qrMgr.add(obj.laneId, 
             obj.staffId, obj.staffNameTh, obj.staffNameEn,
-            obj.trxDateTime, obj.amount, obj.approvCode, obj.refNo)
+            obj.trxDateTime, obj.amount, obj.approvalCode, obj.refNo)
         let ret = { status : {
             code: "S200",
             message: "Success"
@@ -176,7 +176,7 @@ api.AddQRCode = class {
 api.RemoveQRCode = class {
     static entry(req, res) {
         let obj = WebServer.parseReq(req).data
-        qrMgr.remove(obj.trxDateTime, obj.approvCode)
+        qrMgr.remove(obj.trxDateTime, obj.approvalCode)
         let ret = { status : {
             code: "S200",
             message: "Success"

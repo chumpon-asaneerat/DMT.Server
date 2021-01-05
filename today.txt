@@ -1,5 +1,16 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-06 #1
+- EMVTransactionManager Add method remove networkId, plazaId parameter.
+- QRCodeTransactionManager Add method remove networkId, plazaId parameter.
+- Update route AddEMV -> remove  networkId, plazaId parameter.
+- Update route AddQRCode -> remove  networkId, plazaId parameter.
+- Update emvTransactionList.json (from simulator app).
+- Update qrcodeTransactionList.json (from simulator app).
+- Update jobList.json (from simulator app).
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-01-05 #4
 - Add test and update comment in TA.coupon.rest file.
 
