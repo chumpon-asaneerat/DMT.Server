@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-05 #4
+- Add test and update comment in TA.coupon.rest file.
+
+[commited]
 Update 2021-01-05 #3
 - Add SP UpdateflagTACouponReceive for TA Update sendtaflag
 - create api /api/TA/coupons/updatereceive for SP UpdateflagTACouponReceive

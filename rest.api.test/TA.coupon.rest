@@ -20,7 +20,28 @@ content-type: application/json
 }
 
 
-### Gets all TSB coupons Data
+### Gets New TSB coupons data (only newly data which is flag is 0)
+POST http://localhost:3000/api/users/coupons/getlist
+content-type: application/json
+
+{
+    "TSBId": "319",
+    "UserId": null,
+    "TransactionType": 1,
+    "Coupontype": 35,
+    "flag": 0
+}
+
+### Update TSB coupons flags (call when read and stored to local database to mark flag to 1).
+POST http://localhost:3000/api/TA/coupons/updatereceive
+content-type: application/json
+
+{
+    "serialno": "ข003915"
+}
+
+
+### Gets All TSB coupons data
 POST http://localhost:3000/api/users/coupons/getlist
 content-type: application/json
 
@@ -30,12 +51,4 @@ content-type: application/json
     "TransactionType": 1,
     "Coupontype": 35,
     "flag": null
-}
-
-### Gets all TSB coupons Data
-POST http://localhost:3000/api/TA/coupons/updatereceive
-content-type: application/json
-
-{
-    "serialno": "ข003875"
 }
