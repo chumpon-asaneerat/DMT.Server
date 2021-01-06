@@ -23,6 +23,66 @@
             "amount": 75,
             "approvCode": "APV-KP-12500",
             "refNo": "REF-XL-43010"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 5,
+            "staffId": "00113",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-01-06T07:30:53.904+07:00",
+            "amount": 1500,
+            "approvCode": "APV-QY-65473",
+            "refNo": "REF-KA-85506"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 11,
+            "staffId": "00113",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-01-06T07:32:23.720+07:00",
+            "amount": 1200,
+            "approvCode": "APV-JU-00228",
+            "refNo": "REF-04-67287"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 5,
+            "staffId": "00333",
+            "staffNameTh": "Mr. fff Punk3",
+            "staffNameEn": "Mr. fff Punk3",
+            "trxDateTime": "2021-01-06T07:39:26.649+07:00",
+            "amount": 2500,
+            "approvCode": "APV-RU-33680",
+            "refNo": "REF-D3-05520"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 11,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-06T07:40:24.488+07:00",
+            "amount": 200,
+            "approvCode": "APV-6Y-84233",
+            "refNo": "REF-GX-09006"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 3,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-06T07:41:14.927+07:00",
+            "amount": 200,
+            "approvCode": "APV-YW-21267",
+            "refNo": "REF-2N-82467"
         }
     ],
     "status": {

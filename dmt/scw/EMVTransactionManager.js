@@ -98,38 +98,69 @@ const EMVTransactionManager = class {
         let rets = []
         this.load()
         if (this.data && this.data.list) {
-
-            if (!startDateTime && ! endDateTime) {
-                rets = this.data.list.filter((el) => {
-                    return el.networkId === networkId &&
-                        el.plazaId === plazaId &&
-                        el.staffId === staffId
-                })
-            }
-            else if (startDateTime && !endDateTime) {
-                rets = this.data.list.filter((el) => {
-                    return el.networkId === networkId &&
-                        el.plazaId === plazaId &&
-                        el.staffId === staffId && 
-                        el.trxDateTime >= startDateTime
-                })
-            }
-            else if (!startDateTime && endDateTime) {
-                rets = this.data.list.filter((el) => {
-                    return el.networkId === networkId &&
-                        el.plazaId === plazaId &&
-                        el.staffId === staffId && 
-                        el.trxDateTime <= endDateTime
-                })
+            if (staffId) {
+                if (!startDateTime && ! endDateTime) {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.staffId === staffId
+                    })
+                }
+                else if (startDateTime && !endDateTime) {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.staffId === staffId && 
+                            el.trxDateTime >= startDateTime
+                    })
+                }
+                else if (!startDateTime && endDateTime) {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.staffId === staffId && 
+                            el.trxDateTime <= endDateTime
+                    })
+                }
+                else {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.staffId === staffId && 
+                            el.trxDateTime >= startDateTime &&
+                            el.trxDateTime <= endDateTime
+                    })
+                }
             }
             else {
-                rets = this.data.list.filter((el) => {
-                    return el.networkId === networkId &&
-                        el.plazaId === plazaId &&
-                        el.staffId === staffId && 
-                        el.trxDateTime >= startDateTime &&
-                        el.trxDateTime <= endDateTime
-                })
+                if (!startDateTime && ! endDateTime) {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId
+                    })
+                }
+                else if (startDateTime && !endDateTime) {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.trxDateTime >= startDateTime
+                    })
+                }
+                else if (!startDateTime && endDateTime) {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.trxDateTime <= endDateTime
+                    })
+                }
+                else {
+                    rets = this.data.list.filter((el) => {
+                        return el.networkId === networkId &&
+                            el.plazaId === plazaId &&
+                            el.trxDateTime >= startDateTime &&
+                            el.trxDateTime <= endDateTime
+                    })
+                }
             }
         }
         return rets
