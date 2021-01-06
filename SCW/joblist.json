@@ -215,6 +215,24 @@
             "staffId": "00111",
             "bojDateTime": "2021-01-06T07:49:19.233+0700",
             "eojDateTime": "2021-01-06T07:50:09.122+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 1,
+            "jobNo": 1,
+            "staffId": "00112",
+            "bojDateTime": "2021-01-06T08:19:01.829+0700",
+            "eojDateTime": "2021-01-06T08:19:05.199+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 3,
+            "jobNo": 2,
+            "staffId": "00112",
+            "bojDateTime": "2021-01-06T08:19:19.885+0700",
+            "eojDateTime": "2021-01-06T08:19:30.046+0700"
         }
     ],
     "status": {

@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-06 #5
+- Update jobList.json (from simulator app).
+
+[commited]
 Update 2021-01-06 #4
 - EMVTransactionManager -> getEMVTrans method add if-else condition check staffId.
 - QRCodeTransactionManager -> getQRCodeTrans method add if-else condition staffId.
