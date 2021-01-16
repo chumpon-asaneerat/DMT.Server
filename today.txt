@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-17 #1
+- Update TA.Credit.rest (add example to call get low limit).
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-01-07 #1
 - Update jobList.json (from simulator app).
 

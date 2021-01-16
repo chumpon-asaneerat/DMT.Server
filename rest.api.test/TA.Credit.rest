@@ -1,3 +1,11 @@
+### TA Gets Low Limit Balance 
+POST http://localhost:3000/api/TA/CreditLowLimit/get
+content-type: application/json
+
+{
+
+}
+
 ### TA Save Low Limit Balance 
 POST http://localhost:3000/api/TA/CreditLowLimit/save
 content-type: application/json
