@@ -1,5 +1,18 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-18 #1
+- Add Database Script (SP)
+  - TAGetCouponList2 (NEW)
+  - UpdateflagTACouponReceive (UPDATE) -> Add errNum, errMsg and format script.
+  - TCTSoldCoupon (UPDATE) -> When Sold coupon sendtaflag will set to 0 for send to TA App later.
+- Update gulp file.
+- Build Merge scripts for
+  - update-2021-01-05.sql
+  - update-2021-01-18.sql
+- Remove unused file.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-01-17 #2
 - Update TA.Credit.rest (update example add TSBId).
 
