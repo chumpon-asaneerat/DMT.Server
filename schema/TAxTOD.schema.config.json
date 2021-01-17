@@ -11,5 +11,6 @@
     "ESellingToTA": false,
     "TA_UpdateCreditLowLimit": true,
     "GetTSBLowLimit": true,
-    "UpdateflagTACouponReceive": true
+    "UpdateflagTACouponReceive": true,
+    "TAGetCouponList2": true
 }

@@ -1,7 +1,7 @@
 {
     "GetUserCouponList": {
         "type": "PROCEDURE",
-        "updated": "2020-08-11T21:37:30.010Z",
+        "updated": "2020-08-17T07:15:33.090Z",
         "parameter": {
             "inputs": [
                 {
@@ -22,7 +22,7 @@
     },
     "GetUserLaneAttendance": {
         "type": "PROCEDURE",
-        "updated": "2020-08-11T21:37:30.030Z",
+        "updated": "2020-08-17T07:15:33.100Z",
         "parameter": {
             "inputs": [
                 {
@@ -47,7 +47,7 @@
     },
     "TCTSaveLaneAttendance": {
         "type": "PROCEDURE",
-        "updated": "2020-08-13T23:01:19.420Z",
+        "updated": "2021-01-05T19:30:39.450Z",
         "parameter": {
             "inputs": [
                 {
@@ -91,55 +91,22 @@
             ]
         }
     },
-    "TCTSoldCoupon": {
+    "GetTSBLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2020-08-13T23:07:14.393Z",
+        "updated": "2021-01-05T19:31:28.173Z",
         "parameter": {
             "inputs": [
                 {
                     "name": "tsbid",
                     "type": "nvarchar(5)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "nvarchar(2)"
-                },
-                {
-                    "name": "serialno",
-                    "type": "nvarchar(7)"
-                },
-                {
-                    "name": "price",
-                    "type": "decimal"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "solddate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "laneid",
-                    "type": "nvarchar(10)"
                 }
             ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
+            "outputs": []
         }
     },
     "TAGetCouponList": {
         "type": "PROCEDURE",
-        "updated": "2020-12-29T12:45:36.583Z",
+        "updated": "2021-01-05T19:34:15.147Z",
         "parameter": {
             "inputs": [
                 {
@@ -168,7 +135,7 @@
     },
     "TA_UpdateCreditLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2020-12-29T13:26:11.290Z",
+        "updated": "2021-01-05T19:34:15.153Z",
         "parameter": {
             "inputs": [
                 {
@@ -232,22 +199,9 @@
             ]
         }
     },
-    "GetTSBLowLimit": {
-        "type": "PROCEDURE",
-        "updated": "2020-12-29T13:30:58.810Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-01-05T20:40:28.277Z",
+        "updated": "2021-01-18T00:18:09.057Z",
         "parameter": {
             "inputs": [
                 {
@@ -315,14 +269,114 @@
             ]
         }
     },
+    "TAGetCouponList2": {
+        "type": "PROCEDURE",
+        "updated": "2021-01-18T00:19:32.323Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "transactiontype",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                },
+                {
+                    "name": "flag",
+                    "type": "char(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "pageNum",
+                    "type": "int"
+                },
+                {
+                    "name": "rowsPerPage",
+                    "type": "int"
+                },
+                {
+                    "name": "totalRecords",
+                    "type": "int"
+                },
+                {
+                    "name": "maxPage",
+                    "type": "int"
+                },
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(100)"
+                }
+            ]
+        }
+    },
     "UpdateflagTACouponReceive": {
         "type": "PROCEDURE",
-        "updated": "2021-01-05T20:42:42.580Z",
+        "updated": "2021-01-18T00:19:32.330Z",
         "parameter": {
             "inputs": [
                 {
                     "name": "serialno",
                     "type": "nvarchar(7)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TCTSoldCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2021-01-18T00:19:32.333Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "price",
+                    "type": "decimal"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "solddate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
                 }
             ],
             "outputs": [

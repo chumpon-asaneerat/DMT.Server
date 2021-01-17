@@ -1,5 +1,14 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-18 #2
+- Build Schema
+  - TAxTOD.schema.config.json 
+    - set TAGetCouponList2 to true.
+  - TAxTOD.schema.json
+    - Check app input/output paramters.
+  - Build TAxTOD.db.js (OK).
+
+[commited]
 Update 2021-01-18 #1
 - Add Database Script (SP)
   - TAGetCouponList2 (NEW)
