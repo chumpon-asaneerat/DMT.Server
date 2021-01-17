@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-01-18 #3
+- Update TA.Coupon.rest
+  - Add example for call api /api/users/coupons/getlist2 PASSED.
+
+[commited]
 Update 2021-01-18 #2
 - Build Schema
   - TAxTOD.schema.config.json 

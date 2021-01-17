@@ -32,14 +32,6 @@ content-type: application/json
     "flag": 0
 }
 
-### Update TSB coupons flags (call when read and stored to local database to mark flag to 1).
-POST http://localhost:3000/api/TA/coupons/updatereceive
-content-type: application/json
-
-{
-    "serialno": "ข003915"
-}
-
 
 ### Gets All TSB coupons data
 POST http://localhost:3000/api/users/coupons/getlist
@@ -52,3 +44,42 @@ content-type: application/json
     "Coupontype": 35,
     "flag": null
 }
+
+
+### Update TSB coupons flags (call when read and stored to local database to mark flag to 1).
+POST http://localhost:3000/api/TA/coupons/updatereceive
+content-type: application/json
+
+{
+    "serialno": "ข003915"
+}
+
+
+### Gets New TSB coupons data (pagination) - (only newly data which is flag is 0)
+POST http://localhost:3000/api/users/coupons/getlist2
+content-type: application/json
+
+{
+    "TSBId": "319",
+    "UserId": null,
+    "TransactionType": 1,
+    "Coupontype": 35,
+    "flag": 0,
+    "pageNum": 1,
+    "rowsPerPage": 10
+}
+
+### Gets All TSB coupons data (pagination) - Example to get page 2
+POST http://localhost:3000/api/users/coupons/getlist2
+content-type: application/json
+
+{
+    "TSBId": "319",
+    "UserId": null,
+    "TransactionType": 1,
+    "Coupontype": 35,
+    "flag": null,
+    "pageNum": 1,
+    "rowsPerPage": 10
+}
+
