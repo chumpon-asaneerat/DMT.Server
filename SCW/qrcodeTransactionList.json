@@ -83,6 +83,30 @@
             "amount": 200,
             "approvCode": "APV-YW-21267",
             "refNo": "REF-2N-82467"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 13,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-19T18:57:13.389+07:00",
+            "amount": 665,
+            "approvCode": "APV-PC-27570",
+            "refNo": "REF-TT-53970"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 13,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-19T18:57:35.618+07:00",
+            "amount": 665,
+            "approvCode": "APV-RF-38980",
+            "refNo": "REF-9G-71034"
         }
     ],
     "status": {

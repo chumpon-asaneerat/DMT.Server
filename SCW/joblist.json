@@ -278,6 +278,78 @@
             "staffId": "00444",
             "bojDateTime": "2021-01-17T00:53:18.697+0700",
             "eojDateTime": "2021-01-17T00:53:21.793+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 11,
+            "jobNo": 1,
+            "staffId": "00112",
+            "bojDateTime": "2021-01-19T18:53:44.954+0700",
+            "eojDateTime": "2021-01-19T18:54:30.321+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 12,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-19T18:53:50.228+0700",
+            "eojDateTime": "2021-01-19T18:54:14.791+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 13,
+            "jobNo": 3,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-19T18:54:18.653+0700",
+            "eojDateTime": "2021-01-19T18:54:40.141+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 12,
+            "jobNo": 4,
+            "staffId": "00444",
+            "bojDateTime": "2021-01-19T18:54:22.130+0700",
+            "eojDateTime": "2021-01-19T18:54:42.060+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 11,
+            "jobNo": 5,
+            "staffId": "00112",
+            "bojDateTime": "2021-01-19T18:54:34.098+0700",
+            "eojDateTime": "2021-01-19T18:54:43.951+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 12,
+            "jobNo": 6,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-19T18:54:48.038+0700",
+            "eojDateTime": null
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 13,
+            "jobNo": 7,
+            "staffId": "00444",
+            "bojDateTime": "2021-01-19T18:54:51.450+0700",
+            "eojDateTime": null
+        },
+        {
+            "networkId": 31,
+            "plazaId": 1,
+            "laneId": 11,
+            "jobNo": 8,
+            "staffId": "00112",
+            "bojDateTime": "2021-01-19T18:54:56.059+0700",
+            "eojDateTime": null
         }
     ],
     "status": {
