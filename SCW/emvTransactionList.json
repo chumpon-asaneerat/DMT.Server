@@ -1,30 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 1,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-01-21T13:50:36.086+07:00",
-            "amount": 22,
-            "approvCode": "APV-1H-09883",
-            "refNo": "REF-0I-65748"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 4,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-01-21T13:50:52.804+07:00",
-            "amount": 33,
-            "approvCode": "APV-J1-29850",
-            "refNo": "REF-JI-44128"
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"

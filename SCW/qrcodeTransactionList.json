@@ -1,42 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 1,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-01-21T13:50:39.672+07:00",
-            "amount": 22,
-            "approvCode": "APV-CW-16641",
-            "refNo": "REF-WJ-86509"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 4,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-01-21T13:50:56.590+07:00",
-            "amount": 33,
-            "approvCode": "APV-YN-55255",
-            "refNo": "REF-XP-65335"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 3,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-01-21T13:51:36.368+07:00",
-            "amount": 55,
-            "approvCode": "APV-5S-50428",
-            "refNo": "REF-4R-48615"
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"

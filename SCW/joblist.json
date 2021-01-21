@@ -1,33 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 1,
-            "jobNo": 2,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-21T13:50:30.732+0700",
-            "eojDateTime": "2021-01-21T13:50:42.713+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 4,
-            "jobNo": 3,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-21T13:50:47.202+0700",
-            "eojDateTime": "2021-01-21T13:50:59.841+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 3,
-            "jobNo": 6,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-21T13:51:29.172+0700",
-            "eojDateTime": null
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"
