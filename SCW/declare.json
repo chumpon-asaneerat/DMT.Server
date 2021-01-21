@@ -1,54 +1,106 @@
 {
     "networkId": 31,
-    "plazaId": 15,
-    "staffId": "00112",
-    "bagNumber": "5555",
-    "safetyBeltNumber": "5555",
+    "plazaId": 4,
+    "staffId": "20001",
+    "bagNumber": "123",
+    "safetyBeltNumber": "123",
     "shiftTypeId": 1,
-    "declareDateTime": "2020-11-16T14:11:58.216+07:00",
-    "attendanceDateTime": "2020-11-16T14:12:06.314+07:00",
-    "departureDateTime": "2020-11-16T14:12:06.363+07:00",
-    "operationDate": "2020-11-16T00:00:00.000+07:00",
-    "declareById": "00111",
-    "declareByName": "ดินแดง",
-    "cashTotalAmount": 0,
+    "declareDateTime": "2021-01-21T13:56:28.724+07:00",
+    "attendanceDateTime": "2021-01-21T00:38:54.896+07:00",
+    "departureDateTime": "2021-01-21T13:56:34.448+07:00",
+    "operationDate": "2021-01-21T00:00:00.000+07:00",
+    "declareById": "20001",
+    "declareByName": "ลาดพร้าว",
+    "cashTotalAmount": 18,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 105,
-    "emvTotalAmount": 105,
+    "qrcodeTotalAmount": 11,
+    "emvTotalAmount": 55,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
-    "chiefId": "10111",
-    "chiefName": "Admin 1",
+    "chiefId": "00444",
+    "chiefName": "Mr. CTC Test",
     "jobList": [
         {
             "networkId": 31,
-            "plazaId": 15,
-            "laneId": 6,
+            "plazaId": 4,
+            "laneId": 21,
             "jobNo": 1,
-            "staffId": "00112",
-            "bojDateTime": "2020-12-11T12:16:07.363+0700",
-            "eojDateTime": "2020-12-11T12:16:22.061+0700"
+            "staffId": "20001",
+            "bojDateTime": "2021-01-21T13:50:00.904+07:00",
+            "eojDateTime": "2021-01-21T13:50:22.544+07:00"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 23,
+            "jobNo": 4,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-21T13:51:05.522+07:00",
+            "eojDateTime": "2021-01-21T13:51:09.460+07:00"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 22,
+            "jobNo": 5,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-21T13:51:13.002+07:00",
+            "eojDateTime": "2021-01-21T13:51:22.662+07:00"
         }
     ],
-    "cashList": [],
+    "cashList": [
+        {
+            "currencyId": 1,
+            "currencyDenomId": 3,
+            "denomValue": 1,
+            "number": 1,
+            "total": 1
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 4,
+            "denomValue": 2,
+            "number": 1,
+            "total": 2
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 5,
+            "denomValue": 5,
+            "number": 1,
+            "total": 5
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 6,
+            "denomValue": 10,
+            "number": 1,
+            "total": 10
+        }
+    ],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
     "qrcodeList": [
         {
-            "approvalCode": "PCE7P2   ",
-            "trxDate": "2020-11-10T13:10:27.000+07:00",
-            "amount": 35
+            "approvalCode": "APV-0G-83731",
+            "trxDate": "2021-01-21T13:50:20.753+07:00",
+            "amount": 11
         }
     ],
     "emvList": [
         {
-            "approvalCode": "CQA28X   ",
-            "trxDate": "2020-11-10T13:44:28.000+07:00",
-            "amount": 35
+            "approvalCode": "APV-UZ-30462",
+            "trxDate": "2021-01-21T13:50:15.028+07:00",
+            "amount": 11
+        },
+        {
+            "approvalCode": "APV-7L-32525",
+            "trxDate": "2021-01-21T13:51:19.686+07:00",
+            "amount": 44
         }
     ]
 }

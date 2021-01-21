@@ -2,38 +2,29 @@
     "list": [
         {
             "networkId": 31,
-            "plazaId": 1,
-            "laneId": 11,
+            "plazaId": 5,
+            "laneId": 1,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-21T13:50:30.732+0700",
+            "eojDateTime": "2021-01-21T13:50:42.713+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 4,
             "jobNo": 3,
             "staffId": "20001",
-            "bojDateTime": "2021-01-20T01:12:34.643+0700",
-            "eojDateTime": "2021-01-20T01:12:49.935+0700"
+            "bojDateTime": "2021-01-21T13:50:47.202+0700",
+            "eojDateTime": "2021-01-21T13:50:59.841+0700"
         },
         {
             "networkId": 31,
-            "plazaId": 1,
-            "laneId": 12,
-            "jobNo": 4,
-            "staffId": "00444",
-            "bojDateTime": "2021-01-20T01:12:44.648+0700",
-            "eojDateTime": "2021-01-20T01:12:51.679+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 1,
-            "laneId": 12,
-            "jobNo": 5,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-20T01:13:30.136+0700",
-            "eojDateTime": null
-        },
-        {
-            "networkId": 31,
-            "plazaId": 1,
-            "laneId": 11,
+            "plazaId": 5,
+            "laneId": 3,
             "jobNo": 6,
-            "staffId": "00444",
-            "bojDateTime": "2021-01-20T01:13:33.498+0700",
+            "staffId": "20001",
+            "bojDateTime": "2021-01-21T13:51:29.172+0700",
             "eojDateTime": null
         }
     ],
