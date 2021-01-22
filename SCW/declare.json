@@ -1,22 +1,22 @@
 {
     "networkId": 31,
-    "plazaId": 5,
-    "staffId": "00444",
-    "bagNumber": "4",
-    "safetyBeltNumber": "4",
+    "plazaId": 15,
+    "staffId": "00112",
+    "bagNumber": "555",
+    "safetyBeltNumber": "555",
     "shiftTypeId": 1,
-    "declareDateTime": "2021-01-22T02:52:21.031+07:00",
-    "attendanceDateTime": "2021-01-22T02:29:50.543+07:00",
-    "departureDateTime": "2021-01-22T02:52:29.382+07:00",
+    "declareDateTime": "2021-01-22T17:35:24.162+07:00",
+    "attendanceDateTime": "2021-01-22T17:36:05.562+07:00",
+    "departureDateTime": "2021-01-22T17:36:05.836+07:00",
     "operationDate": "2021-01-22T00:00:00.000+07:00",
-    "declareById": "00444",
-    "declareByName": "ลาดพร้าว",
+    "declareById": "00112",
+    "declareByName": "อนุสรน์สถาน",
     "cashTotalAmount": 0,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 130,
-    "emvTotalAmount": 203,
+    "qrcodeTotalAmount": 0,
+    "emvTotalAmount": 0,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
@@ -25,77 +25,18 @@
     "jobList": [
         {
             "networkId": 31,
-            "plazaId": 5,
-            "laneId": 1,
-            "jobNo": 2,
-            "staffId": "00444",
-            "bojDateTime": "2021-01-22T02:30:44.489+07:00",
-            "eojDateTime": "2021-01-22T02:31:05.202+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 2,
-            "jobNo": 4,
-            "staffId": "00444",
-            "bojDateTime": "2021-01-22T02:31:16.000+07:00",
-            "eojDateTime": "2021-01-22T02:32:30.935+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 4,
-            "jobNo": 6,
-            "staffId": "00444",
-            "bojDateTime": "2021-01-22T02:32:54.677+07:00",
-            "eojDateTime": "2021-01-22T02:33:03.375+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 3,
-            "jobNo": 9,
-            "staffId": "00444",
-            "bojDateTime": "2021-01-22T02:34:04.628+07:00",
-            "eojDateTime": "2021-01-22T02:34:19.028+07:00"
+            "plazaId": 15,
+            "laneId": 5,
+            "jobNo": 1,
+            "staffId": "00112",
+            "bojDateTime": "2020-12-07T10:17:45.000+07:00",
+            "eojDateTime": "2020-12-07T11:24:02.000+07:00"
         }
     ],
     "cashList": [],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
-    "qrcodeList": [
-        {
-            "approvalCode": "APV-B2-48505",
-            "trxDate": "2021-01-22T02:31:00.896+07:00",
-            "amount": 25
-        },
-        {
-            "approvalCode": "APV-XF-87077",
-            "trxDate": "2021-01-22T02:31:29.646+07:00",
-            "amount": 50
-        },
-        {
-            "approvalCode": "APV-MC-27012",
-            "trxDate": "2021-01-22T02:34:11.493+07:00",
-            "amount": 55
-        }
-    ],
-    "emvList": [
-        {
-            "approvalCode": "APV-RY-33808",
-            "trxDate": "2021-01-22T02:31:22.523+07:00",
-            "amount": 60
-        },
-        {
-            "approvalCode": "APV-GL-68739",
-            "trxDate": "2021-01-22T02:32:59.731+07:00",
-            "amount": 77
-        },
-        {
-            "approvalCode": "APV-M9-51235",
-            "trxDate": "2021-01-22T02:34:17.145+07:00",
-            "amount": 66
-        }
-    ]
+    "qrcodeList": [],
+    "emvList": []
 }

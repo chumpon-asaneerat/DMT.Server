@@ -1,5 +1,18 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 4,
+            "staffId": "00112",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-01-22T13:20:18.995+07:00",
+            "amount": 123,
+            "approvCode": "APV-O5-95633",
+            "refNo": "REF-ID-53416"
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"
