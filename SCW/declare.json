@@ -1,17 +1,17 @@
 {
     "networkId": 31,
     "plazaId": 4,
-    "staffId": "20001",
-    "bagNumber": "234",
-    "safetyBeltNumber": "234",
+    "staffId": "00112",
+    "bagNumber": "123",
+    "safetyBeltNumber": "123",
     "shiftTypeId": 1,
-    "declareDateTime": "2021-01-22T19:22:59.587+07:00",
-    "attendanceDateTime": "2021-01-22T19:23:09.696+07:00",
-    "departureDateTime": "2021-01-22T19:23:13.674+07:00",
+    "declareDateTime": "2021-01-22T20:46:01.947+07:00",
+    "attendanceDateTime": "2021-01-22T09:49:21.419+07:00",
+    "departureDateTime": "2021-01-22T20:46:09.243+07:00",
     "operationDate": "2021-01-22T00:00:00.000+07:00",
-    "declareById": "20001",
+    "declareById": "00112",
     "declareByName": "ลาดพร้าว",
-    "cashTotalAmount": 0,
+    "cashTotalAmount": 42,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
@@ -22,18 +22,30 @@
     "otherRemark": "",
     "chiefId": "00444",
     "chiefName": "Mr. CTC Test",
-    "jobList": [
+    "jobList": [],
+    "cashList": [
         {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 4,
-            "jobNo": 3,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-22T02:46:04.448+07:00",
-            "eojDateTime": "2021-01-22T02:46:06.465+07:00"
+            "currencyId": 1,
+            "currencyDenomId": 4,
+            "denomValue": 2,
+            "number": 1,
+            "total": 2
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 5,
+            "denomValue": 5,
+            "number": 2,
+            "total": 10
+        },
+        {
+            "currencyId": 1,
+            "currencyDenomId": 6,
+            "denomValue": 10,
+            "number": 3,
+            "total": 30
         }
     ],
-    "cashList": [],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
