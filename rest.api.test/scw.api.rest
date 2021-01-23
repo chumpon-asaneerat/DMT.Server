@@ -99,7 +99,7 @@ content-type: application/json
 
 {
     "networkId": 31,
-    "plazaId": 15,
+    "plazaId": 16,
     "staffId": "00112"
 }
 
