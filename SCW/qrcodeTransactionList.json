@@ -1,18 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 4,
-            "staffId": "00112",
-            "staffNameTh": "Mr. killer1115 killer1115",
-            "staffNameEn": "Mr. killer1115 killer1115",
-            "trxDateTime": "2021-01-22T13:20:37.899+07:00",
-            "amount": 456,
-            "approvCode": "APV-Q4-12264",
-            "refNo": "REF-PI-24922"
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"
