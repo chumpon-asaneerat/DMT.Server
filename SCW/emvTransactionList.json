@@ -1,5 +1,138 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 21,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-01-26T07:19:42.604+07:00",
+            "amount": 555,
+            "approvCode": "APV-9A-23622",
+            "refNo": "REF-K9-23744"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 22,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-26T07:19:54.385+07:00",
+            "amount": 333,
+            "approvCode": "APV-ED-01110",
+            "refNo": "REF-QD-55634"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 2,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-26T07:20:18.226+07:00",
+            "amount": 111,
+            "approvCode": "APV-AO-28713",
+            "refNo": "REF-RJ-32126"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 3,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-01-26T07:20:30.244+07:00",
+            "amount": 222,
+            "approvCode": "APV-C4-52715",
+            "refNo": "REF-BS-03694"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 2,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-26T07:20:34.240+07:00",
+            "amount": 333,
+            "approvCode": "APV-8Q-85580",
+            "refNo": "REF-0H-20481"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 21,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-01-26T14:24:47.462+07:00",
+            "amount": 100,
+            "approvCode": "APV-2C-94072",
+            "refNo": "REF-1U-20322"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 23,
+            "staffId": "00112",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-01-26T14:24:56.509+07:00",
+            "amount": 50,
+            "approvCode": "APV-55-27597",
+            "refNo": "REF-8X-26076"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 21,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-01-26T14:25:21.935+07:00",
+            "amount": 80,
+            "approvCode": "APV-0R-07809",
+            "refNo": "REF-9T-85537"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 1,
+            "staffId": "00112",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-01-26T14:26:13.116+07:00",
+            "amount": 150,
+            "approvCode": "APV-UU-96359",
+            "refNo": "REF-UF-64736"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 3,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-01-26T14:26:19.758+07:00",
+            "amount": 150,
+            "approvCode": "APV-T4-74244",
+            "refNo": "REF-3Z-76046"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 2,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-01-26T14:26:25.102+07:00",
+            "amount": 150,
+            "approvCode": "APV-7H-56561",
+            "refNo": "REF-F9-59965"
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"
