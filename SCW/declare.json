@@ -1,13 +1,13 @@
 {
     "networkId": 31,
-    "plazaId": 5,
+    "plazaId": 4,
     "staffId": "20001",
-    "bagNumber": "222",
-    "safetyBeltNumber": "222",
+    "bagNumber": "232",
+    "safetyBeltNumber": "232",
     "shiftTypeId": 1,
-    "declareDateTime": "2021-01-27T08:06:20.611+07:00",
-    "attendanceDateTime": "2021-01-27T07:24:59.649+07:00",
-    "departureDateTime": "2021-01-27T08:11:53.071+07:00",
+    "declareDateTime": "2021-01-27T18:56:30.058+07:00",
+    "attendanceDateTime": "2021-01-27T18:56:33.384+07:00",
+    "departureDateTime": "2021-01-27T18:56:36.440+07:00",
     "operationDate": "2021-01-27T00:00:00.000+07:00",
     "declareById": "20001",
     "declareByName": "ลาดพร้าว",
@@ -15,8 +15,8 @@
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 30,
-    "emvTotalAmount": 30,
+    "qrcodeTotalAmount": 0,
+    "emvTotalAmount": 90,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
@@ -25,39 +25,24 @@
     "jobList": [
         {
             "networkId": 31,
-            "plazaId": 5,
-            "laneId": 3,
-            "jobNo": 6,
+            "plazaId": 4,
+            "laneId": 21,
+            "jobNo": 1,
             "staffId": "20001",
-            "bojDateTime": "2021-01-27T07:26:02.065+07:00",
-            "eojDateTime": "2021-01-27T07:26:25.746+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 5,
-            "laneId": 4,
-            "jobNo": 7,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-27T07:26:28.157+07:00",
-            "eojDateTime": null
+            "bojDateTime": "2021-01-27T07:23:48.955+07:00",
+            "eojDateTime": "2021-01-27T07:24:03.162+07:00"
         }
     ],
     "cashList": [],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
-    "qrcodeList": [
-        {
-            "approvalCode": "APV-KG-86820",
-            "trxDate": "2021-01-27T07:26:11.790+07:00",
-            "amount": 30
-        }
-    ],
+    "qrcodeList": [],
     "emvList": [
         {
-            "approvalCode": "APV-OE-34035",
-            "trxDate": "2021-01-27T07:26:08.003+07:00",
-            "amount": 30
+            "approvalCode": "APV-HF-96074",
+            "trxDate": "2021-01-27T07:23:56.310+07:00",
+            "amount": 90
         }
     ]
 }
