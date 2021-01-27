@@ -1,5 +1,51 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 21,
+            "jobNo": 1,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-27T07:23:48.955+0700",
+            "eojDateTime": "2021-01-27T07:24:03.162+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 1,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-27T07:24:07.977+0700",
+            "eojDateTime": "2021-01-27T07:24:17.935+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 2,
+            "jobNo": 3,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-27T07:24:22.368+0700",
+            "eojDateTime": "2021-01-27T07:24:29.376+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 4,
+            "laneId": 21,
+            "jobNo": 1,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-27T08:53:48.196+0700",
+            "eojDateTime": "2021-01-27T08:53:54.877+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 5,
+            "laneId": 3,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2021-01-27T08:53:59.946+0700",
+            "eojDateTime": "2021-01-27T08:54:07.978+0700"
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"
