@@ -1,22 +1,22 @@
 {
     "networkId": 31,
-    "plazaId": 4,
-    "staffId": "20001",
-    "bagNumber": "232",
-    "safetyBeltNumber": "232",
+    "plazaId": 15,
+    "staffId": "00444",
+    "bagNumber": "222",
+    "safetyBeltNumber": "222",
     "shiftTypeId": 1,
-    "declareDateTime": "2021-01-27T18:56:30.058+07:00",
-    "attendanceDateTime": "2021-01-27T18:56:33.384+07:00",
-    "departureDateTime": "2021-01-27T18:56:36.440+07:00",
-    "operationDate": "2021-01-27T00:00:00.000+07:00",
-    "declareById": "20001",
-    "declareByName": "ลาดพร้าว",
+    "declareDateTime": "2021-01-28T12:37:01.891+07:00",
+    "attendanceDateTime": "2021-01-28T09:50:44.810+07:00",
+    "departureDateTime": "2021-01-28T12:51:57.857+07:00",
+    "operationDate": "2021-01-28T00:00:00.000+07:00",
+    "declareById": "00444",
+    "declareByName": "อนุสรน์สถาน",
     "cashTotalAmount": 0,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 0,
-    "emvTotalAmount": 90,
+    "qrcodeTotalAmount": 300,
+    "emvTotalAmount": 200,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
@@ -25,24 +25,35 @@
     "jobList": [
         {
             "networkId": 31,
-            "plazaId": 4,
-            "laneId": 21,
-            "jobNo": 1,
-            "staffId": "20001",
-            "bojDateTime": "2021-01-27T07:23:48.955+07:00",
-            "eojDateTime": "2021-01-27T07:24:03.162+07:00"
+            "plazaId": 16,
+            "laneId": 11,
+            "jobNo": 2,
+            "staffId": "00444",
+            "bojDateTime": "2021-01-28T09:54:15.542+07:00",
+            "eojDateTime": null
         }
     ],
     "cashList": [],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
-    "qrcodeList": [],
+    "qrcodeList": [
+        {
+            "approvalCode": "APV-G3-47908",
+            "trxDate": "2021-01-28T09:54:39.605+07:00",
+            "amount": 100
+        },
+        {
+            "approvalCode": "APV-82-37586",
+            "trxDate": "2021-01-28T12:14:12.834+07:00",
+            "amount": 200
+        }
+    ],
     "emvList": [
         {
-            "approvalCode": "APV-HF-96074",
-            "trxDate": "2021-01-27T07:23:56.310+07:00",
-            "amount": 90
+            "approvalCode": "APV-A9-64879",
+            "trxDate": "2021-01-28T12:14:09.587+07:00",
+            "amount": 200
         }
     ]
 }
