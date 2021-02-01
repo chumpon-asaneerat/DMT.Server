@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-01 
+- Update SP TCTSoldCoupon (On site)
+- Update SP GetUserCouponList (On site)
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-01-31 #2
 - commit json data file (generate during testing process).
 
