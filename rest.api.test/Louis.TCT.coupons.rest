@@ -1,5 +1,5 @@
 ### Gets all user coupons that assigned by TA (POST) coupon 35
-POST http://localhost:3000/api/users/coupons/search
+POST http://localhost:8000/api/users/coupons/search
 content-type: application/json
 
 {
@@ -9,7 +9,7 @@ content-type: application/json
 }
 
 ### Gets all user coupons that assigned by TA (POST) coupon 80
-POST http://localhost:3000/api/users/coupons/search
+POST http://localhost:8000/api/users/coupons/search
 content-type: application/json
 
 {
@@ -19,7 +19,7 @@ content-type: application/json
 }
 
 ### Gets all user coupons that assigned by TA (POST) coupon all
-POST http://localhost:3000/api/users/coupons/search
+POST http://localhost:8000/api/users/coupons/search
 content-type: application/json
 
 {
@@ -29,17 +29,17 @@ content-type: application/json
 }
 
 ### Send user coupon sold to TA server (POST)
-POST http://localhost:3000/api/TCT/coupons/sold
+POST http://localhost:8000/api/TCT/coupons/sold
 content-type: application/json
 
 {
-    "tsbid": "311",
-    "plazaid": "3101",
-    "laneid": "DD01",
+    "tsbid": "319",
+    "plazaid": "3116",
+    "laneid": "AN11",
     "coupontype": "35",
-    "serialno": "ข002202",
+    "serialno": "ข003915",
     "price": 665,
-    "userid": "14124",
-   "solddate": "2020-08-10T18:25:43.511Z"
+    "userid": "00444",
+    "solddate": "2021-01-01T10:54:43.511Z"
 }
 
