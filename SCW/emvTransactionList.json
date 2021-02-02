@@ -1,5 +1,126 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 1,
+            "staffId": "00112",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-02-02T19:53:00.664+07:00",
+            "amount": 1,
+            "approvCode": "APV-IL-19871",
+            "refNo": "REF-PW-46881"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 3,
+            "staffId": "00111",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-02-02T19:53:10.151+07:00",
+            "amount": 3,
+            "approvCode": "APV-48-84900",
+            "refNo": "REF-PT-05636"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 11,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-02-02T19:53:22.679+07:00",
+            "amount": 4,
+            "approvCode": "APV-NA-91043",
+            "refNo": "REF-DO-58591"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 12,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-02-02T19:53:30.918+07:00",
+            "amount": 5,
+            "approvCode": "APV-H8-82970",
+            "refNo": "REF-L3-83710"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 12,
+            "staffId": "00111",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-02-02T19:54:00.997+07:00",
+            "amount": 7,
+            "approvCode": "APV-QK-83367",
+            "refNo": "REF-AO-09936"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 1,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-02-02T19:55:00.640+07:00",
+            "amount": 11,
+            "approvCode": "APV-FA-14303",
+            "refNo": "REF-HR-51603"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 2,
+            "staffId": "00444",
+            "staffNameTh": "Mr. CTC Test",
+            "staffNameEn": "Mr. CTC Test",
+            "trxDateTime": "2021-02-02T19:55:13.249+07:00",
+            "amount": 12,
+            "approvCode": "APV-LV-68626",
+            "refNo": "REF-TO-03423"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 11,
+            "staffId": "00111",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-02-02T19:55:34.947+07:00",
+            "amount": 13,
+            "approvCode": "APV-MY-80036",
+            "refNo": "REF-9C-20486"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 11,
+            "staffId": "00111",
+            "staffNameTh": "Mr. killer1115 killer1115",
+            "staffNameEn": "Mr. killer1115 killer1115",
+            "trxDateTime": "2021-02-02T19:55:37.825+07:00",
+            "amount": 13,
+            "approvCode": "APV-ML-70513",
+            "refNo": "REF-LI-86301"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 16,
+            "laneId": 12,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-02-02T19:55:56.387+07:00",
+            "amount": 14,
+            "approvCode": "APV-I6-34929",
+            "refNo": "REF-4B-65755"
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"

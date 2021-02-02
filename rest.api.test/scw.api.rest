@@ -1,5 +1,5 @@
 ### TAA FUNCTIONS
-POST http://localhost:3000/api/taa/isalive
+POST http://localhost:8000/api/taa/isalive
 content-type: application/json
 
 {
@@ -9,7 +9,7 @@ content-type: application/json
 ### SCW FUNCTIONS
 
 ### cardAllowList 
-POST http://localhost:3000/dmt-scw/api/tod/cardAllowList
+POST http://localhost:8000/dmt-scw/api/tod/cardAllowList
 content-type: application/json
 
 {
@@ -17,7 +17,7 @@ content-type: application/json
 }
 
 ### couponList 
-POST http://localhost:3000/dmt-scw/api/tod/couponList
+POST http://localhost:8000/dmt-scw/api/tod/couponList
 content-type: application/json
 
 {
@@ -25,7 +25,7 @@ content-type: application/json
 }
 
 ### couponBookList 
-POST http://localhost:3000/dmt-scw/api/tod/couponBookList
+POST http://localhost:8000/dmt-scw/api/tod/couponBookList
 content-type: application/json
 
 {
@@ -33,7 +33,7 @@ content-type: application/json
 }
 
 ### currencyDenomList 
-POST http://localhost:3000/dmt-scw/api/tod/currencyDenomList
+POST http://localhost:8000/dmt-scw/api/tod/currencyDenomList
 content-type: application/json
 
 {
@@ -41,7 +41,7 @@ content-type: application/json
 }
 
 ### loginAudit
-POST http://localhost:3000/dmt-scw/api/tod/loginAudit
+POST http://localhost:8000/dmt-scw/api/tod/loginAudit
 content-type: application/json
 
 {
@@ -53,7 +53,7 @@ content-type: application/json
 }
 
 ### saveCheifDuty
-POST http://localhost:3000/dmt-scw/api/tod/saveCheifDuty
+POST http://localhost:8000/dmt-scw/api/tod/saveCheifDuty
 content-type: application/json
 
 {
@@ -65,7 +65,7 @@ content-type: application/json
 }
 
 ### cheifOnDuty
-POST http://localhost:3000/dmt-scw/api/tod/cheifOnDuty
+POST http://localhost:8000/dmt-scw/api/tod/cheifOnDuty
 content-type: application/json
 
 {
@@ -75,7 +75,7 @@ content-type: application/json
 }
 
 ### changePassword
-POST http://localhost:3000/dmt-scw/api/tod/changePassword
+POST http://localhost:8000/dmt-scw/api/tod/changePassword
 content-type: application/json
 
 {
@@ -86,7 +86,7 @@ content-type: application/json
 }
 
 ### passwordExpiresDays
-POST http://localhost:3000/dmt-scw/api/tod/passwordExpiresDays
+POST http://localhost:8000/dmt-scw/api/tod/passwordExpiresDays
 content-type: application/json
 
 {
@@ -94,7 +94,7 @@ content-type: application/json
 }
 
 ### joblist 
-POST http://localhost:3000/dmt-scw/api/tod/jobList
+POST http://localhost:8000/dmt-scw/api/tod/jobList
 content-type: application/json
 
 {
@@ -104,7 +104,7 @@ content-type: application/json
 }
 
 ### emvTransactionList 1
-POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+POST http://localhost:8000/dmt-scw/api/tod/emvTransactionList
 content-type: application/json
 
 {
@@ -116,7 +116,7 @@ content-type: application/json
 }
 
 ### emvTransactionList 2
-POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+POST http://localhost:8000/dmt-scw/api/tod/emvTransactionList
 content-type: application/json
 
 {
@@ -126,7 +126,7 @@ content-type: application/json
 }
 
 ### emvTransactionList 3
-POST http://localhost:3000/dmt-scw/api/tod/emvTransactionList
+POST http://localhost:8000/dmt-scw/api/tod/emvTransactionList
 content-type: application/json
 
 {
@@ -137,7 +137,7 @@ content-type: application/json
 }
 
 ### qrcodeTransactionList 1
-POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+POST http://localhost:8000/dmt-scw/api/tod/qrcodeTransactionList 
 content-type: application/json
 
 {
@@ -149,7 +149,7 @@ content-type: application/json
 }
 
 ### qrcodeTransactionList 2
-POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+POST http://localhost:8000/dmt-scw/api/tod/qrcodeTransactionList 
 content-type: application/json
 
 {
@@ -159,7 +159,7 @@ content-type: application/json
 }
 
 ### qrcodeTransactionList 3
-POST http://localhost:3000/dmt-scw/api/tod/qrcodeTransactionList 
+POST http://localhost:8000/dmt-scw/api/tod/qrcodeTransactionList 
 content-type: application/json
 
 {
@@ -171,7 +171,7 @@ content-type: application/json
 
 ### declare #1
 
-POST http://localhost:3000/dmt-scw/api/tod/declare
+POST http://localhost:8000/dmt-scw/api/tod/declare
 content-type: application/json
 
 {
@@ -232,7 +232,7 @@ content-type: application/json
 ### EMULATOR TEST FUNCTIONS
 
 ### BOJ
-POST http://localhost:3000/dmt-scw/api/emu/boj
+POST http://localhost:8000/dmt-scw/api/emu/boj
 content-type: application/json
 
 {
@@ -244,7 +244,7 @@ content-type: application/json
 }
 
 ### EOJ
-POST http://localhost:3000/dmt-scw/api/emu/eoj
+POST http://localhost:8000/dmt-scw/api/emu/eoj
 content-type: application/json
 
 {
@@ -256,7 +256,7 @@ content-type: application/json
 }
 
 ### Get All jobs (not enter revenue entry)
-POST http://localhost:3000/dmt-scw/api/emu/jobs
+POST http://localhost:8000/dmt-scw/api/emu/jobs
 content-type: application/json
 
 {
@@ -265,7 +265,7 @@ content-type: application/json
 }
 
 ### Remove Jobs
-POST http://localhost:3000/dmt-scw/api/emu/removes
+POST http://localhost:8000/dmt-scw/api/emu/removes
 content-type: application/json
 
 {
@@ -282,14 +282,14 @@ content-type: application/json
 }
 
 ### Clear Jobs
-POST http://localhost:3000/dmt-scw/api/emu/cls
+POST http://localhost:8000/dmt-scw/api/emu/cls
 content-type: application/json
 
 {
 }
 
 ### Add EMV
-POST http://localhost:3000/dmt-scw/api/emu/emv/add
+POST http://localhost:8000/dmt-scw/api/emu/emv/add
 content-type: application/json
 
 {
@@ -306,7 +306,7 @@ content-type: application/json
 }
 
 ### Remove EMV
-POST http://localhost:3000/dmt-scw/api/emu/emv/remove
+POST http://localhost:8000/dmt-scw/api/emu/emv/remove
 content-type: application/json
 
 {
@@ -315,7 +315,7 @@ content-type: application/json
 }
 
 ### Clear EMV
-POST http://localhost:3000/dmt-scw/api/emu/emv/cls
+POST http://localhost:8000/dmt-scw/api/emu/emv/cls
 content-type: application/json
 
 {
@@ -323,7 +323,7 @@ content-type: application/json
 
 
 ### Add QRCode
-POST http://localhost:3000/dmt-scw/api/emu/qrcode/add
+POST http://localhost:8000/dmt-scw/api/emu/qrcode/add
 content-type: application/json
 
 {
@@ -340,7 +340,7 @@ content-type: application/json
 }
 
 ### Remove QRCode
-POST http://localhost:3000/dmt-scw/api/emu/qrcode/remove
+POST http://localhost:8000/dmt-scw/api/emu/qrcode/remove
 content-type: application/json
 
 {
@@ -349,7 +349,7 @@ content-type: application/json
 }
 
 ### Clear QRCode
-POST http://localhost:3000/dmt-scw/api/emu/qrcode/cls
+POST http://localhost:8000/dmt-scw/api/emu/qrcode/cls
 content-type: application/json
 
 {
