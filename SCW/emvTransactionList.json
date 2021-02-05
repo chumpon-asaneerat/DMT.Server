@@ -14,18 +14,6 @@
         },
         {
             "networkId": 31,
-            "plazaId": 15,
-            "laneId": 3,
-            "staffId": "00111",
-            "staffNameTh": "Mr. killer1115 killer1115",
-            "staffNameEn": "Mr. killer1115 killer1115",
-            "trxDateTime": "2021-02-02T19:53:10.151+07:00",
-            "amount": 3,
-            "approvCode": "APV-48-84900",
-            "refNo": "REF-PT-05636"
-        },
-        {
-            "networkId": 31,
             "plazaId": 16,
             "laneId": 11,
             "staffId": "00444",
@@ -50,18 +38,6 @@
         },
         {
             "networkId": 31,
-            "plazaId": 16,
-            "laneId": 12,
-            "staffId": "00111",
-            "staffNameTh": "Mr. killer1115 killer1115",
-            "staffNameEn": "Mr. killer1115 killer1115",
-            "trxDateTime": "2021-02-02T19:54:00.997+07:00",
-            "amount": 7,
-            "approvCode": "APV-QK-83367",
-            "refNo": "REF-AO-09936"
-        },
-        {
-            "networkId": 31,
             "plazaId": 15,
             "laneId": 1,
             "staffId": "20001",
@@ -83,30 +59,6 @@
             "amount": 12,
             "approvCode": "APV-LV-68626",
             "refNo": "REF-TO-03423"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 11,
-            "staffId": "00111",
-            "staffNameTh": "Mr. killer1115 killer1115",
-            "staffNameEn": "Mr. killer1115 killer1115",
-            "trxDateTime": "2021-02-02T19:55:34.947+07:00",
-            "amount": 13,
-            "approvCode": "APV-MY-80036",
-            "refNo": "REF-9C-20486"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 11,
-            "staffId": "00111",
-            "staffNameTh": "Mr. killer1115 killer1115",
-            "staffNameEn": "Mr. killer1115 killer1115",
-            "trxDateTime": "2021-02-02T19:55:37.825+07:00",
-            "amount": 13,
-            "approvCode": "APV-ML-70513",
-            "refNo": "REF-LI-86301"
         },
         {
             "networkId": 31,

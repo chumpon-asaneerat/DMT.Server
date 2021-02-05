@@ -37,9 +37,9 @@ content-type: application/json
     "plazaid": "3116",
     "laneid": "AN11",
     "coupontype": "35",
-    "serialno": "ข003915",
+    "serialno": "ข003997",
     "price": 665,
-    "userid": "00444",
+    "userid": "00111",
     "solddate": "2021-01-01T10:54:43.511Z"
 }
 

@@ -2,13 +2,13 @@
     "list": [
         {
             "couponBookId": 1,
-            "couponBookValue": 665.0,
+            "couponBookValue": 665,
             "abbreviation": "35",
             "description": "35 บาท"
         },
         {
             "couponBookId": 2,
-            "couponBookValue": 1520.0,
+            "couponBookValue": 1520,
             "abbreviation": "80",
             "description": "80 บาท"
         }
