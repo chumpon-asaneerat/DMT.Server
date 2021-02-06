@@ -6,7 +6,7 @@ content-type: application/json
     "couponpk": 5,
     "transactionid": 555,
     "transactiondate": "2020-12-25T18:25:43.511Z",
-    "tsbid": "319",
+    "tsbid": "09",
     "coupontype": "35",
     "serialno": "ข003904",
     "price": 665,
@@ -25,7 +25,7 @@ POST http://localhost:3000/api/users/coupons/getlist
 content-type: application/json
 
 {
-    "TSBId": "319",
+    "TSBId": "09",
     "UserId": null,
     "TransactionType": 1,
     "Coupontype": 35,
@@ -38,7 +38,7 @@ POST http://localhost:3000/api/users/coupons/getlist
 content-type: application/json
 
 {
-    "TSBId": "319",
+    "TSBId": "09",
     "UserId": null,
     "TransactionType": 1,
     "Coupontype": 35,
@@ -60,7 +60,7 @@ POST http://localhost:8000/api/users/coupons/getlist2
 content-type: application/json
 
 {
-    "TSBId": "319",
+    "TSBId": "09",
     "UserId": null,
     "TransactionType": 1,
     "Coupontype": 35,
@@ -74,7 +74,7 @@ POST http://localhost:8000/api/users/coupons/getlist2
 content-type: application/json
 
 {
-    "TSBId": "319",
+    "TSBId": "09",
     "UserId": null,
     "TransactionType": 1,
     "Coupontype": 35,

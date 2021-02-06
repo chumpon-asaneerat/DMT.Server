@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-06 #3
+- Add script
+  - Update TSBId on TA_CreditLowLimit table.
+- re-generate db script for 2021-02-06
+
+[commited]
 Update 2021-02-06 #2
 - Add script
   - Update TSBId on TA_Coupon table.
