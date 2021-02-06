@@ -1,6 +1,14 @@
 ----------------------------------------------------------------------------------------------
 [commited]
-Update 2021-02-06
+Update 2021-02-06 #2
+- Add script
+  - Update TSBId on TA_Coupon table.
+  - Update TSBId, PlazaId on Lane table.
+- update gulp file (2021-02-06) .
+- generate db script for 2021-02-06
+
+[commited]
+Update 2021-02-06 #1
 - update gulp file (2021-01-31) .
 - generate db script for 2021-01-31
 
