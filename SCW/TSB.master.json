@@ -1,0 +1,353 @@
+{
+	"TSBS" : [
+		{ 
+			"TSBId": "01", 
+			"TSBNameTH": "ดินแดง", 
+			"TSBNameEN": "DIN DAENG", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "DD", 
+					"PlazaGroupNameTH": "ดินแดง", 
+					"PlazaGroupNameEN": "DIN DAENG", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "011", 
+							"SCWPlazaId": 11, 
+							"PlazaNameTH": "ดินแดง 1", 
+							"PlazaNameEN": "DIN DAENG 1", 
+							"Lanes": [
+								{ "LaneId": "DD11", "LaneNo": 11, "LaneType": "?", "LaneAbbr": "DD11" },
+								{ "LaneId": "DD12", "LaneNo": 12, "LaneType": "?", "LaneAbbr": "DD12" },
+								{ "LaneId": "DD13", "LaneNo": 13, "LaneType": "?", "LaneAbbr": "DD13" },
+								{ "LaneId": "DD14", "LaneNo": 14, "LaneType": "?", "LaneAbbr": "DD14" },
+								{ "LaneId": "DD15", "LaneNo": 15, "LaneType": "?", "LaneAbbr": "DD15" },
+								{ "LaneId": "DD16", "LaneNo": 16, "LaneType": "?", "LaneAbbr": "DD16" }
+							]
+						},
+						{ 
+							"PlazaId": "012", 
+							"SCWPlazaId": 12, 
+							"PlazaNameTH": "ดินแดง 2", 
+							"PlazaNameEN": "DIN DAENG 2", 
+							"Lanes": [
+								{ "LaneId": "DD01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "DD01" },
+								{ "LaneId": "DD02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "DD02" },
+								{ "LaneId": "DD03", "LaneNo": 3, "LaneType": "?", "LaneAbbr": "DD03" },
+								{ "LaneId": "DD04", "LaneNo": 4, "LaneType": "?", "LaneAbbr": "DD04" },
+								{ "LaneId": "DD05", "LaneNo": 5, "LaneType": "?", "LaneAbbr": "DD05" },
+								{ "LaneId": "DD06", "LaneNo": 6, "LaneType": "?", "LaneAbbr": "DD06" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "02", 
+			"TSBNameTH": "สุทธิสาร", 
+			"TSBNameEN": "SUTHISARN", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "SS", 
+					"PlazaGroupNameTH": "สุทธิสาร", 
+					"PlazaGroupNameEN": "SUTHISARN", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "021", 
+							"SCWPlazaId": 21, 
+							"PlazaNameTH": "สุทธิสาร", 
+							"PlazaNameEN": "SUTHISARN", 
+							"Lanes": [
+								{ "LaneId": "SS01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "SS01" },
+								{ "LaneId": "SS02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "SS02" },
+								{ "LaneId": "SS03", "LaneNo": 3, "LaneType": "?", "LaneAbbr": "SS03" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "03", 
+			"TSBNameTH": "ลาดพร้าว", 
+			"TSBNameEN": "LAD PRAO", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "LPS", 
+					"PlazaGroupNameTH": "ลาดพร้าว ขาเข้า", 
+					"PlazaGroupNameEN": "LAD PRAO INBOUND", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "031", 
+							"SCWPlazaId": 31, 
+							"PlazaNameTH": "ลาดพร้าว ขาเข้า", 
+							"PlazaNameEN": "LAD PRAO INBOUND", 
+							"Lanes": [
+								{ "LaneId": "LP21", "LaneNo": 21, "LaneType": "?", "LaneAbbr": "LP21" },
+								{ "LaneId": "LP22", "LaneNo": 22, "LaneType": "?", "LaneAbbr": "LP22" },
+								{ "LaneId": "LP23", "LaneNo": 23, "LaneType": "?", "LaneAbbr": "LP23" }
+							]
+						}
+					]
+				},
+				{ 
+					"PlazaGroupId": "LPN", 
+					"PlazaGroupNameTH": "ลาดพร้าว ขาออก", 
+					"PlazaGroupNameEN": "LAD PRAO OUTBOUND", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "032", 
+							"SCWPlazaId": 32, 
+							"PlazaNameTH": "ลาดพร้าว ขาออก", 
+							"PlazaNameEN": "LAD PRAO OUTBOUND", 
+							"Lanes": [
+								{ "LaneId": "LP01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "LP01" },
+								{ "LaneId": "LP02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "LP02" },
+								{ "LaneId": "LP03", "LaneNo": 3, "LaneType": "?", "LaneAbbr": "LP03" },
+								{ "LaneId": "LP04", "LaneNo": 4, "LaneType": "?", "LaneAbbr": "LP04" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "04", 
+			"TSBNameTH": "รัชดาภิเษก", 
+			"TSBNameEN": "RATCHADA PHISEK", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "RP", 
+					"PlazaGroupNameTH": "รัชดาภิเษก", 
+					"PlazaGroupNameEN": "RATCHADA PHISEK", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "041", 
+							"SCWPlazaId": 41, 
+							"PlazaNameTH": "รัชดาภิเษก 1", 
+							"PlazaNameEN": "RATCHADA PHISEK 1", 
+							"Lanes": [
+								{ "LaneId": "RP01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "RP01" },
+								{ "LaneId": "RP02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "RP02" },
+								{ "LaneId": "RP03", "LaneNo": 3, "LaneType": "?", "LaneAbbr": "RP03" }
+							]
+						},
+						{ 
+							"PlazaId": "042", 
+							"SCWPlazaId": 42, 
+							"PlazaNameTH": "รัชดาภิเษก 2", 
+							"PlazaNameEN": "RATCHADA PHISEK 2", 
+							"Lanes": [
+								{ "LaneId": "RP11", "LaneNo": 11, "LaneType": "?", "LaneAbbr": "RP11" },
+								{ "LaneId": "RP12", "LaneNo": 12, "LaneType": "?", "LaneAbbr": "RP12" },
+								{ "LaneId": "RP13", "LaneNo": 13, "LaneType": "?", "LaneAbbr": "RP13" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "05", 
+			"TSBNameTH": "บางเขน", 
+			"TSBNameEN": "BANGKHEN", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "BK", 
+					"PlazaGroupNameTH": "บางเขน", 
+					"PlazaGroupNameEN": "BANGKHEN", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "051", 
+							"SCWPlazaId": 51, 
+							"PlazaNameTH": "บางเขน", 
+							"PlazaNameEN": "BANGKHEN", 
+							"Lanes": [
+								{ "LaneId": "BK01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "BK01" },
+								{ "LaneId": "BK02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "BK02" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "06", 
+			"TSBNameTH": "แจ้งวัฒนะ", 
+			"TSBNameEN": "CHANGEWATTANA", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "CW", 
+					"PlazaGroupNameTH": "แจ้งวัฒนะ", 
+					"PlazaGroupNameEN": "CHANGEWATTANA", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "061", 
+							"SCWPlazaId": 61, 
+							"PlazaNameTH": "แจ้งวัฒนะ 1", 
+							"PlazaNameEN": "CHANGEWATTANA 1", 
+							"Lanes": [
+								{ "LaneId": "CW21", "LaneNo": 21, "LaneType": "?", "LaneAbbr": "CW21" },
+								{ "LaneId": "CW22", "LaneNo": 22, "LaneType": "?", "LaneAbbr": "CW22" },
+								{ "LaneId": "CW23", "LaneNo": 23, "LaneType": "?", "LaneAbbr": "CW23" }
+							]
+						},
+						{ 
+							"PlazaId": "062", 
+							"SCWPlazaId": 62, 
+							"PlazaNameTH": "แจ้งวัฒนะ 2", 
+							"PlazaNameEN": "CHANGEWATTANA 2", 
+							"Lanes": [
+								{ "LaneId": "CW31", "LaneNo": 31, "LaneType": "?", "LaneAbbr": "CW31" },
+								{ "LaneId": "CW32", "LaneNo": 32, "LaneType": "?", "LaneAbbr": "CW32" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "07", 
+			"TSBNameTH": "หลักสี่", 
+			"TSBNameEN": "LAKSI", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "LKS", 
+					"PlazaGroupNameTH": "หลักสี่ ขาเข้า", 
+					"PlazaGroupNameEN": "LAKSI INBOUND", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "071", 
+							"SCWPlazaId": 71, 
+							"PlazaNameTH": "หลักสี่ ขาเข้า", 
+							"PlazaNameEN": "LAKSI INBOUND", 
+							"Lanes": [
+								{ "LaneId": "LK21", "LaneNo": 21, "LaneType": "?", "LaneAbbr": "LK21" },
+								{ "LaneId": "LK22", "LaneNo": 22, "LaneType": "?", "LaneAbbr": "LK22" },
+								{ "LaneId": "LK23", "LaneNo": 23, "LaneType": "?", "LaneAbbr": "LK23" },
+								{ "LaneId": "LK24", "LaneNo": 24, "LaneType": "?", "LaneAbbr": "LK24" }
+							]
+						}
+					]
+				},
+				{ 
+					"PlazaGroupId": "LKN", 
+					"PlazaGroupNameTH": "หลักสี่ ขาออก", 
+					"PlazaGroupNameEN": "LAKSI OUTBOUND", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "072", 
+							"SCWPlazaId": 72, 
+							"PlazaNameTH": "หลักสี่ ขาออก", 
+							"PlazaNameEN": "LAKSI OUTBOUND", 
+							"Lanes": [
+								{ "LaneId": "LK01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "LK01" },
+								{ "LaneId": "LK02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "LK02" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "08", 
+			"TSBNameTH": "ดอนเมือง", 
+			"TSBNameEN": "DON MUANG", 
+			"Active": false,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "DM", 
+					"PlazaGroupNameTH": "ดอนเมือง", 
+					"PlazaGroupNameEN": "DON MUANG", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "081", 
+							"SCWPlazaId": 81, 
+							"PlazaNameTH": "ดอนเมือง 1", 
+							"PlazaNameEN": "DON MUANG 1", 
+							"Lanes": [
+								{ "LaneId": "DM31", "LaneNo": 31, "LaneType": "?", "LaneAbbr": "DM31" },
+								{ "LaneId": "DM32", "LaneNo": 32, "LaneType": "?", "LaneAbbr": "DM32" },
+								{ "LaneId": "DM33", "LaneNo": 33, "LaneType": "?", "LaneAbbr": "DM33" },
+								{ "LaneId": "DM34", "LaneNo": 34, "LaneType": "?", "LaneAbbr": "DM34" },
+								{ "LaneId": "DM35", "LaneNo": 35, "LaneType": "?", "LaneAbbr": "DM35" }
+							]
+						},
+						{ 
+							"PlazaId": "082", 
+							"SCWPlazaId": 82, 
+							"PlazaNameTH": "ดอนเมือง 2", 
+							"PlazaNameEN": "DON MUANG 2", 
+							"Lanes": [
+								{ "LaneId": "DM21", "LaneNo": 21, "LaneType": "?", "LaneAbbr": "DM21" },
+								{ "LaneId": "DM22", "LaneNo": 22, "LaneType": "?", "LaneAbbr": "DM22" },
+								{ "LaneId": "DM23", "LaneNo": 23, "LaneType": "?", "LaneAbbr": "DM23" },
+								{ "LaneId": "DM24", "LaneNo": 24, "LaneType": "?", "LaneAbbr": "DM24" },
+								{ "LaneId": "DM25", "LaneNo": 25, "LaneType": "?", "LaneAbbr": "DM25" }
+							]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			"TSBId": "09", 
+			"TSBNameTH": "อนุสรน์สถาน", 
+			"TSBNameEN": "ANUSORN SATHAN", 
+			"Active": true,
+			"PlazaGroups": [
+				{ 
+					"PlazaGroupId": "AS", 
+					"PlazaGroupNameTH": "อนุสรน์สถาน", 
+					"PlazaGroupNameEN": "ANUSORN SATHAN", 
+					"Direction": "?",
+					"Plazas": [
+						{ 
+							"PlazaId": "091", 
+							"SCWPlazaId": 91, 
+							"PlazaNameTH": "อนุสรน์สถาน 1", 
+							"PlazaNameEN": "ANUSORN SATHAN 1", 
+							"Lanes": [
+								{ "LaneId": "AN01", "LaneNo": 1, "LaneType": "?", "LaneAbbr": "AN01" },
+								{ "LaneId": "AN02", "LaneNo": 2, "LaneType": "?", "LaneAbbr": "AN02" },
+								{ "LaneId": "AN03", "LaneNo": 3, "LaneType": "?", "LaneAbbr": "AN03" },
+								{ "LaneId": "AN04", "LaneNo": 4, "LaneType": "?", "LaneAbbr": "AN04" },
+								{ "LaneId": "AN05", "LaneNo": 5, "LaneType": "?", "LaneAbbr": "AN05" }
+							]
+						},
+						{ 
+							"PlazaId": "092", 
+							"SCWPlazaId": 92, 
+							"PlazaNameTH": "อนุสรน์สถาน 2", 
+							"PlazaNameEN": "ANUSORN SATHAN 2",
+							"Lanes": [
+								{ "LaneId": "AN11", "LaneNo": 11, "LaneType": "?", "LaneAbbr": "AN11" },
+								{ "LaneId": "AN12", "LaneNo": 12, "LaneType": "?", "LaneAbbr": "AN12" },
+								{ "LaneId": "AN13", "LaneNo": 13, "LaneType": "?", "LaneAbbr": "AN13" },
+								{ "LaneId": "AN14", "LaneNo": 14, "LaneType": "?", "LaneAbbr": "AN14" },
+								{ "LaneId": "AN15", "LaneNo": 15, "LaneType": "?", "LaneAbbr": "AN15" }
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
