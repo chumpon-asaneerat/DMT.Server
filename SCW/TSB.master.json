@@ -14,7 +14,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "011", 
-							"SCWPlazaId": 11, 
+							"SCWPlazaId": 1, 
 							"PlazaNameTH": "ดินแดง 1", 
 							"PlazaNameEN": "DIN DAENG 1", 
 							"Lanes": [
@@ -28,7 +28,7 @@
 						},
 						{ 
 							"PlazaId": "012", 
-							"SCWPlazaId": 12, 
+							"SCWPlazaId": 2, 
 							"PlazaNameTH": "ดินแดง 2", 
 							"PlazaNameEN": "DIN DAENG 2", 
 							"Lanes": [
@@ -58,7 +58,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "021", 
-							"SCWPlazaId": 21, 
+							"SCWPlazaId": 3, 
 							"PlazaNameTH": "สุทธิสาร", 
 							"PlazaNameEN": "SUTHISARN", 
 							"Lanes": [
@@ -85,7 +85,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "031", 
-							"SCWPlazaId": 31, 
+							"SCWPlazaId": 4, 
 							"PlazaNameTH": "ลาดพร้าว ขาเข้า", 
 							"PlazaNameEN": "LAD PRAO INBOUND", 
 							"Lanes": [
@@ -104,7 +104,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "032", 
-							"SCWPlazaId": 32, 
+							"SCWPlazaId": 5, 
 							"PlazaNameTH": "ลาดพร้าว ขาออก", 
 							"PlazaNameEN": "LAD PRAO OUTBOUND", 
 							"Lanes": [
@@ -132,7 +132,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "041", 
-							"SCWPlazaId": 41, 
+							"SCWPlazaId": 6, 
 							"PlazaNameTH": "รัชดาภิเษก 1", 
 							"PlazaNameEN": "RATCHADA PHISEK 1", 
 							"Lanes": [
@@ -143,7 +143,7 @@
 						},
 						{ 
 							"PlazaId": "042", 
-							"SCWPlazaId": 42, 
+							"SCWPlazaId": 7, 
 							"PlazaNameTH": "รัชดาภิเษก 2", 
 							"PlazaNameEN": "RATCHADA PHISEK 2", 
 							"Lanes": [
@@ -170,7 +170,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "051", 
-							"SCWPlazaId": 51, 
+							"SCWPlazaId": 8, 
 							"PlazaNameTH": "บางเขน", 
 							"PlazaNameEN": "BANGKHEN", 
 							"Lanes": [
@@ -196,7 +196,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "061", 
-							"SCWPlazaId": 61, 
+							"SCWPlazaId": 9, 
 							"PlazaNameTH": "แจ้งวัฒนะ 1", 
 							"PlazaNameEN": "CHANGEWATTANA 1", 
 							"Lanes": [
@@ -207,7 +207,7 @@
 						},
 						{ 
 							"PlazaId": "062", 
-							"SCWPlazaId": 62, 
+							"SCWPlazaId": 10, 
 							"PlazaNameTH": "แจ้งวัฒนะ 2", 
 							"PlazaNameEN": "CHANGEWATTANA 2", 
 							"Lanes": [
@@ -233,7 +233,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "071", 
-							"SCWPlazaId": 71, 
+							"SCWPlazaId": 11, 
 							"PlazaNameTH": "หลักสี่ ขาเข้า", 
 							"PlazaNameEN": "LAKSI INBOUND", 
 							"Lanes": [
@@ -253,7 +253,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "072", 
-							"SCWPlazaId": 72, 
+							"SCWPlazaId": 12, 
 							"PlazaNameTH": "หลักสี่ ขาออก", 
 							"PlazaNameEN": "LAKSI OUTBOUND", 
 							"Lanes": [
@@ -279,7 +279,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "081", 
-							"SCWPlazaId": 81, 
+							"SCWPlazaId": 13, 
 							"PlazaNameTH": "ดอนเมือง 1", 
 							"PlazaNameEN": "DON MUANG 1", 
 							"Lanes": [
@@ -292,7 +292,7 @@
 						},
 						{ 
 							"PlazaId": "082", 
-							"SCWPlazaId": 82, 
+							"SCWPlazaId": 14, 
 							"PlazaNameTH": "ดอนเมือง 2", 
 							"PlazaNameEN": "DON MUANG 2", 
 							"Lanes": [
@@ -321,7 +321,7 @@
 					"Plazas": [
 						{ 
 							"PlazaId": "091", 
-							"SCWPlazaId": 91, 
+							"SCWPlazaId": 15, 
 							"PlazaNameTH": "อนุสรน์สถาน 1", 
 							"PlazaNameEN": "ANUSORN SATHAN 1", 
 							"Lanes": [
@@ -334,7 +334,7 @@
 						},
 						{ 
 							"PlazaId": "092", 
-							"SCWPlazaId": 92, 
+							"SCWPlazaId": 16, 
 							"PlazaNameTH": "อนุสรน์สถาน 2", 
 							"PlazaNameEN": "ANUSORN SATHAN 2",
 							"Lanes": [
