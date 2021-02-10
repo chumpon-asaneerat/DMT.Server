@@ -76,8 +76,8 @@ content-type: application/json
 {
     "TSBId": "09",
     "UserId": null,
-    "TransactionType": 1,
-    "Coupontype": 35,
+    "TransactionType": null,
+    "Coupontype": null,
     "flag": null,
     "pageNum": 1,
     "rowsPerPage": 10

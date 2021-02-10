@@ -39,18 +39,6 @@
         {
             "networkId": 31,
             "plazaId": 15,
-            "laneId": 1,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-02-02T19:55:04.121+07:00",
-            "amount": 11,
-            "approvCode": "APV-AT-65117",
-            "refNo": "REF-18-82521"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
             "laneId": 2,
             "staffId": "00444",
             "staffNameTh": "Mr. CTC Test",
@@ -59,30 +47,6 @@
             "amount": 12,
             "approvCode": "APV-MM-10617",
             "refNo": "REF-4R-74975"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 12,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-02-02T19:55:59.294+07:00",
-            "amount": 14,
-            "approvCode": "APV-05-54938",
-            "refNo": "REF-KD-29987"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 12,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-02-02T19:56:02.311+07:00",
-            "amount": 14,
-            "approvCode": "APV-QO-67003",
-            "refNo": "REF-F6-12205"
         }
     ],
     "status": {
