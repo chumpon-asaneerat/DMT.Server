@@ -2,21 +2,21 @@
     "networkId": 31,
     "plazaId": 15,
     "staffId": "20001",
-    "bagNumber": "233",
-    "safetyBeltNumber": "233",
+    "bagNumber": "222",
+    "safetyBeltNumber": "222",
     "shiftTypeId": 2,
-    "declareDateTime": "2021-02-10T18:41:13.999+07:00",
-    "attendanceDateTime": "2021-02-10T16:25:53.068+07:00",
-    "departureDateTime": "2021-02-10T18:42:08.389+07:00",
-    "operationDate": "2021-02-10T00:00:00.000+07:00",
+    "declareDateTime": "2021-02-12T19:12:43.448+07:00",
+    "attendanceDateTime": "2021-02-12T19:12:14.645+07:00",
+    "departureDateTime": "2021-02-12T19:12:46.576+07:00",
+    "operationDate": "2021-02-12T00:00:00.000+07:00",
     "declareById": "20001",
     "declareByName": "อนุสรณ์สถาน",
     "cashTotalAmount": 500,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 3,
-    "emvTotalAmount": 3,
+    "qrcodeTotalAmount": 0,
+    "emvTotalAmount": 200,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
@@ -25,61 +25,32 @@
     "jobList": [
         {
             "networkId": 31,
-            "plazaId": 16,
-            "laneId": 11,
-            "jobNo": 3,
-            "staffId": "20001",
-            "bojDateTime": "2021-02-10T17:32:46.253+07:00",
-            "eojDateTime": "2021-02-10T17:32:55.352+07:00"
-        },
-        {
-            "networkId": 31,
             "plazaId": 15,
-            "laneId": 4,
-            "jobNo": 4,
+            "laneId": 3,
+            "jobNo": 1,
             "staffId": "20001",
-            "bojDateTime": "2021-02-10T17:33:01.287+07:00",
-            "eojDateTime": null
+            "bojDateTime": "2021-02-12T19:12:25.658+07:00",
+            "eojDateTime": "2021-02-12T19:12:33.410+07:00"
         }
     ],
     "cashList": [
         {
             "currencyId": 1,
-            "currencyDenomId": 5,
-            "denomValue": 5,
-            "number": 20,
-            "total": 100
-        },
-        {
-            "currencyId": 1,
-            "currencyDenomId": 8,
-            "denomValue": 20,
-            "number": 15,
-            "total": 300
-        },
-        {
-            "currencyId": 1,
             "currencyDenomId": 9,
             "denomValue": 50,
-            "number": 2,
-            "total": 100
+            "number": 10,
+            "total": 500
         }
     ],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],
-    "qrcodeList": [
-        {
-            "approvalCode": "APV-YO-65803",
-            "trxDate": "2021-02-10T17:32:53.808+07:00",
-            "amount": 3
-        }
-    ],
+    "qrcodeList": [],
     "emvList": [
         {
-            "approvalCode": "APV-VC-58650",
-            "trxDate": "2021-02-10T17:32:50.165+07:00",
-            "amount": 3
+            "approvalCode": "APV-Q9-54294",
+            "trxDate": "2021-02-12T19:12:31.949+07:00",
+            "amount": 200
         }
     ]
 }
