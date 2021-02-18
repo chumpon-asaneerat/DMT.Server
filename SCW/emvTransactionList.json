@@ -1,42 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 11,
-            "staffId": "00444",
-            "staffNameTh": "Mr. CTC Test",
-            "staffNameEn": "Mr. CTC Test",
-            "trxDateTime": "2021-02-02T19:53:22.679+07:00",
-            "amount": 4,
-            "approvCode": "APV-NA-91043",
-            "refNo": "REF-DO-58591"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 12,
-            "staffId": "00444",
-            "staffNameTh": "Mr. CTC Test",
-            "staffNameEn": "Mr. CTC Test",
-            "trxDateTime": "2021-02-02T19:53:30.918+07:00",
-            "amount": 5,
-            "approvCode": "APV-H8-82970",
-            "refNo": "REF-L3-83710"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 2,
-            "staffId": "00444",
-            "staffNameTh": "Mr. CTC Test",
-            "staffNameEn": "Mr. CTC Test",
-            "trxDateTime": "2021-02-02T19:55:13.249+07:00",
-            "amount": 12,
-            "approvCode": "APV-LV-68626",
-            "refNo": "REF-TO-03423"
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"

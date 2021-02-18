@@ -1,54 +1,5 @@
 {
-    "list": [
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 2,
-            "staffId": "20001",
-            "staffNameTh": "Mr. Hussakorn VRS",
-            "staffNameEn": "Mr. Hussakorn VRS",
-            "trxDateTime": "2021-02-02T19:53:05.731+07:00",
-            "amount": 2,
-            "approvCode": "APV-U5-93940",
-            "refNo": "REF-2W-53386"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 11,
-            "staffId": "00444",
-            "staffNameTh": "Mr. CTC Test",
-            "staffNameEn": "Mr. CTC Test",
-            "trxDateTime": "2021-02-02T19:53:19.448+07:00",
-            "amount": 4,
-            "approvCode": "APV-XU-61029",
-            "refNo": "REF-O3-62243"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 11,
-            "staffId": "00444",
-            "staffNameTh": "Mr. CTC Test",
-            "staffNameEn": "Mr. CTC Test",
-            "trxDateTime": "2021-02-02T19:53:46.610+07:00",
-            "amount": 6,
-            "approvCode": "APV-ME-33169",
-            "refNo": "REF-XD-46823"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 2,
-            "staffId": "00444",
-            "staffNameTh": "Mr. CTC Test",
-            "staffNameEn": "Mr. CTC Test",
-            "trxDateTime": "2021-02-02T19:55:16.792+07:00",
-            "amount": 12,
-            "approvCode": "APV-MM-10617",
-            "refNo": "REF-4R-74975"
-        }
-    ],
+    "list": [],
     "status": {
         "code": "S200",
         "message": "Success"
