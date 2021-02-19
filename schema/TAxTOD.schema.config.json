@@ -12,5 +12,21 @@
     "TA_UpdateCreditLowLimit": true,
     "GetTSBLowLimit": true,
     "UpdateflagTACouponReceive": true,
-    "TAGetCouponList2": true
+    "TAGetCouponList2": true,
+    "TA_UpdateSapFlagCoupon": false,
+    "GetAR_Line": false,
+    "GetAR_Serial": false,
+    "UpdateAR_Line": false,
+    "UpdateflagAR_Head": false,
+    "UpdateflagAR_Line": false,
+    "UpdateflagAR_Serial": false,
+    "TA_getSelltoInterface": false,
+    "GetSumTASell": false,
+    "UpdateAR_Serial": false,
+    "UpdateAR_Head": false,
+    "GetAR_Head": false,
+    "GetSumTASellByRunNo": false,
+    "GetTASell": false,
+    "GetTASellByRunNo": false,
+    "GetAR_SerialtoTACoupon": false
 }
