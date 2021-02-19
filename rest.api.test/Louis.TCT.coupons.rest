@@ -34,13 +34,13 @@ content-type: application/json
 
 {
     "tsbid": "09",
-    "plazaid": "091",
-    "laneid": "AN01",
+    "plazaid": "092",
+    "laneid": "AN12",
     "coupontype": "35",
-    "serialno": "ข003996",
+    "serialno": "ข009841",
     "price": 665,
     "userid": "20001",
-    "solddate": "2021-02-18T21:01:43.511Z"
+    "solddate": "2021-02-19T04:07:40.511Z"
 }
 
 ### Send user coupon 80 sold to TA server (POST)
@@ -52,9 +52,9 @@ content-type: application/json
     "plazaid": "091",
     "laneid": "AN01",
     "coupontype": "80",
-    "serialno": "C000684",
+    "serialno": "C000713",
     "price": 1520,
     "userid": "20001",
-    "solddate": "2021-02-18T21:03:03.511Z"
+    "solddate": "2021-02-19T04:05:33.511Z"
 }
 
