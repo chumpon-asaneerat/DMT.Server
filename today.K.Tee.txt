@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-02-19 #1 (K.Tee)
+-  Add View for CouponSold
+-  Alter TA_coupon add payment Field 
+-  Update SP for TCT Sold Coupon
+
+----------------------------------------------------------------------------------------------
 Update 2020-08-13 #6 (K.Tee)
 -  Add Check Empty String
 -  Fix SP Logic for TSBID is null

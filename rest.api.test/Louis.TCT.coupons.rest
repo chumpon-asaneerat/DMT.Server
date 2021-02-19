@@ -37,10 +37,19 @@ content-type: application/json
     "plazaid": "092",
     "laneid": "AN12",
     "coupontype": "35",
-    "serialno": "ข009841",
+    "serialno": "ข009875",
     "price": 665,
     "userid": "20001",
-    "solddate": "2021-02-19T04:07:40.511Z"
+    "solddate": "2021-02-19T14:07:40.511Z",
+     "paytypeid" : 2,
+    "paytypename" : "EMV",
+    "edcdatetime" : "2021-02-19T14:15:33.511Z",
+    "edcterminalid" : "12345678",
+    "edccardno" : "C2345678",
+    "edcamount" : 665,
+    "edcref1" : "1254554",
+    "edcref2" : "652658-2",
+    "edcref3" : "C5598-5"
 }
 
 ### Send user coupon 80 sold to TA server (POST)
@@ -52,9 +61,18 @@ content-type: application/json
     "plazaid": "091",
     "laneid": "AN01",
     "coupontype": "80",
-    "serialno": "C000713",
+    "serialno": "C000770",
     "price": 1520,
-    "userid": "20001",
-    "solddate": "2021-02-19T04:05:33.511Z"
+    "userid": "00112",
+    "solddate": "2021-02-19T14:15:33.511Z",
+    "paytypeid" : 1,
+    "paytypename" : "Cash",
+    "edcdatetime" : "2021-02-19T14:15:33.511Z",
+    "edcterminalid" : "12345678",
+    "edccardno" : "C2345678",
+    "edcamount" : 1520,
+    "edcref1" : null,
+    "edcref2" : null,
+    "edcref3" : null
 }
 
