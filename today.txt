@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-20 #3
+- Merge SQL Script - 2021-02-19.
+
+[commited]
 Update 2021-02-20 #2
 - commit json data file (generate during testing process).
 
