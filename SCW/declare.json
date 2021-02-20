@@ -2,21 +2,21 @@
     "networkId": 31,
     "plazaId": 15,
     "staffId": "20001",
-    "bagNumber": "112",
-    "safetyBeltNumber": "112",
-    "shiftTypeId": 1,
-    "declareDateTime": "2021-02-20T12:28:41.325+07:00",
-    "attendanceDateTime": "2021-02-20T12:19:10.070",
-    "departureDateTime": "2021-02-20T12:28:49.236+07:00",
+    "bagNumber": "113",
+    "safetyBeltNumber": "113",
+    "shiftTypeId": 2,
+    "declareDateTime": "2021-02-20T13:04:28.775+07:00",
+    "attendanceDateTime": "2021-02-20T13:00:49.301",
+    "departureDateTime": "2021-02-20T13:04:33.384+07:00",
     "operationDate": "2021-02-20T00:00:00.000",
     "declareById": "20001",
     "declareByName": "อนุสรณ์สถาน",
     "cashTotalAmount": 0,
     "couponTotalAmount": 0,
-    "couponBookTotalAmount": 0,
+    "couponBookTotalAmount": 2850,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 100,
-    "emvTotalAmount": 300,
+    "qrcodeTotalAmount": 200,
+    "emvTotalAmount": 200,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
@@ -29,8 +29,8 @@
             "laneId": 2,
             "jobNo": 1,
             "staffId": "20001",
-            "bojDateTime": "2021-02-20T12:23:10.411+07:00",
-            "eojDateTime": "2021-02-20T12:23:11.826+07:00"
+            "bojDateTime": "2021-02-20T13:00:56.570+07:00",
+            "eojDateTime": "2021-02-20T13:01:11.127+07:00"
         },
         {
             "networkId": 31,
@@ -38,39 +38,57 @@
             "laneId": 12,
             "jobNo": 2,
             "staffId": "20001",
-            "bojDateTime": "2021-02-20T12:23:15.707+07:00",
-            "eojDateTime": "2021-02-20T12:23:17.126+07:00"
+            "bojDateTime": "2021-02-20T13:01:15.875+07:00",
+            "eojDateTime": "2021-02-20T13:01:22.695+07:00"
         },
         {
             "networkId": 31,
-            "plazaId": 16,
-            "laneId": 12,
+            "plazaId": 15,
+            "laneId": 1,
             "jobNo": 3,
             "staffId": "20001",
-            "bojDateTime": "2021-02-20T12:23:27.665+07:00",
-            "eojDateTime": "2021-02-20T12:23:50.218+07:00"
+            "bojDateTime": "2021-02-20T13:01:29.234+07:00",
+            "eojDateTime": "2021-02-20T13:01:35.222+07:00"
         }
     ],
     "cashList": [],
     "couponList": [],
-    "couponBookList": [],
+    "couponBookList": [
+        {
+            "couponBookId": 1,
+            "couponBookValue": 35,
+            "number": 2,
+            "total": 1330
+        },
+        {
+            "couponBookId": 2,
+            "couponBookValue": 80,
+            "number": 1,
+            "total": 1520
+        }
+    ],
     "cardAllowList": [],
     "qrcodeList": [
         {
-            "approvalCode": "APV-I3-26033",
-            "trxDate": "2021-02-20T12:23:40.866+07:00",
+            "approvalCode": "APV-G0-11206",
+            "trxDate": "2021-02-20T13:01:08.884+07:00",
+            "amount": 100
+        },
+        {
+            "approvalCode": "APV-Q6-03220",
+            "trxDate": "2021-02-20T13:01:21.138+07:00",
             "amount": 100
         }
     ],
     "emvList": [
         {
-            "approvalCode": "APV-E6-44200",
-            "trxDate": "2021-02-20T12:23:36.191+07:00",
-            "amount": 200
+            "approvalCode": "APV-47-94049",
+            "trxDate": "2021-02-20T13:01:03.315+07:00",
+            "amount": 100
         },
         {
-            "approvalCode": "APV-F1-80971",
-            "trxDate": "2021-02-20T12:23:46.347+07:00",
+            "approvalCode": "APV-KU-64609",
+            "trxDate": "2021-02-20T13:01:33.802+07:00",
             "amount": 100
         }
     ]
