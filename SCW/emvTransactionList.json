@@ -1,5 +1,18 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 1,
+            "staffId": "20001",
+            "staffNameTh": "Mr. Hussakorn VRS",
+            "staffNameEn": "Mr. Hussakorn VRS",
+            "trxDateTime": "2021-02-21T15:30:14.854+07:00",
+            "amount": 100,
+            "approvCode": "APV-NK-84244",
+            "refNo": "REF-GS-00088"
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"

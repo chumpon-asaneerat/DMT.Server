@@ -8,6 +8,15 @@
             "staffId": "20001",
             "bojDateTime": "2021-02-20T22:00:14.871+0700",
             "eojDateTime": "2021-02-20T22:00:16.737+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 1,
+            "jobNo": 1,
+            "staffId": "20001",
+            "bojDateTime": "2021-02-21T15:30:08.479+0700",
+            "eojDateTime": "2021-02-21T15:30:16.637+0700"
         }
     ],
     "status": {
