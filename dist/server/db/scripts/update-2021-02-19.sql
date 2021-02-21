@@ -11,6 +11,9 @@ ADD
 	EdcRef2 nvarchar(20),
 	EdcRef3 nvarchar(20);
 
+GO
+
+
 /*********** Script Update Date: 2021-02-19  ***********/
 SET ANSI_NULLS ON
 GO
@@ -23,6 +26,7 @@ AS
 SELECT        TSBId, CouponType, SerialNo, Price, SoldBy, SoldDate, LaneId, SAPItemName, PayTypeID, PaytypeName, EdcDateTime, EdcTerminalId, EdcCardNo, EdcRef1, EdcAmount, EdcRef2, EdcRef3
 FROM            dbo.TA_Coupon
 WHERE        (CouponStatus IN (3, 4))
+
 GO
 
 
@@ -91,3 +95,6 @@ DECLARE @tsb nvarchar(5) = NULL;
 		SET @errMsg = ERROR_MESSAGE();
 	END CATCH
 END
+
+GO
+

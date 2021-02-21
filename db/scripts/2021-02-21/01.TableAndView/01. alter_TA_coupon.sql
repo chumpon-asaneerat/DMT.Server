@@ -1,0 +1,14 @@
+ALTER TABLE TA_Coupon ALTER COLUMN EdcTerminalId nvarchar(20)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcCardNo nvarchar(30)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcRef1 nvarchar(40)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcRef2 nvarchar(40)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcRef3 nvarchar(40)
+GO

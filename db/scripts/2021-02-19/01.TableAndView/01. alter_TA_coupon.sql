@@ -9,3 +9,5 @@ ADD
 	EdcRef1 nvarchar(20),
 	EdcRef2 nvarchar(20),
 	EdcRef3 nvarchar(20);
+
+GO

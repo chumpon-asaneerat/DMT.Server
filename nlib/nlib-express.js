@@ -165,7 +165,9 @@ const init_helmet = (app) => {
 };
 const init_logger = (app) => {
     console.info('use "logger (morgan)".');    
-    app.use(morgan("dev"));
+    app.enable("trust proxy");
+    //app.use(morgan("dev"));
+    app.use(morgan("short"));
 };
 const init_cookie_parser = (app, cfg) => {
     console.info('use "cookie parser".');    

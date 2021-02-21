@@ -15,12 +15,6 @@ const TAxTOD = class extends SqlServer {
         await super.disconnect();
     }
 
-    async GetUserCouponList(pObj) {
-        let name = 'GetUserCouponList';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async GetUserLaneAttendance(pObj) {
         let name = 'GetUserLaneAttendance';
         let proc = schema[name];
@@ -57,14 +51,20 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async UpdateflagTACouponReceive(pObj) {
+        let name = 'UpdateflagTACouponReceive';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
     async TAGetCouponList2(pObj) {
         let name = 'TAGetCouponList2';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async UpdateflagTACouponReceive(pObj) {
-        let name = 'UpdateflagTACouponReceive';
+    async GetUserCouponList(pObj) {
+        let name = 'GetUserCouponList';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }

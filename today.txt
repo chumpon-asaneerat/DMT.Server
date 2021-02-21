@@ -1,5 +1,12 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-21 #1
+- Update SQL Script -> Payment related columns change size.
+- Generate new Schema for database api call.
+- nlib-express.js -> change log -> display IP address.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-02-20 #3
 - Merge SQL Script - 2021-02-19.
 

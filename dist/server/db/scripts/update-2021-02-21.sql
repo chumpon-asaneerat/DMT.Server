@@ -1,3 +1,21 @@
+/*********** Script Update Date: 2021-02-21  ***********/
+ALTER TABLE TA_Coupon ALTER COLUMN EdcTerminalId nvarchar(20)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcCardNo nvarchar(30)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcRef1 nvarchar(40)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcRef2 nvarchar(40)
+GO
+
+ALTER TABLE TA_Coupon ALTER COLUMN EdcRef3 nvarchar(40)
+GO
+
+
+/*********** Script Update Date: 2021-02-21  ***********/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15,12 +33,12 @@ ALTER PROCEDURE [dbo].[TCTSoldCoupon]
 , @paytypeid int
 , @paytypename nvarchar(20)
 , @edcdatetime Datetime
-, @edcterminalid nvarchar(8)
-, @edccardno nvarchar(8)
+, @edcterminalid nvarchar(20)
+, @edccardno nvarchar(30)
 , @edcamount decimal(6,2)
-, @edcref1 nvarchar(20)
-, @edcref2 nvarchar(20)
-, @edcref3 nvarchar(20)
+, @edcref1 nvarchar(40)
+, @edcref2 nvarchar(40)
+, @edcref3 nvarchar(40)
 , @errNum as int = 0 out
 , @errMsg as nvarchar(MAX) = N'' out
 )
@@ -64,3 +82,4 @@ DECLARE @tsb nvarchar(5) = NULL;
 END
 
 GO
+
