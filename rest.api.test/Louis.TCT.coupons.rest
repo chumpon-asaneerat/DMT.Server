@@ -66,7 +66,7 @@ content-type: application/json
     "userid": "20001",
     "solddate": "2021-02-20:13:02.522Z",
     "paytypeid" : 1,
-    "paytypename" : "Cash",
+    "paytypename" : "EMV",
     "edcdatetime" : "2021-02-20:13:02.522Z",
     "edcterminalid" : "12345678",
     "edccardno" : "C2345678",
@@ -74,5 +74,29 @@ content-type: application/json
     "edcref1" : null,
     "edcref2" : null,
     "edcref3" : null
+}
+
+### Send user coupon 80 sold with EMV to TA server (POST)
+POST http://localhost:8000/api/TCT/coupons/sold
+content-type: application/json
+
+{
+    "tsbid":"09",
+    "plazaid":"091",
+    "laneid":"AN05",
+    "coupontype":"35",
+    "serialno":"ข009875",
+    "price":665.0,
+    "userid":"00111",
+    "solddate":"2021-02-21T12:27:28.069Z",
+    "paytypeid":1,
+    "paytypename":"EMV",
+    "edcdatetime":"2021-02-21 12:27:22",
+    "edcterminalid":"10000221",
+    "edccardno":"473252xxxxxx2443",
+    "edcamount":1000.0,
+    "edcref1":"00000000002222222201",
+    "edcref2":"00000099999999990101",
+    "edcref3":"10000221210221122717"
 }
 

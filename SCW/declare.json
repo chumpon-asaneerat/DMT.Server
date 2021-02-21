@@ -2,94 +2,31 @@
     "networkId": 31,
     "plazaId": 15,
     "staffId": "20001",
-    "bagNumber": "113",
-    "safetyBeltNumber": "113",
-    "shiftTypeId": 2,
-    "declareDateTime": "2021-02-20T13:04:28.775+07:00",
-    "attendanceDateTime": "2021-02-20T13:00:49.301",
-    "departureDateTime": "2021-02-20T13:04:33.384+07:00",
-    "operationDate": "2021-02-20T00:00:00.000",
+    "bagNumber": "200",
+    "safetyBeltNumber": "200",
+    "shiftTypeId": 1,
+    "declareDateTime": "2021-02-21T00:00:00.000+07:00",
+    "attendanceDateTime": "2021-02-21T14:25:27.560+07:00",
+    "departureDateTime": "2021-02-21T14:25:29.139+07:00",
+    "operationDate": "2021-02-21T00:00:00.000+07:00",
     "declareById": "20001",
     "declareByName": "อนุสรณ์สถาน",
     "cashTotalAmount": 0,
     "couponTotalAmount": 0,
-    "couponBookTotalAmount": 2850,
+    "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
-    "qrcodeTotalAmount": 200,
-    "emvTotalAmount": 200,
+    "qrcodeTotalAmount": 0,
+    "emvTotalAmount": 0,
     "otherTotalAmount": 0,
     "cashRemark": "",
     "otherRemark": "",
     "chiefId": "00444",
     "chiefName": "Mr. CTC Test",
-    "jobList": [
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 2,
-            "jobNo": 1,
-            "staffId": "20001",
-            "bojDateTime": "2021-02-20T13:00:56.570+07:00",
-            "eojDateTime": "2021-02-20T13:01:11.127+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 16,
-            "laneId": 12,
-            "jobNo": 2,
-            "staffId": "20001",
-            "bojDateTime": "2021-02-20T13:01:15.875+07:00",
-            "eojDateTime": "2021-02-20T13:01:22.695+07:00"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 1,
-            "jobNo": 3,
-            "staffId": "20001",
-            "bojDateTime": "2021-02-20T13:01:29.234+07:00",
-            "eojDateTime": "2021-02-20T13:01:35.222+07:00"
-        }
-    ],
+    "jobList": [],
     "cashList": [],
     "couponList": [],
-    "couponBookList": [
-        {
-            "couponBookId": 1,
-            "couponBookValue": 35,
-            "number": 2,
-            "total": 1330
-        },
-        {
-            "couponBookId": 2,
-            "couponBookValue": 80,
-            "number": 1,
-            "total": 1520
-        }
-    ],
+    "couponBookList": [],
     "cardAllowList": [],
-    "qrcodeList": [
-        {
-            "approvalCode": "APV-G0-11206",
-            "trxDate": "2021-02-20T13:01:08.884+07:00",
-            "amount": 100
-        },
-        {
-            "approvalCode": "APV-Q6-03220",
-            "trxDate": "2021-02-20T13:01:21.138+07:00",
-            "amount": 100
-        }
-    ],
-    "emvList": [
-        {
-            "approvalCode": "APV-47-94049",
-            "trxDate": "2021-02-20T13:01:03.315+07:00",
-            "amount": 100
-        },
-        {
-            "approvalCode": "APV-KU-64609",
-            "trxDate": "2021-02-20T13:01:33.802+07:00",
-            "amount": 100
-        }
-    ]
+    "qrcodeList": [],
+    "emvList": []
 }

@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-21 #2
+- Add TCT coupon rest Test code for EMV Payment.
+
+[commited]
 Update 2021-02-21 #1
 - Update SQL Script -> Payment related columns change size.
 - Generate new Schema for database api call.
