@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-24 #2
+- Install logger packages
+  - winston-daily-rotate-file
+
+[commited]
 Update 2021-02-24 #1
 - Install logger packages
   - winston
