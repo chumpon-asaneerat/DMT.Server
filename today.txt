@@ -1,5 +1,14 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-24 #1
+- Install logger packages
+  - winston
+  - triple-beam
+  - logform
+  - winston-transport
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-02-22 #1
 - commit json data file (generate during testing process).
 
