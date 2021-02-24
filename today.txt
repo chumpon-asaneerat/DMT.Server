@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-24 #4
+- Implements nlib-logger.js #2
+
+[commited]
 Update 2021-02-24 #3
 - Implements nlib-logger.js #1
 
