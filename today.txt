@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-02-25 #2
+- Implements nlib-logger #1.
+
+[commited]
 Update 2021-02-25 #1
 - Update .gitignore
 
