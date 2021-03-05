@@ -1,7 +1,7 @@
 {
     "GetUserLaneAttendance": {
         "type": "PROCEDURE",
-        "updated": "2020-08-17T07:15:33.100Z",
+        "updated": "2020-08-11T21:37:30.030Z",
         "parameter": {
             "inputs": [
                 {
@@ -26,7 +26,7 @@
     },
     "TCTSaveLaneAttendance": {
         "type": "PROCEDURE",
-        "updated": "2021-01-05T19:30:39.450Z",
+        "updated": "2020-08-13T23:01:19.420Z",
         "parameter": {
             "inputs": [
                 {
@@ -70,22 +70,9 @@
             ]
         }
     },
-    "GetTSBLowLimit": {
-        "type": "PROCEDURE",
-        "updated": "2021-01-05T19:31:28.173Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "TAGetCouponList": {
         "type": "PROCEDURE",
-        "updated": "2021-01-05T19:34:15.147Z",
+        "updated": "2020-12-29T12:45:36.583Z",
         "parameter": {
             "inputs": [
                 {
@@ -114,7 +101,7 @@
     },
     "TA_UpdateCreditLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2021-01-05T19:34:15.153Z",
+        "updated": "2020-12-29T13:26:11.290Z",
         "parameter": {
             "inputs": [
                 {
@@ -178,9 +165,22 @@
             ]
         }
     },
+    "GetTSBLowLimit": {
+        "type": "PROCEDURE",
+        "updated": "2020-12-29T13:30:58.810Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-01-18T00:18:09.057Z",
+        "updated": "2021-01-18T12:08:54.170Z",
         "parameter": {
             "inputs": [
                 {
@@ -250,7 +250,7 @@
     },
     "UpdateflagTACouponReceive": {
         "type": "PROCEDURE",
-        "updated": "2021-01-18T00:19:32.330Z",
+        "updated": "2021-01-18T12:09:42.360Z",
         "parameter": {
             "inputs": [
                 {
@@ -272,7 +272,7 @@
     },
     "TAGetCouponList2": {
         "type": "PROCEDURE",
-        "updated": "2021-02-06T16:26:23.203Z",
+        "updated": "2021-01-31T13:36:33.113Z",
         "parameter": {
             "inputs": [
                 {
@@ -326,7 +326,7 @@
     },
     "GetUserCouponList": {
         "type": "PROCEDURE",
-        "updated": "2021-02-06T16:26:23.220Z",
+        "updated": "2021-01-31T15:47:34.347Z",
         "parameter": {
             "inputs": [
                 {
@@ -347,7 +347,7 @@
     },
     "TCTSoldCoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-02-21T13:00:35.233Z",
+        "updated": "2021-02-21T13:40:01.973Z",
         "parameter": {
             "inputs": [
                 {
@@ -425,6 +425,51 @@
                     "type": "nvarchar(max)"
                 }
             ]
+        }
+    },
+    "TA_InquirySellCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-05T12:23:00.923Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "SAPItemCode",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "SAPIntrSerial",
+                    "type": "nvarchar(15)"
+                },
+                {
+                    "name": "SAPTransferNo",
+                    "type": "varchar(20)"
+                },
+                {
+                    "name": "ItemStatusDigit",
+                    "type": "tinyint"
+                },
+                {
+                    "name": "TollWayId",
+                    "type": "smallint"
+                },
+                {
+                    "name": "WorkingDateFrom",
+                    "type": "datetime"
+                },
+                {
+                    "name": "WorkingDateTo",
+                    "type": "datetime"
+                },
+                {
+                    "name": "SAPARInvoice",
+                    "type": "varchar(30)"
+                },
+                {
+                    "name": "ShiftId",
+                    "type": "int"
+                }
+            ],
+            "outputs": []
         }
     }
 }

@@ -83,3 +83,50 @@ content-type: application/json
     "rowsPerPage": 10
 }
 
+### TA Inquiry Coupon Sell -- 1
+POST http://localhost:8000/api/TA/coupons/inquiry
+content-type: application/json
+
+{
+    "SAPItemCode": "C35",
+    "SAPIntrSerial": null,
+    "SAPTransferNo": null,
+    "ItemStatusDigit": null,
+    "TollWayId": 9,
+    "WorkingDateFrom": null,
+    "WorkingDateTo": null,
+    "SAPARInvoice": "",
+    "ShiftId": null
+}
+
+### TA Inquiry Coupon Sell -- 2
+POST http://localhost:8000/api/TA/coupons/inquiry
+content-type: application/json
+
+{
+    "SAPItemCode": "",
+    "SAPIntrSerial": null,
+    "SAPTransferNo": null,
+    "ItemStatusDigit": null,
+    "TollWayId": 1,
+    "WorkingDateFrom": "2020-01-10T18:25:43.511Z",
+    "WorkingDateTo": null,
+    "SAPARInvoice": "",
+    "ShiftId": null
+}
+
+### TA Inquiry Coupon Sell -- 3
+POST http://localhost:8000/api/TA/coupons/inquiry
+content-type: application/json
+
+{
+    "SAPItemCode": "C35",
+    "SAPIntrSerial": null,
+    "SAPTransferNo": null,
+    "ItemStatusDigit": null,
+    "TollWayId": 9,
+    "WorkingDateFrom": null,
+    "WorkingDateTo": null,
+    "SAPARInvoice": "",
+    "ShiftId": 0
+}

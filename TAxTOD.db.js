@@ -27,12 +27,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async GetTSBLowLimit(pObj) {
-        let name = 'GetTSBLowLimit';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async TAGetCouponList(pObj) {
         let name = 'TAGetCouponList';
         let proc = schema[name];
@@ -41,6 +35,12 @@ const TAxTOD = class extends SqlServer {
 
     async TA_UpdateCreditLowLimit(pObj) {
         let name = 'TA_UpdateCreditLowLimit';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetTSBLowLimit(pObj) {
+        let name = 'GetTSBLowLimit';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -71,6 +71,12 @@ const TAxTOD = class extends SqlServer {
 
     async TCTSoldCoupon(pObj) {
         let name = 'TCTSoldCoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_InquirySellCoupon(pObj) {
+        let name = 'TA_InquirySellCoupon';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }

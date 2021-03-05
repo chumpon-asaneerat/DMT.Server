@@ -1,4 +1,9 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-03-05 #1 (K.Tee)
+-  Add Table + Data + Procedure for Page Inquiry Coupon Sell
+-  Add WS http://localhost:8000/api/TA/coupons/inquiry 
+
+----------------------------------------------------------------------------------------------
 Update 2021-02-19 #1 (K.Tee)
 -  Add View for CouponSold
 -  Alter TA_coupon add payment Field 

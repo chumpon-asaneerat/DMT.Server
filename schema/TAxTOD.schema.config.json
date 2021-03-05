@@ -28,5 +28,7 @@
     "GetSumTASellByRunNo": false,
     "GetTASell": false,
     "GetTASellByRunNo": false,
-    "GetAR_SerialtoTACoupon": false
+    "GetAR_SerialtoTACoupon": false,
+    "SAP_GetInquirySellCoupon": false,
+    "TA_InquirySellCoupon": true
 }
