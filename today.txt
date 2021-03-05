@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-03-05 #1
+- Update nlib-logger -> add logger.stream.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-02-25 #9
 - fixed nlib-logger bug and set log folder in default config.
 
