@@ -1,4 +1,8 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-03-11 #1 (K.Tee)
+-  Fix Script [TmpInquirySellCoupon]
+
+----------------------------------------------------------------------------------------------
 Update 2021-03-05 #1 (K.Tee)
 -  Add Table + Data + Procedure for Page Inquiry Coupon Sell
 -  Add WS http://localhost:8000/api/TA/coupons/inquiry 
