@@ -1,0 +1,52 @@
+### Save TSB Credit Balance
+POST http://localhost:8000/api/account/tsbcredit/save
+content-type: application/json
+
+{
+    "tsbId": "09",
+    "amnt1": 1000,
+    "amnt2": 1000,
+    "amnt5": 1000,
+    "amnt10": 1000,
+    "amnt20": 1000,
+    "amnt50": 1000,
+    "amnt100": 1000,
+    "amnt500": 1000,
+    "amnt1000": 1000,
+    "updatedate": "2021-02-20:13:03.112Z",
+    "remark" : null
+    
+}
+
+### Save User Credit on Job
+POST http://localhost:8000/api/account/UserCredit/save
+content-type: application/json
+
+{
+    "tsbId": "09",
+    "userId": "00111",
+    "userprefix": "นาย",
+    "userfirstname": "หัสกร",
+    "userlastname": "ทิพยไพศาล",
+    "bagno": "1245",
+    "credit": 10000,
+    "flag": 0,
+    "creditdate": "2021-02-20:13:03.112Z"
+}
+
+
+### Gets TSB Credit Balance
+POST http://localhost:8000/api/account/tsbcredit
+content-type: application/json
+
+{
+   
+}
+
+### Gets User On Job Credit by TSB
+POST http://localhost:8000/api/account/usercredit/search
+content-type: application/json
+
+{
+   "tsbId": "09"
+}

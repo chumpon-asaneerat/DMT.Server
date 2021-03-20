@@ -81,6 +81,30 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async Acc_SaveUserCreditOnJob(pObj) {
+        let name = 'Acc_SaveUserCreditOnJob';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_SaveTSBCreditBalance(pObj) {
+        let name = 'Acc_SaveTSBCreditBalance';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getTSBBalance(pObj) {
+        let name = 'Acc_getTSBBalance';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getUserOnJobCredit(pObj) {
+        let name = 'Acc_getUserOnJobCredit';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
 }
 
 module.exports = exports = TAxTOD;

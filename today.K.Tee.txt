@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-03-20 #1 (K.Tee)
+-  Add Logic Page TA Account Check Balance
+-  Add API for Save Balance from TA TSB
+-  Add Script 2021-03-20
+
+
+----------------------------------------------------------------------------------------------
 Update 2021-03-11 #1 (K.Tee)
 -  Fix Script [TmpInquirySellCoupon]
 

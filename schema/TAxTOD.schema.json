@@ -429,7 +429,7 @@
     },
     "TA_InquirySellCoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-03-05T12:23:00.923Z",
+        "updated": "2021-03-05T12:50:19.110Z",
         "parameter": {
             "inputs": [
                 {
@@ -467,6 +467,147 @@
                 {
                     "name": "ShiftId",
                     "type": "int"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Acc_SaveUserCreditOnJob": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-20T18:35:30.860Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userprefix",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userfirstname",
+                    "type": "nvarchar(50)"
+                },
+                {
+                    "name": "userlastname",
+                    "type": "nvarchar(50)"
+                },
+                {
+                    "name": "bagno",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "credit",
+                    "type": "decimal"
+                },
+                {
+                    "name": "flag",
+                    "type": "int"
+                },
+                {
+                    "name": "creditdate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_SaveTSBCreditBalance": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-20T19:56:47.300Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "amnt1",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt2",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt5",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt10",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt20",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt50",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt100",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt500",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt1000",
+                    "type": "decimal"
+                },
+                {
+                    "name": "updatedate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "remark",
+                    "type": "nvarchar(200)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_getTSBBalance": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-20T20:31:04.937Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
+    "Acc_getUserOnJobCredit": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-20T20:45:44.287Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
                 }
             ],
             "outputs": []
