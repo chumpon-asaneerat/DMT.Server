@@ -18,6 +18,15 @@ content-type: application/json
     
 }
 
+
+### Gets TSB Credit Balance
+POST http://localhost:8000/api/account/tsbcredit
+content-type: application/json
+
+{
+   
+}
+
 ### Save User Credit on Job
 POST http://localhost:8000/api/account/UserCredit/save
 content-type: application/json
@@ -32,15 +41,6 @@ content-type: application/json
     "credit": 10000,
     "flag": 0,
     "creditdate": "2021-02-20:13:03.112Z"
-}
-
-
-### Gets TSB Credit Balance
-POST http://localhost:8000/api/account/tsbcredit
-content-type: application/json
-
-{
-   
 }
 
 ### Gets User On Job Credit by TSB
