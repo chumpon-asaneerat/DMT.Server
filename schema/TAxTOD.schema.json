@@ -592,17 +592,9 @@
             ]
         }
     },
-    "Acc_getTSBBalance": {
-        "type": "PROCEDURE",
-        "updated": "2021-03-20T20:31:04.937Z",
-        "parameter": {
-            "inputs": [],
-            "outputs": []
-        }
-    },
     "Acc_getUserOnJobCredit": {
         "type": "PROCEDURE",
-        "updated": "2021-03-20T20:45:44.287Z",
+        "updated": "2021-03-20T21:23:02.030Z",
         "parameter": {
             "inputs": [
                 {
@@ -611,6 +603,220 @@
                 }
             ],
             "outputs": []
+        }
+    },
+    "Acc_getTSBBalance": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-20T21:24:22.463Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
+    "TA_SaveExchangeTransaction": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-12T10:19:15.790Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "exchangebht",
+                    "type": "decimal"
+                },
+                {
+                    "name": "borrowbht",
+                    "type": "decimal"
+                },
+                {
+                    "name": "additionalbht",
+                    "type": "decimal"
+                },
+                {
+                    "name": "periodbegin",
+                    "type": "datetime"
+                },
+                {
+                    "name": "periodend",
+                    "type": "datetime"
+                },
+                {
+                    "name": "remark",
+                    "type": "nvarchar(255)"
+                },
+                {
+                    "name": "finishflag",
+                    "type": "nchar(1)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "tranactiondate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "status",
+                    "type": "nchar(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_getReqDatabyStatus": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-12T11:59:45.693Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "status",
+                    "type": "nchar(1)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Acc_getReqDetail": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-12T12:08:23.210Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_SaveReqExchangeDetial": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-12T12:12:29.053Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "currencydenomid",
+                    "type": "int"
+                },
+                {
+                    "name": "currencyvalue",
+                    "type": "decimal"
+                },
+                {
+                    "name": "currencycount",
+                    "type": "decimal"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TA_GetUpdateReqData": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-12T12:26:46.410Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "transdate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_GetAccAppReqDetail": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-12T13:04:28.817Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Acc_SaveAppExchangeDetial": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-13T21:27:48.063Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "currencydenomid",
+                    "type": "int"
+                },
+                {
+                    "name": "currencyvalue",
+                    "type": "decimal"
+                },
+                {
+                    "name": "currencycount",
+                    "type": "decimal"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
         }
     }
 }

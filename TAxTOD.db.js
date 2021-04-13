@@ -93,14 +93,56 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async Acc_getUserOnJobCredit(pObj) {
+        let name = 'Acc_getUserOnJobCredit';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
     async Acc_getTSBBalance(pObj) {
         let name = 'Acc_getTSBBalance';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async Acc_getUserOnJobCredit(pObj) {
-        let name = 'Acc_getUserOnJobCredit';
+    async TA_SaveExchangeTransaction(pObj) {
+        let name = 'TA_SaveExchangeTransaction';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getReqDatabyStatus(pObj) {
+        let name = 'Acc_getReqDatabyStatus';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getReqDetail(pObj) {
+        let name = 'Acc_getReqDetail';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_SaveReqExchangeDetial(pObj) {
+        let name = 'TA_SaveReqExchangeDetial';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_GetUpdateReqData(pObj) {
+        let name = 'TA_GetUpdateReqData';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_GetAccAppReqDetail(pObj) {
+        let name = 'TA_GetAccAppReqDetail';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_SaveAppExchangeDetial(pObj) {
+        let name = 'Acc_SaveAppExchangeDetial';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }

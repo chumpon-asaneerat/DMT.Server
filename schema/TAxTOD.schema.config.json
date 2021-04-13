@@ -7,7 +7,7 @@
     "GetUserLaneAttendance": true,
     "TAGetCouponList": true,
     "TA_GetExchangeData": false,
-    "TA_SaveExchangeTransaction": false,
+    "TA_SaveExchangeTransaction": true,
     "ESellingToTA": false,
     "TA_UpdateCreditLowLimit": true,
     "GetTSBLowLimit": true,
@@ -34,5 +34,11 @@
     "Acc_SaveTSBCreditBalance": true,
     "Acc_SaveUserCreditOnJob": true,
     "Acc_getTSBBalance": true,
-    "Acc_getUserOnJobCredit": true
+    "Acc_getUserOnJobCredit": true,
+    "Acc_getReqDatabyStatus": true,
+    "Acc_getReqDetail": true,
+    "TA_SaveReqExchangeDetial": true,
+    "Acc_SaveAppExchangeDetial": true,
+    "TA_GetUpdateReqData": true,
+    "TA_GetAccAppReqDetail": true
 }

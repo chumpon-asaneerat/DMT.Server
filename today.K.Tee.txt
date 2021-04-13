@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-04-13 #1 (K.Tee)
+-  Add Logic Page TA Account Request/Approve
+-  Add API for TA Account Request/Approve
+-  Add Script 2021-04-13
+
+----------------------------------------------------------------------------------------------
 Update 2021-03-20 #1 (K.Tee)
 -  Add Logic Page TA Account Check Balance
 -  Add API for Save Balance from TA TSB

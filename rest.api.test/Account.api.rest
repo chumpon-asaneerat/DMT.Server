@@ -50,3 +50,96 @@ content-type: application/json
 {
    "tsbId": "09"
 }
+
+
+### Save Request  Head
+POST http://localhost:8000/api/account/request/save
+content-type: application/json
+
+{
+    "requestid": 1 ,
+    "tsbId": "09",
+    "exchangebht" : 10000,
+    "borrowbht" : 0,
+    "additionalbht" : 0,
+    "periodbegin" : null,
+    "periodend" : null,
+    "remark" : "ทดสอบ",
+    "finishflag" : 0 ,
+    "userid" : "00444" ,
+    "tranactiondate" : "2021-04-13:22:03.112Z" ,
+    "status" : "A"
+
+
+}
+
+
+### Save Request  Detail
+POST http://localhost:8000/api/account/request/savedetail
+content-type: application/json
+
+{
+    "requestid": 1 ,
+    "tsbId": "09",
+    "currencydenomid" : 6,
+    "currencyvalue" : 5000,
+    "currencycount" : 500
+
+}
+
+
+### Account get request list
+POST http://localhost:8000/api/account/request/getlist
+content-type: application/json
+
+{
+    "status": "R" 
+
+}
+
+
+### Account get request detail
+POST http://localhost:8000/api/account/request/getdetail
+content-type: application/json
+
+{
+    "requestid": 1 ,
+    "tsbId": "09"
+
+}
+
+
+### Account Save Approve request detail
+POST http://localhost:8000/api/account/request/approve
+content-type: application/json
+
+{
+     "requestid": 1 ,
+    "tsbId": "09",
+    "currencydenomid" : 6,
+    "currencyvalue" : 5000,
+    "currencycount" : 500
+
+}
+
+
+### TSB get Approve request update
+POST http://localhost:8000/api/account/request/getapprove
+content-type: application/json
+
+{
+     "tsbId": "09",
+    "transdate" : "2021-04-13:00:00.000Z" 
+
+}
+
+
+### TSB get Approve request detail
+POST http://localhost:8000/api/account/request/getapprovedetail
+content-type: application/json
+
+{
+    "requestid": 1 ,
+    "tsbId": "09"
+
+}
