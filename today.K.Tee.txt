@@ -1,4 +1,8 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-04-27 #1 (K.Tee)
+-  Add Script for Screen TA Send Data Sell Coupon to SAP 
+
+----------------------------------------------------------------------------------------------
 Update 2021-04-13 #1 (K.Tee)
 -  Add Logic Page TA Account Request/Approve
 -  Add API for TA Account Request/Approve
