@@ -1,0 +1,111 @@
+###  get Customer Code list
+POST http://localhost:8000/api/account/sap/getcustomer
+content-type: application/json
+
+{
+    "searchtext": null
+
+}
+
+###  get TSB  list
+POST http://localhost:8000/api/account/sap/tsblist
+content-type: application/json
+
+{
+    
+
+}
+
+###  get Coupon Sold list
+POST http://localhost:8000/api/account/sap/couponsoldlist
+content-type: application/json
+
+{
+    "tollwayid": 9 ,
+    "solddate": "2021-04-29"
+  
+}
+
+###  Insert AR Head
+POST http://localhost:8000/api/account/sap/save/arhead
+content-type: application/json
+
+{
+    "DocDate": "20210429" ,
+    "DocDueDate": "20210429" , 
+    "CardCode": "CC061" ,
+    "CardName": "ผู้ใช้ทาง" ,
+    "NumAtCard": null ,
+    "Comments": null ,
+    "PaymentGroupCode": 1 ,
+    "TollWayId": 9 
+  
+}
+
+
+###  Get AR Head
+POST http://localhost:8000/api/account/sap/get/arhead
+content-type: application/json
+
+{
+    "DocDate": "20210429" ,
+    "ExportExcel": 0 
+      
+}
+
+###  Get AR Coupon list 
+POST http://localhost:8000/api/account/sap/get/arsumcoupon
+content-type: application/json
+
+{
+    "tollwayid" : 9 ,
+    "SoldDate": "2021-04-29T00:00:00.000+0700" ,
+    "RunNo": 9 
+      
+}
+
+###  Insert AR Line
+POST http://localhost:8000/api/account/sap/save/arline
+content-type: application/json
+
+{
+    "RunNo": 9,
+    "ParentKey": 1 ,
+    "LineNum": 1 ,
+    "DocDate": "20210429" ,
+    "ItemCode": "C80" , 
+    "ItemDescription": "Coupon 80 Baht" ,
+    "Quantity": 1 ,
+    "UnitPrice": 1520 ,
+    "PriceAfterVAT": null ,
+    "VatGroup": "SC7" ,
+    "WarehouseCode": "CAS" ,
+    "TollWayId": 9 
+  
+}
+
+###  Get AR Coupon list 
+POST http://localhost:8000/api/account/sap/get/arcouponlist
+content-type: application/json
+
+{
+    "tollwayid" : 9 ,
+    "SoldDate": "2021-04-29T00:00:00.000+0700" ,
+    "RunNo": 9 
+      
+}
+
+###  Insert AR Serial
+POST http://localhost:8000/api/account/sap/save/arserial
+content-type: application/json
+
+{
+    "RunNo": 9,
+    "ParentKey": 1 ,
+    "InternalSerialNumber": 61956 ,
+    "BaseLineNumber": 0 , 
+    "DocDate": "20210429" ,
+    "TollWayId": 9 ,
+    "SerialNo": "ข061956"
+  
+}

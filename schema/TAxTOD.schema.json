@@ -800,23 +800,6 @@
             "outputs": []
         }
     },
-    "TA_getSelltoInterface": {
-        "type": "PROCEDURE",
-        "updated": "2021-03-08T10:28:49.193Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "smalldatetime"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "UpdateAR_Head": {
         "type": "PROCEDURE",
         "updated": "2021-03-08T12:16:08.767Z",
@@ -1095,27 +1078,6 @@
             "outputs": []
         }
     },
-    "GetTASellByRunNo": {
-        "type": "PROCEDURE",
-        "updated": "2021-03-25T11:06:15.887Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "smalldatetime"
-                },
-                {
-                    "name": "RunNo",
-                    "type": "int"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "GetTASell": {
         "type": "PROCEDURE",
         "updated": "2021-03-25T11:06:19.380Z",
@@ -1145,27 +1107,6 @@
                 {
                     "name": "SoldDate",
                     "type": "smalldatetime"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetSumTASellByRunNo": {
-        "type": "PROCEDURE",
-        "updated": "2021-03-26T10:54:20.103Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "smalldatetime"
-                },
-                {
-                    "name": "RunNo",
-                    "type": "int"
                 }
             ],
             "outputs": []
@@ -1395,6 +1336,65 @@
         "updated": "2021-04-27T10:53:25.487Z",
         "parameter": {
             "inputs": [],
+            "outputs": []
+        }
+    },
+    "TA_getSelltoInterface": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-29T14:29:15.517Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tollwayid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "SoldDate",
+                    "type": "date"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "GetTASellByRunNo": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-30T17:33:40.987Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tollwayid",
+                    "type": "smallint"
+                },
+                {
+                    "name": "SoldDate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "RunNo",
+                    "type": "int"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "GetSumTASellByRunNo": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-30T17:34:02.583Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tollwayid",
+                    "type": "smallint"
+                },
+                {
+                    "name": "SoldDate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "RunNo",
+                    "type": "int"
+                }
+            ],
             "outputs": []
         }
     }

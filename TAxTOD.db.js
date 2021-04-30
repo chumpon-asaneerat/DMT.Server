@@ -129,12 +129,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async TA_getSelltoInterface(pObj) {
-        let name = 'TA_getSelltoInterface';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async UpdateAR_Head(pObj) {
         let name = 'UpdateAR_Head';
         let proc = schema[name];
@@ -189,12 +183,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async GetTASellByRunNo(pObj) {
-        let name = 'GetTASellByRunNo';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async GetTASell(pObj) {
         let name = 'GetTASell';
         let proc = schema[name];
@@ -203,12 +191,6 @@ const TAxTOD = class extends SqlServer {
 
     async GetSumTASell(pObj) {
         let name = 'GetSumTASell';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetSumTASellByRunNo(pObj) {
-        let name = 'GetSumTASellByRunNo';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -263,6 +245,24 @@ const TAxTOD = class extends SqlServer {
 
     async TA_getTSBlist(pObj) {
         let name = 'TA_getTSBlist';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_getSelltoInterface(pObj) {
+        let name = 'TA_getSelltoInterface';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetTASellByRunNo(pObj) {
+        let name = 'GetTASellByRunNo';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetSumTASellByRunNo(pObj) {
+        let name = 'GetSumTASellByRunNo';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
