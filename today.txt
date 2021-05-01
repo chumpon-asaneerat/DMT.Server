@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-01 #1
+- Add package ssh2-sftp-client
+- Add package node-schedule
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-03-29 #1
 - commit json data file (generate during testing process).
 
