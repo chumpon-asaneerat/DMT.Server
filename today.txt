@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-04 #1
+- Rename 09.UpdateAR_Serialsql to 09.UpdateAR_Serial.sql
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-05-01 #2
 - Add Package toad-scheduler
 - Add Quokka sample for 
