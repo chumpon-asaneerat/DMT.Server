@@ -22,7 +22,7 @@ content-type: application/json
 
 {
     "tollwayid": 9 ,
-    "solddate": "2021-04-29"
+    "solddate": "2021-02-20"
   
 }
 
