@@ -26,6 +26,18 @@ content-type: application/json
   
 }
 
+###  Save AR (call this for let SP to insert ARHead and related ARLine, ARSerial in single call)
+POST http://localhost:8000/api/account/sap/save/ar
+content-type: application/json
+
+{
+    "DocDate": "20210429" ,
+    "DocDueDate": "20210429" , 
+    "CardCode": "CC061" ,
+    "CardName": "ผู้ใช้ทาง" ,
+    "TollWayId": 9   
+}
+
 ###  Insert AR Head
 ###  Note: Use SaveAR instead that include 
 ###  - Insert AR Head
