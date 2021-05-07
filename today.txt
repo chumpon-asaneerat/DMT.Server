@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-07 #3
+- generate schecma related files.
+- generate TAxTOD.db.js
+
+[commited]
 Update 2021-05-07 #2
 - update gulpfile and generate script for 2021-05-07.
 

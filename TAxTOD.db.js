@@ -27,8 +27,14 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async TA_GetExchangeData(pObj) {
-        let name = 'TA_GetExchangeData';
+    async ESellingToTA(pObj) {
+        let name = 'ESellingToTA';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetTSBLowLimit(pObj) {
+        let name = 'GetTSBLowLimit';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -41,12 +47,6 @@ const TAxTOD = class extends SqlServer {
 
     async TA_UpdateCreditLowLimit(pObj) {
         let name = 'TA_UpdateCreditLowLimit';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetTSBLowLimit(pObj) {
-        let name = 'GetTSBLowLimit';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -75,50 +75,8 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async ESellingToTA(pObj) {
-        let name = 'ESellingToTA';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetAR_Line(pObj) {
-        let name = 'GetAR_Line';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetAR_Serial(pObj) {
-        let name = 'GetAR_Serial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async UpdateAR_Line(pObj) {
-        let name = 'UpdateAR_Line';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async UpdateAR_Serial(pObj) {
-        let name = 'UpdateAR_Serial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetAR_Head(pObj) {
-        let name = 'GetAR_Head';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async TCTSoldCoupon(pObj) {
         let name = 'TCTSoldCoupon';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async SAP_GetInquirySellCoupon(pObj) {
-        let name = 'SAP_GetInquirySellCoupon';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -129,32 +87,8 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async UpdateAR_Head(pObj) {
-        let name = 'UpdateAR_Head';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async UpdateflagAR_Head(pObj) {
-        let name = 'UpdateflagAR_Head';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async UpdateflagAR_Line(pObj) {
-        let name = 'UpdateflagAR_Line';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async UpdateflagAR_Serial(pObj) {
-        let name = 'UpdateflagAR_Serial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetAR_SerialtoTACoupon(pObj) {
-        let name = 'GetAR_SerialtoTACoupon';
+    async Acc_SaveTSBCreditBalance(pObj) {
+        let name = 'Acc_SaveTSBCreditBalance';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -165,8 +99,8 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async Acc_SaveTSBCreditBalance(pObj) {
-        let name = 'Acc_SaveTSBCreditBalance';
+    async Acc_getTSBBalance(pObj) {
+        let name = 'Acc_getTSBBalance';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -177,20 +111,14 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async Acc_getTSBBalance(pObj) {
-        let name = 'Acc_getTSBBalance';
+    async TA_SaveExchangeTransaction(pObj) {
+        let name = 'TA_SaveExchangeTransaction';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async GetTASell(pObj) {
-        let name = 'GetTASell';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async GetSumTASell(pObj) {
-        let name = 'GetSumTASell';
+    async TA_SaveReqExchangeDetial(pObj) {
+        let name = 'TA_SaveReqExchangeDetial';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -207,20 +135,8 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async TA_SaveReqExchangeDetial(pObj) {
-        let name = 'TA_SaveReqExchangeDetial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async Acc_SaveAppExchangeDetial(pObj) {
         let name = 'Acc_SaveAppExchangeDetial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async TA_SaveExchangeTransaction(pObj) {
-        let name = 'TA_SaveExchangeTransaction';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -249,8 +165,56 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async UpdateAR_Head(pObj) {
+        let name = 'UpdateAR_Head';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetAR_Head(pObj) {
+        let name = 'GetAR_Head';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetAR_Line(pObj) {
+        let name = 'GetAR_Line';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetAR_Serial(pObj) {
+        let name = 'GetAR_Serial';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async UpdateflagAR_Head(pObj) {
+        let name = 'UpdateflagAR_Head';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async UpdateflagAR_Serial(pObj) {
+        let name = 'UpdateflagAR_Serial';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async UpdateflagAR_Line(pObj) {
+        let name = 'UpdateflagAR_Line';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
     async TA_getSelltoInterface(pObj) {
         let name = 'TA_getSelltoInterface';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async GetSumTASellByRunNo(pObj) {
+        let name = 'GetSumTASellByRunNo';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -261,8 +225,20 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async GetSumTASellByRunNo(pObj) {
-        let name = 'GetSumTASellByRunNo';
+    async UpdateAR_Serial(pObj) {
+        let name = 'UpdateAR_Serial';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async UpdateAR_Line(pObj) {
+        let name = 'UpdateAR_Line';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveAR(pObj) {
+        let name = 'SaveAR';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }

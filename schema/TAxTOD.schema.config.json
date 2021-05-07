@@ -42,5 +42,6 @@
     "TA_GetUpdateReqData": true,
     "TA_GetAccAppReqDetail": true,
     "TA_getSAPCustomer": true,
-    "TA_getTSBlist": true
+    "TA_getTSBlist": true,
+    "SaveAR": true
 }
