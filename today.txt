@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-07 #4
+- update sap.api.rest - add comment in unused api.
+
+[commited]
 Update 2021-05-07 #3
 - generate schecma related files.
 - generate TAxTOD.db.js

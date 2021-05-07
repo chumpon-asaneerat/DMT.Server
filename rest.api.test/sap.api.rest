@@ -27,6 +27,13 @@ content-type: application/json
 }
 
 ###  Insert AR Head
+###  Note: Use SaveAR instead that include 
+###  - Insert AR Head
+###  - Get AR Head
+###  - Get AR Sum Coupon list
+###  - Insert AR Line
+###  - Get AR Coupon list 
+###  - Insert AR Serial
 POST http://localhost:8000/api/account/sap/save/arhead
 content-type: application/json
 
@@ -44,6 +51,13 @@ content-type: application/json
 
 
 ###  Get AR Head
+###  Note: Use SaveAR instead that include 
+###  - Insert AR Head
+###  - Get AR Head
+###  - Get AR Sum Coupon list
+###  - Insert AR Line
+###  - Get AR Coupon list 
+###  - Insert AR Serial
 POST http://localhost:8000/api/account/sap/get/arhead
 content-type: application/json
 
@@ -53,7 +67,14 @@ content-type: application/json
       
 }
 
-###  Get AR Coupon list 
+###  Get AR Sum Coupon list 
+###  Note: Use SaveAR instead that include 
+###  - Insert AR Head
+###  - Get AR Head
+###  - Get AR Sum Coupon list
+###  - Insert AR Line
+###  - Get AR Coupon list 
+###  - Insert AR Serial
 POST http://localhost:8000/api/account/sap/get/arsumcoupon
 content-type: application/json
 
@@ -65,6 +86,13 @@ content-type: application/json
 }
 
 ###  Insert AR Line
+###  Note: Use SaveAR instead that include 
+###  - Insert AR Head
+###  - Get AR Head
+###  - Get AR Sum Coupon list
+###  - Insert AR Line
+###  - Get AR Coupon list 
+###  - Insert AR Serial
 POST http://localhost:8000/api/account/sap/save/arline
 content-type: application/json
 
@@ -85,6 +113,13 @@ content-type: application/json
 }
 
 ###  Get AR Coupon list 
+###  Note: Use SaveAR instead that include 
+###  - Insert AR Head
+###  - Get AR Head
+###  - Get AR Sum Coupon list
+###  - Insert AR Line
+###  - Get AR Coupon list 
+###  - Insert AR Serial
 POST http://localhost:8000/api/account/sap/get/arcouponlist
 content-type: application/json
 
@@ -96,6 +131,13 @@ content-type: application/json
 }
 
 ###  Insert AR Serial
+###  Note: Use SaveAR instead that include 
+###  - Insert AR Head
+###  - Get AR Head
+###  - Get AR Sum Coupon list
+###  - Insert AR Line
+###  - Get AR Coupon list 
+###  - Insert AR Serial
 POST http://localhost:8000/api/account/sap/save/arserial
 content-type: application/json
 
