@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-07 #2
+- update gulpfile and generate script for 2021-05-07.
+
+[commited]
 Update 2021-05-07 #1
 - Add SaveAR sql script.
 
