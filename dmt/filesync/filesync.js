@@ -15,7 +15,7 @@ const defaultCfg = {
     export: {}
 };
 
-const cfgFileName = path.join(rootPath, 'import-export.config.json');
+const cfgFileName = path.join(rootPath, 'SAP.files.config.json');
 
 const NFileSync = class {
     constructor() {
@@ -24,7 +24,7 @@ const NFileSync = class {
     }
 
     loadconfig = () => {
-        console.log('load file sync configuration.');
+        console.log('load SAP files processing configuration.');
     
         if (!JSONFile.exists(cfgFileName)) {
             JSONFile.save(cfgFileName, defaultCfg)
@@ -37,4 +37,6 @@ const NFileSync = class {
     }
 }
 
-module.exports.NFileSync = exports.NFileSync = NFileSync;
+let service = new NFileSync();
+
+module.exports = exports = service;

@@ -42,4 +42,6 @@ const NSFTP = class {
     }
 }
 
-module.exports.NSFTP = exports.NSFTP = NSFTP;
+let service = new NSFTP();
+
+module.exports = exports = service;
