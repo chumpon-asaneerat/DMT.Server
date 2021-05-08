@@ -43,11 +43,10 @@ const cfgFileName = path.join(rootPath, 'SAP.files.config.json');
 
 const NFileSync = class {
     constructor() {
-        this.job = null;
+        this.job = null
         this.config = null
         this.loadconfig()
     }
-
     loadconfig = () => {
         logger.info('load SAP files processing configuration.')
     
@@ -56,7 +55,6 @@ const NFileSync = class {
         }
         this.config = JSONFile.load(cfgFileName)
     }
-
     start() {
         logger.info('start file sync service.')
         if (!this.config) {
@@ -73,7 +71,7 @@ const NFileSync = class {
             try { this.job.cancel() }
             catch (err) { logger.error(err.message) }
         }
-        this.job = null;
+        this.job = null
     }
 }
 

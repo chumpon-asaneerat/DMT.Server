@@ -52,10 +52,10 @@ const cfgFileName = path.join(rootPath, 'sftp.config.json');
 
 const NSFTP = class {
     constructor() {
+        this.job = null
         this.config = null
         this.loadconfig()
     }
-
     loadconfig = () => {
         logger.info('load sftp configuration.')
     
@@ -65,7 +65,6 @@ const NSFTP = class {
         // load config
         this.config = JSONFile.load(cfgFileName)
     }
-
     start() {
         logger.info('start sftp service.')
         if (!this.config) {
@@ -82,7 +81,7 @@ const NSFTP = class {
             try { this.job.cancel() }
             catch (err) { logger.error(err.message) }
         }
-        this.job = null;
+        this.job = null
     }
 }
 
