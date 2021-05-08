@@ -19,5 +19,18 @@
         "user": "tester",
         "pwd": "password",
         "privateKeyFile": null
-    }
+    },
+    "downloads": [
+        {
+            "remotePath": "/couponexp",
+            "remoteFile": "*.csv",
+            "localPath": "D:\\samples\\"
+        }
+    ],
+    "uploads": [
+        {
+            "localFiles": "",
+            "remotePath": ""
+        }
+    ]
 }
