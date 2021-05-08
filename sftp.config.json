@@ -1,16 +1,23 @@
 {
+    "schedule": {
+        "website": {
+            "cron": "https://crontab.guru/",
+            "nodeschedule": "https://www.npmjs.com/package/node-schedule"
+        },
+        "cron": "*/5 * * * * *"
+    },
     "server1": {
-        "host": "",
+        "host": "203.114.69.22",
         "port": 22,
-        "user": "",
-        "pwd": "",
+        "user": "sapftp",
+        "pwd": "$apF+p",
         "privateKeyFile": null
     },
     "server2": {
-        "host": "",
+        "host": "192.168.1.37",
         "port": 22,
-        "user": "",
-        "pwd": "",
+        "user": "tester",
+        "pwd": "password",
         "privateKeyFile": null
     }
 }

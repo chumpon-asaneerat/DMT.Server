@@ -1,4 +1,11 @@
 {
+    "schedule": {
+        "website": {
+            "cron": "https://crontab.guru/",
+            "nodeschedule": "https://www.npmjs.com/package/node-schedule"
+        },
+        "cron": "*/5 * * * * *"
+    },
     "import": {},
     "export": {}
 }
