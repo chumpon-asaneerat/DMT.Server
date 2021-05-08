@@ -1,0 +1,16 @@
+{
+    "server1": {
+        "host": "",
+        "port": 22,
+        "user": "",
+        "pwd": "",
+        "privateKeyFile": null
+    },
+    "server2": {
+        "host": "",
+        "port": 22,
+        "user": "",
+        "pwd": "",
+        "privateKeyFile": null
+    }
+}

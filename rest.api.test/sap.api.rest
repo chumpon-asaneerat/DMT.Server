@@ -21,8 +21,8 @@ POST http://localhost:8000/api/account/sap/couponsoldlist
 content-type: application/json
 
 {
-    "tollwayid": 8 ,
-    "solddate": "2021-05-08"
+    "tollwayid": 9 ,
+    "solddate": "2021-02-20"
   
 }
 
