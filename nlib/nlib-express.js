@@ -113,7 +113,7 @@ const defaultWSvr = {
 //#region WebServer helper methods
 
 const loadconfig = () => {
-    console.log('load configuration.');
+    console.log('load web server configuration.');
     let cfg = nlib.Config;
     if (!cfg.exists()) {
         // Set the default app config.
