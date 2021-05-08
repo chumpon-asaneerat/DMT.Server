@@ -2,6 +2,7 @@ const path = require('path');
 const find = require('find');
 const fs = require('fs');
 const schedule = require('node-schedule');
+const { permittedCrossDomainPolicies } = require('helmet');
 
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
@@ -43,6 +44,7 @@ const cfgFileName = path.join(rootPath, 'SAP.files.config.json');
 
 const NFileSync = class {
     constructor() {
+        this.onprocessing = false
         this.job = null
         this.config = null
         this.loadconfig()
@@ -62,8 +64,9 @@ const NFileSync = class {
             return;
         }
         let cron = this.config.schedule.cron
+        let self = this;
         this.job = schedule.scheduleJob(cron, () => {
-            logger.info('file sync process begin')
+            self.processing()
         })
     }
     shutdown() {
@@ -72,6 +75,27 @@ const NFileSync = class {
             catch (err) { logger.error(err.message) }
         }
         this.job = null
+    }
+    processing() {
+        if (this.onprocessing) {
+            logger.info('file sync service in execute state.')
+            return            
+        }
+        
+        this.onprocessing = true
+
+        logger.info('file sync process begin')
+        if (!this.config) {
+            logger.info('file sync service config is null.')
+        }
+        else {
+            logger.info('process csv files.')
+
+            logger.info('create txt files.')
+        }
+        logger.info('file sync process finish')
+
+        this.onprocessing = false
     }
 }
 

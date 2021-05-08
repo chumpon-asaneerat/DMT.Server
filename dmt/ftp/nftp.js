@@ -52,6 +52,7 @@ const cfgFileName = path.join(rootPath, 'sftp.config.json');
 
 const NSFTP = class {
     constructor() {
+        this.onprocessing = false
         this.job = null
         this.config = null
         this.loadconfig()
@@ -72,8 +73,9 @@ const NSFTP = class {
             return;
         }
         let cron = this.config.schedule.cron
+        let self = this;
         this.job = schedule.scheduleJob(cron, () => {
-            logger.info('sftp sync process begin')
+            self.processing()
         })
     }
     shutdown() {
@@ -82,6 +84,27 @@ const NSFTP = class {
             catch (err) { logger.error(err.message) }
         }
         this.job = null
+    }
+    processing() {
+        if (this.onprocessing) {
+            logger.info('sftp service in execute state.')
+            return            
+        }
+        
+        this.onprocessing = true
+
+        logger.info('sftp sync process begin')
+        if (!this.config) {
+            logger.info('sftp service config is null.')
+        }
+        else {
+            logger.info('download csv files.')
+
+            logger.info('upload txt files.')
+        }
+        logger.info('sftp sync process finish')
+
+        this.onprocessing = false
     }
 }
 
