@@ -1,4 +1,8 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-05-08 #1 (K.Tee)
+-  Alter SP TA_getSelltoInterface Add Return TollWayName , ShiftName
+
+----------------------------------------------------------------------------------------------
 Update 2021-05-04 #1 (K.Tee)
 -  Fix Script Gen 27-04-2021 
 -  Update File 07.UpdateAR_Line.sql
