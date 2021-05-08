@@ -2,7 +2,9 @@ const path = require('path');
 const find = require('find');
 const fs = require('fs');
 const schedule = require('node-schedule');
-const SFtpClient = require('ssh2-sftp-client')
+const SFtpClient = require('ssh2-sftp-client');
+const { cli } = require('winston/lib/winston/config');
+const { CLIENT_RENEG_WINDOW } = require('tls');
 
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
@@ -61,103 +63,78 @@ const defaultCfg = {
 
 const cfgFileName = path.join(rootPath, 'sftp.config.json');
 
-const connect = async (client, config) => { 
-    let success = false
-    try {
-        await client.connect({
+const ftp = class {
+    static connect(client, config) {
+        return client.connect({
             host: config.host,
             port: config.port,
             //privateKey: fs.readFileSync('/path/to/ssh/key'),
             username: config.user,
             password: config.pwd
         })
-        success = true
     }
-    catch (err) {
-        logger.error(err.message)
+    static cwd(client) {
+        return client.cwd()
     }
-    finally {
-        return success
+    static list(client, remptePath, remotePattern) {
+        return client.list(remptePath, remotePattern)
     }
-}
-const download = async (client, remotePath, remoteFile, localPath) => { 
-    let success = false
-    try {
-        let files = await client.list(remotePath, remoteFile)
-        files.forEach(fileinfo => {
-            console.log(fileinfo)
-        })
-        success = true
-    }
-    catch (err) {
-        logger.error(err.message)
-    }
-    finally {
-        return success
-    }
-}
-const downloads = async (client, downloadList) => {
-    let dn = [];
-    dn.forEach(item => {})
-    if (downloadList && downloadList.length > 0) {
-        downloadList.forEach(async (item) => {            
-            await download(client, item.remotePath, item.remoteFile, item.localPath)
-        })
-    }
-} 
-const disconnect = async (client) => { 
-    let success = false
-    try {
-        await client.end()
-        success = true
-    }
-    catch (err) {
-        logger.error(err.message)
-    }
-    finally {
-        return success
+    static gets(client, remotePath, localPath, files, callback) {
+        if (files && files.length > 0) {
+            let icnt = 0;
+            let imax = files.length;
+            files.forEach(file =>  {
+                let remoteFileName = path.join(remotePath, fileName)
+                let localFileName = path.join(localPath, fileName)
+                let dst = fs.createWriteStream(localFileName)
+                client.get(remoteFileName, dst).then(() => {
+                    icnt++
+                    if (icnt >= imax) {
+                        client.end() // all file downloaded so close connection.
+                        if (callback) callback()
+                    }
+                })
+            })
+        }        
     }
 }
 
-const doFTP1 = async (config) => {
-    let result = false
-    let client = new SFtpClient('DMT-SFTP-Server')
-    try {
-        result = await connect(client, config.server1)
-        if (result)
-        {
-            await downloads(client, config.downloads)
-            await disconnect(client)
-            result = true
-        }        
-    }
-    catch (err) {
-        logger.error(err.message)
-        result = false
-    }
-    finally {
-        return result
-    }
+const CreatePromiseFileList = (files) => {
+    return new Promise(() => {
+        return files;
+    })
 }
-const doFTP2 = async (config) => {
-    let result = false
+
+const downloadFiles = (serverConfig, downloadCondig, callback) => {
     let client = new SFtpClient('DMT-SFTP-Server')
-    try {
-        result = await connect(client, config.server2)
-        if (result)
-        {
-            await downloads(client, config.downloads)
-            await disconnect(client)
-            result = true
-        }        
-    }
-    catch (err) {
-        logger.error(err.message)
-        result = false
-    }
-    finally {
-        return result
-    }
+    ftp.connect(client, serverConfig)
+        .then(() => { return ftp.cwd(client) }) // get root directory
+        .then((rootDir) => { 
+            let files = []
+            let icnt = 0;
+            let imax = downloadCondig.length
+            // set remote file search pattern to get list of files to download.
+            downloadCondig.forEach(entry => {
+                let remotePath = entry.remotePath
+                let remotePattern = entry.remoteFile
+                let fullRemotePath = path.join(rootDir, remotePath)
+                ftp.list(client, fullRemotePath. remotePattern).then((files) => {
+                    files.push(...files)
+                    icnt++
+                    if (icnt >= imax) return CreatePromiseFileList(files)
+                })
+            })
+        })
+        .then((files) => {
+            let remotePath = downloadConfig.remotePath
+            let localPath = downloadConfig.localPath
+            ftp.gets(client, remotePath, localPath, files, callback)
+        })
+        .catch((err) => {
+            logger.error(err.message)
+            client.end()
+            if (callback) callback()
+        })
 }
 
 const NSFTP = class {
@@ -209,19 +186,12 @@ const NSFTP = class {
         }
         else {
             logger.info('download csv files.')
-            doFTP1(this.config).then((s1) => 
-            { 
-                if (!s1) {
-                    logger.info('server 1 failed.')
-                    doFTP2(this.config).then((s2) => {
-                        if (!s2) logger.info('server 2 failed.')
-                        else this.onprocessing = false
-                    })
-                }
-                else this.onprocessing = false
+            /*
+            let self = this
+            downloadFiles(this.config.server2, this.config.downloads, () => {
+                self.onprocessing = false
             })
-
-            logger.info('upload txt files.')
+            */
         }
         logger.info('sftp sync process finish')
     }

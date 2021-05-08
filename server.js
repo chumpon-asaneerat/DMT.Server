@@ -8,4 +8,4 @@ const wsvr = new WebServer();
 wsvr.listen();
 
 //fileSyncService.start();
-//SFTPService.start();
+SFTPService.start();
