@@ -4,9 +4,9 @@ content-type: application/json
 
 {
     "tsbId": "09",
-    "amnt1": 1000,
-    "amnt2": 1000,
-    "amnt5": 1000,
+    "amnt1": 2000,
+    "amnt2": 2000,
+    "amnt5": 9000,
     "amnt10": 1000,
     "amnt20": 1000,
     "amnt50": 1000,
