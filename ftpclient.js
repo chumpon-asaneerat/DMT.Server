@@ -1,8 +1,6 @@
-const { tree } = require('gulp')
 const SFtpClient = require('ssh2-sftp-client')
 const fs = require('fs')
 const path = require('path')
-const { Console } = require('winston/lib/winston/transports')
 
 console.log('test ftp client')
 
@@ -100,4 +98,74 @@ const doftp = (config) => {
     })
 }
 
-doftp(config2)
+//doftp(config2)
+
+function to(promise) {
+    return promise.then(data => { return { error: null, result: data } })
+        .catch(err => { return { error: err } })
+ }
+
+const checkServer = async (config) => {
+    let client = new SFtpClient('check-ftp-server')
+    let success = false
+    try {
+        await client.connect({
+            host: config.host, 
+            port: config.port,
+            //privateKey: fs.readFileSync('/path/to/ssh/key'),
+            username: config.username, 
+            password: config.password,
+            readyTimeout: 5000})
+
+        console.log(`success connect to host: ${config.host}, port: ${config.port}`)
+
+        success = true
+        client.end()
+    }
+    catch (err) { 
+        console.log(`failed connect to host: ${config.host}, port: ${config.port}`)
+        console.log(err.message)
+        
+        success = false 
+    }
+    return success
+}
+
+const checkServers = async () => {
+    let serverCfg = null
+    let success = false
+    console.log('connect to host 1')    
+    try { 
+        success = await checkServer(config1) 
+        serverCfg = config1
+    }
+    catch (err) { 
+        success = false
+        serverCfg = null
+    }
+    // return if success
+    if (success) return serverCfg
+
+    console.log('connect to host 2')
+    try { 
+        success = await checkServer(config2) 
+        serverCfg = config2
+    }
+    catch (err2) {
+        success = false
+        serverCfg = null
+    }
+
+    return serverCfg
+}
+
+checkServers()
+    .then(cfg => {
+        if (!cfg) console.log('both server failed')
+        else {
+            console.log('work:', cfg)
+        }
+    })
+    .catch(err => { 
+        console.log('checkServers: ' + err.message)
+    })

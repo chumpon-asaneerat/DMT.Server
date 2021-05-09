@@ -1,10 +1,11 @@
+require('events').EventEmitter.defaultMaxListeners = 100
+
 const path = require('path');
 const find = require('find');
 const fs = require('fs');
 const schedule = require('node-schedule');
 const SFtpClient = require('ssh2-sftp-client');
-const { cli } = require('winston/lib/winston/config');
-const { CLIENT_RENEG_WINDOW } = require('tls');
+const { ClientHttp2Session } = require('http2');
 
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
@@ -63,78 +64,216 @@ const defaultCfg = {
 
 const cfgFileName = path.join(rootPath, 'sftp.config.json');
 
-const ftp = class {
-    static connect(client, config) {
-        return client.connect({
-            host: config.host,
-            port: config.port,
+const testConnection = async (ftpCfg) => {
+    let client = new SFtpClient('test-ftp-server')
+    let success = false
+    try {
+        await client.connect({
+            host: ftpCfg.host,
+            port: ftpCfg.port,
             //privateKey: fs.readFileSync('/path/to/ssh/key'),
-            username: config.user,
-            password: config.pwd
+            username: ftpCfg.user,
+            password: ftpCfg.pwd
         })
+
+        logger.info(`success connect to host: ${ftpCfg.host}, port: ${ftpCfg.port}`)
+        success = true
+        client.end()
     }
-    static cwd(client) {
-        return client.cwd()
+    catch (err) {
+        logger.error(`failed connect to host: ${ftpCfg.host}, port: ${ftpCfg.port}`)
+        logger.error(err.message)
+        success = false
     }
-    static list(client, remptePath, remotePattern) {
-        return client.list(remptePath, remotePattern)
+    return success
+}
+const selectFTPServer = async (config) => {
+    let success = false
+    let ftpCfg;
+    // Use server 1 config
+    try {
+        ftpCfg = config.server1
+        logger.info(`attemp to connect host: ${ftpCfg.host}, port: ${ftpCfg.port}`)
+        success = await testConnection(ftpCfg)
     }
-    static gets(client, remotePath, localPath, files, callback) {
-        if (files && files.length > 0) {
-            let icnt = 0;
-            let imax = files.length;
-            files.forEach(file =>  {
-                let remoteFileName = path.join(remotePath, fileName)
-                let localFileName = path.join(localPath, fileName)
-                let dst = fs.createWriteStream(localFileName)
-                client.get(remoteFileName, dst).then(() => {
-                    icnt++
-                    if (icnt >= imax) {
-                        client.end() // all file downloaded so close connection.
-                        if (callback) callback()
-                    }
-                })
-            })
-        }        
+    catch (err) {
+        success = false
+        ftpCfg = null
+    }
+    if (success) return ftpCfg
+    // Use server 2 config
+    try {
+        ftpCfg = config.server2
+        logger.info(`attemp to connect host: ${ftpCfg.host}, port: ${ftpCfg.port}`)
+        success = await testConnection(ftpCfg)
+    }
+    catch (err) {
+        success = false
+        ftpCfg = null
+    }
+    return ftpCfg
+}
+
+const checkLocalDir = (localFileName) => {
+    try {
+        let dirName = path.dirname(localFileName)
+        if (!fs.existsSync(dirName)) {
+            logger.info(`local path ${dirName} not exits create new one.`)
+            fs.mkdirSync(dirName)
+        }
+    }
+    catch (err) {
+        logger.error(err.message)
     }
 }
 
-const CreatePromiseFileList = (files) => {
-    return new Promise(() => {
-        return files;
+const removeDownloadList = (client, entries, callback) => {
+    if (!entries || entries.length <= 0) {
+        callback({error: 'no download list'})
+        return
+    }
+    let icnt = 0;
+    let imax = entries.length;
+    entries.forEach(entry => {
+        let remoteFileName = entry.remoteFileName
+        let localFileName = entry.localFileName
+
+        logger.info(`  ==> delete ${remoteFileName}`)
+        let fstat = fs.statSync(localFileName)
+        let fsize = fstat.size
+        if (fsize == entry.fileSize) {
+            client.delete(remoteFileName)
+                .then(() => {
+                    icnt++
+                    if (icnt >= imax) {
+                        callback({error: null})
+                    }
+                })
+                .catch((err) => {
+                    logger.error(err.message)
+                    callback({error: err})
+                })
+        }
+        else {
+            icnt++
+            if (icnt >= imax) {
+                callback({error: null})
+            }
+        }
     })
 }
 
-const downloadFiles = (serverConfig, downloadCondig, callback) => {
-    let client = new SFtpClient('DMT-SFTP-Server')
-    ftp.connect(client, serverConfig)
-        .then(() => { return ftp.cwd(client) }) // get root directory
-        .then((rootDir) => { 
-            let files = []
-            let icnt = 0;
-            let imax = downloadCondig.length
-            // set remote file search pattern to get list of files to download.
-            downloadCondig.forEach(entry => {
-                let remotePath = entry.remotePath
-                let remotePattern = entry.remoteFile
-                let fullRemotePath = path.join(rootDir, remotePath)
-                ftp.list(client, fullRemotePath. remotePattern).then((files) => {
-                    files.push(...files)
-                    icnt++
-                    if (icnt >= imax) return CreatePromiseFileList(files)
-                })
+const processDownloadList = (client, entries, callback) => {
+    if (!entries || entries.length <= 0) {
+        callback({error: 'no download list'})
+        return
+    }
+    let icnt = 0;
+    let imax = entries.length;
+    entries.forEach(entry => {
+        let remoteFileName = entry.remoteFileName
+        let localFileName = entry.localFileName
+        checkLocalDir(localFileName) // check is local dir exists (auto create if not).
+        let dst = fs.createWriteStream(localFileName)
+
+        logger.info(`  ==> download ${remoteFileName}`)
+        client.get(remoteFileName, dst)
+            .then((stream) => {
+                //stream.on('end', () => { })
+                icnt++
+                if (icnt >= imax) {
+                    //callback({error: null})
+                    removeDownloadList(client, entries, (obj) => {
+                        callback(obj)
+                    })
+                }
             })
-        })
-        .then((files) => {
-            let remotePath = downloadConfig.remotePath
-            let localPath = downloadConfig.localPath
-            ftp.gets(client, remotePath, localPath, files, callback)
-        })
-        .catch((err) => {
+            .catch((err) => {
+                logger.error(err.message)
+                callback({error: err})
+            })
+    })
+}
+
+const processRemoteFiles = (client, root, config, callback) => {
+    if (!config || !config.downloads || config.downloads.length <= 0) {
+        callback({error: 'no download config'})
+        return
+    }
+
+    let entries = []
+    let icnt = 0;
+    let imax = config.downloads.length
+    config.downloads.forEach(entry => { 
+        let remotePath = entry.remotePath
+        let remotePattern = entry.remoteFile
+        let fullRemotePath = path.join(root, remotePath)
+        let localPath = entry.localPath
+        client.list(fullRemotePath, remotePattern)
+            .then(remoteItems => {
+                if (remoteItems && remoteItems.length > 0) {
+                    logger.info(' ** prepare download files ** ')
+                    remoteItems.forEach(remoteItem => {
+                        let item = {
+                            remoteFileName: path.join(remotePath, remoteItem.name),
+                            localFileName: path.join(localPath, remoteItem.name),
+                            fileSize: remoteItem.size
+                        }
+                        logger.info(`  # ${item.remoteFileName} -> ${item.localFileName} (size: ${item.fileSize})`)
+                        entries.push(item) // push to list
+                    })
+                }
+                else {
+                    logger.info(` ** no files in ${fullRemotePath} ** `)
+                }
+                // increate next index of download config
+                icnt++
+                if (icnt >= imax) {
+                    // all remote files prepared
+                    processDownloadList(client, entries, (obj) => {
+                        callback(obj)
+                    })
+                }
+            })
+            .catch(err => {
+                logger.error(err.message)
+                callback({error: err})
+            })
+    })
+}
+
+const downloadFiles = async (config, callback) => {
+    selectFTPServer(config).then(async (ftpCfg) => {
+        let client = new SFtpClient('DMT-SFTP-Server')
+        try {
+            // connect
+            await client.connect({
+                host: ftpCfg.host, port: ftpCfg.port,
+                //privateKey: fs.readFileSync('/path/to/ssh/key'),
+                username: ftpCfg.user, password: ftpCfg.pwd
+            })
+            // get current root remote dir
+            let root = await client.cwd()
+            logger.info(`** root: ${root}`)
+
+            // loop all download paths.
+            processRemoteFiles(client, root, config, () => {
+                // disconnect
+                client.end() 
+                // notify caller that operation is end.
+                callback({data: null})
+            })
+        }
+        catch (err) {
             logger.error(err.message)
-            client.end()
-            if (callback) callback()
-        })
+            callback({error: err})
+        }
+    }).catch(err => {
+        // both host is not avaliable.
+        logger.error('both host is not avaliable')
+        logger.error(err.message)
+        callback({error: err})
+    })
 }
 
 const NSFTP = class {
@@ -183,15 +322,14 @@ const NSFTP = class {
         logger.info('sftp sync process begin')
         if (!this.config) {
             logger.info('sftp service config is null.')
+            this.onprocessing = false
         }
         else {
-            logger.info('download csv files.')
-            /*
             let self = this
-            downloadFiles(this.config.server2, this.config.downloads, () => {
+            logger.info('download csv files.')
+            downloadFiles(this.config, () => {
                 self.onprocessing = false
             })
-            */
         }
         logger.info('sftp sync process finish')
     }

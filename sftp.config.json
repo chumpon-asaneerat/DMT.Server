@@ -7,24 +7,29 @@
         "cron": "*/5 * * * * *"
     },
     "server1": {
-        "host": "203.114.69.22",
-        "port": 22,
-        "user": "sapftp",
-        "pwd": "$apF+p",
-        "privateKeyFile": null
-    },
-    "server2": {
         "host": "192.168.1.37",
         "port": 22,
         "user": "tester",
         "pwd": "password",
         "privateKeyFile": null
     },
+    "server2": {
+        "host": "203.114.69.22",
+        "port": 22,
+        "user": "sapftp",
+        "pwd": "$apF+p",
+        "privateKeyFile": null
+    },
     "downloads": [
         {
             "remotePath": "/couponexp",
             "remoteFile": "*.csv",
-            "localPath": "D:\\samples\\"
+            "localPath": "D:\\samples\\couponexp"
+        },
+        {
+            "remotePath": "/Images",
+            "remoteFile": "*.png",
+            "localPath": "D:\\samples\\Images\\"
         }
     ],
     "uploads": [
