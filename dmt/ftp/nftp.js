@@ -205,40 +205,42 @@ const processRemoteFiles = (client, root, config, callback) => {
     let icnt = 0;
     let imax = config.downloads.length
     config.downloads.forEach(entry => { 
-        let remotePath = entry.remotePath
-        let remotePattern = entry.remoteFile
-        let fullRemotePath = path.join(root, remotePath)
-        let localPath = entry.localPath
-        client.list(fullRemotePath, remotePattern)
-            .then(remoteItems => {
-                if (remoteItems && remoteItems.length > 0) {
-                    logger.info(' ** prepare download files ** ')
-                    remoteItems.forEach(remoteItem => {
-                        let item = {
-                            remoteFileName: path.join(remotePath, remoteItem.name),
-                            localFileName: path.join(localPath, remoteItem.name),
-                            fileSize: remoteItem.size
-                        }
-                        logger.info(`  # ${item.remoteFileName} -> ${item.localFileName} (size: ${item.fileSize})`)
-                        entries.push(item) // push to list
-                    })
-                }
-                else {
-                    logger.info(` ** no files in ${fullRemotePath} ** `)
-                }
-                // increate next index of download config
-                icnt++
-                if (icnt >= imax) {
-                    // all remote files prepared
-                    processDownloadList(client, entries, (obj) => {
-                        callback(obj)
-                    })
-                }
-            })
-            .catch(err => {
-                logger.error(err.message)
-                callback({error: err})
-            })
+        //let fullRemotePath = path.join(root, remotePath)
+        client.realPath(entry.remotePath).then((realDir) => {
+            let remotePath = realDir
+            let remotePattern = entry.remoteFile
+            let localPath = entry.localPath
+            client.list(remotePath, remotePattern)
+                .then(remoteItems => {
+                    if (remoteItems && remoteItems.length > 0) {
+                        logger.info(' ** prepare download files ** ')
+                        remoteItems.forEach(remoteItem => {
+                            let item = {
+                                remoteFileName: path.join(remotePath, remoteItem.name),
+                                localFileName: path.join(localPath, remoteItem.name),
+                                fileSize: remoteItem.size
+                            }
+                            logger.info(`  # ${item.remoteFileName} -> ${item.localFileName} (size: ${item.fileSize})`)
+                            entries.push(item) // push to list
+                        })
+                    }
+                    else {
+                        logger.info(` ** no files in ${remotePath} ** `)
+                    }
+                    // increate next index of download config
+                    icnt++
+                    if (icnt >= imax) {
+                        // all remote files prepared
+                        processDownloadList(client, entries, (obj) => {
+                            callback(obj)
+                        })
+                    }
+                })
+                .catch(err => {
+                    logger.error(err.message)
+                    callback({error: err})
+                })
+        })
     })
 }
 

@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-09 #2
+- Update ftp and file sync #12.
+  - found problem sftp cannot download/upload files on production server
+
+[commited]
 Update 2021-05-09 #1
 - Update ftp and file sync #11.
 
