@@ -52,12 +52,14 @@ content-type: application/json
 }
 
 
-### Save Request  Head
+### Save Request Head. 
+###   status = (R)equest, (A)pprove, (C)ancel
+###   when send status = 'C' need set finishflag to 1 for end process.
 POST http://localhost:8000/api/account/request/save
 content-type: application/json
 
 {
-    "requestid": 1 ,
+    "requestid": 2 ,
     "tsbId": "09",
     "exchangebht" : 10000,
     "borrowbht" : 0,
@@ -68,11 +70,8 @@ content-type: application/json
     "finishflag" : 0 ,
     "userid" : "00444" ,
     "tranactiondate" : "2021-04-13:22:03.112Z" ,
-    "status" : "A"
-
-
+    "status" : "R"
 }
-
 
 ### Save Request  Detail
 POST http://localhost:8000/api/account/request/savedetail
@@ -88,13 +87,20 @@ content-type: application/json
 }
 
 
-### Account get request list
+### Account get request list (A)
+POST http://localhost:8000/api/account/request/getlist
+content-type: application/json
+
+{
+    "status": "A" 
+}
+
+### Account get request list (R)
 POST http://localhost:8000/api/account/request/getlist
 content-type: application/json
 
 {
     "status": "R" 
-
 }
 
 
