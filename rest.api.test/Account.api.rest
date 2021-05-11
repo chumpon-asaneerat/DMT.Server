@@ -52,16 +52,14 @@ content-type: application/json
 }
 
 
-### Save Request Head. 
-###   status = (R)equest, (A)pprove, (C)ancel
-###   when send status = 'C' need set finishflag to 1 for end process.
+### Save Request  Head
 POST http://localhost:8000/api/account/request/save
 content-type: application/json
 
 {
-    "requestid": 2 ,
-    "tsbId": "09",
-    "exchangebht" : 10000,
+    "requestid": 1 ,
+    "tsbId": "08",
+    "exchangebht" : 20000,
     "borrowbht" : 0,
     "additionalbht" : 0,
     "periodbegin" : null,
@@ -71,7 +69,10 @@ content-type: application/json
     "userid" : "00444" ,
     "tranactiondate" : "2021-04-13:22:03.112Z" ,
     "status" : "R"
+
+
 }
+
 
 ### Save Request  Detail
 POST http://localhost:8000/api/account/request/savedetail
@@ -87,20 +88,13 @@ content-type: application/json
 }
 
 
-### Account get request list (A)
-POST http://localhost:8000/api/account/request/getlist
-content-type: application/json
-
-{
-    "status": "A" 
-}
-
-### Account get request list (R)
+### Account get request list
 POST http://localhost:8000/api/account/request/getlist
 content-type: application/json
 
 {
     "status": "R" 
+
 }
 
 
@@ -148,4 +142,37 @@ content-type: application/json
     "requestid": 1 ,
     "tsbId": "09"
 
+}
+
+
+### Get Approve TSB Credit List
+POST http://localhost:8000/api/account/appcredit/list
+content-type: application/json
+
+{
+    
+}
+
+
+### Get  TSB Aprove Credit Transaction List
+POST http://localhost:8000/api/account/appcredit/translist
+content-type: application/json
+
+{
+    "tsbId": "09"
+}
+
+
+### Get  TSB Aprove Credit Transaction List
+POST http://localhost:8000/api/account/appcredit/savetrans
+content-type: application/json
+
+{
+    "tsbId": "09" ,
+    "creapprove" : 200000 ,
+    "creactual" : 0 ,
+    "approvetype" : "I" ,
+    "filename" : "09In.pdf" ,
+    "approveby" : "00444" ,
+    "approvedate" : "2021-05-08:00:00.000Z" 
 }

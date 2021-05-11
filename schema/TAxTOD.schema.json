@@ -1,17 +1,4 @@
 {
-    "Acc_getReqDatabyStatus": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.160Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "status",
-                    "type": "nchar(1)"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "Acc_getReqDetail": {
         "type": "PROCEDURE",
         "updated": "2021-05-07T16:12:58.167Z",
@@ -539,48 +526,6 @@
             ]
         }
     },
-    "SaveAR": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.427Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                },
-                {
-                    "name": "DocDueDate",
-                    "type": "nvarchar(8)"
-                },
-                {
-                    "name": "CardCode",
-                    "type": "nvarchar(15)"
-                },
-                {
-                    "name": "CardName",
-                    "type": "nvarchar(100)"
-                },
-                {
-                    "name": "TollWayId",
-                    "type": "smallint"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "ErrMsg",
-                    "type": "varchar(200)"
-                },
-                {
-                    "name": "ErrNum",
-                    "type": "int"
-                },
-                {
-                    "name": "ReturnType",
-                    "type": "int"
-                }
-            ]
-        }
-    },
     "SaveTACoupon": {
         "type": "PROCEDURE",
         "updated": "2021-05-07T16:12:58.440Z",
@@ -936,6 +881,40 @@
                 {
                     "name": "updatedate",
                     "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TA_UpdateSapFlagCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-07T16:12:58.577Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "coupontype",
+                    "type": "varchar(2)"
+                },
+                {
+                    "name": "serialno",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "cancelFlag",
+                    "type": "char(1)"
                 }
             ],
             "outputs": [
@@ -1435,6 +1414,128 @@
                 {
                     "name": "SoldDate",
                     "type": "date"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "SaveAR": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-09T20:18:37.933Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "DocDueDate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "CardCode",
+                    "type": "nvarchar(15)"
+                },
+                {
+                    "name": "CardName",
+                    "type": "nvarchar(100)"
+                },
+                {
+                    "name": "TollWayId",
+                    "type": "smallint"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ErrMsg",
+                    "type": "varchar(200)"
+                },
+                {
+                    "name": "ErrNum",
+                    "type": "int"
+                },
+                {
+                    "name": "ReturnType",
+                    "type": "int"
+                }
+            ]
+        }
+    },
+    "Acc_getReqDatabyStatus": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-11T10:12:29.307Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "status",
+                    "type": "nchar(1)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Acc_getTSBCreditAppList": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-11T11:31:41.980Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
+    "Acc_SaveCreditApproveTrans": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-11T12:16:10.943Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "creapprove",
+                    "type": "decimal"
+                },
+                {
+                    "name": "creactual",
+                    "type": "decimal"
+                },
+                {
+                    "name": "approvetype",
+                    "type": "nchar(1)"
+                },
+                {
+                    "name": "filename",
+                    "type": "nvarchar(100)"
+                },
+                {
+                    "name": "approveby",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "approvedate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_getTSBCreditAppTrans": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-11T12:36:43.247Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
                 }
             ],
             "outputs": []

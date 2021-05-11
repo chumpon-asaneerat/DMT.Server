@@ -15,12 +15,6 @@ const TAxTOD = class extends SqlServer {
         await super.disconnect();
     }
 
-    async Acc_getReqDatabyStatus(pObj) {
-        let name = 'Acc_getReqDatabyStatus';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async Acc_getReqDetail(pObj) {
         let name = 'Acc_getReqDetail';
         let proc = schema[name];
@@ -135,12 +129,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async SaveAR(pObj) {
-        let name = 'SaveAR';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async SaveTACoupon(pObj) {
         let name = 'SaveTACoupon';
         let proc = schema[name];
@@ -197,6 +185,12 @@ const TAxTOD = class extends SqlServer {
 
     async TA_UpdateCreditLowLimit(pObj) {
         let name = 'TA_UpdateCreditLowLimit';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_UpdateSapFlagCoupon(pObj) {
+        let name = 'TA_UpdateSapFlagCoupon';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -269,6 +263,36 @@ const TAxTOD = class extends SqlServer {
 
     async TA_getSelltoInterface(pObj) {
         let name = 'TA_getSelltoInterface';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveAR(pObj) {
+        let name = 'SaveAR';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getReqDatabyStatus(pObj) {
+        let name = 'Acc_getReqDatabyStatus';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getTSBCreditAppList(pObj) {
+        let name = 'Acc_getTSBCreditAppList';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_SaveCreditApproveTrans(pObj) {
+        let name = 'Acc_SaveCreditApproveTrans';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Acc_getTSBCreditAppTrans(pObj) {
+        let name = 'Acc_getTSBCreditAppTrans';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
