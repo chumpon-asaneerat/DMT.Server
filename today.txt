@@ -1,5 +1,12 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-11 #1
+- Update db script Acc_getReqDatabyStatus (return RequestId column).
+- update gulpfile.
+- generate merge sql script.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-05-10 #1
 - Update Account.api.rest (Reorder test api)
 
