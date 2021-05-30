@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-05-30 #1
+- commit json data file (generate during testing process).
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-05-11 #1
 - Update db script Acc_getReqDatabyStatus (return RequestId column).
 - update gulpfile.

@@ -1,5 +1,15 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 2,
+            "jobNo": 1,
+            "staffId": "20001",
+            "bojDateTime": "2021-05-27T22:31:53.059+0700",
+            "eojDateTime": "2021-05-27T22:31:54.946+0700"
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"
