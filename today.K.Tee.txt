@@ -7,6 +7,14 @@ Update 2021-05-08 #1 (K.Tee)
 -  Alter SP TA_getSelltoInterface Add Return TollWayName , ShiftName
 
 ----------------------------------------------------------------------------------------------
+Update 2021-06-05 #1 (K.Tee)
+-  Add Table + SP Save for TODUserShift , TOD_TSBShift , TODRevenueEntry
+-  Add Api for Save 3 Tables 
+/api/TOD/UserShift/save
+/api/TOD/TSBShift/save
+/api/TOD/RevenueEntry/save
+
+----------------------------------------------------------------------------------------------
 Update 2021-05-04 #1 (K.Tee)
 -  Fix Script Gen 27-04-2021 
 -  Update File 07.UpdateAR_Line.sql

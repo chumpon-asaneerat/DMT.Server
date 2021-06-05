@@ -46,5 +46,8 @@
     "SaveAR": true,
     "Acc_getTSBCreditAppList": true,
     "Acc_SaveCreditApproveTrans": true,
-    "Acc_getTSBCreditAppTrans": true
+    "Acc_getTSBCreditAppTrans": true,
+    "TOD_SaveUserShift": true,
+    "TOD_SaveTSBShift": true,
+    "TOD_SaveRevenueEntry": true
 }

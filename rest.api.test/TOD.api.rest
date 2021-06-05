@@ -1,0 +1,119 @@
+### Save TOD User Shift Start
+POST http://localhost:8000/api/TOD/UserShift/save
+content-type: application/json
+
+{
+  "UserShiftId": "61f2a491-edef-4477-889d-aeabd4cb936c",
+  "TSBId": "08",
+  "ShiftId": 1,
+  "UserId": "00711",
+  "FullNameEN": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "FullNameTH": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "Begin": "2021-06-03T09:57:37.101+07:00",
+  "End": null
+}
+
+### Save TOD User Shift END 
+POST http://localhost:8000/api/TOD/UserShift/save
+content-type: application/json
+
+{
+   "UserShiftId": "61f2a491-edef-4477-889d-aeabd4cb936c",
+  "TSBId": "08",
+  "ShiftId": 1,
+  "UserId": "00711",
+  "FullNameEN": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "FullNameTH": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "Begin": "2021-06-03T09:57:37.101+07:00",
+  "End": "2021-06-03T10:20:02.435+07:00"
+}
+
+
+### Save TOD TSB Shift
+POST http://localhost:8000/api/TOD/TSBShift/save
+content-type: application/json
+
+{
+  "TSBShiftId": "4a2a2738-71d4-43c1-a410-0c5970fdef0b",
+  "TSBId": "08",
+  "ShiftId": 1,
+  "UserId": "00444",
+  "FullNameEN": "นาย หพ.ด่าน ทดสอบระบบ",
+  "FullNameTH": "นาย หพ.ด่าน ทดสอบระบบ",
+  "Begin": "2021-06-03T09:55:47.949+07:00",
+  "End": null
+}
+
+### Save TOD TSB Shift
+POST http://localhost:8000/api/TOD/TSBShift/save
+content-type: application/json
+
+{
+   "TSBShiftId": "806bfeac-a46f-43a8-88d3-d0731a672fa6",
+  "TSBId": "08",
+  "ShiftId": 3,
+  "UserId": "00971",
+  "FullNameEN": "นางสาว สิริลักษณ์ ตรีภาต",
+  "FullNameTH": "นางสาว สิริลักษณ์ ตรีภาต",
+  "Begin": "2021-06-03T22:09:53.158+07:00",
+  "End": null
+}
+
+
+### Save TOD Revenue
+POST http://localhost:8000/api/TOD/RevenueEntry/save
+content-type: application/json
+
+{
+  "PKId": "43a38468-1619-45b2-9027-6e826e7356ba",
+  "EntryDate": "2021-06-03T22:26:56.000+07:00",
+  "RevenueDate": "2021-06-03T22:26:59.976+07:00",
+  "RevenueId": "6400007",
+  "BagNo": "1",
+  "BeltNo": "3",
+  "IsHistorical": 0,
+  "Lanes": "31",
+  "PlazaNames": "",
+  "ShiftBegin": "2021-06-03T12:08:14.089+07:00",
+  "ShiftEnd": "2021-06-03T22:26:59.977+07:00",
+  "TSBId": "08",
+  "PlazaGroupId": "DM",
+  "ShiftId": 2,
+  "UserId": "00111",
+  "CollectorNameEN": "นาย. คิวฟรีเทส ทดสอบระบบเลน",
+  "CollectorNameTH": "นาย. คิวฟรีเทส ทดสอบระบบเลน",
+  "SupervisorId": "00971",
+  "SupervisorNameEN": "นางสาว สิริลักษณ์ ตรีภาต",
+  "SupervisorNameTH": "นางสาว สิริลักษณ์ ตรีภาต",
+  "TrafficST25": 0,
+  "TrafficST50": 0,
+  "TrafficBHT1": 1,
+  "TrafficBHT2": 0,
+  "TrafficBHT5": 0,
+  "TrafficBHT10": 0,
+  "TrafficBHT20": 0,
+  "TrafficBHT50": 0,
+  "TrafficBHT100": 0,
+  "TrafficBHT500": 0,
+  "TrafficBHT1000": 0,
+  "TrafficBHTTotal": 0.0,
+  "TrafficRemark": "",
+  "OtherBHTTotal": 0.0,
+  "OtherRemark": "",
+  "CouponUsageBHT30": 0,
+  "CouponUsageBHT35": 0,
+  "CouponUsageBHT60": 0,
+  "CouponUsageBHT70": 0,
+  "CouponUsageBHT80": 0,
+  "FreePassUsageClassA": 0,
+  "FreePassUsageOther": 0,
+  "CouponSoldBHT35": 0,
+  "CouponSoldBHT80": 0,
+  "CouponSoldBHT35Factor": 665.0,
+  "CouponSoldBHT80Factor": 1520.0,
+  "CouponSoldBHT35Total": 0.0,
+  "CouponSoldBHT80Total": 0.0,
+  "CouponSoldBHTTotal": 0.0,
+  "Status": 0,
+  "LastUpdate": null
+}

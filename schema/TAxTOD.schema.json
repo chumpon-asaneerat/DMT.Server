@@ -1540,5 +1540,327 @@
             ],
             "outputs": []
         }
+    },
+    "TOD_SaveTSBShift": {
+        "type": "PROCEDURE",
+        "updated": "2021-06-05T11:30:36.283Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbshiftid",
+                    "type": "nvarchar(36)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "shiftid",
+                    "type": "int"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "fullnameen",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "fullnameth",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "begin",
+                    "type": "datetime"
+                },
+                {
+                    "name": "end",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TOD_SaveUserShift": {
+        "type": "PROCEDURE",
+        "updated": "2021-06-05T11:33:17.973Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "usershiftid",
+                    "type": "nvarchar(36)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "shiftid",
+                    "type": "int"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "fullnameen",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "fullnameth",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "begin",
+                    "type": "datetime"
+                },
+                {
+                    "name": "end",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TOD_SaveRevenueEntry": {
+        "type": "PROCEDURE",
+        "updated": "2021-06-05T11:59:16.317Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "pkid",
+                    "type": "nvarchar(36)"
+                },
+                {
+                    "name": "entrydate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "revenuedate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "revenueid",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "bagno",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "beltno",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "ishistorical",
+                    "type": "int"
+                },
+                {
+                    "name": "lanes",
+                    "type": "nvarchar(100)"
+                },
+                {
+                    "name": "plazanames",
+                    "type": "nvarchar(100)"
+                },
+                {
+                    "name": "shiftbegin",
+                    "type": "datetime"
+                },
+                {
+                    "name": "shiftend",
+                    "type": "datetime"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "plazagroupid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "shiftid",
+                    "type": "int"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "collectornameen",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "collectornameth",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "supervisorid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "supervisornameen",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "supervisornameth",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "trafficst25",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficst50",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht1",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht2",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht5",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht10",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht20",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht50",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht100",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht500",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbht1000",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficbhttotal",
+                    "type": "int"
+                },
+                {
+                    "name": "trafficremark",
+                    "type": "nvarchar(255)"
+                },
+                {
+                    "name": "otherbhttotal",
+                    "type": "int"
+                },
+                {
+                    "name": "otherremark",
+                    "type": "nvarchar(255)"
+                },
+                {
+                    "name": "couponusagebht30",
+                    "type": "int"
+                },
+                {
+                    "name": "couponusagebht35",
+                    "type": "int"
+                },
+                {
+                    "name": "couponusagebht60",
+                    "type": "int"
+                },
+                {
+                    "name": "couponusagebht70",
+                    "type": "int"
+                },
+                {
+                    "name": "couponusagebht80",
+                    "type": "int"
+                },
+                {
+                    "name": "freepassusageclassa",
+                    "type": "int"
+                },
+                {
+                    "name": "freepassusageother",
+                    "type": "int"
+                },
+                {
+                    "name": "couponsoldbht35",
+                    "type": "int"
+                },
+                {
+                    "name": "couponsoldbht80",
+                    "type": "int"
+                },
+                {
+                    "name": "couponsoldbht35factor",
+                    "type": "float"
+                },
+                {
+                    "name": "couponsoldbht80factor",
+                    "type": "float"
+                },
+                {
+                    "name": "couponsoldbht35total",
+                    "type": "float"
+                },
+                {
+                    "name": "couponsoldbht80total",
+                    "type": "float"
+                },
+                {
+                    "name": "couponsoldbhttotal",
+                    "type": "float"
+                },
+                {
+                    "name": "status",
+                    "type": "int"
+                },
+                {
+                    "name": "lastupdate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
     }
 }
