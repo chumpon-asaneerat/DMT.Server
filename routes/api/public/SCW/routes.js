@@ -143,7 +143,7 @@ api.GetCheifOnDuty = class {
 
 //#endregion
 
-//#region Implement - SaveCheifDuty
+//#region Implement - ChangePassword
 
 api.ChangePassword = class {
     static entry(req, res) {
