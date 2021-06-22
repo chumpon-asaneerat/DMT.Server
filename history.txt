@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------------------------------
+[commited]
+Update 2021-06-22 #1
+- rename today.txt to history.txt
+- set node.js app version to v1.0.0 build 349.
+- add app version in logger file when start.
+
 ----------------------------------------------------------------------------------------------
 [commited]
 Update 2021-05-20 #1
