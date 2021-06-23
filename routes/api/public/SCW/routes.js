@@ -79,12 +79,17 @@ api.LoginAudit = class {
         let jsonFileName = path.join(rootPath, 'SCW', 'loginAudit.json')
         nlib.JSONFile.save(jsonFileName, obj)
 
+        let resultFileName = path.join(rootPath, 'SCW', 'loginAudit.result.json')
+        let ret = nlib.JSONFile.load(resultFileName)
+        WebServer.sendJson(req, res, ret)
+        /*
         WebServer.sendJson(req, res, {
-                status: {
-                    code: 'S200',
-                    message: 'Success'
-                }
-            })
+            status: {
+                code: 'S200',
+                message: 'Success'
+            }
+        })
+        */
     }
 }
 
@@ -99,12 +104,17 @@ api.SaveCheifDuty = class {
         let jsonFileName = path.join(rootPath, 'SCW', 'saveCheifDuty.json')
         nlib.JSONFile.save(jsonFileName, obj)
 
+        let resultFileName = path.join(rootPath, 'SCW', 'saveCheifDuty.result.json')
+        let ret = nlib.JSONFile.load(resultFileName)
+        WebServer.sendJson(req, res, ret)
+        /*
         WebServer.sendJson(req, res, {
-                status: {
-                    code: 'S200',
-                    message: 'Success'
-                }
-            })
+            status: {
+                code: 'S200',
+                message: 'Success'
+            }
+        })
+        */
     }
 }
 
@@ -152,12 +162,17 @@ api.ChangePassword = class {
         let jsonFileName = path.join(rootPath, 'SCW', 'changePassword.json')
         nlib.JSONFile.save(jsonFileName, obj)
 
+        let resultFileName = path.join(rootPath, 'SCW', 'changePassword.result.json')
+        let ret = nlib.JSONFile.load(resultFileName)
+        WebServer.sendJson(req, res, ret)
+        /*
         WebServer.sendJson(req, res, {
-                status: {
-                    code: 'S200',
-                    message: 'Success'
-                }
-            })
+            status: {
+                code: 'S200',
+                message: 'Success'
+            }
+        })
+        */
     }
 }
 
@@ -278,12 +293,17 @@ api.Declare = class {
         emvMgr.removes(emvs) // remove emv from list.
         qrMgr.removes(qrs) // remove qrcode from list.
 
+        let resultFileName = path.join(rootPath, 'SCW', 'declare.result.json')
+        let ret = nlib.JSONFile.load(resultFileName)
+        WebServer.sendJson(req, res, ret)
+        /*
         WebServer.sendJson(req, res, {
-                status: {
-                    code: 'S200',
-                    message: 'Success'
-                }
-            })
+            status: {
+                code: 'S200',
+                message: 'Success'
+            }
+        })
+        */
     }
 }
 

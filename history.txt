@@ -1,5 +1,14 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-06-24 #1
+- update scw route -> load return result from json file.
+  - add saveChiefDuty.result.json
+  - add declare.result.json
+  - add loginAudit.result.json
+  - add changePassword.result.json
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-06-22 #1
 - rename today.txt to history.txt
 - set node.js app version to v1.0.0 build 349.
