@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-06-24 #2
+- set node.js app version to v1.0.0 build 350.
+
+[commited]
 Update 2021-06-24 #1
 - update scw route -> load return result from json file.
   - add saveChiefDuty.result.json

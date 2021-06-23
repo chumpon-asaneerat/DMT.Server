@@ -8,7 +8,7 @@ const fileSyncService = require('./dmt/filesync/filesync');
 const SFTPService = require('./dmt/ftp/nftp');
 
 // write app version to log
-logger.info('start TA Server v1.0..0 build 349 update 2021-05-20 16:20');
+logger.info('start TA Server v1.0..0 build 350 update 2021-05-24 05:40');
 
 // start web server
 const wsvr = new WebServer();
