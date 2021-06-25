@@ -117,3 +117,14 @@ content-type: application/json
   "Status": 0,
   "LastUpdate": null
 }
+
+
+### TCT Check TOD User BOJ
+POST http://localhost:8000/api/TCT/CheckTODBoj
+content-type: application/json
+
+{
+  "TSBId": "08",
+  "UserId": "00711"
+  
+}

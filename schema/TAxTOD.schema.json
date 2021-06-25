@@ -1862,5 +1862,22 @@
                 }
             ]
         }
+    },
+    "TCTCheckTODBoj": {
+        "type": "PROCEDURE",
+        "updated": "2021-06-25T19:48:51.160Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                }
+            ],
+            "outputs": []
+        }
     }
 }

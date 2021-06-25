@@ -49,5 +49,6 @@
     "Acc_getTSBCreditAppTrans": true,
     "TOD_SaveUserShift": true,
     "TOD_SaveTSBShift": true,
-    "TOD_SaveRevenueEntry": true
+    "TOD_SaveRevenueEntry": true,
+    "TCTCheckTODBoj": true
 }

@@ -7,6 +7,11 @@ Update 2021-05-08 #1 (K.Tee)
 -  Alter SP TA_getSelltoInterface Add Return TollWayName , ShiftName
 
 ----------------------------------------------------------------------------------------------
+Update 2021-06-25 #1 (K.Tee)
+-  Add SP For TCT Check TOD BOJ
+-  Add Api for TCT Check TOD BOJ
+/api/TCT/CheckTODBoj
+----------------------------------------------------------------------------------------------
 Update 2021-06-05 #1 (K.Tee)
 -  Add Table + SP Save for TODUserShift , TOD_TSBShift , TODRevenueEntry
 -  Add Api for Save 3 Tables 
