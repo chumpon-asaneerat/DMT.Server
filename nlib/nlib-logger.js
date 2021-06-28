@@ -6,6 +6,7 @@ process.env['ROOT_PATHS'] = path.dirname(require.main.filename)
 const rootPath = process.env['ROOT_PATHS']
 
 const winston = require('winston')
+const moment = require('moment');
 const { createLogger, format, transports } = require('winston')
 const { combine, timestamp, label, printf, colorize, prettyPrint } = format
 //const colorizer = winston.format.colorize()
@@ -22,10 +23,13 @@ const DEFAULT_LOG_FILE_OPTIONS = {
     maxFiles: '14d'
 }
 
+const timestamp2 = () => moment().format('YYYY-MM-DD HH:mm:ss.SSS');
+
 const logFormat = printf((info, opts) => {
     //return colorizer.colorize(level, `${timestamp} ${level}: ${message}`);
     //return `${timestamp} ${level}: ${message}`;
-    return `${info.timestamp} ${info.level}: ${info.message}`
+    //return `${info.timestamp} ${info.level}: ${info.message}`
+    return `${timestamp2()} ${info.level}: ${info.message}`
 });
 
 // default config file name.

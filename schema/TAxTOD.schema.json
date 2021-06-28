@@ -1672,7 +1672,7 @@
                 },
                 {
                     "name": "ishistorical",
-                    "type": "int"
+                    "type": "bit"
                 },
                 {
                     "name": "lanes",

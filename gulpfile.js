@@ -88,7 +88,7 @@ gulp.task('merge-sql-scripts', () => {
     let task = new GulpFileMerge();
 
     // Change date here!!!!!!!!!!!!!!!!!!!!!
-    let sDate = '2021-06-25'; // Change date here!!!!
+    let sDate = '2021-06-29'; // Change date here!!!!
     //let sDate = '2020-08-10'; // Change date here!!!!
     // Change date here!!!!!!!!!!!!!!!!!!!!!
 

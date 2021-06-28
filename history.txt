@@ -1,5 +1,13 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-06-29 #1
+- Update db script
+  - Change TODRevenueEntry Table IsHistorical column type to bit
+  - Change TOD_SaveRevenueEntry procedure IsHistorical parameter to bit
+- Update logger timestamp code.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-06-24 #2
 - set node.js app version to v1.0.0 build 350.
 

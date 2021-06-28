@@ -119,12 +119,77 @@ content-type: application/json
 }
 
 
+### Save TOD Revenue #2
+POST http://localhost:8000/api/TOD/RevenueEntry/save
+content-type: application/json
+
+{
+  "PKId": "8e03e3e8-7018-49c6-b73e-ab5de0cb5ce8",
+  "EntryDate": "2021-06-29T03:32:44.000+07:00",
+  "RevenueDate": "2021-06-29T03:32:47.881+07:00",
+  "RevenueId": "6400036",
+  "BagNo": "777",
+  "BeltNo": "777",
+  "IsHistorical": false,
+  "Lanes": "",
+  "PlazaNames": "",
+  "ShiftBegin": "2021-06-29T02:12:33.224+07:00",
+  "ShiftEnd": "2021-06-29T03:32:47.881+07:00",
+  "TSBId": "09",
+  "TSBNameEN": "ANUSORN SATHAN",
+  "TSBNameTH": "อนุสรณ์สถาน",
+  "PlazaGroupId": "AS",
+  "PlazaGroupNameEN": "ANUSORN SATHAN",
+  "PlazaGroupNameTH": "อนุสรณ์สถาน",
+  "Direction": "?",
+  "ShiftId": 3,
+  "ShiftNameEN": "Midnight",
+  "ShiftNameTH": "ดึก",
+  "UserId": "20001",
+  "CollectorNameEN": "Mr. Hussakorn VRS",
+  "CollectorNameTH": "Mr. Hussakorn VRS",
+  "SupervisorId": "00444",
+  "SupervisorNameEN": "Mr. CTC Test",
+  "SupervisorNameTH": "Mr. CTC Test",
+  "TrafficST25": 0,
+  "TrafficST50": 0,
+  "TrafficBHT1": 0,
+  "TrafficBHT2": 0,
+  "TrafficBHT5": 0,
+  "TrafficBHT10": 0,
+  "TrafficBHT20": 0,
+  "TrafficBHT50": 0,
+  "TrafficBHT100": 0,
+  "TrafficBHT500": 0,
+  "TrafficBHT1000": 0,
+  "TrafficBHTTotal": 0.0,
+  "TrafficRemark": "",
+  "OtherBHTTotal": 0.0,
+  "OtherRemark": "",
+  "CouponUsageBHT30": 0,
+  "CouponUsageBHT35": 0,
+  "CouponUsageBHT60": 0,
+  "CouponUsageBHT70": 0,
+  "CouponUsageBHT80": 0,
+  "FreePassUsageClassA": 0,
+  "FreePassUsageOther": 0,
+  "CouponSoldBHT35": 0,
+  "CouponSoldBHT80": 0,
+  "CouponSoldBHT35Factor": 665.0,
+  "CouponSoldBHT80Factor": 1520.0,
+  "CouponSoldBHT35Total": 0.0,
+  "CouponSoldBHT80Total": 0.0,
+  "CouponSoldBHTTotal": 0.0,
+  "Status": 0,
+  "LastUpdate": null
+}
+
 ### TCT Check TOD User BOJ
 POST http://localhost:8000/api/TCT/CheckTODBoj
 content-type: application/json
 
 {
-  "TSBId": "08",
-  "UserId": "00711"
+  "TSBId": "09",
+  "UserId": "20001"
   
 }
