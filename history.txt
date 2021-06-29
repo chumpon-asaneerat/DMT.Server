@@ -1,5 +1,9 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-06-29 #2
+- commit json data file (generate during testing process).
+
+[commited]
 Update 2021-06-29 #1
 - Update db script
   - Change TODRevenueEntry Table IsHistorical column type to bit

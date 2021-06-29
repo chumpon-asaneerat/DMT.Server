@@ -60,6 +60,26 @@ content-type: application/json
 }
 
 
+### Save TOD TSB Shift #2
+POST http://localhost:8000/api/TOD/TSBShift/save
+content-type: application/json
+
+{
+  "TSBShiftId": "1c57052d-42f7-4426-9213-75c65d7b03fc",
+  "TSBId": "09",
+  "TSBNameEN": "ANUSORN SATHAN",
+  "TSBNameTH": "อนุสรณ์สถาน",
+  "ShiftId": 1,
+  "ShiftNameEN": "Morning",
+  "ShiftNameTH": "เช้า",
+  "UserId": "00444",
+  "FullNameEN": "Mr. CTC Test",
+  "FullNameTH": "Mr. CTC Test",
+  "Begin": "2021-06-29T03:13:37.891+07:00",
+  "End": null,
+  "ToTAServer": null
+}
+
 ### Save TOD Revenue
 POST http://localhost:8000/api/TOD/RevenueEntry/save
 content-type: application/json
