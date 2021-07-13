@@ -1,11 +1,7 @@
 ----------------------------------------------------------------------------------------------
-Update 2021-05-11 #2 (K.Tee)
--  ADD Table + SP For TA Account Approve Credit  Screeen
-
-----------------------------------------------------------------------------------------------
-Update 2021-05-08 #1 (K.Tee)
--  Alter SP TA_getSelltoInterface Add Return TollWayName , ShiftName
-
+Update 2021-07-13 #1 (K.Tee)
+-  Alter SP For TCT Check TOD BOJ Add return ShiftID
+/api/TCT/CheckTODBoj
 ----------------------------------------------------------------------------------------------
 Update 2021-06-25 #1 (K.Tee)
 -  Add SP For TCT Check TOD BOJ
@@ -18,6 +14,14 @@ Update 2021-06-05 #1 (K.Tee)
 /api/TOD/UserShift/save
 /api/TOD/TSBShift/save
 /api/TOD/RevenueEntry/save
+
+----------------------------------------------------------------------------------------------
+Update 2021-05-11 #2 (K.Tee)
+-  ADD Table + SP For TA Account Approve Credit  Screeen
+
+----------------------------------------------------------------------------------------------
+Update 2021-05-08 #1 (K.Tee)
+-  Alter SP TA_getSelltoInterface Add Return TollWayName , ShiftName
 
 ----------------------------------------------------------------------------------------------
 Update 2021-05-04 #1 (K.Tee)
