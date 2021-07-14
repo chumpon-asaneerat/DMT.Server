@@ -2,41 +2,104 @@
     "networkId": 31,
     "plazaId": 15,
     "staffId": "20001",
-    "bagNumber": "111",
-    "safetyBeltNumber": "111",
-    "shiftTypeId": 1,
-    "declareDateTime": "2021-06-29T04:39:24.000+07:00",
-    "attendanceDateTime": "2021-06-29T04:01:05.973+07:00",
-    "departureDateTime": "2021-06-29T04:39:40.889+07:00",
-    "operationDate": "2021-06-29T00:00:00.000+07:00",
+    "bagNumber": "555",
+    "safetyBeltNumber": "555",
+    "shiftTypeId": 3,
+    "declareDateTime": "2021-07-14T10:31:25.000+07:00",
+    "attendanceDateTime": "2021-07-05T20:13:28.753+07:00",
+    "departureDateTime": "2021-07-14T10:32:09.068+07:00",
+    "operationDate": "2021-07-05T00:00:00.000+07:00",
     "declareById": "20001",
     "declareByName": "อนุสรณ์สถาน",
-    "cashTotalAmount": 0,
-    "couponTotalAmount": 0,
-    "couponBookTotalAmount": 0,
-    "cardAllowTotalAmount": 0,
+    "cashTotalAmount": 5000,
+    "couponTotalAmount": 825,
+    "couponBookTotalAmount": 4370,
+    "cardAllowTotalAmount": 4,
     "qrcodeTotalAmount": 0,
     "emvTotalAmount": 0,
-    "otherTotalAmount": 0,
-    "cashRemark": "",
-    "otherRemark": "",
+    "otherTotalAmount": 500,
+    "nonRevenue": 1500,
+    "cashRemark": "test rev",
+    "otherRemark": "test other",
+    "nonRevenueRemark": "test non revenue",
     "chiefId": "00444",
     "chiefName": "Mr. CTC Test",
     "jobList": [
         {
             "networkId": 31,
             "plazaId": 15,
-            "laneId": 1,
-            "jobNo": 1,
+            "laneId": 2,
+            "jobNo": 2,
             "staffId": "20001",
-            "bojDateTime": "2021-06-29T04:37:55.119+07:00",
-            "eojDateTime": "2021-06-29T04:37:56.917+07:00"
+            "bojDateTime": "2021-07-13T04:12:14.975+07:00",
+            "eojDateTime": "2021-07-13T04:12:16.516+07:00"
         }
     ],
-    "cashList": [],
-    "couponList": [],
-    "couponBookList": [],
-    "cardAllowList": [],
+    "cashList": [
+        {
+            "currencyId": 1,
+            "currencyDenomId": 11,
+            "denomValue": 500,
+            "number": 10,
+            "total": 5000
+        }
+    ],
+    "couponList": [
+        {
+            "couponId": 1,
+            "couponValue": 30,
+            "number": 3,
+            "total": 90
+        },
+        {
+            "couponId": 2,
+            "couponValue": 35,
+            "number": 3,
+            "total": 105
+        },
+        {
+            "couponId": 3,
+            "couponValue": 60,
+            "number": 3,
+            "total": 180
+        },
+        {
+            "couponId": 4,
+            "couponValue": 70,
+            "number": 3,
+            "total": 210
+        },
+        {
+            "couponId": 5,
+            "couponValue": 80,
+            "number": 3,
+            "total": 240
+        }
+    ],
+    "couponBookList": [
+        {
+            "couponBookId": 1,
+            "couponBookValue": 35,
+            "number": 2,
+            "total": 1330
+        },
+        {
+            "couponBookId": 2,
+            "couponBookValue": 80,
+            "number": 2,
+            "total": 3040
+        }
+    ],
+    "cardAllowList": [
+        {
+            "cardAllowId": 1,
+            "number": 2
+        },
+        {
+            "cardAllowId": 2,
+            "number": 2
+        }
+    ],
     "qrcodeList": [],
     "emvList": []
 }
