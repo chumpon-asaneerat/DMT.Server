@@ -35,6 +35,33 @@
             "staffId": "00112",
             "bojDateTime": "2021-07-13T04:11:37.821+0700",
             "eojDateTime": "2021-07-13T04:11:39.222+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 2,
+            "jobNo": 1,
+            "staffId": "00112",
+            "bojDateTime": "2021-07-15T09:38:41.597+0700",
+            "eojDateTime": "2021-07-15T09:38:43.089+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 2,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2021-07-15T09:38:44.996+0700",
+            "eojDateTime": "2021-07-15T09:38:46.489+0700"
+        },
+        {
+            "networkId": 31,
+            "plazaId": 15,
+            "laneId": 3,
+            "jobNo": 3,
+            "staffId": "20001",
+            "bojDateTime": "2021-07-15T09:38:48.856+0700",
+            "eojDateTime": "2021-07-15T09:38:49.575+0700"
         }
     ],
     "status": {
