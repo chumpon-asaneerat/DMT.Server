@@ -51,7 +51,7 @@ content-type: application/json
    "tsbId": "09"
 }
 
-### Save Request Head (Model OK)
+### Save Request Head (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/save
 content-type: application/json
 
@@ -70,7 +70,7 @@ content-type: application/json
     "status" : "R"
 }
 
-### Save Request Detail (Model OK)
+### Save Request Detail (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/savedetail
 content-type: application/json
 
@@ -90,7 +90,7 @@ content-type: application/json
     "status": "R" 
 }
 
-### Account get request detail (Model OK)
+### Account get request detail (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/getdetail
 content-type: application/json
 
@@ -99,7 +99,7 @@ content-type: application/json
     "tsbId": "09"
 }
 
-### Account Save Approve request detail (Model OK)
+### Account Save Approve request detail (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/approve
 content-type: application/json
 
@@ -111,7 +111,7 @@ content-type: application/json
     "currencycount" : 500
 }
 
-### TSB get Approve request update
+### TSB get Approve request update (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/getapprove
 content-type: application/json
 
@@ -120,12 +120,12 @@ content-type: application/json
     "transdate" : "2021-04-13:00:00.000Z" 
 }
 
-### TSB get Approve request detail
+### TSB get Approve request detail (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/getapprovedetail
 content-type: application/json
 
 {
-    "requestid": 1 ,
+    "requestid": 1,
     "tsbId": "09"
 }
 
