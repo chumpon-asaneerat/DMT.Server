@@ -1,4 +1,4 @@
-### Save TSB Credit Balance
+### Save TSB Credit Balance (Route OK)
 POST http://localhost:8000/api/account/tsbcredit/save
 content-type: application/json
 
@@ -19,7 +19,7 @@ content-type: application/json
 }
 
 
-### Gets TSB Credit Balance
+### Gets TSB Credit Balance (Route OK)
 POST http://localhost:8000/api/account/tsbcredit
 content-type: application/json
 
@@ -27,7 +27,7 @@ content-type: application/json
    
 }
 
-### Save User Credit on Job
+### Save User Credit on Job (Route OK)
 POST http://localhost:8000/api/account/UserCredit/save
 content-type: application/json
 
@@ -43,7 +43,7 @@ content-type: application/json
     "creditdate": "2021-02-20:13:03.112Z"
 }
 
-### Gets User On Job Credit by TSB
+### Gets User On Job Credit by TSB (Route OK)
 POST http://localhost:8000/api/account/usercredit/search
 content-type: application/json
 
@@ -88,7 +88,7 @@ content-type: application/json
 }
 
 
-### Account get request list
+### Account get request list (Route OK)
 POST http://localhost:8000/api/account/request/getlist
 content-type: application/json
 
