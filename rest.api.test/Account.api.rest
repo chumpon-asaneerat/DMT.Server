@@ -1,4 +1,4 @@
-### Save TSB Credit Balance (Route OK)
+### Save TSB Credit Balance (Route OK, Model OK)
 POST http://localhost:8000/api/account/tsbcredit/save
 content-type: application/json
 
@@ -19,7 +19,7 @@ content-type: application/json
 }
 
 
-### Gets TSB Credit Balance (Route OK)
+### Gets TSB Credit Balance (Route OK, Model OK)
 POST http://localhost:8000/api/account/tsbcredit
 content-type: application/json
 
@@ -27,7 +27,7 @@ content-type: application/json
    
 }
 
-### Save User Credit on Job (Route OK)
+### Save User Credit on Job (Route OK, Model OK)
 POST http://localhost:8000/api/account/UserCredit/save
 content-type: application/json
 
@@ -43,7 +43,7 @@ content-type: application/json
     "creditdate": "2021-02-20:13:03.112Z"
 }
 
-### Gets User On Job Credit by TSB (Route OK)
+### Gets User On Job Credit by TSB (Route OK, Model OK)
 POST http://localhost:8000/api/account/usercredit/search
 content-type: application/json
 
@@ -51,8 +51,7 @@ content-type: application/json
    "tsbId": "09"
 }
 
-
-### Save Request  Head
+### Save Request Head (Model OK)
 POST http://localhost:8000/api/account/request/save
 content-type: application/json
 
@@ -69,59 +68,48 @@ content-type: application/json
     "userid" : "00444" ,
     "tranactiondate" : "2021-04-13:22:03.112Z" ,
     "status" : "R"
-
-
 }
 
-
-### Save Request  Detail
+### Save Request Detail (Model OK)
 POST http://localhost:8000/api/account/request/savedetail
 content-type: application/json
 
 {
-    "requestid": 1 ,
+    "requestid": 1,
     "tsbId": "09",
     "currencydenomid" : 6,
     "currencyvalue" : 5000,
     "currencycount" : 500
-
 }
 
-
-### Account get request list (Route OK)
+### Account get request list (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/getlist
 content-type: application/json
 
 {
     "status": "R" 
-
 }
 
-
-### Account get request detail
+### Account get request detail (Model OK)
 POST http://localhost:8000/api/account/request/getdetail
 content-type: application/json
 
 {
-    "requestid": 1 ,
+    "requestid": 1,
     "tsbId": "09"
-
 }
 
-
-### Account Save Approve request detail
+### Account Save Approve request detail (Model OK)
 POST http://localhost:8000/api/account/request/approve
 content-type: application/json
 
 {
-     "requestid": 1 ,
+    "requestid": 1,
     "tsbId": "09",
     "currencydenomid" : 6,
     "currencyvalue" : 5000,
     "currencycount" : 500
-
 }
-
 
 ### TSB get Approve request update
 POST http://localhost:8000/api/account/request/getapprove
@@ -130,9 +118,7 @@ content-type: application/json
 {
      "tsbId": "09",
     "transdate" : "2021-04-13:00:00.000Z" 
-
 }
-
 
 ### TSB get Approve request detail
 POST http://localhost:8000/api/account/request/getapprovedetail
@@ -141,9 +127,7 @@ content-type: application/json
 {
     "requestid": 1 ,
     "tsbId": "09"
-
 }
-
 
 ### Get Approve TSB Credit List
 POST http://localhost:8000/api/account/appcredit/list
@@ -153,8 +137,7 @@ content-type: application/json
     
 }
 
-
-### Get  TSB Aprove Credit Transaction List
+### Get TSB Aprove Credit Transaction List
 POST http://localhost:8000/api/account/appcredit/translist
 content-type: application/json
 
