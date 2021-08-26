@@ -141,60 +141,6 @@
             ]
         }
     },
-    "Acc_SaveUserCreditOnJob": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.220Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "userprefix",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "userfirstname",
-                    "type": "nvarchar(50)"
-                },
-                {
-                    "name": "userlastname",
-                    "type": "nvarchar(50)"
-                },
-                {
-                    "name": "bagno",
-                    "type": "nvarchar(20)"
-                },
-                {
-                    "name": "credit",
-                    "type": "decimal"
-                },
-                {
-                    "name": "flag",
-                    "type": "int"
-                },
-                {
-                    "name": "creditdate",
-                    "type": "datetime"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "ESellingToTA": {
         "type": "PROCEDURE",
         "updated": "2021-05-07T16:12:58.290Z",
@@ -1541,56 +1487,6 @@
             "outputs": []
         }
     },
-    "TOD_SaveTSBShift": {
-        "type": "PROCEDURE",
-        "updated": "2021-06-05T11:30:36.283Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbshiftid",
-                    "type": "nvarchar(36)"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "shiftid",
-                    "type": "int"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "fullnameen",
-                    "type": "nvarchar(150)"
-                },
-                {
-                    "name": "fullnameth",
-                    "type": "nvarchar(150)"
-                },
-                {
-                    "name": "begin",
-                    "type": "datetime"
-                },
-                {
-                    "name": "end",
-                    "type": "datetime"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "TOD_SaveUserShift": {
         "type": "PROCEDURE",
         "updated": "2021-06-05T11:33:17.973Z",
@@ -1643,7 +1539,7 @@
     },
     "TOD_SaveRevenueEntry": {
         "type": "PROCEDURE",
-        "updated": "2021-06-05T11:59:16.317Z",
+        "updated": "2021-06-29T08:56:40.757Z",
         "parameter": {
             "inputs": [
                 {
@@ -1865,7 +1761,7 @@
     },
     "TCTCheckTODBoj": {
         "type": "PROCEDURE",
-        "updated": "2021-06-25T19:48:51.160Z",
+        "updated": "2021-07-13T17:37:14.463Z",
         "parameter": {
             "inputs": [
                 {
@@ -1878,6 +1774,110 @@
                 }
             ],
             "outputs": []
+        }
+    },
+    "TOD_SaveTSBShift": {
+        "type": "PROCEDURE",
+        "updated": "2021-07-14T16:07:01.187Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbshiftid",
+                    "type": "nvarchar(36)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "shiftid",
+                    "type": "int"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "fullnameen",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "fullnameth",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "begin",
+                    "type": "datetime"
+                },
+                {
+                    "name": "end",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_SaveUserCreditOnJob": {
+        "type": "PROCEDURE",
+        "updated": "2021-08-25T12:52:41.367Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userprefix",
+                    "type": "nvarchar(30)"
+                },
+                {
+                    "name": "userfirstname",
+                    "type": "nvarchar(50)"
+                },
+                {
+                    "name": "userlastname",
+                    "type": "nvarchar(50)"
+                },
+                {
+                    "name": "bagno",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "credit",
+                    "type": "decimal"
+                },
+                {
+                    "name": "flag",
+                    "type": "int"
+                },
+                {
+                    "name": "creditdate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
         }
     }
 }

@@ -1,4 +1,8 @@
 ----------------------------------------------------------------------------------------------
+Update 2021-08-25 #1 (K.Tee)
+ALTER TABLE [dbo].[UserCreditOnJob] add size column userprefix
+
+----------------------------------------------------------------------------------------------
 Update 2021-07-13 #1 (K.Tee)
 -  Alter SP For TCT Check TOD BOJ Add return ShiftID
 /api/TCT/CheckTODBoj
