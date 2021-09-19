@@ -1,5 +1,14 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-08-20 #1
+- nlib-express.js update.
+  - add inject_http_code method (static) for create file to setting http response code.
+  - Update WebRouter class
+    - constructor -> auto add inject_http_code handler when create router object.
+  - update gitignore (exclude routes_http_error_inject.config.json).
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-08-01 #3
 - commit json data file (add comment in rest test file).
 

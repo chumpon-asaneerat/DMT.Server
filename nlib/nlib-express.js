@@ -5,6 +5,7 @@
 const path = require('path');
 const find = require('find');
 const fs = require('fs');
+
 const nlib = require('./nlib');
 // init logger
 const logger = require('./nlib-logger').logger;
@@ -51,8 +52,8 @@ const getargs = () => {
 
 const defaultApp = { 
     name:'NLib Web Server Application', 
-    version:'2.0.0', 
-    updated: '2019-08-12 02:00' 
+    version:'2.0.1', 
+    updated: '2019-08-20 06:00' 
 };
 
 let distMaxAge = "5y";
@@ -304,6 +305,61 @@ const parseReq = (req) => {
 
 //#endregion
 
+//#region HTTP Error Simulate methods
+
+const inject_http_code = (req, res, next) => {
+    let url = req.originalUrl
+    let needSave = false        
+    let pObj = {
+        enabled: false,
+        routes: []
+    }
+    
+    let jsonFileName = path.join(nlib.paths.root, 'routes_http_error_inject.config.json')
+    if (!nlib.JSONFile.exists(jsonFileName)) {
+        needSave = true
+    }
+    else {
+        pObj = nlib.JSONFile.load(jsonFileName)
+    }
+    if (!pObj) {
+        pObj = {
+            enabled: false,
+            routes: []
+        }
+        needSave = true
+    }
+    if (!pObj.routes) {
+        pObj.routes = []
+        needSave = true
+    }
+
+    if (!pObj.enabled) { 
+        next() 
+    }
+    else {
+        let match = pObj.routes.find(el => { return el.url == url })
+        if (!match) {
+            match = { url: url, statusCode: 200 }
+            pObj.routes.push(match)
+            needSave = true
+        }
+
+        if (needSave) {
+            nlib.JSONFile.save(jsonFileName, pObj)
+        }
+
+        if (match.statusCode !== undefined && match.statusCode !== null && match.statusCode !== 200) {
+            res.status(match.statusCode).end()
+        }
+        else {
+            next()
+        }
+    }
+}
+
+//#endregion
+
 //#region WebServer class
 
 /**
@@ -463,6 +519,7 @@ class WebRouter {
     constructor() {
         /** @type {express.Router} Gets the express router */
         this.router = express.Router();
+        this.router.use(inject_http_code);
     }
 
     //#endregion
