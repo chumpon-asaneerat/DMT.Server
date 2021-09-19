@@ -35,7 +35,7 @@
     "@types/js-beautify": "^1.8.1",
     "@types/riot": "^3.6.2",
     "@types/yargs-parser": "^20.2.0",
-    "axios": ">=0.21.1",
+    "axios": ">=0.21.2",
     "bl": ">=2.2.1",
     "compression": "^1.7.4",
     "dot": "^1.1.2",
