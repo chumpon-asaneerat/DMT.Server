@@ -310,33 +310,22 @@ const parseReq = (req) => {
 const inject_http_code = (req, res, next) => {
     let url = req.originalUrl
     let needSave = false        
-    let pObj = {
-        enabled: false,
-        routes: []
-    }
+    let pObj = { enabled: false, routes: [] }
     
     let jsonFileName = path.join(nlib.paths.root, 'routes_http_error_inject.config.json')
-    if (!nlib.JSONFile.exists(jsonFileName)) {
+    if (!nlib.JSONFile.exists(jsonFileName))
         needSave = true
-    }
-    else {
-        pObj = nlib.JSONFile.load(jsonFileName)
-    }
+    else pObj = nlib.JSONFile.load(jsonFileName)
+
     if (!pObj) {
-        pObj = {
-            enabled: false,
-            routes: []
-        }
+        pObj = { enabled: false, routes: [] }
         needSave = true
     }
     if (!pObj.routes) {
         pObj.routes = []
         needSave = true
     }
-
-    if (!pObj.enabled) { 
-        next() 
-    }
+    if (!pObj.enabled) next() 
     else {
         let match = pObj.routes.find(el => { return el.url == url })
         if (!match) {
@@ -344,17 +333,11 @@ const inject_http_code = (req, res, next) => {
             pObj.routes.push(match)
             needSave = true
         }
+        if (needSave) nlib.JSONFile.save(jsonFileName, pObj)
 
-        if (needSave) {
-            nlib.JSONFile.save(jsonFileName, pObj)
-        }
-
-        if (match.statusCode !== undefined && match.statusCode !== null && match.statusCode !== 200) {
+        if (match.statusCode !== undefined && match.statusCode !== null && match.statusCode !== 200) 
             res.status(match.statusCode).end()
-        }
-        else {
-            next()
-        }
+        else next()
     }
 }
 
