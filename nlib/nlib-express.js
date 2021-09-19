@@ -327,9 +327,9 @@ const inject_http_code = (req, res, next) => {
     }
     if (!pObj.enabled) next() 
     else {
-        let match = pObj.routes.find(el => { return el.url == url })
+        let match = pObj.routes.find(el => { return el.url.toLowerCase() == url.toLowerCase() })
         if (!match) {
-            match = { url: url, statusCode: 200 }
+            match = { url: url.toLowerCase(), statusCode: 200 }
             pObj.routes.push(match)
             needSave = true
         }
