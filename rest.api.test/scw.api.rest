@@ -8,6 +8,9 @@ content-type: application/json
 
 ### SCW FUNCTIONS
 
+### version
+GET http://localhost:8000/dmt-scw/api/v1/version
+
 ### cardAllowList 
 POST http://localhost:8000/dmt-scw/api/tod/cardAllowList
 content-type: application/json

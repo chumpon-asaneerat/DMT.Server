@@ -1,18 +1,23 @@
 ----------------------------------------------------------------------------------------------
 [commited]
-Update 2021-08-20 #3
+Update 2021-09-21 #1
+- Add SCW version route - GET method.
+
+----------------------------------------------------------------------------------------------
+[commited]
+Update 2021-09-20 #3
 - nlib-express.js update.
   - inject_http_code method - check/save url in lowercase.
 
 ----------------------------------------------------------------------------------------------
 [commited]
-Update 2021-08-20 #2
+Update 2021-09-20 #2
 - nlib-express.js update.
   - inject_http_code method (static) format code.
 
 ----------------------------------------------------------------------------------------------
 [commited]
-Update 2021-08-20 #1
+Update 2021-09-20 #1
 - nlib-express.js update.
   - add inject_http_code method (static) for create file to setting http response code.
   - Update WebRouter class
