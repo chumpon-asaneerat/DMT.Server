@@ -325,7 +325,11 @@ const inject_http_code = (req, res, next) => {
         pObj.routes = []
         needSave = true
     }
-    if (!pObj.enabled) next() 
+    if (!pObj.enabled) 
+    {
+        if (needSave) nlib.JSONFile.save(jsonFileName, pObj)
+        next() 
+    }
     else {
         let match = pObj.routes.find(el => { return el.url.toLowerCase() == url.toLowerCase() })
         if (!match) {
