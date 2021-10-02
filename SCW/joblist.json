@@ -5,63 +5,9 @@
             "plazaId": 15,
             "laneId": 2,
             "jobNo": 1,
-            "staffId": "00444",
-            "bojDateTime": "2021-06-04T13:02:06.149+0700",
-            "eojDateTime": "2021-06-04T13:02:07.635+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 1,
-            "jobNo": 2,
             "staffId": "20001",
-            "bojDateTime": "2021-06-04T13:03:34.682+0700",
-            "eojDateTime": "2021-06-04T13:03:35.799+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 1,
-            "jobNo": 1,
-            "staffId": "20001",
-            "bojDateTime": "2021-06-29T06:52:16.124+0700",
-            "eojDateTime": "2021-06-29T06:52:17.893+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 1,
-            "jobNo": 1,
-            "staffId": "00112",
-            "bojDateTime": "2021-07-13T04:11:37.821+0700",
-            "eojDateTime": "2021-07-13T04:11:39.222+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 2,
-            "jobNo": 1,
-            "staffId": "00112",
-            "bojDateTime": "2021-07-15T09:38:41.597+0700",
-            "eojDateTime": "2021-07-15T09:38:43.089+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 2,
-            "jobNo": 2,
-            "staffId": "20001",
-            "bojDateTime": "2021-07-15T09:38:44.996+0700",
-            "eojDateTime": "2021-07-15T09:38:46.489+0700"
-        },
-        {
-            "networkId": 31,
-            "plazaId": 15,
-            "laneId": 3,
-            "jobNo": 3,
-            "staffId": "20001",
-            "bojDateTime": "2021-07-15T09:38:48.856+0700",
-            "eojDateTime": "2021-07-15T09:38:49.575+0700"
+            "bojDateTime": "2021-09-26T12:13:04.851+0700",
+            "eojDateTime": "2021-09-26T12:13:06.490+0700"
         }
     ],
     "status": {

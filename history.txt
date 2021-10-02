@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-10-03 #1
+- Move project parent folder.
+- remove unused required node module for SCW version api.
+- commit json data file (add comment in rest test file).
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2021-09-21 #3
 - Update app version (re-commit).
 ----------------------------------------------------------------------------------------------
