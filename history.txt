@@ -1,22 +1,30 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2021-11-07 #2
+- Add TA_InquirySellCoupon sql script (with modify query to returns LaneId).
+- Update gulpfile.
+- rebuild schecma.
+
+[commited]
 Update 2021-11-07 #1
 - commit json data file.
+
 ----------------------------------------------------------------------------------------------
 [commited]
 Update 2021-10-03 #1
 - Move project parent folder.
 - remove unused required node module for SCW version api.
 - commit json data file (add comment in rest test file).
+
 ----------------------------------------------------------------------------------------------
 [commited]
 Update 2021-09-21 #3
 - Update app version (re-commit).
-----------------------------------------------------------------------------------------------
+
 [commited]
 Update 2021-09-21 #2
 - Update app version.
-----------------------------------------------------------------------------------------------
+
 [commited]
 Update 2021-09-21 #1
 - Add SCW version route - GET method.
@@ -27,13 +35,11 @@ Update 2021-09-20 #3
 - nlib-express.js update.
   - inject_http_code method - check/save url in lowercase.
 
-----------------------------------------------------------------------------------------------
 [commited]
 Update 2021-09-20 #2
 - nlib-express.js update.
   - inject_http_code method (static) format code.
 
-----------------------------------------------------------------------------------------------
 [commited]
 Update 2021-09-20 #1
 - nlib-express.js update.
