@@ -10,6 +10,8 @@ const router = new WebRouter();
 
 //#endregion
 
+let sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+
 // static class.
 const api = class { }
 
@@ -17,7 +19,22 @@ const api = class { }
 
 api.Version = class {
     static entry(req, res) {
-        res.send('version : 1.0.7 (2021-09-14)')
+        // for test long operation
+        let timeout = 1000 * 10
+        // example 1
+        /*
+        (async () => { 
+            await sleep(timeout) 
+            res.send('version : 1.0.7 (2021-09-14)')
+        })()
+        */
+        // example 2
+        sleep(timeout).then(() => {
+            res.send('version : 1.0.7 (2021-09-14)') 
+        })
+
+        // original emulator code
+        //res.send('version : 1.0.7 (2021-09-14)')
     }
 }
 
