@@ -1,5 +1,10 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2022-03-25 #3
+- Update SCW-Version routes.
+  - set testmode flag to false.
+
+[commited]
 Update 2022-03-25 #2
 - Update SCW-Version routes.
   - add testmode flag.

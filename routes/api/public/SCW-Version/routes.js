@@ -12,7 +12,7 @@ const router = new WebRouter();
 
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 // test mode flag. set to false when run in production mode.
-let testMode = true
+let testMode = false
 
 // static class.
 const api = class { }
@@ -23,7 +23,7 @@ api.Version = class {
     static entry(req, res) {
         if (testMode) {
             // for test long operation
-            let timeout = 1000 * 10
+            let timeout = 1000 * 5
             
             // example 1
             // (async () => { 
