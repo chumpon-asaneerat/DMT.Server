@@ -87,7 +87,9 @@ POST http://localhost:8000/api/account/request/getlist
 content-type: application/json
 
 {
-    "status": "R" 
+    "status": null ,
+    "tsbId": null,
+    "requestdate" : "2021-04-13"
 }
 
 ### Account get request detail (Route OK, Model OK)

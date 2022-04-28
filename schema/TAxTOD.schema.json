@@ -1362,19 +1362,6 @@
             ]
         }
     },
-    "Acc_getReqDatabyStatus": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-11T10:12:29.307Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "status",
-                    "type": "nchar(1)"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "Acc_getTSBCreditAppList": {
         "type": "PROCEDURE",
         "updated": "2021-05-11T11:31:41.980Z",
@@ -1916,6 +1903,27 @@
                     "type": "nvarchar(max)"
                 }
             ]
+        }
+    },
+    "Acc_getReqDatabyStatus": {
+        "type": "PROCEDURE",
+        "updated": "2022-04-28T09:57:13.887Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "status",
+                    "type": "nchar(1)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "requestdate",
+                    "type": "date"
+                }
+            ],
+            "outputs": []
         }
     }
 }
