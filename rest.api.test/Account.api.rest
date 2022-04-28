@@ -159,3 +159,15 @@ content-type: application/json
     "approveby" : "00444" ,
     "approvedate" : "2021-05-08:00:00.000Z" 
 }
+
+### Account Save Approve request detail (Route OK, Model OK)
+POST http://localhost:8000/api/account/request/receive
+content-type: application/json
+
+{
+    "requestid": 1,
+    "tsbId": "09",
+    "currencydenomid" : 6,
+    "currencyvalue" : 5000,
+    "currencycount" : 500
+}

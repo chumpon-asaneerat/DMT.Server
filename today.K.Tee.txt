@@ -1,3 +1,8 @@
+
+----------------------------------------------------------------------------------------------
+Update 2022-04-28 #1 (K.Tee)
+- Add API / SP for Saving TA Receive Exchange Detail
+- New SP Acc_SaveExchangeReceiveDetial
 ----------------------------------------------------------------------------------------------
 Update 2021-08-25 #1 (K.Tee)
 - ALTER TABLE [dbo].[UserCreditOnJob] add size column userprefix

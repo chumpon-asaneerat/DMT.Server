@@ -50,5 +50,9 @@
     "TOD_SaveUserShift": true,
     "TOD_SaveTSBShift": true,
     "TOD_SaveRevenueEntry": true,
-    "TCTCheckTODBoj": true
+    "TCTCheckTODBoj": true,
+    "TOD_SaveTSBShift1": false,
+    "InsUpdateSAPCustomerCode": false,
+    "InsUpdateInquiryCoupon": false,
+    "Acc_SaveExchangeReceiveDetial": true
 }
