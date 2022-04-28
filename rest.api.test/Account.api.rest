@@ -162,7 +162,7 @@ content-type: application/json
     "approvedate" : "2021-05-08:00:00.000Z" 
 }
 
-### Account Save Approve request detail (Route OK, Model OK)
+### Account Save Received request detail
 POST http://localhost:8000/api/account/request/receive
 content-type: application/json
 

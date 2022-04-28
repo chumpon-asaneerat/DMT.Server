@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2022-04-28 #1
+- Update Account.api.rest
+  - fixed missleading comment in new api.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2022-03-25 #3
 - Update SCW-Version routes.
   - set testmode flag to false.
