@@ -89,7 +89,7 @@ content-type: application/json
 {
     "status": null ,
     "tsbId": null,
-    "requestdate" : "2021-04-13"
+    "requestdate" : "2022-04-27"
 }
 
 ### Account get request detail (Route OK, Model OK)
@@ -98,7 +98,7 @@ content-type: application/json
 
 {
     "requestid": 1,
-    "tsbId": "09"
+    "tsbId": "07"
 }
 
 ### Account Save Approve request detail (Route OK, Model OK)
@@ -118,8 +118,8 @@ POST http://localhost:8000/api/account/request/getapprove
 content-type: application/json
 
 {
-     "tsbId": "09",
-    "transdate" : "2021-04-13:00:00.000Z" 
+     "tsbId": "07",
+    "transdate" : "2022-05-02:00:00.000Z" 
 }
 
 ### TSB get Approve request detail (Route OK, Model OK)
