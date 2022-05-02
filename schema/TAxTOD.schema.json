@@ -609,23 +609,6 @@
             "outputs": []
         }
     },
-    "TA_GetUpdateReqData": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.517Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "transdate",
-                    "type": "datetime"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "TA_SaveExchangeTransaction": {
         "type": "PROCEDURE",
         "updated": "2021-05-07T16:12:58.543Z",
@@ -1921,6 +1904,27 @@
                 {
                     "name": "requestdate",
                     "type": "date"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_GetUpdateReqData": {
+        "type": "PROCEDURE",
+        "updated": "2022-05-02T12:23:11.297Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "transdate",
+                    "type": "datetime"
                 }
             ],
             "outputs": []

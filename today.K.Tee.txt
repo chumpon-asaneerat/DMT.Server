@@ -1,5 +1,8 @@
 
 ----------------------------------------------------------------------------------------------
+Update 2022-05-02 #1 (K.Tee)
+- Update SP TA_GetUpdateReqData Add Parameter requestid
+----------------------------------------------------------------------------------------------
 Update 2022-04-28 #1 (K.Tee)
 - Add API / SP for Saving TA Receive Exchange Detail
 - New SP Acc_SaveExchangeReceiveDetial
