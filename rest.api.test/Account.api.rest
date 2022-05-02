@@ -118,7 +118,8 @@ POST http://localhost:8000/api/account/request/getapprove
 content-type: application/json
 
 {
-     "tsbId": "07",
+    "tsbId": "07",
+    "requestId": 16,
     "transdate" : "2022-05-02:00:00.000Z" 
 }
 
