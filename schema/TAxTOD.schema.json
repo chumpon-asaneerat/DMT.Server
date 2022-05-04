@@ -609,72 +609,6 @@
             "outputs": []
         }
     },
-    "TA_SaveExchangeTransaction": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.543Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "requestid",
-                    "type": "int"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "exchangebht",
-                    "type": "decimal"
-                },
-                {
-                    "name": "borrowbht",
-                    "type": "decimal"
-                },
-                {
-                    "name": "additionalbht",
-                    "type": "decimal"
-                },
-                {
-                    "name": "periodbegin",
-                    "type": "datetime"
-                },
-                {
-                    "name": "periodend",
-                    "type": "datetime"
-                },
-                {
-                    "name": "remark",
-                    "type": "nvarchar(255)"
-                },
-                {
-                    "name": "finishflag",
-                    "type": "nchar(1)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "tranactiondate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "status",
-                    "type": "nchar(1)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "TA_SaveReqExchangeDetial": {
         "type": "PROCEDURE",
         "updated": "2021-05-07T16:12:58.553Z",
@@ -1911,7 +1845,7 @@
     },
     "TA_GetUpdateReqData": {
         "type": "PROCEDURE",
-        "updated": "2022-05-02T12:23:11.297Z",
+        "updated": "2022-05-02T12:36:07.430Z",
         "parameter": {
             "inputs": [
                 {
@@ -1928,6 +1862,72 @@
                 }
             ],
             "outputs": []
+        }
+    },
+    "TA_SaveExchangeTransaction": {
+        "type": "PROCEDURE",
+        "updated": "2022-05-04T13:27:18.010Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "exchangebht",
+                    "type": "decimal"
+                },
+                {
+                    "name": "borrowbht",
+                    "type": "decimal"
+                },
+                {
+                    "name": "additionalbht",
+                    "type": "decimal"
+                },
+                {
+                    "name": "periodbegin",
+                    "type": "datetime"
+                },
+                {
+                    "name": "periodend",
+                    "type": "datetime"
+                },
+                {
+                    "name": "remark",
+                    "type": "nvarchar(255)"
+                },
+                {
+                    "name": "finishflag",
+                    "type": "nchar(1)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "tranactiondate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "status",
+                    "type": "nchar(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
         }
     }
 }
