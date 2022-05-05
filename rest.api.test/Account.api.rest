@@ -128,8 +128,8 @@ POST http://localhost:8000/api/account/request/getapprovedetail
 content-type: application/json
 
 {
-    "requestid": 1,
-    "tsbId": "09"
+    "requestid": 16,
+    "tsbId": "07"
 }
 
 ### Get Approve TSB Credit List
