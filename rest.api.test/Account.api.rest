@@ -119,7 +119,7 @@ content-type: application/json
 
 {
     "tsbId": "07",
-    "requestId": 16,
+    "requestId": 22,
     "transdate" : "2022-05-02:00:00.000Z" 
 }
 
@@ -163,7 +163,7 @@ content-type: application/json
     "approvedate" : "2021-05-08:00:00.000Z" 
 }
 
-### Account Save Received request detail
+### Account Save Received request detail (Route OK, Model OK)
 POST http://localhost:8000/api/account/request/receive
 content-type: application/json
 
