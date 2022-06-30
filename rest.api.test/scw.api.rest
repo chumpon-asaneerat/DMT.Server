@@ -6,6 +6,13 @@ content-type: application/json
 
 }
 
+POST http://localhost:8000/api/taa/version
+content-type: application/json
+
+{
+
+}
+
 ### SCW FUNCTIONS
 
 ### version
