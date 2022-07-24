@@ -1,5 +1,11 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2022-07-25 #1
+- Update Database SP
+  - Acc_getReqDatabyStatus add Status column.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2022-06-30 #1
 - Update TA Server version (UAT version)
   - Add route for check TA Server version (GET Url: /api/taa/version)
