@@ -60,8 +60,23 @@ BEGIN
 		
 	)
 	BEGIN
-	/**
-	if @status in ( 'C' , 'A')
+	if @status in ( 'R') 
+	 UPDATE [dbo].[TSBExchange]
+		SET [FinishFlag] = COALESCE(@finishflag, [FinishFlag])
+		, [Status] = @status
+		, [ExchangeBHT]  = COALESCE(@exchangebht, [ExchangeBHT])
+		, [BorrowBHT] = COALESCE(@borrowbht, [BorrowBHT])
+		, [AdditionalBHT] = COALESCE(@additionalbht, [AdditionalBHT])
+		, [ApproveBy] = @userid
+		, [ApproveDate] = @tranactiondate
+		, [ApproveRemark] = @remark
+		, [LastUpdate] = @tranactiondate
+		, [PeriodBegin] = COALESCE(@periodbegin, [PeriodBegin])
+		, [PeriodEnd] = COALESCE(@periodend, [PeriodEnd])
+		WHERE [RequestId] = @requestid
+		and [TSBId] = @tsbid;
+
+	if @status in ( 'A')
 		UPDATE [dbo].[TSBExchange]
 		SET [FinishFlag] = COALESCE(@finishflag, [FinishFlag])
 		, [Status] = @status
@@ -74,6 +89,19 @@ BEGIN
 		, [LastUpdate] = @tranactiondate
 		WHERE [RequestId] = @requestid
 		and [TSBId] = @tsbid;
+
+	if @status in ( 'C')
+		UPDATE [dbo].[TSBExchange]
+		SET [FinishFlag] = COALESCE(@finishflag, [FinishFlag])
+		, [Status] = @status
+		, [ApproveBy] = @userid
+		, [ApproveDate] = @tranactiondate
+		, [ApproveRemark] = @remark
+		, [LastUpdate] = @tranactiondate
+		WHERE [RequestId] = @requestid
+		and [TSBId] = @tsbid;
+
+
 	if @status in ( 'F')
 		UPDATE [dbo].[TSBExchange]
 		SET [FinishFlag] = COALESCE(@finishflag, [FinishFlag])
@@ -85,13 +113,13 @@ BEGIN
 		WHERE [RequestId] = @requestid
 		and [TSBId] = @tsbid;
 
-		**/
+		/**
 		UPDATE [dbo].[TSBExchange]
 		SET [FinishFlag] = COALESCE(@finishflag, [FinishFlag])
 		, [Status] = @status
-		, [AppExchangeBHT]  = COALESCE(@exchangebht, [AppExchangeBHT])
-		, [AppBorrowBHT] = COALESCE(@borrowbht, [AppBorrowBHT])
-		, [AppAdditionalBHT] = COALESCE(@additionalbht, [AppAdditionalBHT])
+		, [ExchangeBHT]  = COALESCE(@exchangebht, [ExchangeBHT])
+		, [BorrowBHT] = COALESCE(@borrowbht, [BorrowBHT])
+		, [AdditionalBHT] = COALESCE(@additionalbht, [AdditionalBHT])
 		, [ApproveBy] = @userid
 		, [ApproveDate] = @tranactiondate
 		, [ApproveRemark] = @remark
@@ -100,6 +128,7 @@ BEGIN
 		, [PeriodEnd] = COALESCE(@periodend, [PeriodEnd])
 		WHERE [RequestId] = @requestid
 		and [TSBId] = @tsbid;
+		**/
 	End
 	ELSE
 		BEGIN
@@ -120,3 +149,6 @@ BEGIN
 		SET @errMsg = ERROR_MESSAGE();
 	END CATCH
 END
+
+
+
