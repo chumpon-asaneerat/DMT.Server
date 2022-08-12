@@ -1738,9 +1738,9 @@
             ]
         }
     },
-    "TOD_UserReceiveBag": {
+    "UserReceiveBag": {
         "type": "PROCEDURE",
-        "updated": "2022-08-13T00:18:35.977Z",
+        "updated": "2022-08-13T00:48:13.310Z",
         "parameter": {
             "inputs": [
                 {
@@ -1762,6 +1762,14 @@
                 {
                     "name": "fullnameth",
                     "type": "nvarchar(150)"
+                },
+                {
+                    "name": "bagNo",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "beltNo",
+                    "type": "nvarchar(20)"
                 },
                 {
                     "name": "receivedDate",

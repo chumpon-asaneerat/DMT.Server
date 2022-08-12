@@ -213,3 +213,35 @@ content-type: application/json
   "UserId": "20001"
   
 }
+
+### TAA User Received Bag (received bag)
+
+POST http://localhost:8000/api/TAA/UserReceivedBag/Save
+content-type: application/json
+
+{
+  "TSBId": "07",
+  "ShiftId": 1,
+  "UserId": "00711",
+  "FullNameEN": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "FullNameTH": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "BagNo": "444",
+  "BeltNo": "444",
+  "receivedDate": "2022-08-13T00:57:37.101+07:00"
+}
+
+### TAA User Received Bag (when cancel bag that already received)
+
+POST http://localhost:8000/api/TAA/UserReceivedBag/Save
+content-type: application/json
+
+{
+  "TSBId": "07",
+  "ShiftId": 1,
+  "UserId": "00711",
+  "FullNameEN": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "FullNameTH": "นาง ตะวันรัตน์ จินดาสมุทร์",
+  "bagno": "444",
+  "beltno": "444",
+  "receivedDate": null
+}

@@ -1,9 +1,11 @@
-CREATE PROCEDURE [dbo].[TOD_UserReceiveBag] (
+CREATE PROCEDURE [dbo].[UserReceiveBag] (
   @tsbid nvarchar(10)
 , @shiftid int
 , @userid nvarchar(10)
 , @fullnameen nvarchar(150)
 , @fullnameth nvarchar(150)
+, @bagNo nvarchar(20)
+, @beltNo nvarchar(20)
 , @receivedDate datetime
 , @errNum as int = 0 out
 , @errMsg as nvarchar(MAX) = N'' out)

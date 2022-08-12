@@ -1,5 +1,16 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2022-08-13 #2
+- Update Database SP
+  - DROP SP TOD_UserReceiveBag 
+  - CREATE UserReceiveBag (do nothing).
+- Update gulpfile.
+- Rebuild schecma and db wrapper code.
+- Create UserReceiveBag routes.
+- Update TOD.api.rest - for test new api.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2022-08-13 #1
 - Update Database SP
   - Add TOD_UserReceiveBag SP (do nothing).

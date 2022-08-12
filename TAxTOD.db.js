@@ -291,8 +291,8 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async TOD_UserReceiveBag(pObj) {
-        let name = 'TOD_UserReceiveBag';
+    async UserReceiveBag(pObj) {
+        let name = 'UserReceiveBag';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }

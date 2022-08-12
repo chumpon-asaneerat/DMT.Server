@@ -55,5 +55,5 @@
     "InsUpdateSAPCustomerCode": false,
     "InsUpdateInquiryCoupon": false,
     "Acc_SaveExchangeReceiveDetial": true,
-    "TOD_UserReceiveBag": true
+    "UserReceiveBag": true
 }
