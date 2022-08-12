@@ -1,5 +1,13 @@
 ----------------------------------------------------------------------------------------------
 [commited]
+Update 2022-08-13 #1
+- Update Database SP
+  - Add TOD_UserReceiveBag SP (do nothing).
+- Update gulpfile.
+- Rebuild schecma and db wrapper code.
+
+----------------------------------------------------------------------------------------------
+[commited]
 Update 2022-07-25 #1
 - Update Database SP
   - Acc_getReqDatabyStatus add Status column.

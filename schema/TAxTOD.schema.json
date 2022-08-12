@@ -1,132 +1,61 @@
 {
-    "Acc_getReqDetail": {
+    "GetUserLaneAttendance": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.167Z",
+        "updated": "2020-08-17T07:15:33.100Z",
         "parameter": {
             "inputs": [
                 {
-                    "name": "requestid",
-                    "type": "int"
+                    "name": "plazagroupid",
+                    "type": "nvarchar(10)"
                 },
                 {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "Acc_getTSBBalance": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.177Z",
-        "parameter": {
-            "inputs": [],
-            "outputs": []
-        }
-    },
-    "Acc_getUserOnJobCredit": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.187Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "Acc_SaveAppExchangeDetial": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.197Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "requestid",
-                    "type": "int"
+                    "name": "userid",
+                    "type": "nvarchar(10)"
                 },
                 {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "currencydenomid",
-                    "type": "int"
-                },
-                {
-                    "name": "currencyvalue",
-                    "type": "decimal"
-                },
-                {
-                    "name": "currencycount",
-                    "type": "decimal"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "Acc_SaveTSBCreditBalance": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.210Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "amnt1",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt2",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt5",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt10",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt20",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt50",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt100",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt500",
-                    "type": "decimal"
-                },
-                {
-                    "name": "amnt1000",
-                    "type": "decimal"
-                },
-                {
-                    "name": "updatedate",
+                    "name": "startdate",
                     "type": "datetime"
                 },
                 {
-                    "name": "remark",
-                    "type": "nvarchar(200)"
+                    "name": "enddate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TCTSaveLaneAttendance": {
+        "type": "PROCEDURE",
+        "updated": "2021-01-05T19:30:39.450Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "jobid",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "plazaid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "laneid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "boj",
+                    "type": "datetime"
+                },
+                {
+                    "name": "eoj",
+                    "type": "datetime"
                 }
             ],
             "outputs": [
@@ -143,7 +72,7 @@
     },
     "ESellingToTA": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.290Z",
+        "updated": "2021-01-05T19:31:07.527Z",
         "parameter": {
             "inputs": [
                 {
@@ -199,145 +128,9 @@
             ]
         }
     },
-    "GetAR_Head": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.297Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                },
-                {
-                    "name": "ExportExcel",
-                    "type": "bit"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetAR_Line": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.307Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetAR_Serial": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.313Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetAR_SerialtoTACoupon": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.323Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "RunNo",
-                    "type": "int"
-                },
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetSumTASell": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.333Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "smalldatetime"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetSumTASellByRunNo": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.343Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "RunNo",
-                    "type": "int"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetTASell": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.357Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "smalldatetime"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "GetTASellByRunNo": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.367Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tollwayid",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SoldDate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "RunNo",
-                    "type": "int"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "GetTSBLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.373Z",
+        "updated": "2021-01-05T19:31:28.173Z",
         "parameter": {
             "inputs": [
                 {
@@ -348,9 +141,9 @@
             "outputs": []
         }
     },
-    "GetUserCouponList": {
+    "TAGetCouponList": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.383Z",
+        "updated": "2021-01-05T19:34:15.147Z",
         "parameter": {
             "inputs": [
                 {
@@ -360,121 +153,92 @@
                 {
                     "name": "userid",
                     "type": "nvarchar(10)"
+                },
+                {
+                    "name": "transactiontype",
+                    "type": "char(1)"
                 },
                 {
                     "name": "coupontype",
                     "type": "nvarchar(2)"
+                },
+                {
+                    "name": "flag",
+                    "type": "char(1)"
                 }
             ],
             "outputs": []
         }
     },
-    "GetUserLaneAttendance": {
+    "TA_UpdateCreditLowLimit": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.390Z",
+        "updated": "2021-01-05T19:34:15.153Z",
         "parameter": {
             "inputs": [
                 {
-                    "name": "plazagroupid",
-                    "type": "nvarchar(10)"
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "bht1",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht2",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht5",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht10",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht20",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht50",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht100",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht500",
+                    "type": "decimal"
+                },
+                {
+                    "name": "bht1000",
+                    "type": "decimal"
                 },
                 {
                     "name": "userid",
                     "type": "nvarchar(10)"
                 },
                 {
-                    "name": "startdate",
+                    "name": "updatedate",
                     "type": "datetime"
-                },
-                {
-                    "name": "enddate",
-                    "type": "datetime"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "SAP_GetInquirySellCoupon": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.403Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "SAPItemCode",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "SAPIntrSerial",
-                    "type": "nvarchar(15)"
-                },
-                {
-                    "name": "SAPSysSerial",
-                    "type": "int"
-                },
-                {
-                    "name": "SAPTransferNo",
-                    "type": "varchar(20)"
-                },
-                {
-                    "name": "SAPTransferDate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "ItemStatus",
-                    "type": "nvarchar(15)"
-                },
-                {
-                    "name": "ItemStatusDigit",
-                    "type": "tinyint"
-                },
-                {
-                    "name": "TollWayName",
-                    "type": "nvarchar(50)"
-                },
-                {
-                    "name": "TollWayId",
-                    "type": "smallint"
-                },
-                {
-                    "name": "WorkingDate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "ShiftName",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "SAPARInvoice",
-                    "type": "varchar(30)"
-                },
-                {
-                    "name": "SAPARDate",
-                    "type": "datetime"
-                },
-                {
-                    "name": "ShiftId",
-                    "type": "int"
                 }
             ],
             "outputs": [
                 {
-                    "name": "ErrMsg",
-                    "type": "varchar(200)"
-                },
-                {
-                    "name": "ErrNum",
+                    "name": "errNum",
                     "type": "int"
                 },
                 {
-                    "name": "ReturnType",
-                    "type": "int"
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
                 }
             ]
         }
     },
     "SaveTACoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.440Z",
+        "updated": "2021-01-18T00:18:09.057Z",
         "parameter": {
             "inputs": [
                 {
@@ -542,197 +306,14 @@
             ]
         }
     },
-    "TA_GetAccAppReqDetail": {
+    "UpdateflagTACouponReceive": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.450Z",
+        "updated": "2021-01-18T00:19:32.330Z",
         "parameter": {
             "inputs": [
-                {
-                    "name": "requestid",
-                    "type": "int"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "TA_GetExchangeData": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.483Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "transactionid",
-                    "type": "int"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "transactiontype",
-                    "type": "char(1)"
-                },
-                {
-                    "name": "transtartdate",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "tranenddate",
-                    "type": "nvarchar(10)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "TA_getSAPCustomer": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.493Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "SearchText",
-                    "type": "nvarchar(100)"
-                }
-            ],
-            "outputs": []
-        }
-    },
-    "TA_getTSBlist": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.510Z",
-        "parameter": {
-            "inputs": [],
-            "outputs": []
-        }
-    },
-    "TA_SaveReqExchangeDetial": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.553Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "requestid",
-                    "type": "int"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "currencydenomid",
-                    "type": "int"
-                },
-                {
-                    "name": "currencyvalue",
-                    "type": "decimal"
-                },
-                {
-                    "name": "currencycount",
-                    "type": "decimal"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "TA_UpdateCreditLowLimit": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.567Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "bht1",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht2",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht5",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht10",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht20",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht50",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht100",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht500",
-                    "type": "decimal"
-                },
-                {
-                    "name": "bht1000",
-                    "type": "decimal"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "updatedate",
-                    "type": "datetime"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "TA_UpdateSapFlagCoupon": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.577Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "varchar(2)"
-                },
                 {
                     "name": "serialno",
                     "type": "nvarchar(7)"
-                },
-                {
-                    "name": "cancelFlag",
-                    "type": "char(1)"
                 }
             ],
             "outputs": [
@@ -745,40 +326,11 @@
                     "type": "nvarchar(max)"
                 }
             ]
-        }
-    },
-    "TAGetCouponList": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.587Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "transactiontype",
-                    "type": "char(1)"
-                },
-                {
-                    "name": "coupontype",
-                    "type": "nvarchar(2)"
-                },
-                {
-                    "name": "flag",
-                    "type": "char(1)"
-                }
-            ],
-            "outputs": []
         }
     },
     "TAGetCouponList2": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.607Z",
+        "updated": "2021-02-06T16:26:23.203Z",
         "parameter": {
             "inputs": [
                 {
@@ -830,55 +382,30 @@
             ]
         }
     },
-    "TCTSaveLaneAttendance": {
+    "GetUserCouponList": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.620Z",
+        "updated": "2021-02-06T16:26:23.220Z",
         "parameter": {
             "inputs": [
                 {
-                    "name": "jobid",
-                    "type": "nvarchar(20)"
-                },
-                {
                     "name": "tsbid",
                     "type": "nvarchar(5)"
-                },
-                {
-                    "name": "plazaid",
-                    "type": "nvarchar(10)"
-                },
-                {
-                    "name": "laneid",
-                    "type": "nvarchar(10)"
                 },
                 {
                     "name": "userid",
                     "type": "nvarchar(10)"
                 },
                 {
-                    "name": "boj",
-                    "type": "datetime"
-                },
-                {
-                    "name": "eoj",
-                    "type": "datetime"
+                    "name": "coupontype",
+                    "type": "nvarchar(2)"
                 }
             ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
+            "outputs": []
         }
     },
     "TCTSoldCoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.633Z",
+        "updated": "2021-02-21T13:00:35.233Z",
         "parameter": {
             "inputs": [
                 {
@@ -958,9 +485,227 @@
             ]
         }
     },
+    "Acc_SaveTSBCreditBalance": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-21T15:41:13.140Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "amnt1",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt2",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt5",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt10",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt20",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt50",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt100",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt500",
+                    "type": "decimal"
+                },
+                {
+                    "name": "amnt1000",
+                    "type": "decimal"
+                },
+                {
+                    "name": "updatedate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "remark",
+                    "type": "nvarchar(200)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_getTSBBalance": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-21T15:41:13.157Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
+    "Acc_getUserOnJobCredit": {
+        "type": "PROCEDURE",
+        "updated": "2021-03-21T15:41:13.160Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_SaveReqExchangeDetial": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-19T00:49:02.470Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "currencydenomid",
+                    "type": "int"
+                },
+                {
+                    "name": "currencyvalue",
+                    "type": "decimal"
+                },
+                {
+                    "name": "currencycount",
+                    "type": "decimal"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Acc_getReqDetail": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-19T00:49:02.473Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Acc_SaveAppExchangeDetial": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-19T00:49:02.477Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "currencydenomid",
+                    "type": "int"
+                },
+                {
+                    "name": "currencyvalue",
+                    "type": "decimal"
+                },
+                {
+                    "name": "currencycount",
+                    "type": "decimal"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TA_GetAccAppReqDetail": {
+        "type": "PROCEDURE",
+        "updated": "2021-04-19T00:49:02.480Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "requestid",
+                    "type": "int"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_getSAPCustomer": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.723Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "SearchText",
+                    "type": "nvarchar(100)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_getTSBlist": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.730Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
     "UpdateAR_Head": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.647Z",
+        "updated": "2021-05-03T11:39:06.737Z",
         "parameter": {
             "inputs": [
                 {
@@ -1012,9 +757,210 @@
             ]
         }
     },
+    "GetAR_Head": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.740Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "ExportExcel",
+                    "type": "bit"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "GetAR_Line": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.750Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "GetAR_Serial": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.750Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "UpdateflagAR_Head": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.753Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "UpdateflagAR_Serial": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:39:06.780Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "UpdateflagAR_Line": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:44:45.670Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "GetSumTASellByRunNo": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:45:19.083Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tollwayid",
+                    "type": "smallint"
+                },
+                {
+                    "name": "SoldDate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "RunNo",
+                    "type": "int"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "GetTASellByRunNo": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-03T11:45:19.087Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tollwayid",
+                    "type": "smallint"
+                },
+                {
+                    "name": "SoldDate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "RunNo",
+                    "type": "int"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "UpdateAR_Serial": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-04T07:35:17.120Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "RunNo",
+                    "type": "int"
+                },
+                {
+                    "name": "ParentKey",
+                    "type": "int"
+                },
+                {
+                    "name": "InternalSerialNumber",
+                    "type": "int"
+                },
+                {
+                    "name": "BaseLineNumber",
+                    "type": "int"
+                },
+                {
+                    "name": "DocDate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "TollWayId",
+                    "type": "smallint"
+                },
+                {
+                    "name": "SerialNo",
+                    "type": "nvarchar(7)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ErrMsg",
+                    "type": "varchar(200)"
+                },
+                {
+                    "name": "ErrNum",
+                    "type": "int"
+                },
+                {
+                    "name": "ReturnType",
+                    "type": "int"
+                }
+            ]
+        }
+    },
     "UpdateAR_Line": {
         "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.660Z",
+        "updated": "2021-05-05T00:03:49.157Z",
         "parameter": {
             "inputs": [
                 {
@@ -1082,147 +1028,9 @@
             ]
         }
     },
-    "UpdateAR_Serial": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.670Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "RunNo",
-                    "type": "int"
-                },
-                {
-                    "name": "ParentKey",
-                    "type": "int"
-                },
-                {
-                    "name": "InternalSerialNumber",
-                    "type": "int"
-                },
-                {
-                    "name": "BaseLineNumber",
-                    "type": "int"
-                },
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                },
-                {
-                    "name": "TollWayId",
-                    "type": "smallint"
-                },
-                {
-                    "name": "SerialNo",
-                    "type": "nvarchar(7)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "ErrMsg",
-                    "type": "varchar(200)"
-                },
-                {
-                    "name": "ErrNum",
-                    "type": "int"
-                },
-                {
-                    "name": "ReturnType",
-                    "type": "int"
-                }
-            ]
-        }
-    },
-    "UpdateflagAR_Head": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.680Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "UpdateflagAR_Line": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.690Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "UpdateflagAR_Serial": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.697Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "DocDate",
-                    "type": "nvarchar(8)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
-    "UpdateflagTACouponReceive": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-07T16:12:58.707Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "serialno",
-                    "type": "nvarchar(7)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "TA_getSelltoInterface": {
         "type": "PROCEDURE",
-        "updated": "2021-05-08T16:21:19.330Z",
+        "updated": "2021-05-08T16:50:48.710Z",
         "parameter": {
             "inputs": [
                 {
@@ -1239,7 +1047,7 @@
     },
     "SaveAR": {
         "type": "PROCEDURE",
-        "updated": "2021-05-09T20:18:37.933Z",
+        "updated": "2021-05-09T18:24:27.577Z",
         "parameter": {
             "inputs": [
                 {
@@ -1281,15 +1089,28 @@
     },
     "Acc_getTSBCreditAppList": {
         "type": "PROCEDURE",
-        "updated": "2021-05-11T11:31:41.980Z",
+        "updated": "2021-05-11T16:55:14.140Z",
         "parameter": {
             "inputs": [],
             "outputs": []
         }
     },
+    "Acc_getTSBCreditAppTrans": {
+        "type": "PROCEDURE",
+        "updated": "2021-05-11T16:55:14.140Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
     "Acc_SaveCreditApproveTrans": {
         "type": "PROCEDURE",
-        "updated": "2021-05-11T12:16:10.943Z",
+        "updated": "2021-05-11T16:55:14.143Z",
         "parameter": {
             "inputs": [
                 {
@@ -1333,22 +1154,9 @@
             ]
         }
     },
-    "Acc_getTSBCreditAppTrans": {
-        "type": "PROCEDURE",
-        "updated": "2021-05-11T12:36:43.247Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "TOD_SaveUserShift": {
         "type": "PROCEDURE",
-        "updated": "2021-06-05T11:33:17.973Z",
+        "updated": "2021-06-26T16:06:57.007Z",
         "parameter": {
             "inputs": [
                 {
@@ -1398,7 +1206,7 @@
     },
     "TOD_SaveRevenueEntry": {
         "type": "PROCEDURE",
-        "updated": "2021-06-29T08:56:40.757Z",
+        "updated": "2021-06-29T03:47:50.097Z",
         "parameter": {
             "inputs": [
                 {
@@ -1620,7 +1428,7 @@
     },
     "TCTCheckTODBoj": {
         "type": "PROCEDURE",
-        "updated": "2021-07-13T17:37:14.463Z",
+        "updated": "2021-07-14T02:38:06.903Z",
         "parameter": {
             "inputs": [
                 {
@@ -1637,7 +1445,7 @@
     },
     "Acc_SaveUserCreditOnJob": {
         "type": "PROCEDURE",
-        "updated": "2021-08-25T12:52:41.367Z",
+        "updated": "2021-08-26T22:41:34.970Z",
         "parameter": {
             "inputs": [
                 {
@@ -1691,7 +1499,7 @@
     },
     "TOD_SaveTSBShift": {
         "type": "PROCEDURE",
-        "updated": "2021-09-21T20:56:15.243Z",
+        "updated": "2021-08-26T22:41:34.977Z",
         "parameter": {
             "inputs": [
                 {
@@ -1741,7 +1549,7 @@
     },
     "TA_InquirySellCoupon": {
         "type": "PROCEDURE",
-        "updated": "2021-12-07T18:07:52.277Z",
+        "updated": "2021-12-07T13:11:37.527Z",
         "parameter": {
             "inputs": [
                 {
@@ -1786,7 +1594,7 @@
     },
     "Acc_SaveExchangeReceiveDetial": {
         "type": "PROCEDURE",
-        "updated": "2022-04-28T08:32:34.523Z",
+        "updated": "2022-04-28T15:33:36.783Z",
         "parameter": {
             "inputs": [
                 {
@@ -1822,30 +1630,9 @@
             ]
         }
     },
-    "Acc_getReqDatabyStatus": {
-        "type": "PROCEDURE",
-        "updated": "2022-04-28T09:57:13.887Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "status",
-                    "type": "nchar(1)"
-                },
-                {
-                    "name": "tsbid",
-                    "type": "nvarchar(5)"
-                },
-                {
-                    "name": "requestdate",
-                    "type": "date"
-                }
-            ],
-            "outputs": []
-        }
-    },
     "TA_GetUpdateReqData": {
         "type": "PROCEDURE",
-        "updated": "2022-05-02T12:36:07.430Z",
+        "updated": "2022-05-03T02:11:51.267Z",
         "parameter": {
             "inputs": [
                 {
@@ -1864,9 +1651,30 @@
             "outputs": []
         }
     },
+    "Acc_getReqDatabyStatus": {
+        "type": "PROCEDURE",
+        "updated": "2022-07-26T06:25:30.070Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "status",
+                    "type": "nchar(1)"
+                },
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "requestdate",
+                    "type": "date"
+                }
+            ],
+            "outputs": []
+        }
+    },
     "TA_SaveExchangeTransaction": {
         "type": "PROCEDURE",
-        "updated": "2022-05-04T13:27:18.010Z",
+        "updated": "2022-07-26T06:26:25.227Z",
         "parameter": {
             "inputs": [
                 {
@@ -1916,6 +1724,48 @@
                 {
                     "name": "status",
                     "type": "nchar(1)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TOD_UserReceiveBag": {
+        "type": "PROCEDURE",
+        "updated": "2022-08-13T00:18:35.977Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "shiftid",
+                    "type": "int"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "fullnameen",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "fullnameth",
+                    "type": "nvarchar(150)"
+                },
+                {
+                    "name": "receivedDate",
+                    "type": "datetime"
                 }
             ],
             "outputs": [

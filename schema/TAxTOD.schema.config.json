@@ -54,5 +54,6 @@
     "TOD_SaveTSBShift1": false,
     "InsUpdateSAPCustomerCode": false,
     "InsUpdateInquiryCoupon": false,
-    "Acc_SaveExchangeReceiveDetial": true
+    "Acc_SaveExchangeReceiveDetial": true,
+    "TOD_UserReceiveBag": true
 }

@@ -209,7 +209,7 @@ POST http://localhost:8000/api/TCT/CheckTODBoj
 content-type: application/json
 
 {
-  "TSBId": "09",
+  "TSBId": "07",
   "UserId": "20001"
   
 }
