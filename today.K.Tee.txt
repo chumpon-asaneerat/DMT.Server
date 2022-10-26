@@ -1,4 +1,6 @@
-
+----------------------------------------------------------------------------------------------
+Update 2022-10-26 #1 (K.Tee)
+- ADD SP for send coupon to SAP
 ----------------------------------------------------------------------------------------------
 Update 2022-07-25 #1 (K.Tee)
 - Update SP TA_SaveExchangeTransaction fix period Date is not updated from TA
