@@ -55,5 +55,7 @@
     "InsUpdateSAPCustomerCode": false,
     "InsUpdateInquiryCoupon": false,
     "Acc_SaveExchangeReceiveDetial": true,
-    "UserReceiveBag": true
+    "UserReceiveBag": true,
+    "GetCheckAR": false,
+    "TA_EditSoldCoupon": true
 }

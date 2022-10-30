@@ -54,3 +54,15 @@ content-type: application/json
     "transactiontype": 2,
     "coupontype": 35
 }
+
+
+### Gets all TSB coupons Data
+POST http://localhost:8000/api/TA/coupons/editserialno
+content-type: application/json
+
+{
+    "tsbid": "09",
+    "oldserialno": "C000527",
+    "newserialno": "C000603"
+}
+
