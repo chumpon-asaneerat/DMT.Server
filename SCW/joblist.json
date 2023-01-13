@@ -1,5 +1,33 @@
 {
-    "list": [],
+    "list": [
+        {
+            "networkId": 10,
+            "plazaId": 36,
+            "laneId": 32,
+            "jobNo": 1,
+            "staffId": "99831",
+            "bojDateTime": "2023-01-10T18:19:42.549+0700",
+            "eojDateTime": "2023-01-10T18:19:44.980+0700"
+        },
+        {
+            "networkId": 10,
+            "plazaId": 36,
+            "laneId": 32,
+            "jobNo": 1,
+            "staffId": "20001",
+            "bojDateTime": "2023-01-10T18:29:46.156+0700",
+            "eojDateTime": "2023-01-10T18:29:50.445+0700"
+        },
+        {
+            "networkId": 10,
+            "plazaId": 36,
+            "laneId": 32,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2023-01-10T18:30:02.679+0700",
+            "eojDateTime": null
+        }
+    ],
     "status": {
         "code": "S200",
         "message": "Success"

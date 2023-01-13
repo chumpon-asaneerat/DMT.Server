@@ -1,55 +1,72 @@
 ### Gets all user coupons that assigned by TA (POST) coupon 35
-POST http://localhost:3000/api/users/coupons/search
+POST http://localhost:8000/api/users/coupons/search
 content-type: application/json
 
 {
-    "tsbId": "311",
-    "userId": "14124",
+    "tsbId": "09",
+    "userId": "20001",
     "coupontype": "35"
 }
 
 ### Gets all user coupons that assigned by TA (POST) coupon 80
-POST http://localhost:3000/api/users/coupons/search
+POST http://localhost:8000/api/users/coupons/search
 content-type: application/json
 
 {
-    "tsbId": "311",
-    "userId": "14124",
+    "tsbId": "09",
+    "userId": "20001",
     "coupontype": "80"
 }
 
 ### Gets all user coupons that assigned by TA (POST) coupon all
-POST http://localhost:3000/api/users/coupons/search
+POST http://localhost:8000/api/users/coupons/search
 content-type: application/json
 
 {
-    "tsbId": "",
-    "userId": "14124",
+    "tsbId": "09",
+    "userId": "20001",
     "coupontype": null
 }
 
 ### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
-POST http://localhost:3000/api/TCT/coupons/sold
+POST http://localhost:8000/api/TCT/coupons/sold
 content-type: application/json
 
 {
-    "tsbid": "311",
-    "plazaid": "3101",
-    "laneid": "DD01",
+    "tsbid": "09",
+    "plazaid": "081",
+    "laneid": "AN02",
     "coupontype": "35",
-    "serialno": "ข002202",
+    "serialno": "ข009892",
     "price": 665,
-    "userid": "14124",
-   "solddate": "2020-08-10T18:25:43.511Z"
+    "userid": "20001",
+    "solddate": "2023-01-10T19:04:50.511Z",
+    "edcdatetime": "2023-01-10T19:04:50.511Z"
+}
+
+### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
+POST http://localhost:8000/api/TCT/coupons/sold
+content-type: application/json
+
+{
+    "tsbid": "09",
+    "plazaid": "081",
+    "laneid": "AN02",
+    "coupontype": "80",
+    "serialno": "C000767",
+    "price": 1520,
+    "userid": "20001",
+    "solddate": "2023-01-10T19:04:53.511Z",
+    "edcdatetime": "2023-01-10T19:04:53.511Z"
 }
 
 
 ### Gets all TSB coupons Data
-POST http://localhost:3000/api/users/coupons/getlist
+POST http://localhost:8000/api/users/coupons/getlist
 content-type: application/json
 
 {
-    "tsbid": "311",
+    "tsbid": "08",
     "userId": null,
     "transactiontype": 2,
     "coupontype": 35
