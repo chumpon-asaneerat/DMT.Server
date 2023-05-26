@@ -26,6 +26,24 @@
             "staffId": "20001",
             "bojDateTime": "2023-01-10T18:30:02.679+0700",
             "eojDateTime": null
+        },
+        {
+            "networkId": 10,
+            "plazaId": 41,
+            "laneId": 3,
+            "jobNo": 1,
+            "staffId": "20001",
+            "bojDateTime": "2023-05-26T23:30:24.926+0700",
+            "eojDateTime": "2023-05-26T23:30:26.400+0700"
+        },
+        {
+            "networkId": 10,
+            "plazaId": 41,
+            "laneId": 4,
+            "jobNo": 2,
+            "staffId": "20001",
+            "bojDateTime": "2023-05-26T23:30:29.366+0700",
+            "eojDateTime": "2023-05-26T23:30:30.324+0700"
         }
     ],
     "status": {
