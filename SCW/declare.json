@@ -5,13 +5,13 @@
     "bagNumber": "20001",
     "safetyBeltNumber": "",
     "shiftTypeId": 1,
-    "declareDateTime": "2023-03-06T07:41:33.000+07:00",
-    "attendanceDateTime": "2023-03-06T07:30:48.855+07:00",
-    "departureDateTime": "2023-03-06T07:44:34.470+07:00",
-    "operationDate": "2023-03-06T00:00:00.000+07:00",
+    "declareDateTime": "2023-07-08T09:48:35.000+07:00",
+    "attendanceDateTime": "2023-07-08T07:57:54.061+07:00",
+    "departureDateTime": "2023-07-08T09:49:32.489+07:00",
+    "operationDate": "2023-07-08T00:00:00.000+07:00",
     "declareById": "20001",
     "declareByName": "Mr. Hussakorn VRS",
-    "cashTotalAmount": 100,
+    "cashTotalAmount": 0,
     "couponTotalAmount": 0,
     "couponBookTotalAmount": 0,
     "cardAllowTotalAmount": 0,
@@ -20,8 +20,8 @@
     "otherTotalAmount": 0,
     "nonRevenue": 0,
     "cashRemark": "",
-    "otherRemark": "test",
-    "nonRevenueRemark": "test",
+    "otherRemark": "",
+    "nonRevenueRemark": "",
     "chiefId": "00444",
     "chiefName": "นาย หพ.ด่าน ทดสอบระบบ",
     "jobList": [
@@ -29,21 +29,13 @@
             "networkId": 10,
             "plazaId": 41,
             "laneId": 2,
-            "jobNo": 1,
+            "jobNo": 2,
             "staffId": "20001",
-            "bojDateTime": "2023-03-06T07:31:06.890+07:00",
-            "eojDateTime": "2023-03-06T07:31:14.493+07:00"
+            "bojDateTime": "2023-07-08T09:26:09.738+07:00",
+            "eojDateTime": "2023-07-08T09:26:10.728+07:00"
         }
     ],
-    "cashList": [
-        {
-            "currencyId": 1,
-            "currencyDenomId": 10,
-            "denomValue": 100,
-            "number": 1,
-            "total": 100
-        }
-    ],
+    "cashList": [],
     "couponList": [],
     "couponBookList": [],
     "cardAllowList": [],

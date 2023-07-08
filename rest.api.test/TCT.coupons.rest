@@ -37,11 +37,11 @@ content-type: application/json
     "plazaid": "091",
     "laneid": "AN01",
     "coupontype": "35",
-    "serialno": "ข003904",
+    "serialno": "ข009840",
     "price": 665,
-    "userid": "20001",
-    "solddate": "2023-05-10T10:04:50.511Z",
-    "edcdatetime": "2023-05-10T10:04:50.511Z"
+    "userid": "00112",
+    "solddate": "2023-07-08T10:09:50.511Z",
+    "edcdatetime": "2023-07-08T10:09:50.511Z"
 }
 
 ### Send user coupon to TA server (POST) - Incompleted sp not call some data is not saved.
