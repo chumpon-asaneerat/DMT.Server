@@ -57,5 +57,14 @@
     "Acc_SaveExchangeReceiveDetial": true,
     "UserReceiveBag": true,
     "GetCheckAR": false,
-    "TA_EditSoldCoupon": true
+    "TA_EditSoldCoupon": true,
+    "InsUpdateSAPInvData": false,
+    "sap_invoiceInsUpd": false,
+    "SaveCouponReservation": false,
+    "SaveCouponReservationHead": false,
+    "SaveCouponReservationItem": false,
+    "Sap_GetUnsendReservationHead": false,
+    "Sap_GetReservationItem": false,
+    "Sap_UpdateSendReservation": false,
+    "SaveReceivedCoupon": false
 }
