@@ -467,6 +467,14 @@
             "outputs": []
         }
     },
+    "GetCheckAR": {
+        "type": "PROCEDURE",
+        "updated": "2023-07-06T19:31:50.760Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
     "GetSumTASell": {
         "type": "PROCEDURE",
         "updated": "2023-07-06T19:31:50.763Z",
@@ -543,6 +551,168 @@
             "outputs": []
         }
     },
+    "InsUpdateInquiryCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2023-07-06T19:31:50.780Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "sapitemcode",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "sapintrserial",
+                    "type": "nvarchar(15)"
+                },
+                {
+                    "name": "sapsysserial",
+                    "type": "int"
+                },
+                {
+                    "name": "saptransferno",
+                    "type": "varchar(20)"
+                },
+                {
+                    "name": "saptransferdate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "itemstatus",
+                    "type": "nvarchar(15)"
+                },
+                {
+                    "name": "itemstatusdigit",
+                    "type": "tinyint"
+                },
+                {
+                    "name": "tollwayname",
+                    "type": "nvarchar(50)"
+                },
+                {
+                    "name": "tollwayid",
+                    "type": "smallint"
+                },
+                {
+                    "name": "workingdate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "shiftname",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "saparinvoice",
+                    "type": "varchar(30)"
+                },
+                {
+                    "name": "sapardate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "shiftid",
+                    "type": "int"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ErrMsg",
+                    "type": "varchar(200)"
+                },
+                {
+                    "name": "ErrNum",
+                    "type": "int"
+                },
+                {
+                    "name": "ReturnType",
+                    "type": "int"
+                }
+            ]
+        }
+    },
+    "InsUpdateSAPCustomerCode": {
+        "type": "PROCEDURE",
+        "updated": "2023-07-06T19:31:50.783Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "cardcode",
+                    "type": "nvarchar(15)"
+                },
+                {
+                    "name": "cardname",
+                    "type": "nvarchar(100)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ErrMsg",
+                    "type": "varchar(200)"
+                },
+                {
+                    "name": "ErrNum",
+                    "type": "int"
+                },
+                {
+                    "name": "ReturnType",
+                    "type": "int"
+                }
+            ]
+        }
+    },
+    "InsUpdateSAPInvData": {
+        "type": "PROCEDURE",
+        "updated": "2023-07-06T19:31:50.783Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "itemcode",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "itemName",
+                    "type": "nvarchar(100)"
+                },
+                {
+                    "name": "SerialNo",
+                    "type": "nvarchar(32)"
+                },
+                {
+                    "name": "SerialKey",
+                    "type": "nvarchar(15)"
+                },
+                {
+                    "name": "DocumentNo",
+                    "type": "int"
+                },
+                {
+                    "name": "Docdate",
+                    "type": "datetime"
+                },
+                {
+                    "name": "warehouse",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "createdate",
+                    "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ErrMsg",
+                    "type": "varchar(200)"
+                },
+                {
+                    "name": "ErrNum",
+                    "type": "int"
+                },
+                {
+                    "name": "ReturnType",
+                    "type": "int"
+                }
+            ]
+        }
+    },
     "SAP_GetInquirySellCoupon": {
         "type": "PROCEDURE",
         "updated": "2023-07-06T19:31:50.787Z",
@@ -617,6 +787,60 @@
                 {
                     "name": "ReturnType",
                     "type": "int"
+                }
+            ]
+        }
+    },
+    "sap_invoiceInsUpd": {
+        "type": "PROCEDURE",
+        "updated": "2023-07-06T19:31:50.790Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "DocType",
+                    "type": "int"
+                },
+                {
+                    "name": "ItemCode",
+                    "type": "nvarchar(20)"
+                },
+                {
+                    "name": "ItemName",
+                    "type": "nvarchar(100)"
+                },
+                {
+                    "name": "SerialNo",
+                    "type": "nvarchar(32)"
+                },
+                {
+                    "name": "SerialKey",
+                    "type": "int"
+                },
+                {
+                    "name": "Warehouse",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "DocDate",
+                    "type": "date"
+                },
+                {
+                    "name": "SAPARInvoice",
+                    "type": "int"
+                },
+                {
+                    "name": "CreateDate",
+                    "type": "date"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
                 }
             ]
         }
@@ -1989,6 +2213,244 @@
                 {
                     "name": "receivedDate",
                     "type": "datetime"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "SaveCouponReservation": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-20T08:59:47.050Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "postingdate",
+                    "type": "char(8)"
+                },
+                {
+                    "name": "mat_slip",
+                    "type": "char(16)"
+                },
+                {
+                    "name": "headertext",
+                    "type": "char(25)"
+                },
+                {
+                    "name": "itemnumber",
+                    "type": "char(4)"
+                },
+                {
+                    "name": "materialnum",
+                    "type": "char(10)"
+                },
+                {
+                    "name": "quantity",
+                    "type": "int"
+                },
+                {
+                    "name": "unit",
+                    "type": "char(4)"
+                },
+                {
+                    "name": "plant",
+                    "type": "char(4)"
+                },
+                {
+                    "name": "location",
+                    "type": "char(4)"
+                },
+                {
+                    "name": "goodsrecipient",
+                    "type": "char(12)"
+                },
+                {
+                    "name": "matdescription",
+                    "type": "nchar(40)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "SaveCouponReservationHead": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-26T10:32:27.180Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "basedate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "movementtype",
+                    "type": "nvarchar(3)"
+                },
+                {
+                    "name": "goodsrecipient",
+                    "type": "nvarchar(12)"
+                },
+                {
+                    "name": "receivingstor",
+                    "type": "nvarchar(4)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(6)"
+                },
+                {
+                    "name": "postingdate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "mat_slip",
+                    "type": "char(16)"
+                },
+                {
+                    "name": "headertext",
+                    "type": "char(25)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "SaveCouponReservationItem": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-26T10:32:27.187Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "goodsrecipient",
+                    "type": "nvarchar(12)"
+                },
+                {
+                    "name": "itemnumber",
+                    "type": "nvarchar(4)"
+                },
+                {
+                    "name": "materialnum",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "quantity",
+                    "type": "int"
+                },
+                {
+                    "name": "unit",
+                    "type": "nvarchar(4)"
+                },
+                {
+                    "name": "plant",
+                    "type": "nvarchar(4)"
+                },
+                {
+                    "name": "fromstor",
+                    "type": "nvarchar(4)"
+                },
+                {
+                    "name": "mat_slip",
+                    "type": "nvarchar(16)"
+                },
+                {
+                    "name": "transferqty",
+                    "type": "int"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "Sap_GetUnsendReservationHead": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-26T10:32:27.190Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
+    "Sap_GetReservationItem": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-26T10:32:27.190Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "goodsrecipient",
+                    "type": "nvarchar(12)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Sap_UpdateSendReservation": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-26T10:32:27.190Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "goodsrecipient",
+                    "type": "nvarchar(12)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "SaveReceivedCoupon": {
+        "type": "PROCEDURE",
+        "updated": "2023-09-26T10:32:27.193Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "materialnum",
+                    "type": "nvarchar(10)"
+                },
+                {
+                    "name": "location",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "SerialNo",
+                    "type": "nvarchar(7)"
+                },
+                {
+                    "name": "mat_slip",
+                    "type": "nvarchar(12)"
+                },
+                {
+                    "name": "matdescription",
+                    "type": "nvarchar(20)"
                 }
             ],
             "outputs": [

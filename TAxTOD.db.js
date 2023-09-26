@@ -111,6 +111,12 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async GetCheckAR(pObj) {
+        let name = 'GetCheckAR';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
     async GetSumTASell(pObj) {
         let name = 'GetSumTASell';
         let proc = schema[name];
@@ -135,8 +141,32 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async InsUpdateInquiryCoupon(pObj) {
+        let name = 'InsUpdateInquiryCoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async InsUpdateSAPCustomerCode(pObj) {
+        let name = 'InsUpdateSAPCustomerCode';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async InsUpdateSAPInvData(pObj) {
+        let name = 'InsUpdateSAPInvData';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
     async SAP_GetInquirySellCoupon(pObj) {
         let name = 'SAP_GetInquirySellCoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async sap_invoiceInsUpd(pObj) {
+        let name = 'sap_invoiceInsUpd';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -317,6 +347,48 @@ const TAxTOD = class extends SqlServer {
 
     async UserReceiveBag(pObj) {
         let name = 'UserReceiveBag';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveCouponReservation(pObj) {
+        let name = 'SaveCouponReservation';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveCouponReservationHead(pObj) {
+        let name = 'SaveCouponReservationHead';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveCouponReservationItem(pObj) {
+        let name = 'SaveCouponReservationItem';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Sap_GetUnsendReservationHead(pObj) {
+        let name = 'Sap_GetUnsendReservationHead';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Sap_GetReservationItem(pObj) {
+        let name = 'Sap_GetReservationItem';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Sap_UpdateSendReservation(pObj) {
+        let name = 'Sap_UpdateSendReservation';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveReceivedCoupon(pObj) {
+        let name = 'SaveReceivedCoupon';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
