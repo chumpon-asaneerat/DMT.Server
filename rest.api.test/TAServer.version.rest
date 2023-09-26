@@ -1,0 +1,6 @@
+### Check TA Server version
+GET http://localhost:8000/api/taa/version
+content-type: application/json
+
+{
+}
