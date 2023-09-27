@@ -68,3 +68,7 @@ nlib.config.json
 
 # routes_http_error_inject.config.json
 routes_http_error_inject.config.json
+
+# json files
+Queues/
+jsonfiles/
