@@ -19,6 +19,7 @@ const reserveQueue = new JsonQueue(path.join('Queues', 'ToSAP'))
 
 const SendToSAP = class {
     constructor() {
+        this.Processing = false
     }
 
     async getUnsendData() {
@@ -58,6 +59,11 @@ const SendToSAP = class {
                 }
                 // write file
                 reserveQueue.writeFile(doc, null, doc.GOODS_RECIPIENT)
+                // mark send to SAP
+                var pObj2 = {
+                    goodsrecipient: head.GOODS_RECIPIENT
+                }
+                await db.Sap_UpdateSendReservation(pObj2)
             }
         }
         await db.disconnect()
@@ -65,13 +71,18 @@ const SendToSAP = class {
 
     start() {
         schedule.scheduleJob('*/5 * * * * *', () => {
-            // auto send reserve in every 5 seconds
+            if (!this.Processing) {
+                this.Processing = true
 
-            this.getUnsendData().then(_ => { 
-                //reserveQueue.Url = 'https://api.restful-api.dev/objects'
-                reserveQueue.Url = 'https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
-                reserveQueue.processFiles()
-            })
+                // auto send reserve in every 5 seconds
+                this.getUnsendData().then(_ => { 
+                    //reserveQueue.Url = 'https://api.restful-api.dev/objects'
+                    reserveQueue.Url = 'https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
+                    reserveQueue.processFiles()
+                })
+                
+                this.Processing = false
+            }
         })
     }
 }
