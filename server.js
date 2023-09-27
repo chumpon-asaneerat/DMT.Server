@@ -18,17 +18,20 @@ wsvr.listen();
 
 //fileSyncService.start();
 //SFTPService.start();
-const reserveQueue = new JsonQueue(path.join('Queues', 'Reserve'))
-
-let obj = {
-    tesT: "test"
-}
-reserveQueue.writeFile(obj, 'reservation')
 
 const schedule = require('node-schedule')
 process.on('SIGINT', () => { 
     schedule.gracefulShutdown().then(() => process.exit(0))
 })
+
+
+const reserveQueue = new JsonQueue(path.join('Queues', 'Reserve'))
+/*
+let obj = {
+    tesT: "test"
+}
+reserveQueue.writeFile(obj, 'reservation')
+*/
 
 schedule.scheduleJob('*/5 * * * * *', () => {
     // auto send reserve in every 5 seconds

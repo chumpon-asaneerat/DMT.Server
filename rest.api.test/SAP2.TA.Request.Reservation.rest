@@ -22,7 +22,7 @@ SAP-Client: 300
         { 
             "itemnumber": "1", 
             "goodsrecipient": "TADD20230001", 
-            "materialnum": "31000080",
+            "materialnum": "310000080",
             "quantity": 100,
             "unit": "BOK",
             "plant": "1010",

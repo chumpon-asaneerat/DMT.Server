@@ -1,0 +1,88 @@
+### common variables
+@username=api_user
+@password=DMTinf#2023
+
+### OB Toll (Call By SAP)
+
+POST http://localhost:8000/api/secure/ob_toll/save
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 300
+
+{
+    "HEADER": [
+        {
+            "POSTING_DATE": "20230721",
+            "MAT_SLIP": "TADD20230001",
+            "HEADER_TXT": "",
+            "ITEM": [
+                {
+                    "ITEM_NUMBER": "1",
+                    "MATERIAL_NUM": "310000080",
+                    "MATERIAL_DESCRIPTION": "เล่มคูปอง 80 บาท",
+                    "QUANTITY": "2",
+                    "UNIT_OF_MEASURE": "BOK",
+                    "PLANT": "1010",
+                    "STORAGE_LOCATION": "CCDD",
+                    "GOODS_RECIPIENT": "TADD20230001",
+                    "ZSERIAL_NO": [
+                        {
+                            "OBJECT_COUNTER": "1",
+                            "SERIAL_NO": "C000001"
+                        },
+                        {
+                            "OBJECT_COUNTER": "2",
+                            "SERIAL_NO": "C000002"
+                        }
+                    ]
+                }, {
+                    "ITEM_NUMBER": "2",
+                    "MATERIAL_NUM": "310000035",
+                    "MATERIAL_DESCRIPTION": "เล่มคูปอง 35 บาท",
+                    "QUANTITY": "2",
+                    "UNIT_OF_MEASURE": "BOK",
+                    "PLANT": "1010",
+                    "STORAGE_LOCATION": "CCDD",
+                    "GOODS_RECIPIENT": "TADD20230001",
+                    "ZSERIAL_NO": [
+                        {
+                            "OBJECT_COUNTER": "1",
+                            "SERIAL_NO": "ข000001"
+                        },
+                        {
+                            "OBJECT_COUNTER": "2",
+                            "SERIAL_NO": "ข000002"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "POSTING_DATE": "20230721",
+            "MAT_SLIP": "TAAN20230002",
+            "HEADER_TXT": "",
+            "ITEM": [
+                {
+                    "ITEM_NUMBER": "1",
+                    "MATERIAL_NUM": "310000035",
+                    "MATERIAL_DESCRIPTION": "เล่มคูปอง 35 บาท",
+                    "QUANTITY": "2",
+                    "UNIT_OF_MEASURE": "BOK",
+                    "PLANT": "1010",
+                    "STORAGE_LOCATION": "CCAN",
+                    "GOODS_RECIPIENT": "TAAN20230002",
+                    "ZSERIAL_NO": [
+                        {
+                            "OBJECT_COUNTER": "1",
+                            "SERIAL_NO": "ข000003"
+                        },
+                        {
+                            "OBJECT_COUNTER": "2",
+                            "SERIAL_NO": "ข000004"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

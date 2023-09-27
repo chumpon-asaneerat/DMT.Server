@@ -43,14 +43,18 @@ const Process = async (params) => {
 }
 
 const saveReservation = (req, res, next) => {
-    let fname = 'msg.' + moment().format('YYYY.MM.DD.HH.mm.ss.SSSS') + '.requst.reservation.json'
-    let filename = path.join(rootPath, 'jsonfiles', 'requst.reservation', fname)
+    let sDateTime = moment().format('YYYY.MM.DD.HH.mm.ss.SSSS')
+    let req_fname = 'msg.' + sDateTime + '.req.reservation.json'
+    let res_fname = 'msg.' + sDateTime + '.res.reservation.json'
+    
+    let req_filename = path.join(rootPath, 'jsonfiles', 'TAReservation', req_fname)
+    let res_filename = path.join(rootPath, 'jsonfiles', 'TAReservation', res_fname)
 
     let params = WebServer.parseReq(req).data
-    jsonFile.save(filename, params)
+    jsonFile.save(req_filename, params) // save to file
 
-    // save
     Process(params).then(output => {
+        jsonFile.save(res_filename, output) // save to file
         res.json(output)
     })
 }
