@@ -17,6 +17,9 @@ const socket = require('socket.io');
 
 const statusMon = require('express-status-monitor');
 
+
+const basicAuth = require("express-basic-auth")
+
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cookieparser = require("cookie-parser");
@@ -112,6 +115,12 @@ const defaultWSvr = {
 //#endregion
 
 //#region WebServer helper methods
+
+function getUnauthorizedResponse(req, res) {
+    return {
+        msg: req.auth ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected') : 'No credentials provided'
+    }
+}
 
 const loadconfig = () => {
     console.log('load web server configuration.');
@@ -225,6 +234,33 @@ const init_swagger_doc = (app, cfg) => {
     });
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 };
+
+const init_basic_auth = (app, cfg) => {
+    // Init Basic Auth
+    let users = {}
+    var auth = cfg.get('webserver.basicAuth')
+    if (!auth) {
+        // auto apppend config
+        auth = {
+            user: 'api_user',
+            password: 'DMTinf#2023'
+        }
+        cfg.set('webserver.basicAuth', auth)
+        cfg.update()
+    }
+    // read config
+    auth = cfg.get('webserver.basicAuth')
+     
+    let username = auth.user
+    let pwd = auth.password
+    users[username] = pwd
+
+    app.use('/api/secure', basicAuth({
+        //users: { 'api_user' : 'DMTinf#2023' },
+        users: users,
+        unauthorizedResponse: getUnauthorizedResponse
+    }))
+};
 const init_middlewares = (app, io, cfg) => {
     //? load common middlewares.
     //! be careful the middleware order is matter.
@@ -235,6 +271,7 @@ const init_middlewares = (app, io, cfg) => {
     init_cookie_parser(app, cfg);
     init_body_parser(app);
     init_fav_icon(app, cfg);
+    init_basic_auth(app, cfg);
     init_public_paths(app, cfg);
     init_swagger_doc(app, cfg);
 };
