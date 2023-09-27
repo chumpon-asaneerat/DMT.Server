@@ -2,10 +2,11 @@ const path = require('path');
 const fs = require('fs');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
-const moment = require('moment')
+const moment = require('moment');
+const { tree } = require('gulp');
 
 // Recursive function to get files
-function getFiles(dir, recursive = false) {
+function getFiles(dir) {
     let files = []
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true })
@@ -16,11 +17,7 @@ function getFiles(dir, recursive = false) {
     for (const file of fileList) {
       const name = `${dir}/${file}`;
       // Check if the current file/directory is a directory using fs.statSync
-      if (recursive && fs.statSync(name).isDirectory()) {
-        // If it is a directory, recursively call the getFiles function with the directory path and the files array
-        let childs = getFiles(name, files);
-        files.push(...childs)
-      } else {
+      if (!fs.statSync(name).isDirectory()) {
         // If it is a file, push the full path to the files array
         files.push(name);
       }
@@ -28,11 +25,30 @@ function getFiles(dir, recursive = false) {
     return files;
   }
 
+  function moveFile(oldFile, newFile) {
+    try {
+        let newPath = path.dirname(newFile)
+        if (!fs.existsSync(newPath)) {
+            // create target path if not exists
+            fs.mkdirSync(newPath, { recursive: true })
+        }
+        if (fs.existsSync(oldFile)) {
+            fs.renameSync(oldFile, newFile)
+        }
+        else {
+            console.log('file not found')
+        }
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
+
 class JsonQueue {
     //#region  Constructor
 
-    constructor(path) {
-        this._path = path
+    constructor(queuePath) {
+        this._path = path.join(rootPath, queuePath)
         this._processing = false
     }
 
@@ -42,6 +58,12 @@ class JsonQueue {
 
     processJson(fileName) {
         console.log('process file: ' + fileName)
+        let backupPath = path.join(this._path, 'backup')
+        //let errorPath = path.join(this._path, 'error')
+        let fname = path.basename(fileName)
+        let sourceFile = path.join(this._path, fname)
+        let targetFile = path.join(backupPath, fname)
+        moveFile(sourceFile, targetFile)
     } 
 
     writeFile(fileName, pObj) {
@@ -61,10 +83,16 @@ class JsonQueue {
     }
 
     processFiles() {
-        let files = getFiles(this._path, false)
+        if (this._processing) 
+            return
+        let files = getFiles(this._path)
+        this._processing = true
         if (files && files.length > 0) {
-            processJson()
+            for (let file of files) {
+                this.processJson(file)
+            }
         }
+        this._processing = false
     }
 
     //#endregion

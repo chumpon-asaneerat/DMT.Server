@@ -19,4 +19,12 @@ wsvr.listen();
 //fileSyncService.start();
 //SFTPService.start();
 const reserveQueue = new JsonQueue(path.join('Queues', 'Reserve'))
-reserveQueue.processFiles()
+
+const schedule = require('node-schedule')
+process.on('SIGINT', () => { 
+    schedule.gracefulShutdown().then(() => process.exit(0))
+})
+
+schedule.scheduleJob('*/5 * * * * *', () => {
+    reserveQueue.processFiles()
+})
