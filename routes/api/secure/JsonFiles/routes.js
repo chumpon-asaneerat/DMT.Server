@@ -3,6 +3,7 @@
 const path = require('path');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
+const jsonFile = nlib.JSONFile
 
 const WebServer = require(path.join(rootPath, 'nlib', 'nlib-express'));
 const WebRouter = WebServer.WebRouter;
@@ -15,6 +16,8 @@ const moment = require('moment')
 const saveJsonFile = (req, res, next) => {
     let fname = 'req.' + moment().format('YYYY.MM.DD.HH.mm.ss.SSSS') + '.json'
     let filename = path.join(rootPath, 'jsonfiles', 'req', fname)
+    let value = req.body
+    jsonFile.save(filename, value)
 
     let obj = {
         value: 'file ' + fname + ' saved.'

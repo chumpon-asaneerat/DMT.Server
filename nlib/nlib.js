@@ -273,7 +273,19 @@ const JSONFile = class {
      * @return {Boolean} Returns true if file is successfully saved.
      */
     static save(fileName, obj) {
-        return fs.writeFileSync(fileName, JSON.stringify(obj, null, 4), 'utf8');
+        try
+        {
+            // check directory exists
+            let dir = path.dirname(fileName)
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true })
+            }
+            fs.writeFileSync(fileName, JSON.stringify(obj, null, 4), 'utf8')
+        }
+        catch (err)
+        {
+            logger.error(err.message)
+        }
     }
     /**
      * Load object from json file.
@@ -281,9 +293,16 @@ const JSONFile = class {
      * @return {Object} Returns json object that load from file. Null returns if error occur.
      */
     static load(fileName) {
-        let sJson = fs.readFileSync(fileName, 'utf8');
-        try { return JSON.parse(sJson); }
-        catch { return null; }
+        let obj = null
+        let sJson = fs.readFileSync(fileName, 'utf8')
+        try { 
+            obj = JSON.parse(sJson)
+        }
+        catch (err) { 
+            logger.error(err.message)
+            obj = null
+        }
+        return obj
     }
     /**
      * Checks file exists.
