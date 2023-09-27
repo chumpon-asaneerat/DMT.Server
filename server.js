@@ -20,6 +20,11 @@ wsvr.listen();
 //SFTPService.start();
 const reserveQueue = new JsonQueue(path.join('Queues', 'Reserve'))
 
+let obj = {
+    tesT: "test"
+}
+reserveQueue.writeFile(obj, 'reservation')
+
 const schedule = require('node-schedule')
 process.on('SIGINT', () => { 
     schedule.gracefulShutdown().then(() => process.exit(0))

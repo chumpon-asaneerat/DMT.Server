@@ -3,10 +3,9 @@ const fs = require('fs');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 const moment = require('moment');
-const { tree } = require('gulp');
 
 // Recursive function to get files
-function getFiles(dir) {
+function getJsonFiles(dir) {
     let files = []
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true })
@@ -18,8 +17,11 @@ function getFiles(dir) {
       const name = `${dir}/${file}`;
       // Check if the current file/directory is a directory using fs.statSync
       if (!fs.statSync(name).isDirectory()) {
-        // If it is a file, push the full path to the files array
-        files.push(name);
+        let ext = path.extname(name)
+        if (ext == '.json') {
+            // If it is a file, push the full path to the files array
+            files.push(name);
+        }
       }
     }
     return files;
@@ -65,29 +67,39 @@ class JsonQueue {
         let targetFile = path.join(backupPath, fname)
         moveFile(sourceFile, targetFile)
     } 
-
-    writeFile(fileName, pObj) {
-
-    }
-
-    moveTo(fileName, subFolder) {
-
+    writeFile(pObj, objName) {
+        let fileNameOnly = 'msg.' + moment().format('YYYY.MM.DD.HH.mm.ss.SSSS')
+        let sName = objName.toString().toLowerCase().trim()
+        if (sName.length > 0) {
+            fileNameOnly = fileNameOnly + '.' + objName.toString().toLowerCase()
+        }
+        fileNameOnly = fileNameOnly + '.json'
+        let fileName = path.join(this._path, fileNameOnly)
+        nlib.JSONFile.save(fileName, pObj)
     }
 
     moveToBackup(fileName) {
-        
+        let backupPath = path.join(this._path, 'backup')
+        let fname = path.basename(fileName)
+        let sourceFile = path.join(this._path, fname)
+        let targetFile = path.join(backupPath, fname)
+        moveFile(sourceFile, targetFile)
     }
 
     moveToError(fileName) {
-        
+        let errorPath = path.join(this._path, 'error')
+        let fname = path.basename(fileName)
+        let sourceFile = path.join(this._path, fname)
+        let targetFile = path.join(errorPath, fname)
+        moveFile(sourceFile, targetFile)
     }
 
     processFiles() {
         if (this._processing) 
             return
-        let files = getFiles(this._path)
+        let files = getJsonFiles(this._path)
         this._processing = true
-        if (files && files.length > 0) {
+        if (files) {
             for (let file of files) {
                 this.processJson(file)
             }
