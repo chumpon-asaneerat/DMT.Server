@@ -31,5 +31,6 @@ process.on('SIGINT', () => {
 })
 
 schedule.scheduleJob('*/5 * * * * *', () => {
+    // auto send reserve in every 5 seconds
     reserveQueue.processFiles()
 })
