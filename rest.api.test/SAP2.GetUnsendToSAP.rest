@@ -1,0 +1,16 @@
+### common variables
+@sapUATurl='https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
+
+@username=api_user
+@password=DMTinf#2023
+
+### Gets Unsend Coupon ToSAP
+
+POST http://localhost:8000/api/secure/reservation/gets
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 300
+
+{
+}
+
