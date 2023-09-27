@@ -4,10 +4,9 @@ const WebServer = require('./nlib/nlib-express');
 // init logger
 const logger = require('./nlib/nlib-logger').logger;
 
+const schedule = require('node-schedule')
 const JsonQueue = require('./dmt/utils/jsonqueue').JsonQueue;
-
-//const fileSyncService = require('./dmt/filesync/filesync');
-//const SFTPService = require('./dmt/ftp/nftp');
+const sendToSAP = require('./sendToSAP');
 
 // write app version to log
 logger.info('start TA Server v1.1.0 build 400 update 2023-09-26 14:30');
@@ -16,24 +15,9 @@ logger.info('start TA Server v1.1.0 build 400 update 2023-09-26 14:30');
 const wsvr = new WebServer();
 wsvr.listen();
 
-//fileSyncService.start();
-//SFTPService.start();
-
-const schedule = require('node-schedule')
+// set global schedule exit process
 process.on('SIGINT', () => { 
     schedule.gracefulShutdown().then(() => process.exit(0))
 })
 
-
-const reserveQueue = new JsonQueue(path.join('Queues', 'Reserve'))
-/*
-let obj = {
-    tesT: "test"
-}
-reserveQueue.writeFile(obj, 'reservation')
-*/
-
-schedule.scheduleJob('*/5 * * * * *', () => {
-    // auto send reserve in every 5 seconds
-    reserveQueue.processFiles()
-})
+sendToSAP.start() // start monitor data send to SAP

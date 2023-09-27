@@ -16,14 +16,6 @@ const dbutils = require(path.join(rootPath, 'dmt', 'utils', 'db-utils')).DbUtils
 
 const moment = require('moment')
 
-const createResult = () => {
-    let ret = nlib.NResult.empty();
-    // append properties.
-    ret.multiple = false;
-    ret.datasets = null;
-    return ret;
-}
-
 const Process = async (params) => {
     let rets = []
     // save to db

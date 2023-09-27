@@ -3,6 +3,36 @@ const fs = require('fs');
 const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 const moment = require('moment');
+const fetch = require('node-fetch')
+
+const SendToSAP = async (url, pObj, callback) => {
+    let cfg = nlib.Config;
+    var auth = cfg.get('webserver.basicAuth')
+    let username = auth.user
+    let pwd = auth.password
+    let sAuth = Buffer.from(username + ":" + pwd).toString('base64')
+    let request = async () => {
+        try {
+            const response = await fetch(url, { 
+                method: 'POST',
+                body: JSON.stringify(pObj),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'SAP-Client': 300,
+                    'Authorization': 'Basic ' + sAuth
+                }
+            })
+            const data = await response.json()
+            if (callback) callback(request, response, data)
+        }
+        catch (err) {
+            console.error(err)
+            if (callback) callback(request, null, null, err)
+        }    
+    }
+
+    request()
+}
 
 // Recursive function to get files
 function getJsonFiles(dir) {
@@ -52,6 +82,7 @@ class JsonQueue {
     constructor(queuePath) {
         this._path = path.join(rootPath, queuePath)
         this._processing = false
+        this.Url = ''
     }
 
     //#endregion
@@ -59,17 +90,27 @@ class JsonQueue {
     //#region Public Methods
 
     processJson(fileName) {
-        console.log('process file: ' + fileName)
-        let backupPath = path.join(this._path, 'backup')
-        //let errorPath = path.join(this._path, 'error')
         let fname = path.basename(fileName)
         let sourceFile = path.join(this._path, fname)
-        let targetFile = path.join(backupPath, fname)
-        moveFile(sourceFile, targetFile)
+
+        console.log('process file: ' + sourceFile)
+        let pObj = nlib.JSONFile.load(sourceFile)
+        if (pObj) {
+            SendToSAP(this.Url).then((req, res, data, err) => {
+                if (err) {
+                    this.moveToError(sourceFile)
+                }
+                else {
+                    this.moveToBackup(sourceFile)
+                }
+            })
+        }
     } 
-    writeFile(pObj, objName) {
-        let fileNameOnly = 'msg.' + moment().format('YYYY.MM.DD.HH.mm.ss.SSSS')
-        let sName = objName.toString().toLowerCase().trim()
+    writeFile(pObj, objName, fileNameOnly) {
+        if (!fileNameOnly) {
+            fileNameOnly = 'msg.' + moment().format('YYYY.MM.DD.HH.mm.ss.SSSS')
+        }
+        let sName = (objName) ? objName.toString().toLowerCase().trim() : ''
         if (sName.length > 0) {
             fileNameOnly = fileNameOnly + '.' + objName.toString().toLowerCase()
         }
@@ -77,7 +118,6 @@ class JsonQueue {
         let fileName = path.join(this._path, fileNameOnly)
         nlib.JSONFile.save(fileName, pObj)
     }
-
     moveToBackup(fileName) {
         let backupPath = path.join(this._path, 'backup')
         let fname = path.basename(fileName)
@@ -85,7 +125,6 @@ class JsonQueue {
         let targetFile = path.join(backupPath, fname)
         moveFile(sourceFile, targetFile)
     }
-
     moveToError(fileName) {
         let errorPath = path.join(this._path, 'error')
         let fname = path.basename(fileName)
