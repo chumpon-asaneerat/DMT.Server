@@ -1,14 +1,3 @@
-### common variables
-@username=api_user
-@password=DMTinf#2023
-
-### Request Reservation (from TA plaza)
-
-POST http://localhost:8000/api/secure/reservation/save
-content-type: application/json
-Authorization: Basic {{username}} {{password}}
-SAP-Client: 300
-
 {
     "basedate": "20230826",
     "movementtype": "311",
@@ -19,18 +8,18 @@ SAP-Client: 300
     "mat_slip": null,
     "headertext": null,
     "items": [
-        { 
-            "itemnumber": "1", 
-            "goodsrecipient": "TADD20230001", 
+        {
+            "itemnumber": "1",
+            "goodsrecipient": "TADD20230001",
             "materialnum": "31000080",
             "quantity": 100,
             "unit": "BOK",
             "plant": "1010",
             "fromstor": "CDMT"
         },
-        { 
-            "itemnumber": "2", 
-            "goodsrecipient": "TADD20230001", 
+        {
+            "itemnumber": "2",
+            "goodsrecipient": "TADD20230001",
             "materialnum": "310000035",
             "quantity": 50,
             "unit": "BOK",
