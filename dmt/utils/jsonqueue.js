@@ -24,7 +24,11 @@ const SendToSAP = async (url, pObj, callback) => {
                 agent: httpsAgent,
                 headers: {
                     'Content-Type': 'application/json',
-                    'SAP-Client': 300,
+                    'SAP-Client': '300',
+                    'type': 'default',
+                    'enabled': 'true',
+                    'X-Requested-With': 'X',
+                    'Accept': 'application/json',
                     'Authorization': 'Basic ' + sAuth
                 }
             })
@@ -102,7 +106,7 @@ class JsonQueue {
         console.log('process file: ' + sourceFile)
         let pObj = nlib.JSONFile.load(sourceFile)
         if (pObj) {
-            SendToSAP(this.Url).then((req, res, data, err) => {
+            SendToSAP(this.Url, pObj).then((req, res, data, err) => {
                 if (err) {
                     this.moveToError(sourceFile)
                 }
