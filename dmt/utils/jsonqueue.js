@@ -4,6 +4,11 @@ const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'nlib', 'nlib'));
 const moment = require('moment');
 const fetch = require('node-fetch')
+const https = require('https')
+
+const httpsAgent = new https.Agent({
+    rejectUnauthorized: false,
+})
 
 const SendToSAP = async (url, pObj, callback) => {
     let cfg = nlib.Config;
@@ -16,6 +21,7 @@ const SendToSAP = async (url, pObj, callback) => {
             const response = await fetch(url, { 
                 method: 'POST',
                 body: JSON.stringify(pObj),
+                agent: httpsAgent,
                 headers: {
                     'Content-Type': 'application/json',
                     'SAP-Client': 300,

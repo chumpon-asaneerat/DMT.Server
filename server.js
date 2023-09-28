@@ -1,7 +1,5 @@
 const path = require("path");
 
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0; // Disable the warning
-
 //const nlib = require("./nlib/nlib");
 const WebServer = require('./nlib/nlib-express');
 // init logger
