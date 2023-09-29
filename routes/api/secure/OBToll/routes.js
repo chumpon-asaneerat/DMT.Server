@@ -104,14 +104,14 @@ const SaveOBCoupons = async (db, spParams) => {
 
         let type = ''
         let msg = ''
-        if (dbResult.out && dbResult.out.errNum)
+        if (dbResult.out && dbResult.out.errNum != null)
         {
             type = (dbResult.out.errNum == 0) ? 'S' : 'E'
         }
         else {
             type = 'E'
         }
-        if (dbResult.out && dbResult.out.errMsg) {
+        if (dbResult.out && dbResult.out.errMsg != null) {
             msg = (dbResult.out.errNum == 0) ? 'Successfull' : dbResult.out.errMsg
         }
         else {
