@@ -107,7 +107,6 @@ const SaveOBCoupons = async (db, spParams) => {
         if (dbResult.out && dbResult.out.errNum)
         {
             type = (dbResult.out.errNum == 0) ? 'S' : 'E'
-            
         }
         else {
             type = 'E'
