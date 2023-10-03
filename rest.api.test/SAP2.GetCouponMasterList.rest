@@ -1,0 +1,14 @@
+### common variables
+@username=api_user
+@password=DMTinf#2023
+
+### Gets Coupon Master List
+
+POST http://localhost:8000/api/secure/coupons/master/gets
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 300
+
+{
+}
+
