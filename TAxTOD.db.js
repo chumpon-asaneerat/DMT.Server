@@ -393,6 +393,42 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async TA_getCouponMasterList(pObj) {
+        let name = 'TA_getCouponMasterList';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_getStorageLocationByTSBID(pObj) {
+        let name = 'TA_getStorageLocationByTSBID';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async Sap_SaveSendReservationRes(pObj) {
+        let name = 'Sap_SaveSendReservationRes';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_SearchReservationStatus(pObj) {
+        let name = 'TA_SearchReservationStatus';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_ReserveRunningNo(pObj) {
+        let name = 'TA_ReserveRunningNo';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_UpdateRunningNo(pObj) {
+        let name = 'TA_UpdateRunningNo';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
 }
 
 module.exports = exports = TAxTOD;

@@ -2464,5 +2464,111 @@
                 }
             ]
         }
+    },
+    "TA_getCouponMasterList": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-03T19:57:14.540Z",
+        "parameter": {
+            "inputs": [],
+            "outputs": []
+        }
+    },
+    "TA_getStorageLocationByTSBID": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-03T19:57:25.653Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "Sap_SaveSendReservationRes": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-03T19:57:41.897Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "goodsrecipient",
+                    "type": "nvarchar(12)"
+                },
+                {
+                    "name": "msgtype",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "msgresult",
+                    "type": "nvarchar(100)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
+        }
+    },
+    "TA_SearchReservationStatus": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-03T19:57:41.903Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "basedate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "sendresult",
+                    "type": "char(1)"
+                },
+                {
+                    "name": "transfer",
+                    "type": "char(1)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_ReserveRunningNo": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-03T19:57:55.457Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "year",
+                    "type": "nvarchar(4)"
+                }
+            ],
+            "outputs": []
+        }
+    },
+    "TA_UpdateRunningNo": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-03T19:57:55.463Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "tsbid",
+                    "type": "nvarchar(5)"
+                },
+                {
+                    "name": "runningno",
+                    "type": "int"
+                }
+            ],
+            "outputs": []
+        }
     }
 }
