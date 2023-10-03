@@ -66,5 +66,11 @@
     "Sap_GetUnsendReservationHead": true,
     "Sap_GetReservationItem": true,
     "Sap_UpdateSendReservation": true,
-    "SaveReceivedCoupon": true
+    "SaveReceivedCoupon": true,
+    "TA_getCouponMasterList": true,
+    "TA_getStorageLocationByTSBID": true,
+    "Sap_SaveSendReservationRes": true,
+    "TA_SearchReservationStatus": true,
+    "TA_ReserveRunningNo": true,
+    "TA_UpdateRunningNo": true
 }
