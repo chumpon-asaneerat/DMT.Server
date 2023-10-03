@@ -21,7 +21,7 @@ const Process = async (params) => {
     // save to db
     let db = new sqldb()
     await db.connect()
-    const dbResult = await db.TA_getCouponMasterList()
+    const dbResult = await db.TA_getStorageLocationByTSBID(params)
     if (dbResult && dbResult.data) {
         rets = dbResult.data
     }
@@ -32,14 +32,14 @@ const Process = async (params) => {
     return result
 }
 
-const getCouponMasters = (req, res, next) => {
+const getStorageLocationByTSBID = (req, res, next) => {
     let params = WebServer.parseReq(req).data
     Process(params).then(output => {
         res.json(output)
     })
 }
 
-router.post('/coupons/master/gets', getCouponMasters)
+router.post('/master/storage/gets', getStorageLocationByTSBID)
 
 const init_routes = (svr) => {
     svr.route('/api/secure', router); // set route name

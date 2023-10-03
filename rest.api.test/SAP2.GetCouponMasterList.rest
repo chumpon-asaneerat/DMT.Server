@@ -4,7 +4,7 @@
 
 ### Gets Coupon Master List
 
-POST http://localhost:8000/api/secure/coupons/master/gets
+POST http://localhost:8000/api/secure/master/coupon/gets
 content-type: application/json
 Authorization: Basic {{username}} {{password}}
 SAP-Client: 300

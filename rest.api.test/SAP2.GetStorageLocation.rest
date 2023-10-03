@@ -2,15 +2,13 @@
 @username=api_user
 @password=DMTinf#2023
 
-### Gets Reservation Current Running No
+### Gets Storage Location
 
-POST http://localhost:8000/api/secure/reservation/runningno/get
+POST http://localhost:8000/api/secure/master/storage/gets
 content-type: application/json
 Authorization: Basic {{username}} {{password}}
 SAP-Client: 300
 
 {
-    "tsbid":"09",
-    "year":"2023"
+    "tsbId": "09"
 }
-
