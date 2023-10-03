@@ -1,0 +1,16 @@
+### common variables
+@username=api_user
+@password=DMTinf#2023
+
+### Gets Coupon Master List
+
+POST http://localhost:8000/api/secure/reservation/runningno/get
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 300
+
+{
+    "tsbid":"09",
+    "year":"2023"
+}
+
