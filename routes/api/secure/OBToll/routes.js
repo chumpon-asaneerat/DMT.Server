@@ -118,7 +118,6 @@ const SaveOBCoupons = async (db, spParams) => {
             msg = 'UNKNOWN ERROR!'
         }
 
-
         let ret;
 
         if (idx === -1) {
