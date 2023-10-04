@@ -254,6 +254,8 @@ const init_basic_auth = (app, cfg) => {
     let username = auth.user
     let pwd = auth.password
     users[username] = pwd
+    
+    users['DMTUSER'] = 'DMTPASS' // add TA Application auth user
 
     app.use('/api/secure', basicAuth({
         //users: { 'api_user' : 'DMTinf#2023' },
