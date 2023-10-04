@@ -21,14 +21,14 @@ content-type: application/json
 
 
 ### Gets New TSB coupons data (only newly data which is flag is 0)
-POST http://localhost:3000/api/users/coupons/getlist
+POST http://localhost:8000/api/users/coupons/getlist
 content-type: application/json
 
 {
     "TSBId": "09",
     "UserId": null,
-    "TransactionType": 1,
-    "Coupontype": 35,
+    "TransactionType": null,
+    "Coupontype": null,
     "flag": 0
 }
 
@@ -62,8 +62,8 @@ content-type: application/json
 {
     "TSBId": "09",
     "UserId": null,
-    "TransactionType": 1,
-    "Coupontype": 35,
+    "TransactionType": null,
+    "Coupontype": null,
     "flag": 0,
     "pageNum": 1,
     "rowsPerPage": 10

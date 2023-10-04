@@ -440,7 +440,8 @@ const formatChar = value => {
     let ret = null;
     try {
         if (value) {
-            ret = Buffer.from(value, 'latin1')
+            ret = value
+            //ret = Buffer.from(value)
             //ret = iconv.encode(value, 'tis620')
             //ret = iconv.encode(value, 'iso-8859-11')
         }
@@ -455,7 +456,8 @@ const formatVarChar = value => {
     let ret = null;
     try {
         if (value) {
-            ret = Buffer.from(value, 'latin1')
+            ret = value
+            //ret = Buffer.from(value)
             //ret = iconv.encode(value, 'tis620')
             //ret = iconv.encode(value, 'iso-8859-11')
         }
@@ -476,8 +478,8 @@ const ValueFormatters = [
     { type: mssql.VarBinary, format: formatBuffer },
     { type: mssql.Binary, format: formatBuffer },
     { type: mssql.Image, format: formatBuffer },
-    { type: mssql.Char, format: formatChar },
-    { type: mssql.Variant, format: formatVarChar }
+    //{ type: mssql.Char, format: formatChar },
+    //{ type: mssql.VarChar, format: formatVarChar }
 ]
 const formatValue = (sqlType, value) => {
     let types = ValueFormatters.map(fmt => { return fmt.type; })

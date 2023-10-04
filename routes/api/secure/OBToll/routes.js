@@ -42,12 +42,14 @@ const CouponOBParams = async (headers) => {
                             headertext: header.HEADER_TXT,
                             itemnumber: item.ITEM_NUMBER,
                             materialnum: item.MATERIAL_NUM,
-                            quantity: item.QUANTITY,
+                            quantity: null,
                             unit: item.UNIT_OF_MEASURE,
                             plant: item.PLANT,
                             location: item.STORAGE_LOCATION,
                             goodsrecipient: item.GOODS_RECIPIENT,
                             matdescription: item.MATERIAL_DESCRIPTION,
+                            fromstor: null,
+                            transferqty: item.QUANTITY,
                             books: []
                         }
                         // load serial numbers
@@ -87,13 +89,16 @@ const SaveOBCoupons = async (db, spParams) => {
     for await (const spParam of spParams) {
         // save to db
         const dbResult = await db.SaveCouponReservationHead(spParam)
-        const dbResult2 = await db.SaveCouponReservationItem(spParam)
+        if (dbResult.out.errNum == 0) {
+            const dbResult2 = await db.SaveCouponReservationItem(spParam)
+            if (dbResult2.out.errNum == 0) {
+                if (spParam && spParam.books) {
+                    for await (const book of spParam.books) {
+                        const dbResult3 = await SaveReceivedCoupon(db, book)
+                        if (dbResult3) {
 
-        if (spParam && spParam.books) {
-            for await (const book of spParam.books) {
-                const dbResult3 = await SaveReceivedCoupon(db, book)
-                if (dbResult3) {
-
+                        }
+                    }
                 }
             }
         }

@@ -32,6 +32,7 @@ const Process = async (params) => {
                 quantity: item.quantity,
                 unit: item.unit,
                 plant: item.plant,
+                fromstor: item.fromstor,
                 goodsrecipient: header.goodsrecipient // save as header
             }
             let itemResult = await db.SaveCouponReservationItem(pObj)
