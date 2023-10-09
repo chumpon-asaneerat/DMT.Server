@@ -2289,56 +2289,6 @@
             ]
         }
     },
-    "SaveCouponReservationHead": {
-        "type": "PROCEDURE",
-        "updated": "2023-09-26T10:32:27.180Z",
-        "parameter": {
-            "inputs": [
-                {
-                    "name": "basedate",
-                    "type": "nvarchar(8)"
-                },
-                {
-                    "name": "movementtype",
-                    "type": "nvarchar(3)"
-                },
-                {
-                    "name": "goodsrecipient",
-                    "type": "nvarchar(12)"
-                },
-                {
-                    "name": "receivingstor",
-                    "type": "nvarchar(4)"
-                },
-                {
-                    "name": "userid",
-                    "type": "nvarchar(6)"
-                },
-                {
-                    "name": "postingdate",
-                    "type": "nvarchar(8)"
-                },
-                {
-                    "name": "mat_slip",
-                    "type": "char(16)"
-                },
-                {
-                    "name": "headertext",
-                    "type": "char(25)"
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "errNum",
-                    "type": "int"
-                },
-                {
-                    "name": "errMsg",
-                    "type": "nvarchar(max)"
-                }
-            ]
-        }
-    },
     "SaveCouponReservationItem": {
         "type": "PROCEDURE",
         "updated": "2023-09-26T10:32:27.187Z",
@@ -2569,6 +2519,56 @@
                 }
             ],
             "outputs": []
+        }
+    },
+    "SaveCouponReservationHead": {
+        "type": "PROCEDURE",
+        "updated": "2023-10-04T21:35:54.853Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "basedate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "movementtype",
+                    "type": "nvarchar(3)"
+                },
+                {
+                    "name": "goodsrecipient",
+                    "type": "nvarchar(12)"
+                },
+                {
+                    "name": "receivingstor",
+                    "type": "nvarchar(4)"
+                },
+                {
+                    "name": "userid",
+                    "type": "nvarchar(6)"
+                },
+                {
+                    "name": "postingdate",
+                    "type": "nvarchar(8)"
+                },
+                {
+                    "name": "mat_slip",
+                    "type": "char(16)"
+                },
+                {
+                    "name": "headertext",
+                    "type": "char(25)"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "errNum",
+                    "type": "int"
+                },
+                {
+                    "name": "errMsg",
+                    "type": "nvarchar(max)"
+                }
+            ]
         }
     }
 }

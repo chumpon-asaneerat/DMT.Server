@@ -357,12 +357,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async SaveCouponReservationHead(pObj) {
-        let name = 'SaveCouponReservationHead';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async SaveCouponReservationItem(pObj) {
         let name = 'SaveCouponReservationItem';
         let proc = schema[name];
@@ -425,6 +419,12 @@ const TAxTOD = class extends SqlServer {
 
     async TA_UpdateRunningNo(pObj) {
         let name = 'TA_UpdateRunningNo';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveCouponReservationHead(pObj) {
+        let name = 'SaveCouponReservationHead';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }

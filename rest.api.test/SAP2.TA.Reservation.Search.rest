@@ -13,8 +13,7 @@ Authorization: Basic {{username}} {{password}}
 SAP-Client: 300
 
 {
-    "basedate":"20231002",
-    "sendresult":"A",
-    "transfer":"ํY"
+    "basedate": "20230826",
+    "sendresult": "A",
+    "transfer": "Y"
 }
-
