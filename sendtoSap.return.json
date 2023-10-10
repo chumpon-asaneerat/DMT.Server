@@ -5,42 +5,41 @@
             "uri": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet(BASE_DATE='20230826',MOVEMENT_TYPE='311',GOODS_RECIPIENT='TADD20230012',RECEIVING_STOR='CCDD')",
             "type": "ZOD_MM_INTERFACE_SRV.RESERVH"
         },
-        "BASE_DATE": "20230826",
-        "MOVEMENT_TYPE": "311",
-        "GOODS_RECIPIENT": "TADD20230012",
-        "RECEIVING_STOR": "CCDD",
-        "ITEM": {
-            "results": [
-                {
-                    "__metadata": {
-                        "id": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0001',MATERIAL_NUM='310000080',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2080%20%E0%B8%9A',QUANTITY=100.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
-                        "uri": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0001',MATERIAL_NUM='310000080',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2080%20%E0%B8%9A',QUANTITY=100.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
-                        "type": "ZOD_MM_INTERFACE_SRV.RESERVI"
-                    },
-                    "ITEM_NUMBER": "0001",
-                    "MATERIAL_NUM": "310000080",
-                    "MATERIAL_DESCRIPTION": "คูปอง 80 บ",
-                    "QUANTITY": "100.000",
-                    "UNIT_OF_MEASURE": "BOK",
-                    "PLANT": "1010",
-                    "FROM_STOR": "CDMT"
+    "BASE_DATE": "20230826",
+    "MOVEMENT_TYPE": "311",
+    "GOODS_RECIPIENT": "TADD20230012",
+    "RECEIVING_STOR": "CCDD",
+    "ITEM": {
+        "results": [
+        {
+                "__metadata": {
+                    "id": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0001',MATERIAL_NUM='310000080',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2080%20%E0%B8%9A',QUANTITY=100.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
+                    "uri": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0001',MATERIAL_NUM='310000080',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2080%20%E0%B8%9A',QUANTITY=100.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
+                    "type": "ZOD_MM_INTERFACE_SRV.RESERVI"
                 },
-                {
-                    "__metadata": {
-                        "id": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0002',MATERIAL_NUM='310000035',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2035%20%E0%B8%9A',QUANTITY=50.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
-                        "uri": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0002',MATERIAL_NUM='310000035',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2035%20%E0%B8%9A',QUANTITY=50.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
-                        "type": "ZOD_MM_INTERFACE_SRV.RESERVI"
-                    },
-                    "ITEM_NUMBER": "0002",
-                    "MATERIAL_NUM": "310000035",
-                    "MATERIAL_DESCRIPTION": "คูปอง 35 บ",
-                    "QUANTITY": "50.000",
-                    "UNIT_OF_MEASURE": "BOK",
-                    "PLANT": "1010",
-                    "FROM_STOR": "CDMT"
-                }
-            ]
-        },
+                "ITEM_NUMBER": "0001",
+                "MATERIAL_NUM": "310000080",
+                "MATERIAL_DESCRIPTION": "คูปอง 80 บ",
+                "QUANTITY": "100.000",
+                "UNIT_OF_MEASURE": "BOK",
+                "PLANT": "1010",
+                "FROM_STOR": "CDMT"
+            },
+            {
+                "__metadata": {
+                    "id": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0002',MATERIAL_NUM='310000035',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2035%20%E0%B8%9A',QUANTITY=50.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
+                    "uri": "https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVISet(ITEM_NUMBER='0002',MATERIAL_NUM='310000035',MATERIAL_DESCRIPTION='%E0%B8%84%E0%B8%B9%E0%B8%9B%E0%B8%AD%E0%B8%87%2035%20%E0%B8%9A',QUANTITY=50.000m,UNIT_OF_MEASURE='BOK',PLANT='1010',FROM_STOR='CDMT')",
+                    "type": "ZOD_MM_INTERFACE_SRV.RESERVI"
+                },
+                "ITEM_NUMBER": "0002",
+                "MATERIAL_NUM": "310000035",
+                "MATERIAL_DESCRIPTION": "คูปอง 35 บ",
+                "QUANTITY": "50.000",
+                "UNIT_OF_MEASURE": "BOK",
+                "PLANT": "1010",
+                "FROM_STOR": "CDMT"
+            }
+        ]},
         "RETURN": {
             "results": [
                 {
