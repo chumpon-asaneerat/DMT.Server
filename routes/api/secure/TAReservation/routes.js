@@ -21,7 +21,7 @@ const Process = async (params) => {
     // save to db
     let db = new sqldb()
     await db.connect()
-    const hdrResult = await db.SaveCouponReservationHead(header)
+    let hdrResult = await db.SaveCouponReservationHead(header)
     let result = dbutils.validate(db, hdrResult)
     let items = header.items
     if (items) {

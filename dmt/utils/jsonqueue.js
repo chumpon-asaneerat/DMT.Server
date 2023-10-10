@@ -6,22 +6,27 @@ const moment = require('moment');
 const fetch = require('node-fetch')
 const https = require('https')
 
+const sqldb = require(path.join(nlib.paths.root, 'TAxTOD.db'));
+const dbutils = require(path.join(rootPath, 'dmt', 'utils', 'db-utils')).DbUtils;
+
 const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
 })
-
-const SendToSAP = async (url, pObj, callback) => {
+const SendToSAP = async (url, pObj, queue, sourceFile) => {
     let cfg = nlib.Config;
     var auth = cfg.get('webserver.basicAuth')
     let username = auth.user
     let pwd = auth.password
     let sAuth = Buffer.from(username + ":" + pwd).toString('base64')
+
+    let agent = url.startsWith('https') ? httpsAgent : null
+
     let request = async () => {
         try {
             const response = await fetch(url, { 
                 method: 'POST',
                 body: JSON.stringify(pObj),
-                agent: httpsAgent,
+                agent: agent,
                 headers: {
                     'Content-Type': 'application/json',
                     'SAP-Client': '400',
@@ -33,15 +38,53 @@ const SendToSAP = async (url, pObj, callback) => {
                 }
             })
             const data = await response.json()
-            if (callback) callback(request, response, data)
+
+            // has response
+            if (data) {
+                await UpdateToDb(data.RETURN)
+            }
+
+            if (queue) {
+                queue.moveToBackup(sourceFile)
+            }
         }
         catch (err) {
             console.error(err)
-            if (callback) callback(request, null, null, err)
+            if (queue) {
+                queue.moveToError(sourceFile)
+            }
         }    
+
     }
 
     request()
+}
+
+const UpdateToDb = async (items) => {
+    // save to db
+    let db = new sqldb()
+    if (items && items.length > 0) {
+        await db.connect()
+
+        for await (const item of items) {
+            try {
+                let obj = {
+                    msgtype: item.TYPE,
+                    msgresult: item.MESSAGE,
+                    goodsrecipient: item.GOODS_RECIPIENT
+                }
+                let dbResult = await db.Sap_SaveSendReservationRes(obj)
+                if (dbResult && dbResult.data) {
+                    
+                }
+            }
+            catch (err) {
+                console.error(err)
+            }
+        }
+
+        await db.disconnect()
+    }
 }
 
 // Recursive function to get files
@@ -106,14 +149,7 @@ class JsonQueue {
         console.log('process file: ' + sourceFile)
         let pObj = nlib.JSONFile.load(sourceFile)
         if (pObj) {
-            SendToSAP(this.Url, pObj).then((req, res, data, err) => {
-                if (err) {
-                    this.moveToError(sourceFile)
-                }
-                else {
-                    this.moveToBackup(sourceFile)
-                }
-            })
+            SendToSAP(this.Url, pObj, this, sourceFile)
         }
     } 
     writeFile(pObj, objName, fileNameOnly) {

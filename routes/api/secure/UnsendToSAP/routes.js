@@ -21,7 +21,7 @@ const Process = async (params) => {
     // save to db
     let db = new sqldb()
     await db.connect()
-    const dbResult = await db.Sap_GetUnsendReservationHead()
+    let dbResult = await db.Sap_GetUnsendReservationHead()
     if (dbResult && dbResult.data) {
         let heads = dbResult.data
         for await (let head of heads) {

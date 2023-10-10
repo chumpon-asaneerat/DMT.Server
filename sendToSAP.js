@@ -77,9 +77,10 @@ const SendToSAP = class {
                 this.getUnsendData().then(_ => { 
                     //reserveQueue.Url = 'https://api.restful-api.dev/objects'
                     //reserveQueue.Url = 'https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
+                    reserveQueue.Url = 'http://localhost:8000/api/secure/emu/sap'
                     // Note: 2023-10-10 
                     // changes vhdmptwdwd01.sap.tollway.co.th:44380 เป็น sapdev.tollway.co.th:443
-                    reserveQueue.Url = 'https://sapdev.tollway.co.th:443/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
+                    //reserveQueue.Url = 'https://sapdev.tollway.co.th:443/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
                     reserveQueue.processFiles()
                 })
                 

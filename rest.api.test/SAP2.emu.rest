@@ -1,0 +1,39 @@
+### common variables
+
+@username=api_user
+@password=DMTinf#2023
+
+### Gets Unsend Coupon ToSAP
+
+POST http://localhost:8000/api/secure/emu/sap
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 400
+
+{
+    "BASE_DATE": "20231010",
+    "MOVEMENT_TYPE": "311",
+    "GOODS_RECIPIENT": "TAAN20230002",
+    "RECEIVING_STOR": "CCAN",
+    "ITEM": [
+        {
+            "ITEM_NUMBER": "1",
+            "MATERIAL_NUM": "310000030",
+            "MATERIAL_DESCRIPTION": "คูปอง 30 บ",
+            "QUANTITY": 10,
+            "UNIT_OF_MEASURE": "BOK",
+            "PLANT": "1010",
+            "FROM_STOR": "CDMT"
+        },
+        {
+            "ITEM_NUMBER": "2",
+            "MATERIAL_NUM": "310000080",
+            "MATERIAL_DESCRIPTION": "คูปอง 80 บ",
+            "QUANTITY": 20,
+            "UNIT_OF_MEASURE": "BOK",
+            "PLANT": "1010",
+            "FROM_STOR": "CDMT"
+        }
+    ],
+    "RETURN": []
+}

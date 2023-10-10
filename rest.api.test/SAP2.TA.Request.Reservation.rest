@@ -7,7 +7,7 @@
 POST http://localhost:8000/api/secure/reservation/save
 content-type: application/json
 Authorization: Basic {{username}} {{password}}
-SAP-Client: 300
+SAP-Client: 400
 
 {
     "basedate": "20230826",

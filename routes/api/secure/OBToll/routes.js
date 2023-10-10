@@ -88,7 +88,7 @@ const SaveOBCoupons = async (db, spParams) => {
     }
     for await (const spParam of spParams) {
         // save to db
-        const dbResult = await db.SaveCouponReservationHead(spParam)
+        let dbResult = await db.SaveCouponReservationHead(spParam)
         if (dbResult.out.errNum == 0) {
             const dbResult2 = await db.SaveCouponReservationItem(spParam)
             if (dbResult2.out.errNum == 0) {

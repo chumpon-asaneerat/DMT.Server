@@ -21,7 +21,7 @@ const Process = async (params) => {
     // save to db
     let db = new sqldb()
     await db.connect()
-    const dbResult = await db.TA_ReserveRunningNo(params)
+    let dbResult = await db.TA_ReserveRunningNo(params)
     if (dbResult && dbResult.data) {
         rets = dbResult.data
     }
