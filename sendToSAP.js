@@ -73,12 +73,13 @@ const SendToSAP = class {
         schedule.scheduleJob('*/5 * * * * *', () => {
             if (!this.Processing) {
                 this.Processing = true
-
                 // auto send reserve in every 5 seconds
                 this.getUnsendData().then(_ => { 
                     //reserveQueue.Url = 'https://api.restful-api.dev/objects'
-                    reserveQueue.Url = 'https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
-                    //reserveQueue.Url = 'http://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
+                    //reserveQueue.Url = 'https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
+                    // Note: 2023-10-10 
+                    // changes vhdmptwdwd01.sap.tollway.co.th:44380 เป็น sapdev.tollway.co.th:443
+                    reserveQueue.Url = 'https://sapdev.tollway.co.th:443/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
                     reserveQueue.processFiles()
                 })
                 

@@ -24,7 +24,7 @@ const SendToSAP = async (url, pObj, callback) => {
                 agent: httpsAgent,
                 headers: {
                     'Content-Type': 'application/json',
-                    'SAP-Client': '300',
+                    'SAP-Client': '400',
                     'type': 'default',
                     'enabled': 'true',
                     'X-Requested-With': 'X',
