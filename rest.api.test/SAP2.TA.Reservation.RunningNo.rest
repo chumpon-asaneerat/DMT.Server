@@ -14,3 +14,15 @@ SAP-Client: 300
     "year":"2023"
 }
 
+### Update Reservation Running No
+
+POST http://localhost:8000/api/secure/reservation/runningno/save
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 300
+
+{
+    "tsbid":"09",
+    "runningno": 0
+}
+
