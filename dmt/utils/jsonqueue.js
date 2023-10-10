@@ -39,13 +39,16 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
             })
             const data = await response.json()
 
-            // has response
-            if (data) {
-                await UpdateToDb(data.RETURN)
-            }
+            if (data.ITEM && data.ITEM.results)
+            {
+                // has response
+                if (data) {
+                    await UpdateToDb(data.ITEM.results)
+                }
 
-            if (queue) {
-                queue.moveToBackup(sourceFile)
+                if (queue) {
+                    queue.moveToBackup(sourceFile)
+                }
             }
         }
         catch (err) {
