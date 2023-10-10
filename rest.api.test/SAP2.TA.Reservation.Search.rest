@@ -13,7 +13,18 @@ Authorization: Basic {{username}} {{password}}
 SAP-Client: 400
 
 {
-    "basedate": "20230826",
+    "basedate": "20231010",
     "sendresult": "A",
-    "transfer": "Y"
+    "transfer": null
+}
+
+
+### Gets Get Reservation Items
+POST http://localhost:8000/api/secure/reservation/items/search
+content-type: application/json
+Authorization: Basic {{username}} {{password}}
+SAP-Client: 400
+
+{
+    "goodsrecipient": "TAAN20230002"
 }
