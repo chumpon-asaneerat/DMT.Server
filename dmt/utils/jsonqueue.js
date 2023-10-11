@@ -44,15 +44,19 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
                 queue.writeResponse(sourceFile, data)
             }
 
-            if (data && data.RETURN && data.RETURN.results)
+            if (data && data.d && data.d.RETURN && data.d.RETURN.results)
             {
                 // has response
-                if (data) {
-                    await UpdateToDb(data.RETURN.results)
-                }
+                await UpdateToDb(data.d.RETURN.results)
 
                 if (queue) {
                     queue.moveToBackup(sourceFile)
+                }
+            }
+            else
+            {
+                if (queue) {
+                    queue.moveToError(sourceFile)
                 }
             }
         }

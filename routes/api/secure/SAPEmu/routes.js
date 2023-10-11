@@ -43,8 +43,10 @@ const sendToSAPEmu = (req, res, next) => {
 
     let value = req.body
     let obj = {
-        RETURN: {
-            results: []
+        d: {
+            RETURN: {
+                results: []
+            }
         }
     }
     try {
@@ -64,7 +66,7 @@ const sendToSAPEmu = (req, res, next) => {
             GOODS_RECIPIENT: value.GOODS_RECIPIENT,
             RESERVATION_NO: ''
         }
-        obj.RETURN.results.push(item)
+        obj.d.RETURN.results.push(item)
     }
     catch (err) {
         console.error(err)

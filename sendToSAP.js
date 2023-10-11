@@ -49,7 +49,7 @@ const SendToSAP = class {
                             ITEM_NUMBER: item.ITEM_NUMBER,
                             MATERIAL_NUM: item.MATERIAL_NUM,
                             MATERIAL_DESCRIPTION: item.MATERIAL_DESCRIPTION,
-                            QUANTITY: item.QUANTITY,
+                            QUANTITY: Number(item.QUANTITY).toString(10),
                             UNIT_OF_MEASURE: item.UNIT_OF_MEASURE,
                             PLANT: item.PLANT,
                             FROM_STOR: item.FROM_STOR
