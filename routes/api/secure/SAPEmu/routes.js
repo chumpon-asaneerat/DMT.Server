@@ -43,12 +43,10 @@ const sendToSAPEmu = (req, res, next) => {
 
     let value = req.body
     let obj = {
-        ITEM: {
-            RETURN: {
-                results: []
-            }
+        RETURN: {
+            results: []
         }
-    }
+}
     try {
         counter++
         if (counter > 100) counter = 0
@@ -66,7 +64,7 @@ const sendToSAPEmu = (req, res, next) => {
             GOODS_RECIPIENT: value.GOODS_RECIPIENT,
             RESERVATION_NO: ''
         }
-        obj.ITEM.RETURN.results.push(item)
+        obj.RETURN.results.push(item)
     }
     catch (err) {
         console.error(err)

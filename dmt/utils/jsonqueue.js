@@ -29,7 +29,7 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
                 agent: agent,
                 headers: {
                     'Content-Type': 'application/json',
-                    'SAP-Client': '300',
+                    'SAP-Client': '400',
                     'type': 'default',
                     'enabled': 'true',
                     'X-Requested-With': 'X',
@@ -44,11 +44,11 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
                 queue.writeResponse(sourceFile, data)
             }
 
-            if (data.ITEM && data.ITEM.RETURN && data.ITEM.RETURN.results)
+            if (data && data.RETURN && data.RETURN.results)
             {
                 // has response
                 if (data) {
-                    await UpdateToDb(data.ITEM.RETURN.results)
+                    await UpdateToDb(data.RETURN.results)
                 }
 
                 if (queue) {
