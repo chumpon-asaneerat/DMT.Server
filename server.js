@@ -9,6 +9,8 @@ const schedule = require('node-schedule')
 const JsonQueue = require('./dmt/utils/jsonqueue').JsonQueue;
 const sendToSAP = require('./sendToSAP');
 
+//const jsonFileUtils = require('./dmt/utils/json-file-utils');
+
 // write app version to log
 logger.info('start TA Server v1.1.0 build 400 update 2023-09-26 14:30');
 
@@ -22,3 +24,5 @@ process.on('SIGINT', () => {
 })
 
 sendToSAP.start() // start monitor data send to SAP
+
+//jsonFileUtils.removeFiles(path.join('Queues', 'ToSAP', 'backup'), 5)

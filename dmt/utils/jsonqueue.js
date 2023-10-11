@@ -29,7 +29,7 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
                 agent: agent,
                 headers: {
                     'Content-Type': 'application/json',
-                    'SAP-Client': '400',
+                    'SAP-Client': '300',
                     'type': 'default',
                     'enabled': 'true',
                     'X-Requested-With': 'X',
@@ -39,11 +39,16 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
             })
             const data = await response.json()
 
-            if (data.ITEM && data.ITEM.results)
+            if (queue) {
+                // write response to file
+                queue.writeResponse(sourceFile, data)
+            }
+
+            if (data.ITEM && data.ITEM.RETURN && data.ITEM.RETURN.results)
             {
                 // has response
                 if (data) {
-                    await UpdateToDb(data.ITEM.results)
+                    await UpdateToDb(data.ITEM.RETURN.results)
                 }
 
                 if (queue) {
@@ -180,6 +185,14 @@ class JsonQueue {
         let sourceFile = path.join(this._path, fname)
         let targetFile = path.join(errorPath, fname)
         moveFile(sourceFile, targetFile)
+    }
+    writeResponse(sourcefileName, pObj) {
+        let targetfileNameOnly = 'msg.' + moment().format('YYYY.MM.DD.HH.mm.ss.SSSS')
+        let srcFileNameOnly = path.basename(sourcefileName)
+        targetfileNameOnly = targetfileNameOnly + '.res.' + srcFileNameOnly
+        let responsePath = path.join(this._path, 'responses')
+        let targetFile = path.join(responsePath, targetfileNameOnly)
+        nlib.JSONFile.save(targetFile, pObj)
     }
 
     processFiles() {
