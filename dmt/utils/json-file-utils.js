@@ -24,6 +24,9 @@ const getJsonFiles = (dir, files = []) => {
 
 const NJsonFileUtils = class {
     removeFiles(pathName,  top = 5) {
+        
+        //! need to check file last access to make sure no one use file anymore
+
         let dir = path.join(rootPath, pathName)
         let files = []
         getJsonFiles(dir, files)
