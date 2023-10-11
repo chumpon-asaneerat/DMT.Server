@@ -46,7 +46,7 @@ const sendToSAPEmu = (req, res, next) => {
         RETURN: {
             results: []
         }
-}
+    }
     try {
         counter++
         if (counter > 100) counter = 0
