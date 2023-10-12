@@ -81,12 +81,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async ESellingToTA(pObj) {
-        let name = 'ESellingToTA';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async GetAR_Head(pObj) {
         let name = 'GetAR_Head';
         let proc = schema[name];
@@ -173,18 +167,6 @@ const TAxTOD = class extends SqlServer {
 
     async SaveAR(pObj) {
         let name = 'SaveAR';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async SaveTACoupon(pObj) {
-        let name = 'SaveTACoupon';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async TA_EditSoldCoupon(pObj) {
-        let name = 'TA_EditSoldCoupon';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -279,12 +261,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async TCTSoldCoupon(pObj) {
-        let name = 'TCTSoldCoupon';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async TOD_SaveRevenueEntry(pObj) {
         let name = 'TOD_SaveRevenueEntry';
         let proc = schema[name];
@@ -315,12 +291,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async UpdateAR_Serial(pObj) {
-        let name = 'UpdateAR_Serial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async UpdateflagAR_Head(pObj) {
         let name = 'UpdateflagAR_Head';
         let proc = schema[name];
@@ -335,12 +305,6 @@ const TAxTOD = class extends SqlServer {
 
     async UpdateflagAR_Serial(pObj) {
         let name = 'UpdateflagAR_Serial';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async UpdateflagTACouponReceive(pObj) {
-        let name = 'UpdateflagTACouponReceive';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -381,18 +345,6 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
-    async SaveReceivedCoupon(pObj) {
-        let name = 'SaveReceivedCoupon';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async TA_getCouponMasterList(pObj) {
-        let name = 'TA_getCouponMasterList';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
     async TA_getStorageLocationByTSBID(pObj) {
         let name = 'TA_getStorageLocationByTSBID';
         let proc = schema[name];
@@ -401,12 +353,6 @@ const TAxTOD = class extends SqlServer {
 
     async Sap_SaveSendReservationRes(pObj) {
         let name = 'Sap_SaveSendReservationRes';
-        let proc = schema[name];
-        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
-    }
-
-    async TA_SearchReservationStatus(pObj) {
-        let name = 'TA_SearchReservationStatus';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
@@ -423,8 +369,62 @@ const TAxTOD = class extends SqlServer {
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
 
+    async TA_getCouponMasterList(pObj) {
+        let name = 'TA_getCouponMasterList';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_SearchReservationStatus(pObj) {
+        let name = 'TA_SearchReservationStatus';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
     async SaveCouponReservationHead(pObj) {
         let name = 'SaveCouponReservationHead';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveTACoupon(pObj) {
+        let name = 'SaveTACoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TA_EditSoldCoupon(pObj) {
+        let name = 'TA_EditSoldCoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async TCTSoldCoupon(pObj) {
+        let name = 'TCTSoldCoupon';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async UpdateflagTACouponReceive(pObj) {
+        let name = 'UpdateflagTACouponReceive';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async ESellingToTA(pObj) {
+        let name = 'ESellingToTA';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async UpdateAR_Serial(pObj) {
+        let name = 'UpdateAR_Serial';
+        let proc = schema[name];
+        return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
+    }
+
+    async SaveReceivedCoupon(pObj) {
+        let name = 'SaveReceivedCoupon';
         let proc = schema[name];
         return await this.execute(name, pObj, proc.parameter.inputs, proc.parameter.outputs);
     }
