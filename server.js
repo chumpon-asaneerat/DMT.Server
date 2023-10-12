@@ -12,7 +12,7 @@ const sendToSAP = require('./sendToSAP');
 //const jsonFileUtils = require('./dmt/utils/json-file-utils');
 
 // write app version to log
-logger.info('start TA Server v1.1.0 build 450 update 2023-10-11 14:30');
+logger.info('start TA Server v1.1.0 build 451 update 2023-10-12 08:10');
 
 // start web server
 const wsvr = new WebServer();

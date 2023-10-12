@@ -17,7 +17,7 @@ let testMode = false
 // static class.
 const api = class { }
 
-const sVersion = "TA Server v1.1.0 build 400 update 2023-09-26 14:30"
+const sVersion = "TA Server v1.1.0 build 451 update 2023-10-12 08:10"
 
 //#region Implement - GetTAServerVersion
 
