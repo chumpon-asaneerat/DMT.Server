@@ -8,6 +8,7 @@ const logger = require('./nlib/nlib-logger').logger;
 const schedule = require('node-schedule')
 const JsonQueue = require('./dmt/utils/jsonqueue').JsonQueue;
 const sendToSAP = require('./sendToSAP');
+const sendToSCW = require('./sendToSCW');
 
 //const jsonFileUtils = require('./dmt/utils/json-file-utils');
 
@@ -24,5 +25,6 @@ process.on('SIGINT', () => {
 })
 
 sendToSAP.start() // start monitor data send to SAP
+sendToSCW.start() // start monitor data send to SCW
 
 //jsonFileUtils.removeFiles(path.join('Queues', 'ToSAP', 'backup'), 5)
