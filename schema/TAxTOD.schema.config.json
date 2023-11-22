@@ -72,5 +72,6 @@
     "Sap_SaveSendReservationRes": true,
     "TA_SearchReservationStatus": true,
     "TA_ReserveRunningNo": true,
-    "TA_UpdateRunningNo": true
+    "TA_UpdateRunningNo": true,
+    "TA_SendCouponToSCW": true
 }

@@ -2566,5 +2566,18 @@
                 }
             ]
         }
+    },
+    "TA_SendCouponToSCW": {
+        "type": "PROCEDURE",
+        "updated": "2023-11-22T23:12:06.580Z",
+        "parameter": {
+            "inputs": [
+                {
+                    "name": "transactiondate",
+                    "type": "date"
+                }
+            ],
+            "outputs": []
+        }
     }
 }
