@@ -1,0 +1,7 @@
+### TA Gets Low Limit Balance 
+POST http://localhost:8000/api/coupon/sendtoscw
+content-type: application/json
+
+{
+    "transactiondate": "2023-11-22T23:22:03.112Z"
+}
