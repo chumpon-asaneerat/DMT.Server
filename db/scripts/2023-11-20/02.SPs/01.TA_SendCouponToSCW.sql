@@ -1,13 +1,12 @@
-/****** Object:  StoredProcedure [dbo].[TA_SendCouponToSCW]    Script Date: 20/11/2566 12:37:19 ******/
+/****** Object:  StoredProcedure [dbo].[TA_SendCouponToSCW]    Script Date: 11/23/2023 8:49:22 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE PROCEDURE [dbo].[TA_SendCouponToSCW]
 (
-  @transactiondate date
+  @transactiondate datetime
 )
 AS
 BEGIN

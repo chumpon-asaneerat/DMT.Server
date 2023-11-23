@@ -40,7 +40,7 @@ const SendToSCW = class {
     }
 
     start() {
-        schedule.scheduleJob('*/5 * * * * *', () => {
+        schedule.scheduleJob('*/10 * * * * *', () => {
             if (!this.Processing) {
                 this.Processing = true
                 // auto send reserve in every 5 seconds

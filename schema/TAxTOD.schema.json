@@ -2569,12 +2569,12 @@
     },
     "TA_SendCouponToSCW": {
         "type": "PROCEDURE",
-        "updated": "2023-11-22T23:12:06.580Z",
+        "updated": "2023-11-23T08:50:07.393Z",
         "parameter": {
             "inputs": [
                 {
                     "name": "transactiondate",
-                    "type": "date"
+                    "type": "datetime"
                 }
             ],
             "outputs": []
