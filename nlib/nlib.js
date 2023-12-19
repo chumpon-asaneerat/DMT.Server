@@ -296,6 +296,8 @@ const JSONFile = class {
         let obj = null
         let sJson = fs.readFileSync(fileName, 'utf8')
         try { 
+            // Fixed unicode in some case
+            //sJson = sJson.replace(/^\uFFFD/, '').replace(/^\uFFFD/, '').replace(/\0/g, '')
             obj = JSON.parse(sJson)
         }
         catch (err) { 
