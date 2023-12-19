@@ -3,7 +3,7 @@ const rootPath = process.env['ROOT_PATHS'];
 
 const WebServer = require('./nlib/nlib-express');
 // init logger
-const logger = require('./nlib/nlib-logger').logger;
+const logger = require(path.join(rootPath, 'nlib', 'nlib-logger')).logger;
 
 const schedule = require('node-schedule')
 
@@ -70,11 +70,13 @@ const SendToSAP = class {
     }
 
     start() {
-        schedule.scheduleJob('*/5 * * * * *', () => {
+        schedule.scheduleJob('*/30 * * * * *', () => {
             if (!this.Processing) {
                 this.Processing = true
-                // auto send reserve in every 5 seconds
+                // auto send reserve in every 30 seconds
                 this.getUnsendData().then(_ => { 
+                    logger.info('SendToSAP - Process files..')
+                    //reserveQueue.Url = 'https://sapprd.tollway.co.th/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
                     //reserveQueue.Url = 'https://172.16.202.138:44380/sap/opu/odata/SAP/ZOD_MM_INTERFACE_SRV/RESERVHSet'
                     // Note: 2023-10-10 
                     // changes vhdmptwdwd01.sap.tollway.co.th:44380 เป็น sapdev.tollway.co.th:443

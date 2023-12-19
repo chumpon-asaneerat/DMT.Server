@@ -8,6 +8,8 @@ const https = require('https')
 
 const sqldb = require(path.join(nlib.paths.root, 'TAxTOD.db'));
 const dbutils = require(path.join(rootPath, 'dmt', 'utils', 'db-utils')).DbUtils;
+// init logger
+const logger = require(path.join(rootPath, 'nlib', 'nlib-logger')).logger;
 
 const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
@@ -19,13 +21,17 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
     let pwd = auth.password
     let sAuth = Buffer.from(username + ":" + pwd).toString('base64')
 
+    let sJson = JSON.stringify(pObj)
+    
     let agent = url.startsWith('https') ? httpsAgent : null
 
     let request = async () => {
         try {
+            logger.info('Sending to SAP')
+
             const response = await fetch(url, { 
                 method: 'POST',
-                body: JSON.stringify(pObj),
+                body: sJson,
                 agent: agent,
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,10 +57,12 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
 
                 if (queue) {
                     queue.moveToBackup(sourceFile)
+                    logger.info('Success send to SAP')
                 }
             }
             else
             {
+                logger.error('Invalid data return from SAP')
                 if (queue) {
                     queue.moveToError(sourceFile)
                 }
@@ -62,6 +70,8 @@ const SendToSAP = async (url, pObj, queue, sourceFile) => {
         }
         catch (err) {
             console.error(err)
+            logger.error(err.message)
+            logger.error('body:' + sJson)
             if (queue) {
                 queue.moveToError(sourceFile)
             }
